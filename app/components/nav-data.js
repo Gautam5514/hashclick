@@ -1,0 +1,433 @@
+import {
+  Sparkles,
+  Bot,
+  Laptop,
+  Globe,
+  Mic,
+  Video,
+  Search,
+  FolderKanban,
+  FileText,
+  CalendarDays,
+  LayoutDashboard,
+  Timer,
+  GanttChartSquare,
+  Workflow,
+  PenTool,
+  Plug,
+  Target,
+  Table2,
+  Rocket,
+  Megaphone,
+  Code2,
+  Server,
+  Users,
+  Crown,
+  Palette,
+  Building2,
+  GraduationCap,
+  BookOpen,
+  LifeBuoy,
+  Newspaper,
+  Presentation,
+  Download,
+  Cpu,
+} from "lucide-react";
+
+export const navigation = [
+  {
+    label: "Brain AI",
+    href: "/ai",
+    highlight: true,
+    columns: [
+      {
+        title: "AI PLATFORM",
+        items: [
+          {
+            icon: Cpu,
+            tone: "purple",
+            name: "Platform Overview",
+            desc: "The converged AI workspace",
+            href: "/ai",
+          },
+          {
+            icon: Bot,
+            tone: "pink",
+            name: "Super Agents",
+            badge: "NEW",
+            desc: "Delegate your work entirely",
+            href: "/ai#agents",
+          },
+          {
+            icon: Laptop,
+            tone: "blue",
+            name: "Brain MAX",
+            desc: "One AI app to rule them all",
+            href: "/ai#brain-max",
+          },
+          {
+            icon: Globe,
+            tone: "orange",
+            name: "Brain MAX extension",
+            desc: "Your AI assistant, in every tab",
+            href: "/ai#extension",
+          },
+        ],
+      },
+      {
+        title: "AI FEATURES",
+        items: [
+          {
+            icon: Mic,
+            tone: "green",
+            name: "Talk to Text",
+            desc: "Write 4x faster than you type",
+            href: "/ai#talk",
+          },
+          {
+            icon: Video,
+            tone: "deepblue",
+            name: "Notetaker",
+            desc: "Intelligent meeting notes and summaries",
+            href: "/ai#notetaker",
+          },
+          {
+            icon: Search,
+            tone: "purple",
+            name: "Enterprise Search",
+            desc: "Find anything across your workspace",
+            href: "/ai#search",
+          },
+        ],
+      },
+      {
+        title: "AI RESOURCES",
+        isSimpleList: true,
+        items: [
+          {
+            name: "Pricing",
+            href: "/pricing",
+          },
+          {
+            name: "State of AI",
+            href: "/ai#state-of-ai",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Product",
+    href: "/product",
+    columns: [
+      {
+        title: "PLAN & TRACK",
+        items: [
+          {
+            icon: FolderKanban,
+            tone: "purple",
+            name: "Projects",
+            desc: "Tasks, sprints, and roadmaps",
+            href: "/product#projects",
+          },
+          {
+            icon: GanttChartSquare,
+            tone: "pink",
+            name: "Gantt & Timelines",
+            desc: "Dependencies at a glance",
+            href: "/product#gantt",
+          },
+          {
+            icon: Target,
+            tone: "orange",
+            name: "Goals",
+            desc: "Tie daily work to outcomes",
+            href: "/product#goals",
+          },
+          {
+            icon: Timer,
+            tone: "green",
+            name: "Time Tracking",
+            desc: "Native timers and timesheets",
+            href: "/product#time",
+          },
+        ],
+      },
+      {
+        title: "CREATE & COLLABORATE",
+        items: [
+          {
+            icon: FileText,
+            tone: "deepblue",
+            name: "Docs & Wikis",
+            desc: "Knowledge that stays current",
+            href: "/product#docs",
+          },
+          {
+            icon: PenTool,
+            tone: "pink",
+            name: "Whiteboards",
+            desc: "From idea to task in one move",
+            href: "/product#whiteboards",
+          },
+          {
+            icon: Table2,
+            tone: "orange",
+            name: "Spreadsheets",
+            desc: "Live data, no exports",
+            href: "/product#sheets",
+          },
+        ],
+      },
+      {
+        title: "AUTOMATE & REPORT",
+        items: [
+          {
+            icon: Workflow,
+            tone: "purple",
+            name: "Automations",
+            desc: "Describe it, ship it",
+            href: "/product#automations",
+          },
+          {
+            icon: LayoutDashboard,
+            tone: "blue",
+            name: "Dashboards",
+            desc: "Real-time answers, no BI tool",
+            href: "/product#dashboards",
+          },
+          {
+            icon: CalendarDays,
+            tone: "green",
+            name: "Calendar",
+            desc: "Every meeting, task and doc",
+            href: "/product#calendar",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Solutions",
+    href: "/solutions",
+    columns: [
+      {
+        title: "BY TEAM",
+        items: [
+          {
+            icon: Rocket,
+            tone: "purple",
+            name: "Project Management",
+            desc: "Run complex programs",
+            href: "/solutions#projects",
+          },
+          {
+            icon: Megaphone,
+            tone: "pink",
+            name: "Marketing",
+            desc: "Campaigns end to end",
+            href: "/solutions#marketing",
+          },
+          {
+            icon: Code2,
+            tone: "blue",
+            name: "Product & Engineering",
+            desc: "Sprints, bugs and releases",
+            href: "/solutions#engineering",
+          },
+        ],
+      },
+      {
+        title: "BY FUNCTION",
+        items: [
+          {
+            icon: Server,
+            tone: "deepblue",
+            name: "IT & Operations",
+            desc: "Requests, assets, uptime",
+            href: "/solutions#it",
+          },
+          {
+            icon: Users,
+            tone: "orange",
+            name: "HR & Recruiting",
+            desc: "Hiring and onboarding",
+            href: "/solutions#hr",
+          },
+          {
+            icon: Crown,
+            tone: "green",
+            name: "Leadership",
+            desc: "One view of the business",
+            href: "/solutions#leadership",
+          },
+        ],
+      },
+      {
+        title: "BY SIZE",
+        items: [
+          {
+            icon: Palette,
+            tone: "pink",
+            name: "Agencies",
+            desc: "Client work, profitably",
+            href: "/solutions#agencies",
+          },
+          {
+            icon: Building2,
+            tone: "purple",
+            name: "Enterprise",
+            desc: "Scale with governance",
+            href: "/enterprise",
+          },
+          {
+            icon: GraduationCap,
+            tone: "blue",
+            name: "Startups",
+            desc: "Move fast on one platform",
+            href: "/solutions#startups",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Learn",
+    href: "/learn",
+    columns: [
+      {
+        title: "GET STARTED",
+        items: [
+          {
+            icon: BookOpen,
+            tone: "purple",
+            name: "Templates",
+            desc: "1,000+ ready-made setups",
+            href: "/learn#templates",
+          },
+          {
+            icon: GraduationCap,
+            tone: "blue",
+            name: "University",
+            desc: "Free courses and certs",
+            href: "/learn#university",
+          },
+          {
+            icon: LifeBuoy,
+            tone: "green",
+            name: "Help Center",
+            desc: "24/7 support, every plan",
+            href: "/learn#support",
+          },
+        ],
+      },
+      {
+        title: "GO DEEPER",
+        items: [
+          {
+            icon: Video,
+            tone: "pink",
+            name: "Webinars",
+            desc: "Live and on demand",
+            href: "/learn#webinars",
+          },
+          {
+            icon: Newspaper,
+            tone: "orange",
+            name: "Blog",
+            desc: "Productivity research",
+            href: "/learn#blog",
+          },
+          {
+            icon: Presentation,
+            tone: "deepblue",
+            name: "Customer Stories",
+            desc: "How teams cut tool sprawl",
+            href: "/learn#customers",
+          },
+        ],
+      },
+    ],
+  },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Enterprise", href: "/enterprise" },
+];
+
+export const footerColumns = [
+  {
+    title: "Download",
+    links: [
+      { name: "iOS & Android", href: "/download" },
+      { name: "Mac & Windows", href: "/download" },
+      { name: "Brain MAX", href: "/ai" },
+      { name: "Chrome extension", href: "/download" },
+    ],
+  },
+  {
+    title: "AI",
+    links: [
+      { name: "Brain²", href: "/ai" },
+      { name: "Super Agents", href: "/ai#agents" },
+      { name: "Ambient Agents", href: "/ai#ambient" },
+      { name: "AI Notetaker", href: "/ai#notetaker" },
+      { name: "Enterprise Search", href: "/ai#search" },
+      { name: "Talk to Text", href: "/ai#talk" },
+    ],
+  },
+  {
+    title: "Product",
+    links: [
+      { name: "Chat", href: "/product#chat" },
+      { name: "Projects", href: "/product#projects" },
+      { name: "Docs & Wikis", href: "/product#docs" },
+      { name: "Calendar", href: "/product#calendar" },
+      { name: "Dashboards", href: "/product#dashboards" },
+      { name: "Time Tracking", href: "/product#time" },
+      { name: "Gantt Charts", href: "/product#gantt" },
+      { name: "Automations", href: "/product#automations" },
+      { name: "Whiteboards", href: "/product#whiteboards" },
+      { name: "Integrations", href: "/product#integrations" },
+    ],
+  },
+  {
+    title: "Compare",
+    links: [
+      { name: "vs. Atlassian", href: "/compare" },
+      { name: "vs. Microsoft", href: "/compare" },
+      { name: "vs. Asana", href: "/compare" },
+      { name: "vs. Monday", href: "/compare" },
+      { name: "vs. Slack", href: "/compare" },
+      { name: "vs. Notion", href: "/compare" },
+      { name: "vs. Smartsheet", href: "/compare" },
+      { name: "vs. Wrike", href: "/compare" },
+      { name: "vs. Airtable", href: "/compare" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "About", href: "/company" },
+      { name: "Careers", href: "/company" },
+      { name: "Customers", href: "/company" },
+      { name: "Partners", href: "/company" },
+      { name: "Affiliates", href: "/company" },
+      { name: "Events", href: "/company" },
+      { name: "Press", href: "/company" },
+      { name: "Brand", href: "/company" },
+      { name: "Roadmap", href: "/company" },
+    ],
+  },
+];
+
+export const footerHelpLinks = [
+  { name: "Support", href: "/learn#support" },
+  { name: "Contact Sales", href: "/enterprise#contact" },
+  { name: "Get a Demo", href: "/demo" },
+  { name: "Import", href: "/learn" },
+  { name: "Templates", href: "/learn#templates" },
+  { name: "Community", href: "/learn" },
+  { name: "University", href: "/learn#university" },
+  { name: "Webinars", href: "/learn#webinars" },
+  { name: "Blog", href: "/learn#blog" },
+  { name: "Research", href: "/learn#blog" },
+];

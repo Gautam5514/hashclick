@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — mirrored from the ClickUp 2026 design system
+   ============================================================ */
+
+@theme {
+  /* Core surfaces */
+  --color-bg-main: #ffffff;
+  --color-bg-box: #f8f9fa;
+  --color-bg-card: #f8f9fa;
+  --color-bg-gray: #f7f7f7;
+
+  /* Core text */
+  --color-ink: #202020;
+  --color-ink-secondary: #646464;
+  --color-ink-tertiary: #7b7b7b;
+  --color-ink-disabled: #bbbbbb;
+
+  /* Borders */
+  --color-line: #e8e8e8;
+  --color-line-strong: #d9d9d9;
+
+  /* Brand */
+  --color-brand-purple: #7612fa;
+  --color-brand-pink: #fa12e3;
+  --color-brand-gold: #ffc800;
+  --color-brand-cyan: #40ddff;
+
+  /* Accents */
+  --color-accent-purple: #6647f0;
+  --color-accent-purple-soft: #b38cff;
+  --color-accent-purple-badge: #efedfd;
+  --color-accent-pink: #ff02f0;
+  --color-accent-pink-soft: #ff8af7;
+  --color-accent-pink-badge: #feecfc;
+  --color-accent-blue: #0091ff;
+  --color-accent-blue-soft: #7acaff;
+  --color-accent-blue-badge: #edf6fd;
+  --color-accent-orange: #fc6d2d;
+  --color-accent-orange-soft: #fb9e79;
+  --color-accent-orange-badge: #fdede7;
+  --color-accent-deep-blue: #4a2fff;
+  --color-accent-deep-blue-badge: #e3e5fb;
+  --color-accent-green: #078d3b;
+  --color-accent-green-badge: #e2f8ec;
+  --color-accent-red: #f0382d;
+  --color-accent-red-badge: #fbdddd;
+  --color-accent-navy: #101f52;
+
+  /* Buttons */
+  --color-btn-primary: #202020;
+  --color-btn-secondary: #f0f0f0;
+  --color-btn-secondary-hover: #dedede;
+
+  /* Typography */
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Radii — generous, but never fully pill-shaped on surfaces */
+  --radius-card: 20px;
+  --radius-panel: 28px;
+
+  /* Motion */
+  --ease-out-brand: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ------------------------------------------------------------
+   Dark theme — opt in per-section with data-theme="dark"
+   ------------------------------------------------------------ */
+[data-theme="dark"] {
+  --color-bg-main: #000000;
+  --color-bg-box: #111111;
+  --color-bg-card: #272727;
+  --color-bg-gray: #111111;
+  --color-ink: #eeeeee;
+  --color-ink-secondary: #b4b4b4;
+  --color-ink-tertiary: #838383;
+  --color-ink-disabled: #606060;
+  --color-line: #2a2a2a;
+  --color-line-strong: #3d3d3e;
+  --color-btn-primary: #ffffff;
+  --color-btn-secondary: rgba(255, 255, 255, 0.1);
+  --color-btn-secondary-hover: rgba(255, 255, 255, 0.16);
+  --color-accent-purple: #b38cff;
+  --color-accent-pink: #ff8af7;
+  --color-accent-blue: #7acaff;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: color-mix(in oklab, #7612fa 22%, transparent);
+}
+
+/* ============================================================
+   Brand utilities
+   ============================================================ */
+
+/* The signature CTA gradient */
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    100deg,
+    #7612fa -6%,
+    #fa12e3 60%,
+    #ffc800 127%
+  );
+}
+
+@utility bg-brand-gradient-cool {
+  background-image: linear-gradient(
+    100deg,
+    #40ddff -6%,
+    #7612fa 25%,
+    #fa12e3 100%
+  );
+}
+
+@utility text-brand-gradient {
+  background-image: linear-gradient(
+    100deg,
+    #7612fa -6%,
+    #fa12e3 60%,
+    #ffc800 127%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility text-gradient-cool {
+  background-image: linear-gradient(
+    100deg,
+    #40ddff -6%,
+    #7612fa 40%,
+    #fa12e3 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 1px gradient border via mask compositing */
+@utility border-gradient {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(100deg, #7612fa, #fa12e3 60%, #ffc800);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+@utility fade-mask-b {
+  -webkit-mask-image: linear-gradient(#000 60%, #0000 100%);
+  mask-image: linear-gradient(#000 60%, #0000 100%);
+}
+
+@utility fade-mask-x {
+  -webkit-mask-image: linear-gradient(90deg, #0000, #000 6%, #000 94%, #0000);
+  mask-image: linear-gradient(90deg, #0000, #000 6%, #000 94%, #0000);
+}
+
+/* ------------------------------------------------------------
+   Continuous "Train Moving on Track" Rotating Light Beam Border
+   ------------------------------------------------------------ */
+@keyframes border-conic-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rainbow-pill-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 1.5px;
+  background-color: #e8e8e8;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.rainbow-pill-wrap::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  background: conic-gradient(
+    from 0deg,
+    #40ddff 0deg,
+    #7612fa 30deg,
+    #ff02f0 60deg,
+    #ff6b4a 90deg,
+    transparent 125deg,
+    transparent 360deg
+  );
+  animation: border-conic-spin 3.8s linear infinite;
+  pointer-events: none;
+}
+
+.rainbow-pill-inner {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  padding: 0.35rem 0.95rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: #202020;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shimmer-sweep {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@utility animate-marquee {
+  animation: marquee var(--marquee-duration, 40s) linear infinite;
+}
+
+@utility animate-rise {
+  animation: rise-in 0.7s var(--ease-out-brand) both;
+}
+
+@utility animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+@utility shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-secondary) 0%,
+    #0091ff 25%,
+    #a43cb4 40%,
+    #f100e3 55%,
+    var(--color-ink-secondary) 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 6s linear infinite;
+}
+
+/* Hide scrollbars on horizontal rails (tabs, card carousels) */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
