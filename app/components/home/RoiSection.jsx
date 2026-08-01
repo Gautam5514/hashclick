@@ -1,31 +1,33 @@
-import { TrendingUp, Banknote, Clock4, CalendarCheck, ShieldCheck } from "lucide-react";
-import { Container, Section } from "../ui/Container";
-import Button from "../ui/Button";
+"use client";
 
-const stats = [
+import Link from "next/link";
+import { ShieldCheck } from "lucide-react";
+import "./roi-section.css";
+
+const roiMetrics = [
   {
-    icon: TrendingUp,
+    tag: "ROI",
     value: "384%",
-    label: "ROI over three years",
-    accent: "#7612fa",
+    description:
+      "ClickUp delivered 384% ROI over three years, helping organizations unlock significant efficiency gains.",
   },
   {
-    icon: Banknote,
+    tag: "REVENUE INCREASE",
     value: "$3.9M",
-    label: "in revenue gains",
-    accent: "#fa12e3",
+    description:
+      "ClickUp projects drove $3.9M in revenue gains by streamlining work, consolidating tools, and scaling faster.",
   },
   {
-    icon: Clock4,
+    tag: "HOURS SAVED",
     value: "92,400",
-    label: "hours saved annually",
-    accent: "#0091ff",
+    description:
+      "Organizations saved 92,400 hours with ClickUp, reducing manual work and recapturing productivity at scale.",
   },
   {
-    icon: CalendarCheck,
+    tag: "PAYBACK",
     value: "<6 mo",
-    label: "payback period",
-    accent: "#078d3b",
+    description:
+      "Customers reached payback in under six months, making ClickUp a proven investment with rapid returns.",
   },
 ];
 
@@ -33,63 +35,68 @@ const compliance = ["SOC 2 Type II", "ISO 27001", "GDPR", "HIPAA"];
 
 export function RoiSection() {
   return (
-    <Section className="border-y border-line">
-      <Container size="default">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-          <div>
-            <h2 className="font-display text-[clamp(1.9rem,3.8vw,3rem)] leading-[1.05] font-extrabold tracking-[-0.035em] text-ink text-balance">
-              The business case writes itself
-            </h2>
-            <p className="mt-5 text-[16.5px] leading-relaxed text-ink-secondary">
-              An independent study of composite organizations found consolidating
-              onto one work platform pays for itself in under two quarters.
-            </p>
-            <p className="mt-4 text-[13px] text-ink-tertiary">
-              Source: Total Economic Impact™ study, 2026.
-            </p>
-            <Button href="/enterprise#roi" variant="outline" size="lg" className="mt-8">
-              Read the full report
-            </Button>
+    <section className="roi-wrapper" data-testid="home-impact">
+      <div className="roi-container">
+        <div className="roi-title-row">
+          <div className="roi-title-wrap">
+            <div className="roi-title">
+              <h2>It&apos;s like adding 15 full-time employees</h2>
+            </div>
+            <div className="roi-subtext">
+              <p>
+                According to third party research ClickUp saves the average company
+                over 30k hours per year, <br />
+                and delivers industry-leading ROI.
+              </p>
+            </div>
           </div>
 
-          <dl className="grid gap-4 sm:grid-cols-2">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-card border border-line p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_-30px_rgba(0,0,0,0.3)]"
-              >
-                <span
-                  className="flex size-10 items-center justify-center rounded-xl"
-                  style={{ background: `${s.accent}14`, color: s.accent }}
-                >
-                  <s.icon className="size-5" />
-                </span>
-                <dt className="font-display mt-5 text-[clamp(2rem,3.4vw,2.75rem)] leading-none font-extrabold tracking-[-0.04em] text-ink">
-                  {s.value}
-                </dt>
-                <dd className="mt-2 text-[14px] font-medium text-ink-secondary">
-                  {s.label}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <div className="roi-cta-wrap">
+            <Link href="/signup" className="roi-button">
+              <strong>
+                <span>Get started</span>
+              </strong>
+            </Link>
+          </div>
         </div>
-      </Container>
-    </Section>
+
+        <div className="roi-stats">
+          {roiMetrics.map((item) => (
+            <div key={item.tag} className="roi-stat">
+              <div className="roi-stat-content">
+                <p className="roi-stat-title">{item.tag}</p>
+                <div className="roi-stat-value">{item.value}</div>
+              </div>
+              <p className="roi-stat-desc">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="roi-footer">
+          <p className="roi-footnote">
+            *from 2025 The Total Economic Impact™ of ClickUp report from Forrester
+            Group.{" "}
+            <Link href="/demo" className="roi-footnote-link">
+              Get the report
+            </Link>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
 export function ScaleSection() {
   return (
-    <Section className="py-20 md:py-24">
-      <Container size="default">
-        <div className="rounded-panel border border-line bg-bg-box px-7 py-12 md:px-14">
+    <section className="relative w-full bg-white py-16 md:py-20 border-t border-[#e8e8e8]">
+      <div className="mx-auto w-full max-w-[1550px] px-6 sm:px-10 lg:px-16">
+        <div className="rounded-[28px] border border-[#e8e8e8] bg-[#f7f8fa] p-8 md:p-12 lg:p-14">
           <div className="grid items-center gap-10 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.08] font-extrabold tracking-[-0.03em] text-ink text-balance">
+              <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.08] font-bold tracking-[-0.03em] text-[#111827]">
                 85% of the Fortune 500 already runs work here
               </h2>
-              <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-ink-secondary">
+              <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-[#4b5563]">
                 From two-person startups to 100,000-seat rollouts — with the
                 governance, residency and audit controls security teams ask for
                 on day one.
@@ -98,9 +105,9 @@ export function ScaleSection() {
                 {compliance.map((c) => (
                   <li
                     key={c}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-line bg-bg-main px-3.5 py-2 text-[12.5px] font-semibold text-ink-secondary"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#e8e8e8] bg-white px-3.5 py-2 text-[12.5px] font-semibold text-[#374151]"
                   >
-                    <ShieldCheck className="size-3.5 text-accent-green" />
+                    <ShieldCheck className="size-3.5 text-[#078d3b]" />
                     {c}
                   </li>
                 ))}
@@ -114,10 +121,10 @@ export function ScaleSection() {
                 { v: "99.9%", l: "uptime SLA" },
               ].map((s) => (
                 <div key={s.l}>
-                  <dt className="font-display text-[32px] leading-none font-extrabold tracking-[-0.04em] text-brand-gradient">
+                  <dt className="font-display text-[32px] leading-none font-bold tracking-[-0.04em] text-[#7612fa]">
                     {s.v}
                   </dt>
-                  <dd className="mt-1.5 text-[13px] text-ink-tertiary">
+                  <dd className="mt-1.5 text-[13px] text-[#6b7280]">
                     {s.l}
                   </dd>
                 </div>
@@ -125,7 +132,7 @@ export function ScaleSection() {
             </dl>
           </div>
         </div>
-      </Container>
-    </Section>
+      </div>
+    </section>
   );
 }

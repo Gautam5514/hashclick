@@ -1,0 +1,518 @@
+/* ============================================================
+   Achievements — G2 badge marquee + Fortune 500 dot grid.
+   Values mirrored from ClickUp's `achievements` section.
+   Namespaced `ach-`.
+   ============================================================ */
+
+.ach-wrapper {
+  --ach-grey-0: 41, 45, 52;
+  --ach-grey-1: 124, 130, 141;
+  --ach-grey-2: 185, 190, 199;
+  --ach-grey-3: 233, 235, 240;
+  --ach-purple: 118, 18, 250;
+  --ach-line: #e8e8e8;
+  --ach-display: var(--font-jakarta), -apple-system, Roboto, Helvetica, sans-serif;
+  --ach-sans: var(--font-inter), -apple-system, Roboto, Helvetica, sans-serif;
+  --ach-mono: var(--font-sometype), ui-monospace, "SFMono-Regular", monospace;
+
+  width: 100%;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-block: 80px;
+  background: #fff;
+}
+
+/* --- Two-column box ------------------------------------------------- */
+
+.ach-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+/* The hairlines above and below each box fade out toward the edges. */
+.ach-box::before,
+.ach-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 1px;
+  background: radial-gradient(circle, var(--ach-line) 40%, transparent 100%);
+}
+
+.ach-box::before {
+  top: 0;
+}
+
+.ach-box::after {
+  bottom: 0;
+}
+
+/* Second box sits flush under the first — no repeated top rule. */
+.ach-box-flush {
+  margin-block-start: 0;
+}
+
+.ach-box-flush::before {
+  display: none;
+}
+
+/* Media on the left, copy on the right. */
+.ach-box-media-first {
+  flex-direction: row-reverse;
+}
+
+.ach-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 10;
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: var(--ach-line);
+  transform: translateX(-50%);
+}
+
+.ach-arc {
+  position: absolute;
+  left: 50%;
+  z-index: 10;
+  display: block;
+  transform: translateX(-50%);
+}
+
+.ach-arc-top {
+  top: 0;
+}
+
+.ach-box-flush .ach-arc-top {
+  top: -1px;
+}
+
+.ach-arc-bottom {
+  bottom: 0;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/* --- Copy column ---------------------------------------------------- */
+
+.ach-content {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 48px;
+}
+
+.ach-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.ach-label {
+  margin: 0 0 8px;
+  color: #6647f0;
+  font-family: var(--ach-mono);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.ach-title h2 {
+  margin: 0;
+  color: #202020;
+  font-family: var(--ach-display);
+  font-weight: 650;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  font-feature-settings: "calt" off;
+}
+
+.ach-secondary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ach-button {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border: unset;
+  border-radius: 8px;
+  background: #202020;
+  color: #fff;
+  font-family: var(--ach-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.375;
+  letter-spacing: -0.32px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ach-button:hover {
+  background: rgba(32, 32, 32, 0.85);
+}
+
+/* --- Stats ---------------------------------------------------------- */
+
+.ach-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 120px 0 0;
+}
+
+.ach-stat {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.ach-stat dt {
+  margin: 0;
+  color: rgb(var(--ach-grey-0));
+  font-family: var(--ach-display);
+  font-weight: 650;
+  font-size: 2.125rem;
+  line-height: 1.1764705882;
+  letter-spacing: -0.04em;
+}
+
+.ach-stat dd {
+  margin: 0;
+  color: rgb(var(--ach-grey-1));
+  font-family: var(--ach-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+/* --- Media column --------------------------------------------------- */
+
+.ach-media-wrap {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  width: 50%;
+  min-width: 50%;
+}
+
+.ach-media {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* --- Badge marquee -------------------------------------------------- */
+
+.ach-vignette {
+  mask-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02), #000 20%, #000 80%, rgba(0, 0, 0, 0.02)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), #000 20%, #000 80%, rgba(0, 0, 0, 0.02));
+  -webkit-mask-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.02), #000 20%, #000 80%, rgba(0, 0, 0, 0.02)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), #000 20%, #000 80%, rgba(0, 0, 0, 0.02));
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+}
+
+.ach-marquee {
+  --marquee-gap: 12px;
+  --marquee-item-width: 82px;
+  --marquee-item-height: 94px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  height: 425px;
+  gap: var(--marquee-gap);
+}
+
+.ach-marquee-row {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.ach-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+  animation: ach-marquee var(--row-duration, 46s) linear infinite;
+}
+
+.ach-marquee-row-reverse .ach-marquee-track {
+  animation-direction: reverse;
+}
+
+@keyframes ach-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ach-marquee-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--marquee-gap);
+  padding-inline-end: var(--marquee-gap);
+}
+
+.ach-badge {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: var(--marquee-item-width);
+  height: var(--marquee-item-height);
+  border: 1px solid rgb(var(--ach-grey-3));
+  border-radius: var(--marquee-gap);
+}
+
+.ach-badge img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- Dot grid ------------------------------------------------------- */
+
+.ach-dotgrid-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+}
+
+.ach-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 48px 0;
+}
+
+.ach-grid {
+  --dot-size: 8px;
+  --dot-gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(25, calc(var(--dot-size) + var(--dot-gap)));
+  justify-content: center;
+}
+
+.ach-dot {
+  position: relative;
+  z-index: var(--proximity-z, 0);
+  box-sizing: border-box;
+  width: calc(var(--dot-size) + var(--dot-gap));
+  height: calc(var(--dot-size) + var(--dot-gap));
+  padding: calc(var(--dot-gap) / 2);
+  border-radius: 50%;
+  background-color: rgb(var(--ach-grey-3));
+  background-clip: content-box;
+  opacity: var(--proximity-opacity, 1);
+  transform: translate(var(--proximity-tx, 0), var(--proximity-ty, 0))
+    scale(var(--proximity-scale, 1));
+  transform-origin: center;
+  transition:
+    transform var(--proximity-duration, 0.45s) cubic-bezier(0.33, 1, 0.68, 1),
+    opacity var(--proximity-duration, 0.45s) cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* While the pointer is over the grid the field dims; the dots nearest the
+   cursor are pushed back up by the per-dot opacity the script writes. */
+.ach-grid-hovering .ach-dot:not(.ach-dot-accent) {
+  --proximity-opacity: 0.75;
+}
+
+.ach-dot-fill {
+  position: absolute;
+  inset-block: calc(var(--dot-gap) / 2);
+  inset-inline: calc(var(--dot-gap) / 2);
+  border-radius: 50%;
+  background-color: rgb(var(--ach-purple));
+  transform: scale(0);
+}
+
+.ach-figure-revealed .ach-dot-fill {
+  animation: ach-dot-pop 0.5s cubic-bezier(0.33, 1, 0.68, 1) both;
+  animation-delay: calc(var(--w, 0) * 18ms);
+}
+
+@keyframes ach-dot-pop {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.ach-caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 2lh;
+  margin: 16px 0 0;
+  color: rgb(var(--ach-grey-1));
+  font-family: var(--ach-mono);
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ach-caption span {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* --- Corner dots (mobile only, like ClickUp) ------------------------ */
+
+.ach-corner {
+  --dot-size: 7px;
+  --dot-position: calc(-1 * (var(--dot-size) / 2));
+  display: none;
+  z-index: 10;
+}
+
+.ach-corner-tl {
+  left: var(--dot-position);
+  top: var(--dot-position);
+}
+.ach-corner-tr {
+  right: var(--dot-position);
+  top: var(--dot-position);
+}
+.ach-corner-bl {
+  left: var(--dot-position);
+  bottom: var(--dot-position);
+}
+.ach-corner-br {
+  right: var(--dot-position);
+  bottom: var(--dot-position);
+}
+
+/* --- Responsive ----------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .ach-wrapper {
+    padding-block: 48px;
+  }
+  .ach-box,
+  .ach-box-media-first {
+    flex-direction: column-reverse;
+  }
+  .ach-box::before,
+  .ach-box::after {
+    display: none;
+  }
+  .ach-box-flush {
+    margin-block-start: -1px;
+  }
+  .ach-center-line,
+  .ach-arc {
+    display: none;
+  }
+  .ach-content,
+  .ach-media-wrap {
+    border: 1px solid var(--ach-line);
+  }
+  .ach-media-wrap {
+    border-block-end: unset;
+    width: 100%;
+    min-width: 0;
+  }
+  .ach-content {
+    gap: 16px;
+    width: 100%;
+    padding: 40px 24px;
+  }
+  .ach-corner {
+    position: absolute;
+    display: block;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: var(--ach-line);
+  }
+  .ach-marquee {
+    height: 320px;
+  }
+  .ach-grid {
+    --dot-size: 6px;
+    --dot-gap: 4px;
+  }
+  .ach-figure {
+    padding: 48px 24px;
+  }
+  .ach-stats {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ach-box {
+    padding: 0 20px;
+  }
+  .ach-title h2 {
+    font-size: 1.625rem;
+    line-height: 1.25;
+    letter-spacing: -0.91px;
+  }
+  .ach-label,
+  .ach-caption {
+    font-size: 0.875rem;
+    line-height: 1.2857142857;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ach-marquee-track {
+    animation: none;
+  }
+  .ach-figure-revealed .ach-dot-fill {
+    animation: none;
+    transform: scale(1);
+  }
+  .ach-dot {
+    transition: none;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronRight } from "lucide-react";
+import { Check, ChevronRight, ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
 import AppMockup from "../shared/AppMockup";
 import { cn } from "@/lib/utils";
@@ -61,7 +61,47 @@ const row2Pills = ["Time Tracking", "Calendar", "Docs", "Whiteboards"];
 const row3Pills = ["Automations", "Dashboards", "Scheduling"];
 
 export default function Hero() {
-  const [activePill, setActivePill] = useState("Projects");
+  const [activePills, setActivePills] = useState([
+    "Projects",
+    "Chat",
+    "Brain MAX",
+    "AI Agents",
+  ]);
+  const [lastSelectedPill, setLastSelectedPill] = useState("Projects");
+
+  const [waveKey, setWaveKey] = useState(0);
+
+  const togglePill = (pill) => {
+    setLastSelectedPill(pill);
+    setWaveKey((prev) => prev + 1);
+    setActivePills((prev) =>
+      prev.includes(pill) ? prev.filter((p) => p !== pill) : [...prev, pill]
+    );
+  };
+
+  const renderPill = (pill) => {
+    const isActive = activePills.includes(pill);
+    return (
+      <button
+        key={pill}
+        type="button"
+        onClick={() => togglePill(pill)}
+        className={cn(
+          "group relative inline-flex items-center rounded-full px-4 py-1.5 text-[13.5px] transition-all cursor-pointer select-none",
+          isActive
+            ? "border-2 border-[#0091ff] bg-white text-[#0091ff] font-bold shadow-2xs"
+            : "border-[1.5px] border-dashed border-[#d1d5db] bg-white text-[#4b5563] font-semibold hover:border-gray-400 hover:text-[#111827]"
+        )}
+      >
+        <span>{pill}</span>
+        {isActive && (
+          <span className="absolute -top-1.5 -right-1.5 flex size-4.5 items-center justify-center rounded-full bg-[#0091ff] text-white shadow-xs z-10">
+            <Check className="size-3 stroke-[3.5]" />
+          </span>
+        )}
+      </button>
+    );
+  };
 
   return (
     <section className="relative w-full bg-white pt-8 pb-4 md:pt-12 md:pb-6 lg:pt-14 overflow-hidden">
@@ -126,98 +166,53 @@ export default function Hero() {
             </div>
 
             {/* Sub-label for Pills */}
-            <div className="mt-9 text-[10px] font-mono font-bold tracking-widest text-[#7b7b7b] uppercase">
+            <div className="mt-9 text-[11px] font-mono font-bold tracking-[0.14em] text-[#374151] uppercase">
               GET 400% MORE DONE • CUSTOMIZE YOUR WORKSPACE
             </div>
 
             {/* ALL 3 ROWS OF PILLS */}
-            <div className="mt-3.5 flex flex-col gap-2.5 w-full">
+            <div className="mt-4 flex flex-col gap-3 w-full">
               {/* Row 1 */}
-              <div className="flex flex-wrap gap-1.5">
-                {row1Pills.map((pill) => {
-                  const isActive = activePill === pill;
-                  return (
-                    <button
-                      key={pill}
-                      type="button"
-                      onClick={() => setActivePill(pill)}
-                      className={cn(
-                        "group relative inline-flex items-center gap-1 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold transition-all",
-                        isActive
-                          ? "border-2 border-[#0091ff] bg-white text-[#0091ff] shadow-xs"
-                          : "border border-dashed border-[#d9d9d9] bg-white text-[#202020] hover:border-[#202020] hover:bg-[#f8f9fa]"
-                      )}
-                    >
-                      <span>{pill}</span>
-                      {isActive && (
-                        <span className="flex size-3.5 items-center justify-center rounded-full bg-[#0091ff] text-white">
-                          <Check className="size-2.5 stroke-[3]" />
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
+              <div className="flex flex-wrap gap-2">
+                {row1Pills.map(renderPill)}
               </div>
 
               {/* Row 2 */}
-              <div className="flex flex-wrap gap-1.5">
-                {row2Pills.map((pill) => {
-                  const isActive = activePill === pill;
-                  return (
-                    <button
-                      key={pill}
-                      type="button"
-                      onClick={() => setActivePill(pill)}
-                      className={cn(
-                        "group relative inline-flex items-center gap-1 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold transition-all",
-                        isActive
-                          ? "border-2 border-[#0091ff] bg-white text-[#0091ff] shadow-xs"
-                          : "border border-dashed border-[#d9d9d9] bg-white text-[#202020] hover:border-[#202020] hover:bg-[#f8f9fa]"
-                      )}
-                    >
-                      <span>{pill}</span>
-                      {isActive && (
-                        <span className="flex size-3.5 items-center justify-center rounded-full bg-[#0091ff] text-white">
-                          <Check className="size-2.5 stroke-[3]" />
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
+              <div className="flex flex-wrap gap-2">
+                {row2Pills.map(renderPill)}
               </div>
 
               {/* Row 3 */}
-              <div className="flex flex-wrap gap-1.5">
-                {row3Pills.map((pill) => {
-                  const isActive = activePill === pill;
-                  return (
-                    <button
-                      key={pill}
-                      type="button"
-                      onClick={() => setActivePill(pill)}
-                      className={cn(
-                        "group relative inline-flex items-center gap-1 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold transition-all",
-                        isActive
-                          ? "border-2 border-[#0091ff] bg-white text-[#0091ff] shadow-xs"
-                          : "border border-dashed border-[#d9d9d9] bg-white text-[#202020] hover:border-[#202020] hover:bg-[#f8f9fa]"
-                      )}
-                    >
-                      <span>{pill}</span>
-                      {isActive && (
-                        <span className="flex size-3.5 items-center justify-center rounded-full bg-[#0091ff] text-white">
-                          <Check className="size-2.5 stroke-[3]" />
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
+              <div className="flex flex-wrap gap-2">
+                {row3Pills.map(renderPill)}
+              </div>
+
+              {/* Activate Button Container with ClickUp Emitting Wave Burst */}
+              <div className="mt-3.5 flex items-center">
+                <div className="group relative inline-flex items-center justify-center">
+                  {/* Wave Ring emitting outwards from behind the button */}
+                  <span
+                    key={waveKey}
+                    className="absolute inset-0 rounded-full bg-[#e2e8f0] animate-clickup-wave pointer-events-none"
+                  />
+
+                  {/* Inner Compact Dark Pill Button */}
+                  <button
+                    type="button"
+                    onClick={() => setWaveKey((prev) => prev + 1)}
+                    className="relative z-10 inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#282c35] to-[#181b22] px-4.5 py-1.5 text-[13.5px] font-bold text-white shadow-md transition-all hover:from-[#323844] hover:to-[#1e232d] hover:scale-[1.03] active:scale-95 cursor-pointer"
+                  >
+                    <span>Activate</span>
+                    <ArrowRight className="size-3.5 stroke-[2.8] transition-transform group-hover:translate-x-0.4" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
           {/* RIGHT COLUMN: HERO PRODUCT UI */}
           <div className="relative w-full overflow-hidden">
-            <AppMockup activePill={activePill} className="w-full" />
+            <AppMockup activePill={lastSelectedPill} className="w-full" />
           </div>
         </div>
       </div>

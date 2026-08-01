@@ -2,12 +2,11 @@ import Hero from "./components/home/Hero";
 import LogoCloud from "./components/shared/LogoCloud";
 import ContextGap from "./components/home/ContextGap";
 import FeatureWall from "./components/home/FeatureWall";
+import Brain2Section from "./components/home/Brain2Section";
 import FeatureTabs from "./components/home/FeatureTabs";
-import SuperAgents from "./components/home/SuperAgents";
-import BrainSection from "./components/home/BrainSection";
-import SolutionCards from "./components/shared/SolutionCards";
-import { RoiSection, ScaleSection } from "./components/home/RoiSection";
+import { RoiSection } from "./components/home/RoiSection";
 import Testimonials from "./components/shared/Testimonials";
+import Achievements from "./components/home/Achievements";
 import CtaBanner from "./components/shared/CtaBanner";
 
 export default function Home() {
@@ -17,13 +16,11 @@ export default function Home() {
       <LogoCloud />
       <ContextGap />
       <FeatureWall />
+      <Brain2Section />
       <FeatureTabs />
-      <SuperAgents />
-      <BrainSection />
-      <SolutionCards />
       <RoiSection />
       <Testimonials />
-      <ScaleSection />
+      <Achievements />
       <CtaBanner />
     </>
   );

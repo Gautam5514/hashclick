@@ -49,13 +49,13 @@ export default function ContextGap() {
           {/* Mouse-Following Custom "Play Video" Cursor Badge (High z-40 so it stays above all overlays) */}
           {isHovered && (
             <div
-              className="pointer-events-none absolute z-40 flex items-center gap-3 rounded-full bg-[#111111] px-5 py-3 text-[14px] font-bold text-white shadow-2xl transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2"
+              className="pointer-events-none absolute z-40 flex items-center gap-3 rounded-2xl bg-[#111111] px-5 py-3 text-[14px] font-bold text-white shadow-2xl transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2"
               style={{
                 left: `${cursorPos.x}px`,
                 top: `${cursorPos.y}px`,
               }}
             >
-              <span className="flex size-6 items-center justify-center rounded-full bg-white text-[#111111]">
+              <span className="flex size-6 items-center justify-center rounded-xl bg-white text-[#111111]">
                 <Play className="size-3 fill-[#111111] translate-x-0.5" />
               </span>
               <span className="whitespace-nowrap">Play Video</span>

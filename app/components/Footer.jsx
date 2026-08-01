@@ -1,169 +1,294 @@
-import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
-import { footerColumns, footerHelpLinks } from "./nav-data";
-import { LogoMark } from "./ui/Logo";
-import { Container } from "./ui/Container";
-import { site } from "@/lib/site";
+"use client";
 
-/* Brand marks are not part of the icon set, so they live here as inline SVG. */
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+
+function ClickUpLogoMark({ className = "size-6" }) {
+  return (
+    <svg viewBox="0 0 40 40" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M10 22L20 14L30 22"
+        stroke="url(#ft_logo_grad_2)"
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13 29C17 32 23 32 27 29"
+        stroke="url(#ft_logo_grad_2)"
+        strokeWidth="4.5"
+        strokeLinecap="round"
+      />
+      <defs>
+        <linearGradient id="ft_logo_grad_2" x1="10" y1="14" x2="30" y2="32" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#7612fa" />
+          <stop offset="0.5" stopColor="#fa12e3" />
+          <stop offset="1" stopColor="#fc6d2d" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
 function LinkedinIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" {...props}>
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77Z" />
     </svg>
   );
 }
 
 function FacebookIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.69.24 2.69.24v2.97h-1.52c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07Z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" {...props}>
+      <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
     </svg>
   );
 }
 
 function InstagramIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16ZM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.39A5.86 5.86 0 0 0 .63 4.14c-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.39 2.12a5.86 5.86 0 0 0 2.12 1.39c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.39 5.86 5.86 0 0 0 1.39-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.39-2.12A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm7.85-10.41a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0Z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" {...props}>
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
     </svg>
   );
 }
-
-const socials = [
-  { name: "LinkedIn", icon: LinkedinIcon, href: "https://linkedin.com" },
-  { name: "Facebook", icon: FacebookIcon, href: "https://facebook.com" },
-  { name: "Instagram", icon: InstagramIcon, href: "https://instagram.com" },
-];
-
-const compliance = ["SOC 2 Type II", "ISO 27001", "GDPR", "HIPAA"];
-
-const legal = [
-  { name: "Status", href: "/legal" },
-  { name: "Security", href: "/legal" },
-  { name: "Privacy", href: "/legal" },
-  { name: "Terms", href: "/legal" },
-  { name: "Cookie Preferences", href: "/legal" },
-];
 
 function XIcon(props) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
-      <path d="M18.9 2.25h3.34l-7.3 8.34 8.58 11.34h-6.72l-5.26-6.88-6.02 6.88H2.17l7.8-8.92L1.74 2.25h6.89l4.76 6.29 5.51-6.29Zm-1.17 17.68h1.85L7.36 4.13H5.38l12.35 15.8Z" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className="size-4" {...props}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
 }
 
+const aiLinks = [
+  "Brain",
+  "Super Agents",
+  "Ambient Agents",
+  "Notetaker",
+  "Enterprise Search",
+  "Talk to Text",
+];
+
+const downloadLinks = ["iOS & Android", "Mac & Windows", "Brain MAX"];
+
+const productLinks = [
+  "Chat",
+  "Projects",
+  "Docs & Wikis",
+  "Calendar",
+  "Dashboards",
+  "Time Tracking",
+  "Gantt Charts",
+  "Automations",
+  "Whiteboards",
+  "API",
+  "Integrations",
+];
+
+const compareLinks = [
+  "vs Atlassian",
+  "vs Microsoft Teams",
+  "vs Asana",
+  "vs ServiceNow",
+  "vs Monday",
+  "vs Slack",
+  "vs Smartsheet",
+  "vs Wrike",
+  "vs Salesforce",
+  "vs Notion",
+  "vs Airtable",
+];
+
+const companyLinks = [
+  "About Us",
+  "Careers",
+  "Customers",
+  "Affiliates",
+  "Events",
+  "Partners",
+  "Consultants",
+  "Reviews",
+  "Press",
+  "Brand",
+  "Roadmap",
+];
+
+const helpLinks = [
+  "24/7 Support",
+  "Contact Us",
+  "Get a Demo",
+  "Import",
+  "Templates",
+  "Community",
+  "ClickUp University",
+  "Webinars",
+  "Blog",
+  "Research",
+];
+
+const legalLinks = [
+  "Status",
+  "Security",
+  "Privacy",
+  "Terms",
+  "Cookie Preferences",
+];
+
 export default function Footer() {
   return (
-    <footer data-theme="dark" className="bg-bg-main">
-      <Container size="wide" className="pt-20 pb-10">
-        {/* Link columns */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
-          {footerColumns.map((col) => (
-            <div key={col.title}>
-              <h3 className="text-[13px] font-bold tracking-[0.06em] text-ink uppercase">
-                {col.title}
-              </h3>
-              <ul className="mt-4 space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-[13.5px] text-ink-secondary transition-colors hover:text-ink"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+    <footer className="w-full bg-white text-[#52525b] pt-10 pb-12 border-t border-[#e5e7eb]">
+      <div className="mx-auto w-full max-w-[1400px] px-6 sm:px-10 lg:px-12">
+        {/* Top Disclaimer Line */}
+        <div className="text-left text-[12.5px] text-[#71717a] font-normal pb-6 border-b border-[#e5e7eb] mb-8">
+          1. Our agreements ensure zero data training & retention on all third-party model providers
+        </div>
+
+        {/* 5 Navigation Columns with Logo on Top of Column 1 */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 text-left mb-14">
+          {/* Column 1: Logo + AI + Download */}
+          <div>
+            {/* ClickUp Logo */}
+            <div className="flex items-center gap-2 mb-6">
+              <ClickUpLogoMark className="size-6" />
+              <span className="font-display text-[20px] font-extrabold tracking-tight text-[#111827]">
+                ClickUp
+              </span>
             </div>
-          ))}
-        </div>
 
-        {/* Help row */}
-        <div className="mt-14 border-t border-line pt-8">
-          <h3 className="text-[13px] font-bold tracking-[0.06em] text-ink uppercase">
-            Help
-          </h3>
-          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2.5">
-            {footerHelpLinks.map((link) => (
-              <li key={link.name}>
-                <Link
-                  href={link.href}
-                  className="text-[13.5px] text-ink-secondary transition-colors hover:text-ink"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <h3 className="text-[13.5px] font-bold text-[#111827] mb-3">AI</h3>
+            <ul className="space-y-2 text-[13px]">
+              {aiLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/ai" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-        {/* Compliance + social */}
-        <div className="mt-10 flex flex-col gap-6 border-t border-line pt-8 md:flex-row md:items-center md:justify-between">
-          <ul className="flex flex-wrap items-center gap-2.5">
-            {compliance.map((badge) => (
-              <li
-                key={badge}
-                className="inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-[12px] font-semibold text-ink-secondary"
-              >
-                <ShieldCheck className="size-3.5 text-accent-green" />
-                {badge}
-              </li>
-            ))}
-          </ul>
-
-          <ul className="flex items-center gap-2">
-            {socials.map((s) => (
-              <li key={s.name}>
-                <a
-                  href={s.href}
-                  aria-label={s.name}
-                  rel="noreferrer noopener"
-                  target="_blank"
-                  className="flex size-9 items-center justify-center rounded-full border border-line text-ink-secondary transition-colors hover:border-ink-tertiary hover:text-ink"
-                >
-                  <s.icon className="size-4" />
-                </a>
-              </li>
-            ))}
-            <li>
-              <a
-                href="https://x.com"
-                aria-label="X"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="flex size-9 items-center justify-center rounded-full border border-line text-ink-secondary transition-colors hover:border-ink-tertiary hover:text-ink"
-              >
-                <XIcon className="size-3.5" />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Legal */}
-        <div className="mt-8 flex flex-col-reverse gap-5 border-t border-line pt-8 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-2.5">
-            <LogoMark className="size-6" />
-            <p className="text-[12.5px] text-ink-tertiary">
-              © {new Date().getFullYear()} {site.name}. All rights reserved.
-            </p>
+            <h3 className="text-[13.5px] font-bold text-[#111827] mt-6 mb-3">Download</h3>
+            <ul className="space-y-2 text-[13px]">
+              {downloadLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/download" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
-            {legal.map((l) => (
-              <li key={l.name}>
-                <Link
-                  href={l.href}
-                  className="text-[12.5px] text-ink-tertiary transition-colors hover:text-ink"
-                >
-                  {l.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+
+          {/* Column 2: Product */}
+          <div className="pt-[44px]">
+            <h3 className="text-[13.5px] font-bold text-[#111827] mb-3">Product</h3>
+            <ul className="space-y-2 text-[13px]">
+              {productLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/product" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 3: Compare */}
+          <div className="pt-[44px]">
+            <h3 className="text-[13.5px] font-bold text-[#111827] mb-3">Compare</h3>
+            <ul className="space-y-2 text-[13px]">
+              {compareLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/compare" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Company */}
+          <div className="pt-[44px]">
+            <h3 className="text-[13.5px] font-bold text-[#111827] mb-3">Company</h3>
+            <ul className="space-y-2 text-[13px]">
+              {companyLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/company" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 5: Help */}
+          <div className="pt-[44px]">
+            <h3 className="text-[13.5px] font-bold text-[#111827] mb-3">Help</h3>
+            <ul className="space-y-2 text-[13px]">
+              {helpLinks.map((item) => (
+                <li key={item}>
+                  <Link href="/learn" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </Container>
+
+        {/* Social Icons & Security Badges Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 pb-6 border-t border-[#e5e7eb]">
+          {/* Social Icons */}
+          <div className="flex items-center gap-5 text-[#71717a]">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#111827] transition-colors" aria-label="LinkedIn">
+              <LinkedinIcon />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#111827] transition-colors" aria-label="Facebook">
+              <FacebookIcon />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#111827] transition-colors" aria-label="Instagram">
+              <InstagramIcon />
+            </a>
+            <a href="https://x.com" target="_blank" rel="noreferrer" className="hover:text-[#111827] transition-colors" aria-label="X">
+              <XIcon />
+            </a>
+          </div>
+
+          {/* Security Compliance Badges */}
+          <div className="flex flex-wrap items-center gap-3 text-[10.5px] font-mono text-[#52525b]">
+            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
+              <span className="font-bold text-[#111827]">SOC 2</span>
+              <span className="text-[#71717a]">CERTIFIED</span>
+            </div>
+            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
+              <span className="font-bold text-[#111827]">ISO 27001</span>
+              <span className="text-[#71717a]">CERTIFIED</span>
+            </div>
+            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
+              <span className="font-bold text-[#111827]">GDPR</span>
+              <span className="text-[#71717a]">COMPLIANT</span>
+            </div>
+            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
+              <span className="font-bold text-[#111827]">HIPAA</span>
+              <span className="text-[#71717a]">COMPLIANT</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Copyright & Legal Links */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#e5e7eb] text-[12.5px] text-[#71717a]">
+          <div>© 2026 ClickUp</div>
+
+          <div className="flex flex-wrap items-center gap-6">
+            {legalLinks.map((item) => (
+              <Link key={item} href="/legal" className="hover:text-[#111827] transition-colors">
+                {item}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

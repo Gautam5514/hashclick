@@ -2,17 +2,21 @@
 
 import { useState } from "react";
 import { Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { Container, Section } from "../ui/Container";
 import { SectionHeading } from "../ui/Bits";
 import { cn } from "@/lib/utils";
 
-export default function Faq({ title = "Frequently asked questions", items }) {
+export default function Faq({ title = "Frequently asked questions", description, contactHref, items }) {
   const [open, setOpen] = useState(0);
 
   return (
     <Section className="py-20 md:py-24">
       <Container size="narrow">
         <SectionHeading title={title} />
+        {description && <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-ink-secondary">{description}</p>}
+        {contactHref && <div className="mt-7 flex justify-center"><Link href={contactHref} className="inline-flex items-center gap-3 rounded-xl bg-[#202020] px-6 py-3.5 text-[14px] font-bold text-white">Contact us <ArrowRight className="size-4"/></Link></div>}
         <ul className="mt-12 divide-y divide-line border-y border-line">
           {items.map((item, i) => {
             const isOpen = open === i;

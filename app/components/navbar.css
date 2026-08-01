@@ -1,0 +1,673 @@
+/* ============================================================
+   Navigation — geometry and colour measured off ClickUp's live
+   nav (60px bar, 1120px container, mega-menu curtain).
+   Namespaced `cu-`.
+   ============================================================ */
+
+/* --- Announcement strip (scrolls away; the bar below stays stuck) ----- */
+
+.cu-banner {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  color: #202020;
+  font-family: var(--font-inter), -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cu-banner:hover {
+  background: #f1f2f5;
+}
+
+.cu-banner strong {
+  font-weight: 700;
+}
+
+.cu-banner sup {
+  position: relative;
+  top: -0.45em;
+  font-size: 0.62em;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.cu-banner i {
+  font-style: italic;
+}
+
+.cu-banner-chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.cu-banner:hover .cu-banner-chevron {
+  transform: translateX(2px);
+}
+
+@media (max-width: 600px) {
+  .cu-banner {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+.cu-nav {
+  --cu-ink: #000;
+  --cu-ink-soft: #646464;
+  --cu-ink-muted: #838383;
+  --cu-purple: #6647f0;
+  --cu-purple-badge: #efedfd;
+  --cu-blue: #0091ff;
+  --cu-display: var(--font-jakarta), sans-serif;
+  --cu-sans: var(--font-inter), -apple-system, Roboto, Helvetica, sans-serif;
+
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  font-family: var(--cu-display);
+}
+
+.cu-backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color 0.3s;
+}
+
+.cu-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 52px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1120px;
+  height: 60px;
+  margin-inline: auto;
+  padding: 14px 20px;
+}
+
+.cu-container-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cu-logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.cu-logo svg {
+  display: block;
+  width: 100px;
+  height: 30px;
+}
+
+.cu-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* --- Triggers ------------------------------------------------------- */
+
+.cu-trigger {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 32px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--cu-ink);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cu-trigger:hover,
+.cu-trigger-open {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.cu-chevron {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.cu-chevron svg {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.cu-trigger-open .cu-chevron {
+  transform: rotate(180deg);
+}
+
+.cu-link {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  height: 32px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--cu-ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cu-link:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+  color: var(--cu-ink);
+}
+
+/* --- Right-hand actions --------------------------------------------- */
+
+.cu-cta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.cu-demo {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cu-demo:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.cu-login {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.cu-login:hover {
+  background-color: #e4e4e4;
+}
+
+.cu-signup {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 8px 12px;
+  border: unset;
+  border-radius: 8px;
+  background: #202020;
+  color: #fff;
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cu-signup:hover {
+  background: rgba(32, 32, 32, 0.85);
+}
+
+/* --- Mega-menu curtain ---------------------------------------------- */
+
+.cu-overlay {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: 9997;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 32px;
+  background-color: #fff;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Every panel is laid out at all times so the curtain can measure it; only
+   the active one is visible. */
+.cu-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.cu-panel-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cu-dropdown {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.cu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 14px;
+}
+
+.cu-column-title {
+  margin: 0;
+  color: var(--cu-ink-muted);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cu-list-tight {
+  gap: 4px;
+}
+
+/* --- Platform rows (icon + title + description) ---------------------- */
+
+.cu-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 375px;
+  padding: 6px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cu-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.cu-item-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.cu-item-icon img,
+.cu-item-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Two stacked artworks — the "active" one fades in on hover. */
+.cu-item-icon img[data-state="active"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.cu-item:hover .cu-item-icon img[data-state="active"] {
+  opacity: 1;
+}
+
+.cu-item:hover .cu-item-icon img[data-state="default"] {
+  opacity: 0;
+}
+
+.cu-item-body {
+  min-width: 0;
+}
+
+.cu-item-title {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+.cu-item-desc {
+  color: var(--cu-ink-soft);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+.cu-badge {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  background-color: var(--cu-purple-badge);
+  color: var(--cu-purple);
+  font-family: var(--cu-sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+/* --- Product rows (sprite icon + title) ------------------------------ */
+
+.cu-product {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  width: 197px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cu-product:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.cu-product-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+
+.cu-product-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.cu-product-title {
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* --- Simple text rows ----------------------------------------------- */
+
+.cu-simple {
+  display: flex;
+  align-items: center;
+  width: 211px;
+  height: 28px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cu-simple:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.cu-see-all {
+  color: var(--cu-blue);
+  font-size: 13px;
+}
+
+/* --- Customer story card -------------------------------------------- */
+
+.cu-story {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 377px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.cu-story:hover {
+  background: #f1f2f5;
+}
+
+.cu-story svg {
+  display: block;
+  width: 54px;
+  height: 32px;
+}
+
+.cu-story-quote {
+  margin: 0;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+}
+
+.cu-story-cta {
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* --- Mobile ---------------------------------------------------------- */
+
+.cu-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.cu-hamburger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--cu-ink);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.cu-mobile {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: 9998;
+  display: none;
+  overflow-y: auto;
+  width: 100%;
+  max-height: calc(100dvh - 60px);
+  padding: 8px 20px 32px;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cu-mobile-open {
+  display: block;
+}
+
+.cu-mobile-group + .cu-mobile-group {
+  border-top: 1px solid #e8e8e8;
+}
+
+.cu-mobile-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 4px;
+  border: 0;
+  background: transparent;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cu-mobile-panel {
+  padding-bottom: 12px;
+}
+
+.cu-mobile-col-title {
+  margin: 12px 0 6px;
+  color: var(--cu-ink-muted);
+  font-family: var(--cu-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.cu-mobile-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 4px;
+  color: var(--cu-ink);
+  font-family: var(--cu-sans);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cu-mobile-link img,
+.cu-mobile-link svg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .cu-links,
+  .cu-demo {
+    display: none;
+  }
+  .cu-hamburger {
+    display: flex;
+  }
+  .cu-container {
+    gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cu-overlay,
+  .cu-chevron,
+  .cu-item-icon img {
+    transition: none;
+  }
+}

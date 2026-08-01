@@ -1,4 +1,4 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Sometype_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,6 +17,13 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
+const sometype = Sometype_Mono({
+  variable: "--font-sometype",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
 export const metadata = {
   title: {
     default: `${site.name} | Software to replace all software`,
@@ -30,7 +37,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
+      className={`${inter.variable} ${jakarta.variable} ${sometype.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-clip bg-bg-main text-ink">
         <Navbar />

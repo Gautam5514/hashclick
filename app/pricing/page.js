@@ -1,9 +1,10 @@
 import PricingPlans from "../components/pricing/PricingPlans";
-import CompareTable from "../components/pricing/CompareTable";
-import LogoCloud from "../components/shared/LogoCloud";
-import Testimonials from "../components/shared/Testimonials";
+import SavingsCalculator from "../components/pricing/SavingsCalculator";
 import Faq from "../components/shared/Faq";
-import CtaBanner from "../components/shared/CtaBanner";
+import { ArrowRight, Bot, GraduationCap } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import "./pricing.css";
 
 export const metadata = {
   title: "Pricing",
@@ -46,16 +47,12 @@ export default function PricingPage() {
   return (
     <>
       <PricingPlans />
-      <LogoCloud headline="The pricing 5+ million teams already said yes to" />
-      <CompareTable />
-      <Testimonials />
-      <Faq title="Pricing questions, answered" items={faqs} />
-      <CtaBanner
-        title="Start free. Upgrade when it pays for itself."
-        subtitle="No credit card, no sales call, no seat minimums. Most teams are running real work inside an hour."
-        secondary={{ label: "Compare plans", href: "#" }}
-        showMockup={false}
-      />
+      <section className="fair-billing">
+        <div className="pricing-container fair-inner"><div><span>SUPER FAIR BILLING POLICY</span><h2>When we optimize,<br/><em>you save $</em></h2><p>When our teams save on AI costs, we pass the savings to you. When sudden increases occur, we subsidize the cost and adjust pricing gradually and transparently.</p><Link href="/legal">See our billing policy <ArrowRight size={15}/></Link></div><div className="fair-live-art"><Image src="/pricing/super-agent-billing-policy.webp" alt="Super Agent price per credit — $0.001" width={630} height={558} sizes="(max-width: 900px) 100vw, 50vw" /></div></div>
+      </section>
+      <section className="assist-section"><div className="pricing-container assist-card"><div><span>CLICKUP ASSIST</span><h2>Live training and support for AI.</h2><p>Personalized expert guidance for setup and success.</p><ul><li><Bot/>2 hours of 1:1 expert time/month</li><li><GraduationCap/>Guidance on setting up AI agents</li></ul><Link href="/signup">Get started <ArrowRight size={15}/></Link></div><div className="assist-live-art"><Image src="/pricing/clickup-assist-bg.png" alt="ClickUp Assist workspace and AI agent interface" width={1972} height={600} sizes="(max-width: 900px) 100vw, 55vw" /><span className="assist-play"><Image src="/pricing/play-icon.svg" alt="" width={24} height={24}/></span></div></div></section>
+      <SavingsCalculator />
+      <Faq title="Frequently asked questions" description="Find answers to your questions right here, and don't hesitate to contact us if you couldn't find what you're looking for." contactHref="/demo" items={faqs} />
     </>
   );
 }
