@@ -955,7 +955,32 @@
    ------------------------------------------------------------ */
 
 .b2-pillars-band {
-  padding-block: 0 80px;
+  --b2-line: #2a2a2a;
+  --b2-ink: #eee;
+  --b2-ink-2: #b4b4b4;
+  --b2-mono: var(--font-sometype), ui-monospace, "SFMono-Regular", monospace;
+  --b2-display: var(--font-jakarta), -apple-system, Roboto, Helvetica, sans-serif;
+  --b2-sans: var(--font-inter), -apple-system, Roboto, Helvetica, sans-serif;
+
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-block: 0;
+  border-inline: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+}
+
+.b2-pillars-band::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  width: 100vw;
+  height: 1px;
+  background: #252525;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .b2-pillars-header {
@@ -1013,7 +1038,7 @@
   flex-direction: column;
   gap: 0;
   width: 100%;
-  max-width: 1120px;
+  max-width: none;
   margin-inline: auto;
 }
 

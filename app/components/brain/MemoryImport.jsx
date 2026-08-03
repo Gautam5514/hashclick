@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const sources = [
   { name: "ChatGPT", icon: "/brain-2/logos/chatgpt.svg" },
   { name: "Gemini", icon: "/brain-2/logos/gemini.svg" },
@@ -7,30 +9,59 @@ const sources = [
 export default function MemoryImport() {
   return (
     <section className="bn-import" aria-label="Import memories into Brain²">
-      <div className="bn-container bn-import-inner">
-        <img className="bn-import-glow" src="/brain-2/glow.svg" alt="" aria-hidden="true" />
+      <div className="bn-import-container">
+        <div className="bn-import-card">
+          <Image
+            className="bn-import-glow"
+            src="/brain-2/glow.svg"
+            width={1000}
+            height={798}
+            alt=""
+            aria-hidden="true"
+            unoptimized
+          />
+          <Image
+            className="bn-import-noise"
+            src="/brain-2/title-noise-lg.png"
+            width={1440}
+            height={798}
+            alt=""
+            aria-hidden="true"
+          />
 
-        <div className="bn-import-lockup" aria-hidden="true">
-          {sources.map((s) => (
-            <span className="bn-import-source" key={s.name}>
-              <img src={s.icon} width="22" height="22" alt="" />
+          <div className="bn-import-lockup" aria-hidden="true">
+            <div className="bn-import-sources">
+              {sources.map((source) => (
+                <span className="bn-import-source" key={source.name}>
+                  <Image src={source.icon} width={30} height={30} alt="" unoptimized />
+                  <span>{source.name}</span>
+                </span>
+              ))}
+            </div>
+            <span className="bn-import-connector" />
+            <span className="bn-import-brain">
+              <Image src="/brain-2/brain.svg" width={46} height={46} alt="" unoptimized />
             </span>
-          ))}
-          <span className="bn-import-connector" />
-          <span className="bn-import-brain">
-            <img src="/brain-2/brain.svg" width="34" height="34" alt="" />
-          </span>
-        </div>
+          </div>
 
-        <h2 className="bn-h2 bn-import-title">
-          Bring your memory into Brain<sup>2</sup> with one-click.
-        </h2>
-        <p className="bn-lede bn-import-lede">
-          Import your ChatGPT, Claude, or any AI memory into Brain² instantly.
-        </p>
-        <a href="/signup" className="bn-btn bn-btn-primary">
-          Import Memory
-        </a>
+          <div className="bn-import-copy">
+            <h2 className="bn-import-title">
+              Bring your memory into Brain<sup>2</sup> with one-click.
+            </h2>
+            <p className="bn-import-lede">
+              Import your ChatGPT, Claude, or any AI memory into Brain<sup>2</sup> instantly.
+            </p>
+          </div>
+
+          <a href="/signup" className="bn-import-button">
+            <span className="bn-import-logo-stack" aria-hidden="true">
+              {sources.map((source) => (
+                <Image src={source.icon} width={20} height={20} alt="" unoptimized key={source.name} />
+              ))}
+            </span>
+            <span>Import Memory</span>
+          </a>
+        </div>
 
         <div className="bn-footnotes">
           <p>

@@ -40,11 +40,14 @@ export default function Faq() {
     <section className="bn-faq" aria-label="Frequently asked questions">
       <div className="bn-container">
         <header className="bn-faq-header">
-          <p className="bn-eyebrow bn-eyebrow-purple">FAQs</p>
+          <div className="bn-faq-eyebrow-row">
+            <p className="bn-eyebrow bn-eyebrow-purple">FAQs</p>
+            <span className="bn-faq-rule" aria-hidden="true" />
+          </div>
           <h2 className="bn-h2">
             You have questions
             <br />
-            <em>Brain has answers.</em>
+            Brain has answers.
           </h2>
         </header>
 

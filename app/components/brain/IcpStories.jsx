@@ -1,146 +1,197 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const roles = [
   {
     title: "Project Manager",
     desc: "Plans and rebalances the week",
-    prompt: "What's at risk this week, and how should I rebalance?",
-    reply:
-      "Three tasks slipped in Sprint 24. I moved the billing migration to Marcus, pushed the pricing copy to Thursday, and flagged the DPA with legal.",
-    chips: ["12 tasks", "Sprint 24", "3 owners"],
+    project: "Phoenix",
+    accent: "#7b68ee",
+    messages: [
+      ["Lena", "Can we still ship the onboarding flow Friday?", "2:14 pm", "L"],
+      ["Sam", "Design is done, but legal still owes us copy", "2:14 pm", "S"],
+      ["Priya", "I can pick it up after the mobile handoff", "2:15 pm", "P"],
+    ],
+    action: "Brain rebalanced 6 tasks and updated the launch plan",
   },
   {
     title: "Engineering Lead",
     desc: "Triages and runs engineering",
-    prompt: "Triage today's bugs and tell me what's blocking the release.",
-    reply:
-      "9 new bugs. 2 are release blockers — auth refresh and the CSV export timeout. I assigned both and drafted the release note.",
-    chips: ["9 bugs", "2 blockers", "PR #4182"],
+    project: "Platform",
+    accent: "#7357ff",
+    messages: [
+      ["Lena", "my PR’s still waiting for review 💀", "2:14 pm", "L"],
+      ["Sam", "we’re gonna miss the sprint", "2:14 pm", "S"],
+      ["Priya", "Marcus had to hop on the incident", "2:15 pm", "P"],
+    ],
+    action: "Brain reassigned the review and rebuilt the sprint plan",
   },
   {
     title: "Agency Owner",
     desc: "Manages every client account",
-    prompt: "Which accounts need me this week?",
-    reply:
-      "Northwind is 2 days from deadline with 4 open approvals. Vertex hasn't been touched in 9 days. I drafted check-ins for both.",
-    chips: ["6 accounts", "4 approvals", "2 at risk"],
+    project: "Client Delivery",
+    accent: "#ff5b8d",
+    messages: [
+      ["Maya", "Northwind needs the new concept today", "9:41 am", "M"],
+      ["Alex", "Vertex hasn’t approved the last round", "9:42 am", "A"],
+      ["Jon", "I’ve got capacity after lunch", "9:43 am", "J"],
+    ],
+    action: "Brain drafted both check-ins and shifted the creative team",
   },
   {
     title: "Head of Ops",
     desc: "Keeps every team in sync",
-    prompt: "Where are teams duplicating work?",
-    reply:
-      "Marketing and Product both track launch readiness in separate lists. I merged them into one view and notified both leads.",
-    chips: ["2 teams", "1 merged view", "14 tasks"],
+    project: "Operations",
+    accent: "#00b884",
+    messages: [
+      ["Noah", "Launch readiness is split across two lists", "11:06 am", "N"],
+      ["Ava", "Product is tracking a different deadline", "11:07 am", "A"],
+      ["Mia", "Can we get one source of truth?", "11:08 am", "M"],
+    ],
+    action: "Brain merged both workflows and notified every owner",
   },
   {
     title: "Marketing Manager",
     desc: "Ships campaigns end to end",
-    prompt: "Build the Q3 launch campaign plan.",
-    reply:
-      "Created 18 tasks across brief, creative, and paid. Copy drafts are in the doc, and the calendar is blocked through launch week.",
-    chips: ["18 tasks", "1 doc", "Calendar"],
+    project: "Q3 Launch",
+    accent: "#ff9f1a",
+    messages: [
+      ["Zoë", "Paid creative is ready for review", "3:21 pm", "Z"],
+      ["Eli", "The landing page copy needs one more pass", "3:22 pm", "E"],
+      ["Nina", "Launch calendar still has two gaps", "3:23 pm", "N"],
+    ],
+    action: "Brain filled the calendar and created the missing briefs",
   },
   {
     title: "Founder / CEO",
     desc: "Your always-on chief of staff",
-    prompt: "Give me the state of the business.",
-    reply:
-      "Revenue is tracking 4% ahead of plan. Two OKRs are amber. Hiring is behind by 3 roles. Full brief is in your inbox.",
-    chips: ["4 OKRs", "Weekly brief", "Hiring"],
+    project: "Company HQ",
+    accent: "#ef4c5b",
+    messages: [
+      ["Rina", "Revenue is tracking ahead of the month", "8:31 am", "R"],
+      ["Owen", "Two company OKRs moved to amber", "8:32 am", "O"],
+      ["Kai", "Hiring is behind by three roles", "8:33 am", "K"],
+    ],
+    action: "Brain prepared the brief and assigned every follow-up",
   },
 ];
 
-const DURATION = 6000;
+const DURATION = 6200;
+
+function Sparkle() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2c.7 5.7 4.3 9.3 10 10-5.7.7-9.3 4.3-10 10-.7-5.7-4.3-9.3-10-10 5.7-.7 9.3-4.3 10-10Z" fill="currentColor" />
+    </svg>
+  );
+}
 
 export default function IcpStories() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
+  const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
+  const elapsedRef = useRef(0);
 
-  // The timer restarts whenever `active` changes, whether that came from the
-  // auto-advance below or from a click, so no timestamp is touched in render.
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
-
-    let startedAt = null;
-    let frame = 0;
-
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    let startedAt;
+    let frame;
     const tick = (now) => {
-      if (startedAt === null) startedAt = now;
-      const t = (now - startedAt) / DURATION;
-      if (t >= 1) {
-        setActive((a) => (a + 1) % roles.length);
+      if (startedAt === undefined) startedAt = now - elapsedRef.current;
+      const elapsed = now - startedAt;
+      elapsedRef.current = elapsed;
+      const next = elapsed / DURATION;
+      if (next >= 1) {
+        elapsedRef.current = 0;
+        setProgress(0);
+        setActive((value) => (value + 1) % roles.length);
         return;
       }
-      setProgress(t);
+      setProgress(next);
       frame = requestAnimationFrame(tick);
     };
-
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [active]);
+  }, [active, paused]);
 
-  const pick = (i) => {
-    setActive(i);
+  const selectRole = (index) => {
+    elapsedRef.current = 0;
     setProgress(0);
+    setActive(index);
   };
 
   const role = roles[active];
 
   return (
-    <section className="bn-icp" aria-label="One Brain. Any job.">
+    <section className="bn-icp" aria-labelledby="bn-icp-title">
       <div className="bn-container bn-icp-container">
         <header className="bn-icp-header">
           <p className="bn-eyebrow bn-eyebrow-purple">One Brain. Any job.</p>
-          <h2 className="bn-h2">
-            Brain<sup>2</sup> already knows what to do,
-            <br />
+          <div className="bn-icp-rule" />
+          <h2 className="bn-h2" id="bn-icp-title">
+            Brain<sup>2</sup> already knows what to do,<br />
             <em>watch it work.</em>
           </h2>
           <p className="bn-lede">
-            Your team&apos;s entire way of working is already inside Brain². Just ask. It produces
-            what you need, the right way, every time.
+            Your team&apos;s entire way of working is already inside Brain². Just ask. It produces what you
+            need, the right way, every time.
           </p>
-          <a href="/signup" className="bn-btn bn-btn-primary bn-btn-inline">
-            Get started
-          </a>
+          <a href="/signup" className="bn-btn bn-btn-light bn-btn-inline">Get started</a>
         </header>
 
-        <div className="bn-tab-strip" role="tablist">
-          {roles.map((r, i) => (
-            <button
-              key={r.title}
-              type="button"
-              role="tab"
-              aria-selected={i === active}
-              className={`bn-tab${i === active ? " bn-tab-active" : ""}`}
-              onClick={() => pick(i)}
-            >
-              <span className="bn-tab-title">{r.title}</span>
-              <span className="bn-tab-desc">{r.desc}</span>
-              <span className="bn-tab-underline">
-                <span
-                  className="bn-tab-progress"
-                  style={{ "--progress": i === active ? progress : 0 }}
-                />
-              </span>
-            </button>
-          ))}
-        </div>
+        <div className="bn-icp-demo">
+          <div className="bn-role-list" role="tablist" aria-label="Choose a role">
+            {roles.map((item, index) => (
+              <button
+                key={item.title}
+                type="button"
+                role="tab"
+                aria-selected={index === active}
+                className={`bn-role${index === active ? " bn-role-active" : ""}`}
+                onClick={() => selectRole(index)}
+              >
+                <span className="bn-role-progress"><i style={{ "--progress": index === active ? progress : 0 }} /></span>
+                <strong>{item.title}</strong>
+                <small>{item.desc}</small>
+              </button>
+            ))}
+          </div>
 
-        <div className="bn-stage">
-          <span className="bn-stage-glow" aria-hidden="true" />
-          <div className="bn-stage-chat" key={active}>
-            <div className="bn-msg bn-msg-user">{role.prompt}</div>
-            <div className="bn-msg bn-msg-brain">
-              {role.reply}
-              <span className="bn-msg-chips">
-                {role.chips.map((c) => (
-                  <span key={c}>{c}</span>
+          <div className="bn-workspace-wrap">
+            <span className="bn-workspace-aurora" aria-hidden="true" />
+            <div className="bn-workspace" key={active}>
+              <div className="bn-workspace-topbar">
+                <div className="bn-project-name">
+                  <span style={{ background: role.accent }}>C</span>
+                  <strong>{role.project}</strong>
+                  <i>⌄</i>
+                </div>
+                <div className="bn-project-actions"><span>♧</span><span>♙</span><strong>Share</strong></div>
+              </div>
+              <div className="bn-workspace-tabs">
+                <span className="bn-chat-icon">#</span><strong>Chat</strong><i />
+                <span className="bn-view-plus">＋</span><span>View</span>
+              </div>
+              <div className="bn-chat-feed">
+                {role.messages.map(([name, text, time, initial], index) => (
+                  <div className="bn-chat-row" style={{ "--delay": `${index * 120}ms` }} key={name}>
+                    <span className={`bn-avatar bn-avatar-${index}`}>{initial}</span>
+                    <div><p><strong>{name}</strong><time>{time}</time></p><span>{text}</span></div>
+                  </div>
                 ))}
-              </span>
+                <div className="bn-brain-action">
+                  <span><Sparkle /></span>
+                  <div><strong>Brain² is working</strong><p>{role.action}</p></div>
+                </div>
+              </div>
+              <button className="bn-demo-pause" type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play demo" : "Pause demo"}>
+                <span style={{ "--progress": progress }} />{paused ? "▶" : "Ⅱ"}
+              </button>
+              <div className="bn-composer">
+                <p>Write to {role.project} project</p>
+                <div><span>＋</span><span>♧</span><span>@</span><span>◉</span><span>☺</span><span>▣</span><span>♩</span><b>➤</b></div>
+              </div>
             </div>
           </div>
         </div>

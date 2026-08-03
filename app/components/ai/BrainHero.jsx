@@ -101,9 +101,6 @@ export default function BrainHero() {
                 Watch the demo
               </Button>
             </div>
-            <p className="mt-4 text-[13px] text-ink-tertiary">
-              No card required. Unlimited access starts at $9 per user/month.
-            </p>
 
             <ul className="mt-8 flex flex-wrap items-center gap-2">
               {platforms.map((p) => (

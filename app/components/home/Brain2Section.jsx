@@ -115,7 +115,7 @@ const agents = [
 
 /* ---------------- Card visuals ---------------- */
 
-function ContextVisual() {
+export function ContextVisual() {
   return (
     <div className="b2-ctx-visual" role="presentation" aria-hidden="true">
       <div className="b2-ctx-scene">
@@ -146,7 +146,7 @@ function ContextVisual() {
   );
 }
 
-function IntelligenceVisual() {
+export function IntelligenceVisual() {
   return (
     <div className="b2-int-visual" role="presentation" aria-hidden="true">
       <div className="b2-int-menu">
@@ -169,7 +169,7 @@ function IntelligenceVisual() {
   );
 }
 
-function PersonalityVisual() {
+export function PersonalityVisual() {
   return (
     <div className="b2-per-visual" role="presentation" aria-hidden="true">
       <div className="b2-per-panel">
@@ -494,6 +494,20 @@ export function BrainWhatsNewGrid() {
   );
 }
 
+export function BrainWhatsNewSection() {
+  return (
+    <div className="b2-pillars-band">
+      <header className="b2-pillars-header">
+        <h3 className="b2-pillars-title">
+          Nothing comes close to Brain<sup>2</sup>
+        </h3>
+        <p className="b2-pillars-sub">We rebuilt Brain from the ground up.</p>
+      </header>
+      <BrainWhatsNewGrid />
+    </div>
+  );
+}
+
 export default function Brain2Section() {
   return (
     <section className="b2-wrapper" aria-labelledby="brain2-title">
@@ -558,16 +572,7 @@ export default function Brain2Section() {
         </div>
 
         {/* Pillars + what's new */}
-        <div className="b2-pillars-band">
-          <header className="b2-pillars-header">
-            <h3 className="b2-pillars-title">
-              Nothing comes close to Brain<sup>2</sup>
-            </h3>
-            <p className="b2-pillars-sub">We rebuilt Brain from the ground up.</p>
-          </header>
-
-          <BrainWhatsNewGrid />
-        </div>
+        <BrainWhatsNewSection />
 
         {/* Closing band */}
         <div className="b2-closing">
