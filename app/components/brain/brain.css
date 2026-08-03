@@ -345,7 +345,7 @@
 .bn-loop-stage {
   position: relative;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1120px;
   height: 620px;
   margin-inline: auto;
   overflow: hidden;
@@ -366,7 +366,7 @@
 
 .bn-cv-zone-input {
   left: 0;
-  width: 30%;
+  width: 26%;
   mask-image: linear-gradient(90deg, transparent 0, #000 34%, #000 72%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 34%, #000 72%, transparent 100%);
 }
@@ -445,7 +445,7 @@
 
 .bn-cv-zone-output {
   right: 0;
-  width: 30%;
+  width: 26%;
   mask-image: linear-gradient(90deg, transparent 0, #000 26%, #000 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 26%, #000 70%, transparent 100%);
 }
@@ -644,7 +644,7 @@
   }
   100% {
     opacity: 0;
-    transform: translateX(64px);
+    transform: translateX(48px);
   }
 }
 
@@ -901,11 +901,11 @@
 
 /* Sits clear of the self-organizing node it leads into. */
 .bn-loop-label-left {
-  transform: translate(calc(-50% - 216px), -50%);
+  transform: translate(calc(-50% - 200px), -50%);
 }
 /* Sits clear of the memory-axis dot run that leads into it. */
 .bn-loop-label-right {
-  transform: translate(calc(-50% + 235px), -50%);
+  transform: translate(calc(-50% + 215px), -50%);
 }
 
 /* Pillar cards ----------------------------------------------------------- */
@@ -2658,9 +2658,10 @@
 .bn-access-hero {
   position: relative;
   display: grid;
-  grid-template-columns: 36% 64%;
+  /* 400px / 678px of the 1078px grid in the reference. */
+  grid-template-columns: 37.1% 62.9%;
   overflow: hidden;
-  height: 315px;
+  height: 399px;
   margin: 0 20px;
   border: 1px solid #292929;
   background: #030303;
@@ -2855,13 +2856,13 @@
 
 .bn-access-wave {
   position: absolute;
-  top: 38px;
   left: 24px;
+  right: 24px;
+  top: 38px;
   display: flex;
   gap: 3px;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 8px);
   height: 86px;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -2869,9 +2870,10 @@
     linear-gradient(120deg, #ff1679, #ff862e, #8f35ff, #00b7ff) border-box;
 }
 
+/* Height comes from the inline style — calc() has no modulo. */
 .bn-access-wave i {
+  flex-shrink: 0;
   width: 3px;
-  height: calc(5px + (var(--bar) % 7) * 2px);
   border-radius: 3px;
   background: #8d8d8d;
   animation: bn-access-wave 1.4s ease-in-out infinite alternate;
@@ -2972,10 +2974,12 @@
 }
 
 /* The rule escapes the container and spans the viewport. */
+/* Aligned to the navbar container rather than bleeding to the viewport. */
 .bn-full-divider {
   width: 100%;
+  max-width: 1120px;
   height: 1px;
-  margin-block: 56px 0;
+  margin: 56px auto 0;
   background: #252525;
 }
 

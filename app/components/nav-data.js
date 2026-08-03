@@ -48,7 +48,7 @@ export const navMenus = [
         title: "Projects",
         kind: "product",
         items: [
-          { label: "Tasks", href: "/product", icon: "nav-icon-tasks" },
+          { label: "Tasks", href: "/features/tasks", icon: "nav-icon-tasks" },
           { label: "Dashboards", href: "/product", icon: "nav-icon-dashboards" },
           { label: "Board", href: "/product", icon: "nav-icon-views" },
           { label: "Gantt", href: "/product", icon: "nav-icon-hierarchy" },

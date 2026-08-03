@@ -262,37 +262,38 @@ export default function BrainHero() {
           </div>
 
           {/* viewBox is unscaled (1:1) at the 1400px stage and centred with a +100 x-offset,
-              so the core sits at (600, 310) with a rim radius of 93. Every distance below is
-              a multiple of that rim, measured off the reference. */}
-          <svg className="bn-cv-wires" viewBox="0 0 1200 620" fill="none" aria-hidden="true">
+              so the core sits at (560, 310) with a rim radius of 93. The viewBox matches the
+              1120px stage exactly, so it renders 1:1 and every coordinate is a real pixel.
+              Distances are multiples of the rim, measured off the reference. */}
+          <svg className="bn-cv-wires" viewBox="0 0 1120 620" fill="none" aria-hidden="true">
             {/* The four pillar cards converge on the two horizontal-axis nodes,
                 so the strands read as one bowtie passing through the core. */}
-            <path className="bn-wire" d="M182 162 C 312 188, 400 264, 505 310" />
-            <path className="bn-wire" d="M182 458 C 312 432, 400 356, 505 310" />
-            <path className="bn-wire" d="M1018 162 C 888 188, 800 264, 695 310" />
-            <path className="bn-wire" d="M1018 458 C 888 432, 800 356, 695 310" />
+            <path className="bn-wire" d="M274 162 C 372 186, 414 262, 465 310" />
+            <path className="bn-wire" d="M274 458 C 372 434, 414 358, 465 310" />
+            <path className="bn-wire" d="M846 162 C 748 186, 706 262, 655 310" />
+            <path className="bn-wire" d="M846 458 C 748 434, 706 358, 655 310" />
 
             {/* Self-improving axis: verdicts travel up out of the core. */}
-            <path className="bn-wire bn-wire-dash bn-wire-axis" d="M600 215 L600 112" />
+            <path className="bn-wire bn-wire-dash bn-wire-axis" d="M560 215 L560 112" />
 
             {/* Orchestration axis: the core fans work out to each model. */}
-            <path className="bn-wire bn-wire-dash" d="M600 405 L509 477" />
-            <path className="bn-wire bn-wire-dash" d="M600 405 L600 481" />
-            <path className="bn-wire bn-wire-dash" d="M600 405 L691 477" />
+            <path className="bn-wire bn-wire-dash" d="M560 405 L469 477" />
+            <path className="bn-wire bn-wire-dash" d="M560 405 L560 481" />
+            <path className="bn-wire bn-wire-dash" d="M560 405 L651 477" />
 
             {/* Self-organizing axis: a short lead-in from the label to the node. */}
-            <path className="bn-wire bn-wire-dash bn-wire-memory" d="M470 310 L496 310" />
+            <path className="bn-wire bn-wire-dash bn-wire-memory" d="M430 310 L456 310" />
 
             {/* Cardinal nodes sit on the rim itself, not outside it. */}
-            <circle className="bn-node bn-node-lg" cx="505" cy="310" r="5" />
-            <circle className="bn-node bn-node-lg" cx="695" cy="310" r="5" />
-            <circle className="bn-node bn-node-lg" cx="600" cy="215" r="4.5" />
-            <circle className="bn-node bn-node-lg" cx="600" cy="405" r="4.5" />
+            <circle className="bn-node bn-node-lg" cx="465" cy="310" r="5" />
+            <circle className="bn-node bn-node-lg" cx="655" cy="310" r="5" />
+            <circle className="bn-node bn-node-lg" cx="560" cy="215" r="4.5" />
+            <circle className="bn-node bn-node-lg" cx="560" cy="405" r="4.5" />
 
             {/* Memory axis: distilled knowledge streams out toward the ticker. */}
-            <path className="bn-wire bn-wire-dash bn-wire-memory" d="M706 310 L722 310" />
+            <path className="bn-wire bn-wire-dash bn-wire-memory" d="M666 310 L682 310" />
             {[0, 1, 2].map((i) => (
-              <circle key={i} className="bn-node-flow" cx="732" cy="310" r="2.6" style={{ "--i": i }} />
+              <circle key={i} className="bn-node-flow" cx="692" cy="310" r="2.6" style={{ "--i": i }} />
             ))}
           </svg>
 

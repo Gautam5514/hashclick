@@ -26,7 +26,7 @@ export default function Accessibility() {
               Full agent management<br />
               on the go.
             </h3>
-            <a href="/signup" className="bn-btn bn-btn-primary">
+            <a href="/signup" className="bn-btn bn-btn-light">
               Get started
             </a>
 
@@ -89,9 +89,14 @@ export default function Accessibility() {
 
           <article className="bn-access-capability">
             <div className="bn-access-cap-visual bn-access-voice">
+              {/* Heights are computed here: calc() has no modulo operator, so
+                  deriving them in CSS silently invalidates the declaration. */}
               <div className="bn-access-wave">
                 {Array.from({ length: 35 }).map((_, index) => (
-                  <i key={index} style={{ "--bar": index }} />
+                  <i
+                    key={index}
+                    style={{ "--bar": index, height: `${5 + ((index * 5) % 7) * 5}px` }}
+                  />
                 ))}
               </div>
               <p>Stop&nbsp;&nbsp; ⌥⌘ &nbsp; | &nbsp; Close&nbsp; Esc&nbsp;&nbsp; ⛶</p>
