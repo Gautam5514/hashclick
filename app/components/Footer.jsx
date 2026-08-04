@@ -186,7 +186,24 @@ export default function Footer() {
             <ul className="space-y-2 text-[13px]">
               {productLinks.map((item) => (
                 <li key={item}>
-                  <Link href="/product" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                  <Link
+                    href={
+                      item === "Chat"
+                        ? "/features/chat"
+                        : item === "Dashboards"
+                        ? "/features/dashboards"
+                        : item === "Tasks"
+                        ? "/features/tasks"
+                        : item === "Docs & Wikis" || item === "Docs"
+                        ? "/features/docs"
+                        : item === "Calendar"
+                        ? "/features/calendar"
+                        : item === "Board view" || item === "Board"
+                        ? "/features/kanban-board"
+                        : "/product"
+                    }
+                    className="hover:text-[#111827] transition-colors leading-[1.7] block"
+                  >
                     {item}
                   </Link>
                 </li>

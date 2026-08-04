@@ -112,7 +112,7 @@
 
 .task-foundation { padding-top: 116px; padding-bottom: 40px; background: #fdfdfd; }
 .task-foundation-heading { max-width: none; margin-bottom: 76px; }
-.task-foundation-heading h2 { overflow: visible; padding-bottom: .1em; font-size: clamp(36px, 4.25vw, 56px); line-height: 1.14; background: linear-gradient(90deg, #242424 15%, #242424 48%, #929292 84%); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.task-foundation-heading h2 { overflow: visible; padding-bottom: .1em; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.18; background: linear-gradient(90deg, #242424 15%, #242424 48%, #929292 84%); background-clip: text; -webkit-background-clip: text; color: transparent; }
 .task-foundation-heading > p:not(.task-eyebrow) { max-width: 840px; color: #6b6b6b; font-size: 17px; line-height: 1.42; }
 .task-workflow-grid { overflow: hidden; border: 1px solid var(--task-line); border-radius: 0; background: #fff; }
 .task-workflow-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: 500px; }
@@ -158,16 +158,16 @@
 
 .task-ai { background: #fafafa; }
 .task-ai > .task-shell { max-width: 1440px; }
-.task-ai .task-heading { max-width: 1180px; margin-bottom: 72px; }
-.task-ai .task-heading .task-eyebrow { margin-bottom: 30px; font-size: 16px; letter-spacing: .12em; }
-.task-ai .task-heading h2 { background: linear-gradient(90deg, #202021 0%, #232324 43%, #555557 72%, #858587 100%); color: transparent; font-size: clamp(54px, 5vw, 76px); line-height: 1.06; letter-spacing: -.057em; -webkit-background-clip: text; background-clip: text; }
+.task-ai .task-heading { max-width: 1040px; margin-bottom: 56px; margin-inline: auto; text-align: center; }
+.task-ai .task-heading .task-eyebrow { margin-bottom: 24px; font-size: 15px; letter-spacing: .12em; }
+.task-ai .task-heading h2 { width: 100%; max-width: 960px; margin-inline: auto; overflow: visible; padding-bottom: 4px; background: linear-gradient(90deg, #202021 0%, #232324 43%, #555557 72%, #858587 100%); color: transparent; font-size: clamp(30px, 3.5vw, 48px); line-height: 1.16; letter-spacing: -.04em; white-space: normal; -webkit-background-clip: text; background-clip: text; }
 .task-ai-grid { border: 1px solid var(--task-line); border-radius: 16px; overflow: hidden; background: #fff; }
 .task-ai-grid article { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; }
 .task-ai-grid article + article { border-top: 1px solid var(--task-line); }
 .task-ai-grid article:nth-child(2) .task-ai-copy { order: 2; }
 .task-ai-copy { display: flex; flex-direction: column; justify-content: center; padding: 64px 54px; }
-.task-ai-copy h3 { margin: 20px 0 18px; font: 700 clamp(34px, 4vw, 49px)/1.1 var(--font-jakarta), sans-serif; letter-spacing: -.04em; }
-.task-ai-copy > p:not(.task-eyebrow) { margin: 0; color: var(--task-muted); font-size: 18px; line-height: 1.48; }
+.task-ai-copy h3 { margin: 20px 0 18px; font: 700 clamp(30px, 3vw, 42px)/1.1 var(--font-jakarta), sans-serif; letter-spacing: -.04em; }
+.task-ai-copy > p:not(.task-eyebrow) { margin: 0; color: var(--task-muted); font-size: 17px; line-height: 1.48; }
 .task-ai-image { position: relative; overflow: hidden; border-left: 1px solid var(--task-line); }
 .task-ai-grid article:nth-child(2) .task-ai-image { border-right: 1px solid var(--task-line); border-left: 0; }
 .task-ai-image img { object-fit: cover; }
@@ -175,10 +175,22 @@
 .task-dark-link { display: inline-flex; gap: 8px; align-items: center; padding: 0 16px; border-radius: 9px; background: #222; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; }
 .task-dark-link svg { width: 16px; }
 
-.task-feature-section { padding-block: 102px 112px; background: #fff; }
+.task-feature-section { padding-block: 84px 96px; background: #fff; }
 .task-feature-shell { max-width: 1120px; }
-.task-feature-heading { max-width: none; margin-bottom: 70px; }
-.task-feature-heading h2 { width: max-content; max-width: 100%; margin-inline: auto; padding-bottom: 10px; background: linear-gradient(90deg, #1f1f20 0%, #222 48%, #656566 76%, #9a9a9c 100%); color: transparent; font-size: clamp(42px, 4vw, 58px); line-height: 1.14; letter-spacing: -.052em; white-space: nowrap; -webkit-background-clip: text; background-clip: text; }
+.task-feature-heading { max-width: 900px; margin-bottom: 56px; margin-inline: auto; text-align: center; }
+.task-feature-heading h2 { width: 100%; max-width: 900px; margin-inline: auto; overflow: visible; padding-bottom: 6px; background: linear-gradient(90deg, #1f1f20 0%, #222 48%, #656566 76%, #9a9a9c 100%); color: transparent; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.18; letter-spacing: -.04em; white-space: normal; word-break: normal; -webkit-background-clip: text; background-clip: text; }
+.task-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 54px; row-gap: 48px; }
+.task-feature-grid article { display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; column-gap: 15px; align-items: start; min-width: 0; }
+.task-feature-grid article > span { display: grid; grid-row: 1 / 3; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: #f7f7f8; color: #6946ff; }
+.task-feature-grid svg { width: 23px; height: 23px; stroke-width: 2.1; }
+.task-feature-grid h3 { margin: 0 0 6px; font: 700 16px/1.25 var(--font-jakarta), sans-serif; letter-spacing: -.018em; }
+.task-feature-grid p { margin: 0; color: #6d6d72; font-size: 13px; line-height: 1.42; }
+
+.task-platform { padding-block: 96px 108px; background: #fff; }
+.task-platform-shell { max-width: 1200px; }
+.task-platform-heading { max-width: 960px; margin-bottom: 56px; margin-inline: auto; text-align: center; }
+.task-platform-heading .task-eyebrow { margin-bottom: 18px; font-size: 14px; letter-spacing: .1em; }
+.task-platform-heading h2 { width: 100%; max-width: 900px; margin-inline: auto; overflow: visible; padding: 0 12px 10px; background: linear-gradient(90deg, #202021 0%, #303031 50%, #777779 100%); color: transparent; font-size: clamp(28px, 3.2vw, 44px) !important; line-height: 1.18; letter-spacing: -.04em; white-space: normal; -webkit-background-clip: text; background-clip: text; }
 .task-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 54px; row-gap: 48px; }
 .task-feature-grid article { display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; column-gap: 15px; align-items: start; min-width: 0; }
 .task-feature-grid article > span { display: grid; grid-row: 1 / 3; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: #f7f7f8; color: #6946ff; }
@@ -211,19 +223,130 @@
 .task-platform-grid b { font-size: 15px; line-height: 1.2; transition: color .2s; }
 .task-platform-grid small { overflow-wrap: anywhere; color: var(--task-muted); font-size: 13px; line-height: 1.3; }
 
-.task-faq-list { max-width: 900px; margin-inline: auto; border-top: 1px solid var(--task-line); }
-.task-faq-list article { border-bottom: 1px solid var(--task-line); }
-.task-faq-list button { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 24px 4px; border: 0; background: none; color: var(--task-ink); font: 700 17px/1.3 var(--font-jakarta), sans-serif; text-align: left; cursor: pointer; }
-.task-faq-list button svg { width: 18px; transition: transform .25s; }
+.task-faq-header { text-align: center; margin-bottom: 48px; }
+.task-faq-header h2 { display: inline-block; margin: 0; font: 800 clamp(38px, 4.5vw, 56px)/1.1 var(--font-jakarta), sans-serif; letter-spacing: -.04em; background: linear-gradient(90deg, #171717 0%, #171717 48%, #6b7280 82%, #9ca3af 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.task-faq-list { max-width: 850px; margin-inline: auto; border-top: 1px solid #e4e4e7; }
+.task-faq-list article { border-bottom: 1px solid #e4e4e7; }
+.task-faq-list button { display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 22px 4px; border: 0; background: none; color: #27272a; font: 600 17px/1.35 var(--font-jakarta), sans-serif; text-align: left; cursor: pointer; }
+.task-faq-list button svg { width: 18px; height: 18px; color: #52525b; flex-shrink: 0; transition: transform .25s ease; }
 .task-faq-list article.open button svg { transform: rotate(180deg); }
 .task-faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
 .task-faq-answer p { overflow: hidden; margin: 0; color: var(--task-muted); font-size: 15px; line-height: 1.6; }
 .task-faq-list article.open .task-faq-answer { grid-template-rows: 1fr; }
 .task-faq-list article.open .task-faq-answer p { padding: 0 4px 26px; }
 
-.task-final { padding: 90px 0; background: linear-gradient(135deg, #5b30f5, #e238d1 62%, #ff7948); color: #fff; text-align: center; }
-.task-final h2 { max-width: 800px; margin: 0 auto 28px; font: 700 clamp(42px, 5.5vw, 68px)/1.05 var(--font-jakarta), sans-serif; letter-spacing: -.05em; }
-.task-final p { margin: 14px 0 0; opacity: .78; }
+.task-final-section { padding-block: 40px 80px; }
+.task-final-card {
+  position: relative;
+  background: linear-gradient(135deg, #7c3aed 0%, #db2777 52%, #ff523b 100%);
+  border-radius: 28px;
+  padding: 56px 56px 0;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.15);
+}
+.task-final-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.task-final-title {
+  margin: 0;
+  font: 700 clamp(30px, 3.8vw, 44px)/1.1 var(--font-jakarta), sans-serif;
+  letter-spacing: -.03em;
+  color: #ffffff;
+  max-width: 520px;
+}
+.task-final-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.task-final-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #111111;
+  padding: 14px 26px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+.task-final-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+.task-final-subtext {
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.task-final-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 36px;
+  margin-bottom: 40px;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+.task-final-slider-track {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  width: max-content;
+  animation: taskMarquee 26s linear infinite;
+}
+.task-final-slider-track:hover {
+  animation-play-state: paused;
+}
+@keyframes taskMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+.task-final-logo-item {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  opacity: 0.78;
+  white-space: nowrap;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+.task-final-logo-item:hover {
+  opacity: 1;
+}
+.task-final-visual {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.task-final-mockup {
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: none;
+  box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.28);
+  display: block;
+}
 
 @media (max-width: 900px) {
   .task-section { padding-block: 70px; }
@@ -247,10 +370,10 @@
   .task-feature-section { padding-block: 76px; }
   .task-feature-shell { width: calc(100% - 40px); padding-inline: 0; }
   .task-feature-heading { margin-bottom: 46px; }
-  .task-feature-heading h2 { font-size: clamp(42px, 12vw, 58px); white-space: normal; }
+  .task-feature-heading h2 { font-size: clamp(24px, 7vw, 34px); white-space: normal; word-break: normal; }
   .task-ai .task-heading { margin-bottom: 46px; }
   .task-ai .task-heading .task-eyebrow { margin-bottom: 20px; font-size: 14px; }
-  .task-ai .task-heading h2 { font-size: clamp(44px, 12vw, 58px); }
+  .task-ai .task-heading h2 { font-size: clamp(26px, 7vw, 36px); white-space: normal; word-break: normal; }
   .task-hero-copy h1 { font-size: clamp(46px, 14vw, 66px); }
   .task-hero-lede { font-size: 17px; }
   .task-hero-action { align-items: flex-start; flex-direction: column; }

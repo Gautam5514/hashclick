@@ -12,6 +12,31 @@ const items = [
 ];
 
 export default function TasksFaq() {
-  const [open, setOpen] = useState(0);
-  return <section className="task-section task-faq"><div className="task-shell"><header className="task-heading"><p className="task-eyebrow">FAQs</p><h2>Questions? We&apos;ve got answers.</h2></header><div className="task-faq-list">{items.map(([q,a],i) => <article className={open === i ? "open" : ""} key={q}><button type="button" aria-expanded={open === i} onClick={() => setOpen(open === i ? -1 : i)}><span>{q}</span><ChevronDown /></button><div className="task-faq-answer"><p>{a}</p></div></article>)}</div></div></section>;
+  const [open, setOpen] = useState(-1);
+  return (
+    <section className="task-section task-faq">
+      <div className="task-shell">
+        <header className="task-faq-header">
+          <h2>FAQs</h2>
+        </header>
+        <div className="task-faq-list">
+          {items.map(([q, a], i) => (
+            <article className={open === i ? "open" : ""} key={q}>
+              <button
+                type="button"
+                aria-expanded={open === i}
+                onClick={() => setOpen(open === i ? -1 : i)}
+              >
+                <span>{q}</span>
+                <ChevronDown />
+              </button>
+              <div className="task-faq-answer">
+                <p>{a}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

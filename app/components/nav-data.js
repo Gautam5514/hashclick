@@ -49,8 +49,8 @@ export const navMenus = [
         kind: "product",
         items: [
           { label: "Tasks", href: "/features/tasks", icon: "nav-icon-tasks" },
-          { label: "Dashboards", href: "/product", icon: "nav-icon-dashboards" },
-          { label: "Board", href: "/product", icon: "nav-icon-views" },
+          { label: "Dashboards", href: "/features/dashboards", icon: "nav-icon-dashboards" },
+          { label: "Board", href: "/features/kanban-board", icon: "nav-icon-views" },
           { label: "Gantt", href: "/product", icon: "nav-icon-hierarchy" },
         ],
       },
@@ -58,7 +58,7 @@ export const navMenus = [
         title: "Communication",
         kind: "product",
         items: [
-          { label: "Chat", href: "/product", icon: "nav-icon-chat" },
+          { label: "Chat", href: "/features/chat", icon: "nav-icon-chat" },
           { label: "SyncUp", href: "/product", icon: "nav-icon-syncup" },
           { label: "Inbox", href: "/product", icon: "nav-icon-inbox" },
           { label: "Clips", href: "/product", icon: "nav-icon-rapid-views" },
@@ -68,9 +68,9 @@ export const navMenus = [
         title: "Knowledge",
         kind: "product",
         items: [
-          { label: "Docs", href: "/product", icon: "nav-icon-docs" },
+          { label: "Docs", href: "/features/docs", icon: "nav-icon-docs" },
           { label: "Whiteboards", href: "/product", icon: "nav-icon-whiteboards" },
-          { label: "Wiki", href: "/product", icon: "nav-icon-wiki" },
+          { label: "Wiki", href: "/features/docs", icon: "nav-icon-wiki" },
           { label: "Forms", href: "/product", icon: "nav-icon-forms" },
         ],
       },
@@ -78,7 +78,7 @@ export const navMenus = [
         title: "Time",
         kind: "product",
         items: [
-          { label: "Calendar", href: "/product", icon: "nav-icon-calendar" },
+          { label: "Calendar", href: "/features/calendar", icon: "nav-icon-calendar" },
           { label: "Scheduling", href: "/product", icon: "nav-icon-scheduling" },
           { label: "Automations", href: "/product", icon: "nav-icon-automations" },
           { label: "Time tracking", href: "/product", icon: "nav-icon-time-tracking" },
@@ -224,11 +224,11 @@ export const footerColumns = [
   {
     title: "Product",
     links: [
-      { name: "Chat", href: "/product#chat" },
+      { name: "Chat", href: "/features/chat" },
       { name: "Projects", href: "/product#projects" },
-      { name: "Docs & Wikis", href: "/product#docs" },
-      { name: "Calendar", href: "/product#calendar" },
-      { name: "Dashboards", href: "/product#dashboards" },
+      { name: "Docs & Wikis", href: "/features/docs" },
+      { name: "Calendar", href: "/features/calendar" },
+      { name: "Dashboards", href: "/features/dashboards" },
       { name: "Time Tracking", href: "/product#time" },
       { name: "Gantt Charts", href: "/product#gantt" },
       { name: "Automations", href: "/product#automations" },
