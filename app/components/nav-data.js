@@ -104,9 +104,9 @@ export const navMenus = [
         title: "Teams",
         kind: "simple",
         items: [
-          { label: "Project management", href: "/solutions" },
-          { label: "Product development", href: "/solutions" },
-          { label: "Operations", href: "/solutions" },
+          { label: "Project management", href: "/teams/project-management" },
+          { label: "Product development", href: "/teams/product-development" },
+          { label: "Operations", href: "/teams/operations" },
           { label: "IT", href: "/solutions" },
           { label: "Marketing", href: "/solutions" },
           { label: "Human Resources", href: "/solutions" },

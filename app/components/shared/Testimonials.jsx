@@ -43,23 +43,26 @@ const stories = [
   },
 ];
 
-export default function Testimonials() {
+/** `showHeadline={false}` reuses just the cards under a page's own header. */
+export default function Testimonials({ showHeadline = true }) {
   return (
     <section className="tm-wrapper" data-testid="home-testimonials">
-      <div className="tm-headline-row">
-        <div className="tm-headline">
-          <h2>Loved by 5+ million teams, backed by 100+ awards</h2>
+      {showHeadline && (
+        <div className="tm-headline-row">
+          <div className="tm-headline">
+            <h2>Loved by 5+ million teams, backed by 100+ awards</h2>
+          </div>
+          <div className="tm-award">
+            <img
+              src="/testimonials/awards.svg"
+              width="346"
+              height="89"
+              alt="ClickUp awards"
+              loading="lazy"
+            />
+          </div>
         </div>
-        <div className="tm-award">
-          <img
-            src="/testimonials/awards.svg"
-            width="346"
-            height="89"
-            alt="ClickUp awards"
-            loading="lazy"
-          />
-        </div>
-      </div>
+      )}
 
       <div className="tm-grid-wrapper">
         <ul className="tm-grid">

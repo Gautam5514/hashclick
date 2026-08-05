@@ -2,34 +2,31 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
 
-/** Gradient mark: stacked upward chevrons, matching the brand mark silhouette. */
+/**
+ * Gradient mark: a chevron over a smile arc. Drawn as strokes so the geometry
+ * stays clean from favicon size up to the 112px badge on the integrations belt.
+ */
 export function LogoMark({ className }) {
   return (
     <svg
-      viewBox="0 0 40 40"
+      viewBox="0 0 48 48"
       fill="none"
       aria-hidden="true"
       className={cn("size-8", className)}
     >
       <defs>
-        <linearGradient id="lm-lower" x1="0" y1="40" x2="40" y2="20">
-          <stop offset="0%" stopColor="#40ddff" />
-          <stop offset="55%" stopColor="#7612fa" />
-          <stop offset="100%" stopColor="#fa12e3" />
+        <linearGradient id="lm-upper" x1="8" y1="17" x2="40" y2="4" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#ff17c8" />
+          <stop offset="100%" stopColor="#ff8a1e" />
         </linearGradient>
-        <linearGradient id="lm-upper" x1="6" y1="18" x2="34" y2="2">
-          <stop offset="0%" stopColor="#fa12e3" />
-          <stop offset="100%" stopColor="#ffc800" />
+        <linearGradient id="lm-lower" x1="9" y1="42" x2="39" y2="27" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#8b1cf5" />
+          <stop offset="100%" stopColor="#3fd2ff" />
         </linearGradient>
       </defs>
-      <path
-        d="M3.4 29.6 9.1 25.4c3.03 3.96 6.25 5.78 9.84 5.78 3.57 0 6.7-1.8 9.6-5.73l5.77 4.12C30.13 35.24 25.2 38.2 18.94 38.2c-6.24 0-11.23-2.94-15.54-8.6Z"
-        fill="url(#lm-lower)"
-      />
-      <path
-        d="M18.9 11.1 8.78 19.83 4.14 14.45 18.93 1.7 33.6 14.46l-4.65 5.36L18.9 11.1Z"
-        fill="url(#lm-upper)"
-      />
+      {/* Chunky chevron with a rounded apex over a deep, thick smile */}
+      <path d="M8 17 24 4l16 13" stroke="url(#lm-upper)" strokeWidth="10" strokeLinejoin="round" />
+      <path d="M9 27a15 15 0 0 0 30 0" stroke="url(#lm-lower)" strokeWidth="10" />
     </svg>
   );
 }
