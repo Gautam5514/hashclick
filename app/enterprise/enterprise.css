@@ -1332,11 +1332,36 @@
   margin: 75px auto 0;
 }
 @media (max-width: 900px) {
+  .ent-hero .mx-auto {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .ent-hero-copy > p {
+    margin: 0 auto;
+  }
+  .ent-actions {
+    justify-content: center;
+  }
+  .ent-rating {
+    justify-content: center;
+  }
+  .ent-hero-logos {
+    justify-content: center;
+  }
   .ent-support-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 640px) {
+  .ent-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ent-primary,
+  .ent-secondary {
+    width: 100%;
+  }
   .enterprise-ai-note {
     margin-top: 32px;
   }

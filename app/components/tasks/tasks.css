@@ -403,6 +403,17 @@
   .task-feature-grid article { min-height: 0; padding: 0; border: 0 !important; }
 }
 
+@media (max-width: 480px) {
+  .task-hero-visual { width: 100%; margin-right: 0; border-radius: 14px; }
+  .task-hero-visual img { width: 100%; max-width: 100%; }
+  .task-workflow-copy, .task-ai-copy { padding: 36px 20px; }
+  .task-workflow-image, .task-ai-image { min-height: 280px; }
+  .task-motion-copy { padding: 32px 20px; }
+  .task-motion-banner h2 { font-size: 26px; }
+  .task-motion-product { width: 100%; left: 0; }
+  .task-btn { width: 100%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .tasks-page *, .tasks-page *::before, .tasks-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }

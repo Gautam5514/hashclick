@@ -171,13 +171,13 @@ function TasksFinal() {
 
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
-            <h2 className="text-3xl ml-20 sm:text-4xl md:text-3xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
+            <h2 className="text-3xl ml-0 md:ml-20 sm:text-4xl md:text-3xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
               Never lose track of work again.
             </h2>
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 shrink-0">
               <Link
                 href="/signup"
-                className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap  transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap transition-all hover:bg-neutral-100"
               >
                 <span>Get started. It&apos;s FREE</span>
                 <ArrowRight className="w-5 h-5" />
@@ -189,7 +189,7 @@ function TasksFinal() {
           </div>
 
           {/* Infinite Marquee Slider */}
-          <div className="relative  w-full ml-20 overflow-hidden my-8 md:my-10 [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]">
+          <div className="relative w-full ml-0 md:ml-20 overflow-hidden my-8 md:my-10 [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_90%,transparent_100%)]">
             <div className="flex items-center gap-12 md:gap-16 w-max animate-task-marquee hover:[animation-play-state:paused]">
               {marqueeList.map((item, idx) => (
                 <div

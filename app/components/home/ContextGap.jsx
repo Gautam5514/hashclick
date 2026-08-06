@@ -25,7 +25,7 @@ export default function ContextGap() {
           <h2 className="font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.06] font-bold tracking-[-0.03em] text-[#202020]">
             <span>60% of work is lost in context</span>
             <br />
-            <span className="whitespace-nowrap font-semibold text-[#646464]">
+            <span className="normal sm:whitespace-nowrap font-semibold text-[#646464]">
               - and AI is lost without it
             </span>
           </h2>

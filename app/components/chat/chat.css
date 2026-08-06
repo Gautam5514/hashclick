@@ -482,10 +482,13 @@
 
 /* ---- orbit graphic --------------------------------------------------- */
 
+/* Hidden on phones: the Rive embed is served on its own white page, which
+   reads as a blank slab against this dark section. It's decorative, so the
+   section simply drops it below desktop. */
 .chat-problem-art {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: center;
   max-width: 30rem;
   margin: 0 auto 3rem;
@@ -497,6 +500,7 @@
 @media (min-width: 1024px) {
   /* Sits on the right half, beside the first step */
   .chat-problem-art {
+    display: flex;
     position: absolute;
     top: 2rem;
     right: 0;
@@ -1834,4 +1838,25 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.7);
   padding-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .chat-hero-frame {
+    border-radius: 16px 16px 0 0;
+  }
+  .chat-closing-card {
+    padding: 1.75rem 1.25rem;
+    min-height: 18rem;
+  }
+  .chat-closing-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .chat-btn-primary {
+    width: 100%;
+    padding: 0.8125rem 1.25rem;
+  }
+  .chat-spotlight-frame {
+    border-radius: 1rem;
+  }
 }

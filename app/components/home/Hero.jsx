@@ -129,7 +129,7 @@ export default function Hero() {
             <h1 className="font-display mt-5 text-[clamp(2.1rem,3.6vw,3.5rem)] leading-[1.03] font-bold tracking-[-0.03em] text-[#202020]">
               <span>Software to</span>
               <br />
-              <span className="whitespace-nowrap">replace all software</span>
+              <span className="normal sm:whitespace-nowrap">replace all software</span>
             </h1>
 
             {/* Checkmark Points */}
@@ -151,22 +151,22 @@ export default function Hero() {
             </ul>
 
             {/* Primary CTA + Subtext */}
-            <div className="mt-8 flex items-center gap-3.5">
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-3.5 w-full sm:w-auto">
               <Button
                 href="/signup"
                 size="lg"
-                className="rounded-2xl bg-[#202020] px-7 py-3.5 text-[16px] font-bold text-white shadow-md transition-all hover:bg-black hover:scale-[1.02]"
+                className="w-full sm:w-auto text-center rounded-2xl bg-[#202020] px-7 py-3.5 text-[16px] font-bold text-white shadow-md transition-all hover:bg-black hover:scale-[1.02]"
               >
                 Get started. It&apos;s FREE!
               </Button>
               <div className="text-[12.5px] font-medium leading-snug text-[#646464]">
-                Free forever. <br />
+                Free forever. <br className="hidden sm:inline" />
                 No credit card.
               </div>
             </div>
 
             {/* Sub-label for Pills */}
-            <div className="mt-9 text-[11px] font-mono font-bold tracking-[0.14em] text-[#374151] uppercase">
+            <div className="mt-9 text-[11px] font-mono font-bold tracking-normal sm:tracking-[0.14em] text-[#374151] uppercase">
               GET 400% MORE DONE • CUSTOMIZE YOUR WORKSPACE
             </div>
 

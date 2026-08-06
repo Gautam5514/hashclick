@@ -245,7 +245,10 @@ export default function Footer() {
             <ul className="space-y-2 text-[13px]">
               {helpLinks.map((item) => (
                 <li key={item}>
-                  <Link href="/learn" className="hover:text-[#111827] transition-colors leading-[1.7] block">
+                  <Link
+                    href={item === "Blog" ? "/blog" : "/learn"}
+                    className="hover:text-[#111827] transition-colors leading-[1.7] block"
+                  >
                     {item}
                   </Link>
                 </li>

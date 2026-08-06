@@ -99,7 +99,7 @@ function Column({ column }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(null);
-  const [mobileSection, setMobileSection] = useState(null);
+  const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [mobileNav, setMobileNav] = useState(false);
   const [height, setHeight] = useState(0);
   const panelRefs = useRef({});
@@ -112,6 +112,7 @@ export default function Navbar() {
         setOpen(null);
         setHeight(0);
         setMobileNav(false);
+        setMobileSubmenu(null);
       }
     };
     document.addEventListener("keydown", onKey);
@@ -247,54 +248,222 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* Mobile accordion */}
+      {/* Mobile drawer matching official ClickUp 5 reference screenshots */}
       <div className={`cu-mobile${mobileNav ? " cu-mobile-open" : ""}`} id="cu-mobile-menu">
-        {navMenus.map((menu) => (
-          <div className="cu-mobile-group" key={menu.id}>
-            <button
-              type="button"
-              className="cu-mobile-trigger"
-              aria-expanded={mobileSection === menu.id}
-              onClick={() => setMobileSection(mobileSection === menu.id ? null : menu.id)}
-            >
-              {menu.label}
-              <Raw markup={CHEVRON} className="cu-chevron" />
-            </button>
-            {mobileSection === menu.id ? (
-              <div className="cu-mobile-panel">
-                {menu.columns.map((column) => (
-                  <div key={column.title}>
-                    <p className="cu-mobile-col-title">{column.title}</p>
+        {mobileSubmenu === null ? (
+          /* MAIN LEVEL MENU */
+          <>
+            <div className="cu-mobile-list">
+              <button
+                type="button"
+                className="cu-mobile-item"
+                onClick={() => setMobileSubmenu("brain-ai")}
+              >
+                <span>Brain AI</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                className="cu-mobile-item"
+                onClick={() => setMobileSubmenu("product")}
+              >
+                <span>Product</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                className="cu-mobile-item"
+                onClick={() => setMobileSubmenu("solutions")}
+              >
+                <span>Solutions</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                className="cu-mobile-item"
+                onClick={() => setMobileSubmenu("learn")}
+              >
+                <span>Learn</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+
+              <Link
+                href="/pricing"
+                className="cu-mobile-item"
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
+              >
+                <span>Pricing</span>
+              </Link>
+
+              <Link
+                href="/enterprise"
+                className="cu-mobile-item"
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
+              >
+                <span>Enterprise</span>
+              </Link>
+
+              <Link
+                href="/demo"
+                className="cu-mobile-item"
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
+              >
+                <span>Get a Demo</span>
+              </Link>
+            </div>
+
+            <div className="cu-mobile-footer">
+              <Link
+                href="/login"
+                className="cu-mobile-login-full"
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
+              >
+                Login
+              </Link>
+            </div>
+          </>
+        ) : (
+          /* SUBMENU LEVEL VIEW */
+          <>
+            <div className="cu-mobile-subview-content">
+              {navMenus
+                .find((m) => m.id === mobileSubmenu)
+                ?.columns.map((column) => (
+                  <div key={column.title} className="cu-mobile-col-section">
+                    <h4 className="cu-mobile-subhead">{column.title}</h4>
+
                     {column.kind === "story" ? (
-                      <Link href={column.story.href} className="cu-mobile-link">
-                        {column.story.cta}
+                      <Link
+                        href={column.story.href}
+                        className="cu-mobile-story-card"
+                        onClick={() => {
+                          setMobileNav(false);
+                          setMobileSubmenu(null);
+                        }}
+                      >
+                        <Raw markup={ART[column.story.art]} />
+                        <p className="cu-story-quote">{column.story.quote}</p>
+                        <span className="cu-story-cta">{column.story.cta}</span>
                       </Link>
                     ) : (
-                      column.items.map((item) => (
-                        <Link key={item.label} href={item.href} className="cu-mobile-link">
-                          {column.kind === "product" ? (
-                            <SpriteIcon id={item.icon} />
-                          ) : item.icon ? (
-                            <img src={`/nav/brain/${item.icon}.svg`} alt="" width="24" height="24" />
-                          ) : null}
-                          {item.label}
-                        </Link>
-                      ))
+                      <div className="cu-mobile-sublist">
+                        {column.items?.map((item) =>
+                          column.kind === "platform" || column.kind === "featured" ? (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              className="cu-mobile-platform-item"
+                              onClick={() => {
+                                setMobileNav(false);
+                                setMobileSubmenu(null);
+                              }}
+                            >
+                              <span className="cu-mobile-item-icon">
+                                {item.art ? (
+                                  <Raw markup={ART[item.art]} />
+                                ) : (
+                                  <img
+                                    src={`/nav/brain/${item.icon}.svg`}
+                                    alt=""
+                                    width={item.w || 36}
+                                    height="36"
+                                  />
+                                )}
+                              </span>
+                              <span className="cu-mobile-item-body">
+                                <span className="cu-mobile-item-title">
+                                  {item.label}
+                                  {item.badge ? (
+                                    <span className="cu-badge">{item.badge}</span>
+                                  ) : null}
+                                </span>
+                                {item.desc ? (
+                                  <span className="cu-mobile-item-desc">{item.desc}</span>
+                                ) : null}
+                              </span>
+                            </Link>
+                          ) : column.kind === "product" ? (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              className="cu-mobile-product-item"
+                              onClick={() => {
+                                setMobileNav(false);
+                                setMobileSubmenu(null);
+                              }}
+                            >
+                              <span className="cu-mobile-product-icon">
+                                <SpriteIcon id={item.icon} />
+                              </span>
+                              <span className="cu-mobile-product-title">{item.label}</span>
+                            </Link>
+                          ) : (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              className="cu-mobile-simple-item"
+                              onClick={() => {
+                                setMobileNav(false);
+                                setMobileSubmenu(null);
+                              }}
+                            >
+                              {item.label}
+                            </Link>
+                          )
+                        )}
+
+                        {column.seeAll ? (
+                          <Link
+                            href={column.seeAll.href}
+                            className="cu-mobile-see-all"
+                            onClick={() => {
+                              setMobileNav(false);
+                              setMobileSubmenu(null);
+                            }}
+                          >
+                            {column.seeAll.label}
+                          </Link>
+                        ) : null}
+                      </div>
                     )}
                   </div>
                 ))}
-              </div>
-            ) : null}
-          </div>
-        ))}
+            </div>
 
-        <div className="cu-mobile-group">
-          {navLinks.map((link) => (
-            <Link key={link.label} href={link.href} className="cu-mobile-trigger">
-              {link.label}
-            </Link>
-          ))}
-        </div>
+            <div className="cu-mobile-footer">
+              <button
+                type="button"
+                className="cu-mobile-back-btn"
+                onClick={() => setMobileSubmenu(null)}
+              >
+                Back
+              </button>
+            </div>
+          </>
+        )}
       </div>
       </nav>
     </>

@@ -1,0 +1,95 @@
+/* ClickUp Official Blog Styles */
+
+.blog-page {
+  background-color: #fafafa;
+  color: #1c1c1e;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.blog-shell {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* Category Tabs */
+.blog-cat-btn {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  background-color: #f0f0f2;
+  color: #4b5563;
+  border: 1px solid transparent;
+}
+
+.blog-cat-btn:hover {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.blog-cat-btn.active {
+  background: linear-gradient(135deg, #7026e3 0%, #e02fa8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(112, 38, 227, 0.25);
+}
+
+/* Featured Hero Card */
+.blog-featured-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #eaebf0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Key Takeaways Box (ClickUp Exact CSS) */
+.key-takeaways-box {
+  background: linear-gradient(135deg, rgba(102, 71, 240, 0.04), rgba(0, 145, 255, 0.04));
+  padding: 24px;
+  margin-bottom: 32px;
+  border-radius: 14px;
+  position: relative;
+  border: 1px solid #e1e5ea;
+}
+
+.key-takeaways-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(90deg, #ff02f0, #fc6d2d);
+}
+
+/* Highlight Block Callout */
+.highlight-block-box {
+  background: linear-gradient(135deg, rgba(102, 71, 240, 0.04), rgba(0, 145, 255, 0.04));
+  padding: 24px 24px 24px 24px;
+  margin: 32px 0;
+  border-radius: 14px;
+  border: 1px solid #e1e5ea;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-block-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #ff02f0, #fc6d2d);
+  border-radius: 14px 0 0 14px;
+}

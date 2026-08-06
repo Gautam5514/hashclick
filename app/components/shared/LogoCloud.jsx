@@ -142,7 +142,7 @@ export default function LogoCloud({ className }) {
   return (
     <section className={cn("w-full bg-white mt-10 md:mt-16 lg:mt-10 py-4 md:py-6 overflow-hidden border-none", className)}>
       <div className="mx-auto w-full max-w-[1650px] px-6 sm:px-10 lg:pl-16 lg:pr-6 xl:pl-20 xl:pr-10">
-        <div className="group/logos flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-12 cursor-pointer">
+        <div className="group/logos flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-6 lg:gap-12 cursor-pointer max-lg:text-center">
           {/* Label on Far Left */}
           <div className="text-[11px] font-mono font-bold tracking-[0.2em] text-[#8e8e8e] uppercase shrink-0 transition-colors group-hover/logos:text-[#202020]">
             TRUSTED BY THE BEST
@@ -152,7 +152,7 @@ export default function LogoCloud({ className }) {
           <div className="flex-1 overflow-hidden">
             <div
               className={cn(
-                "flex flex-wrap items-center justify-between gap-6 sm:gap-8 md:gap-10 transition-all duration-500 ease-in-out",
+                "flex flex-wrap items-center justify-center lg:justify-between gap-6 sm:gap-8 md:gap-10 transition-all duration-500 ease-in-out",
                 isFading ? "opacity-0 scale-[0.98] blur-[1px]" : "opacity-100 scale-100 blur-0"
               )}
             >

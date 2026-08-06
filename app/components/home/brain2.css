@@ -944,9 +944,9 @@
 
 @media (max-width: 600px) {
   .b2-per-panel {
-    left: 24px;
-    width: clamp(405px, 112%, 520px);
-    transform: none;
+    left: 50%;
+    width: min(calc(100% - 24px), 405px);
+    transform: translateX(-50%);
   }
 }
 

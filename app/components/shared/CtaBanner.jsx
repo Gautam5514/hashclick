@@ -42,7 +42,7 @@ export default function CtaBanner({
       <div className="mx-auto w-full max-w-[1550px] px-6 sm:px-10 lg:px-16">
         {/* Rounded Gradient Card Banner */}
         <div
-          className="relative overflow-hidden rounded-[36px] md:rounded-[44px] pt-14 pb-0 px-6 sm:px-10 md:px-16 text-center text-white shadow-2xl"
+          className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] md:rounded-[44px] pt-10 sm:pt-14 pb-0 px-4 sm:px-10 md:px-16 text-center text-white shadow-2xl"
           style={{
             background:
               "linear-gradient(115deg, #5b21b6 0%, #7c3aed 25%, #d946ef 55%, #f97316 95%)",

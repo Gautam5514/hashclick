@@ -65,7 +65,8 @@ function Hero() {
     <div className="pm-shell pm-hero-grid">
       <div className="pm-hero-copy">
         <p className="pm-kicker">AI-powered project management</p>
-        <h1>The world&apos;s<br />most powerful &amp;<br />flexible project<br />management<br />software</h1>
+        {/* Spaces before each break so the line still wraps when the <br>s are hidden on mobile */}
+        <h1>The world&apos;s{" "}<br />most powerful &amp;{" "}<br />flexible project{" "}<br />management{" "}<br />software</h1>
         <p className="pm-lede"><strong>Manage your projects, docs, and chat in one place—all powered by AI.</strong> ClickUp adapts to any project, eliminates busywork, and keeps everything organized so your team delivers projects on time, all the time.</p>
         <div className="pm-action-row"><CTA /><span>Free forever.<br />No credit card.</span></div>
         <div className="pm-reviews"><StarRating /><span>25,000+ reviews from</span><ReviewLogos /></div>

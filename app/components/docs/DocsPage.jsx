@@ -299,7 +299,7 @@ function DocsFinal() {
     <section className="w-full py-12 md:py-20">
       <div className="mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-8">
         <div
-          className="relative overflow-hidden rounded-[28px] md:rounded-[36px] bg-gradient-to-r from-[#7026e3] via-[#e02fa8] to-[#ff5d39] px-6 sm:px-12 lg:px-14 pt-8 sm:pt-12 lg:pt-14 shadow-2xl shadow-purple-950/20"
+          className="relative overflow-hidden rounded-[24px] sm:rounded-[28px] md:rounded-[36px] bg-gradient-to-r from-[#7026e3] via-[#e02fa8] to-[#ff5d39] px-5 sm:px-12 lg:px-14 pt-8 sm:pt-12 lg:pt-14 shadow-2xl shadow-purple-950/20"
           style={{ paddingBottom: 0 }}
         >
           {/* Upper Header & CTA */}
@@ -307,16 +307,16 @@ function DocsFinal() {
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
               Create your first connected doc in seconds.
             </h2>
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 shrink-0">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
                 href="/signup"
-                className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all"
+                className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
                 <span>Get started. It&apos;s FREE</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Free forever. <br /> No credit card.
+                Free forever. <br className="hidden sm:inline" /> No credit card.
               </div>
             </div>
           </div>

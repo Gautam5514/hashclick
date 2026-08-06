@@ -165,7 +165,7 @@ export const navMenus = [
         title: "Discover",
         kind: "simple",
         items: [
-          { label: "Blog", href: "/learn" },
+          { label: "Blog", href: "/blog" },
           { label: "Customer stories", href: "/learn" },
           { label: "Guides", href: "/learn" },
           { label: "Kill Work Sprawl", href: "/learn" },

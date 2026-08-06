@@ -490,7 +490,10 @@
 
 @media (max-width: 600px) {
   .ach-box {
-    padding: 0 20px;
+    padding: 0;
+  }
+  .ach-content {
+    padding: 24px 16px;
   }
   .ach-title h2 {
     font-size: 1.625rem;

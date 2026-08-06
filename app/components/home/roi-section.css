@@ -255,7 +255,7 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    padding-inline: 0;
+    padding: 16px 0;
     border-bottom: 1px solid #e8e8e8;
     border-start-start-radius: 0;
     border-start-end-radius: 0;

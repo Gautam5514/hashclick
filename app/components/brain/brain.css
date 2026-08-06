@@ -1162,6 +1162,45 @@
   }
 }
 
+@media (max-width: 480px) {
+  .bn-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .bn-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .bn-cv-radar {
+    width: min(280px, 86vw);
+    height: min(280px, 86vw);
+  }
+  .bn-cv-radar-ring:nth-child(1) {
+    width: 124px;
+    height: 124px;
+  }
+  .bn-cv-radar-ring:nth-child(2) {
+    width: 200px;
+    height: 200px;
+  }
+  .bn-cv-radar-ring:nth-child(3) {
+    width: 270px;
+    height: 270px;
+  }
+  .bn-cv-core {
+    top: 180px;
+    width: 130px;
+    height: 130px;
+  }
+  .bn-cv-models {
+    top: 180px;
+    gap: 20px;
+    transform: translate(-50%, calc(-50% + 98px));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bn-cv-track-content,
   .bn-cv-output-content,
@@ -3262,7 +3301,7 @@
 
 @media (max-width: 560px) {
   .bn-security-inner { padding-inline: 12px; }
-  .bn-sec-card { min-height: 640px; padding: 44px 34px 0; }
+  .bn-sec-card { min-height: 640px; padding: 44px 18px 0; }
   .bn-sec-title { font-size: clamp(31px, 10vw, 42px); }
   .bn-sec-desc { font-size: clamp(17px, 5vw, 22px); }
   .bn-sec-visual { min-height: 350px; margin-top: 24px; }

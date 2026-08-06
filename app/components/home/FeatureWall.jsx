@@ -127,20 +127,20 @@ function GridTile({ item, colIndex = 5, isGhost = false }) {
     return <div className="border border-[#eef0f3] bg-white min-h-[60px] opacity-60" />;
   }
 
-  // Column opacity: Leftmost (0) & Rightmost (9) half-faded (opacity-45)
+  // Column opacity: Leftmost (0) & Rightmost (9) half-faded (opacity-45) on desktop lg:
   let opacityClass = "opacity-100";
-  if (colIndex === 0 || colIndex === 9) opacityClass = "opacity-45";
-  else if (colIndex === 1 || colIndex === 8) opacityClass = "opacity-80";
+  if (colIndex === 0 || colIndex === 9) opacityClass = "max-lg:opacity-100 lg:opacity-45";
+  else if (colIndex === 1 || colIndex === 8) opacityClass = "max-lg:opacity-100 lg:opacity-80";
 
   return (
     <div
       className={cn(
-        "group relative flex flex-col items-center justify-center gap-2.5 border border-[#eef0f3] bg-white p-4 text-center transition-all duration-200 hover:z-30 hover:-translate-y-1 hover:border-2 hover:border-[#111111] hover:bg-white hover:shadow-xl cursor-pointer min-h-[110px]",
+        "group relative flex flex-col items-center justify-center gap-2.5 border border-[#eef0f3] bg-white p-3 sm:p-4 text-center transition-all duration-200 hover:z-30 hover:-translate-y-1 hover:border-2 hover:border-[#111111] hover:bg-white hover:shadow-xl cursor-pointer min-h-[90px] sm:min-h-[110px]",
         opacityClass
       )}
     >
       <item.icon className="size-5 text-[#8e8e8e] transition-colors group-hover:text-[#111111]" />
-      <span className="text-[12.5px] font-semibold text-[#646464] transition-colors group-hover:text-[#111111] whitespace-nowrap">
+      <span className="text-[11.5px] sm:text-[12.5px] font-semibold text-[#646464] transition-colors group-hover:text-[#111111] whitespace-nowrap">
         {item.name}
       </span>
     </div>
@@ -164,32 +164,32 @@ export default function FeatureWall() {
 
         {/* Unified Grid Matrix with Clearly Visible Half-Box Top/Bottom Ghost Rows */}
         <div className="relative mx-auto w-full max-w-[1480px] overflow-hidden bg-white select-none">
-          {/* Subtle Top & Bottom Fade Overlays to preserve half-box visibility */}
+          {/* Subtle Top & Bottom Fade Overlays */}
           <div className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white via-white/70 to-transparent z-20" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white via-white/70 to-transparent z-20" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
 
           {/* Grid Container */}
           <div className="border border-[#eef0f3] bg-white">
-            {/* TOP CLEARLY VISIBLE HALF GHOST BOX ROW */}
-            <div className="grid grid-cols-10 border-b border-[#eef0f3]">
+            {/* TOP CLEARLY VISIBLE HALF GHOST BOX ROW (Desktop lg: only) */}
+            <div className="hidden lg:grid lg:grid-cols-10 border-b border-[#eef0f3]">
               {Array.from({ length: 10 }).map((_, i) => (
                 <GridTile key={`top-ghost-${i}`} isGhost />
               ))}
             </div>
 
             {/* ROW 1: 10 TOP FEATURE TILES */}
-            <div className="grid grid-cols-10 border-b border-[#eef0f3]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 border-b border-[#eef0f3]">
               {topRowItems.map((item, idx) => (
                 <GridTile key={item.name} item={item} colIndex={idx} />
               ))}
             </div>
 
             {/* MIDDLE SECTION: 3 COLS LEFT + 4 COLS SPOTLIGHT + 3 COLS RIGHT */}
-            <div className="grid grid-cols-10 border-b border-[#eef0f3]">
-              {/* Left Side (3 Columns = 30% width) */}
-              <div className="col-span-3 grid grid-cols-3 border-r border-[#eef0f3]">
+            <div className="grid grid-cols-1 lg:grid-cols-10 border-b border-[#eef0f3]">
+              {/* Left Side (3 Columns = 30% width on Desktop) */}
+              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 border-b lg:border-b-0 lg:border-r border-[#eef0f3]">
                 {sideRowItemsLeft.map((item, idx) => (
                   <GridTile key={item.name} item={item} colIndex={idx} />
                 ))}
@@ -204,10 +204,10 @@ export default function FeatureWall() {
                 ))}
               </div>
 
-              {/* Center 2x2 Spotlight Cards (4 Columns = 40% width) */}
-              <div className="col-span-4 grid grid-cols-2 gap-px bg-[#eef0f3] p-px">
+              {/* Center 2x2 Spotlight Cards (4 Columns = 40% width on Desktop) */}
+              <div className="lg:col-span-4 grid grid-cols-2 gap-px bg-[#eef0f3] p-px">
                 {/* Spotlight 1: Projects */}
-                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#fffdfa] to-white p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[250px]">
+                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#fffdfa] to-white p-3 sm:p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[180px] sm:min-h-[250px]">
                   <img
                     src="/feature-projects.avif"
                     alt="Projects"
@@ -216,7 +216,7 @@ export default function FeatureWall() {
                 </div>
 
                 {/* Spotlight 2: Docs */}
-                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#f4fbff] to-white p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[250px]">
+                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#f4fbff] to-white p-3 sm:p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[180px] sm:min-h-[250px]">
                   <img
                     src="/feature-docs.avif"
                     alt="Docs"
@@ -225,7 +225,7 @@ export default function FeatureWall() {
                 </div>
 
                 {/* Spotlight 3: Brain */}
-                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#fff5fd] to-white p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[250px]">
+                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#fff5fd] to-white p-3 sm:p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[180px] sm:min-h-[250px]">
                   <img
                     src="/feature-brain.avif"
                     alt="Brain"
@@ -234,7 +234,7 @@ export default function FeatureWall() {
                 </div>
 
                 {/* Spotlight 4: Chat */}
-                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#faf8ff] to-white p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[250px]">
+                <div className="group relative flex flex-col items-center justify-center bg-gradient-to-b from-[#faf8ff] to-white p-3 sm:p-4 transition-all duration-300 hover:z-30 hover:shadow-2xl cursor-pointer overflow-hidden min-h-[180px] sm:min-h-[250px]">
                   <img
                     src="/feature-chat.avif"
                     alt="Chat"
@@ -243,8 +243,8 @@ export default function FeatureWall() {
                 </div>
               </div>
 
-              {/* Right Side (3 Columns = 30% width) */}
-              <div className="col-span-3 grid grid-cols-3 border-l border-[#eef0f3]">
+              {/* Right Side (3 Columns = 30% width on Desktop) */}
+              <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 border-t lg:border-t-0 lg:border-l border-[#eef0f3]">
                 {sideRowItemsRight.map((item, idx) => (
                   <GridTile key={item.name} item={item} colIndex={idx + 7} />
                 ))}
@@ -261,14 +261,14 @@ export default function FeatureWall() {
             </div>
 
             {/* ROW 5: 10 BOTTOM FEATURE TILES */}
-            <div className="grid grid-cols-10 border-b border-[#eef0f3]">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 border-b border-[#eef0f3]">
               {bottomRowItems.map((item, idx) => (
                 <GridTile key={item.name} item={item} colIndex={idx} />
               ))}
             </div>
 
-            {/* BOTTOM CLEARLY VISIBLE HALF GHOST BOX ROW */}
-            <div className="grid grid-cols-10">
+            {/* BOTTOM CLEARLY VISIBLE HALF GHOST BOX ROW (Desktop lg: only) */}
+            <div className="hidden lg:grid lg:grid-cols-10">
               {Array.from({ length: 10 }).map((_, i) => (
                 <GridTile key={`bottom-ghost-${i}`} isGhost />
               ))}
