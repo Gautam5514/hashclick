@@ -1,0 +1,124 @@
+/* ClickUp About Page Styles */
+
+.about-hero-section {
+  position: relative;
+  padding: 4.5rem 1.5rem 3.5rem;
+  background: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-hero-tag {
+  font-family: var(--font-sometype), monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6647f0;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.about-hero-title {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: #111827;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .about-hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero-title {
+    font-size: 4.75rem;
+  }
+}
+
+.about-title-gradient {
+  background: linear-gradient(90deg, #7612fa 0%, #fa12e3 50%, #fc6d2d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Mission Section Container */
+.about-mission-section {
+  position: relative;
+  background: #faf8f5;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid #f0eee9;
+  border-bottom: 1px solid #f0eee9;
+}
+
+/* Value Cards Grid */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-value-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-col: column;
+  justify-content: space-between;
+}
+
+.about-value-card:hover {
+  transform: translateY(-3px);
+  border-color: #d1d5db;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+}
+
+/* Stats Card Container */
+.about-stats-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .about-stats-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-stat-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.25rem 1.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}

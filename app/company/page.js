@@ -1,14 +1,10 @@
-import ComingSoon from "../components/shared/ComingSoon";
+import AboutPage from "../components/about/AboutPage";
 
-export const metadata = { title: "Company" };
+export const metadata = {
+  title: "About Us & Company | ClickUp™",
+  description: "We build software that gives people back the time their tools were quietly taking. Discover ClickUp's mission, team, and values.",
+};
 
-export default function CompanyPage() {
-  return (
-    <ComingSoon
-      eyebrow="Company"
-      title="Saving the world one day a week"
-      body="We build software that gives people back the time their tools were quietly taking."
-      links={["About us", "Careers", "Customers", "Partners & consultants", "Affiliates", "Events", "Press & brand", "Public roadmap"]}
-    />
-  );
+export default function Page() {
+  return <AboutPage />;
 }

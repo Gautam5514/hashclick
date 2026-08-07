@@ -1,0 +1,303 @@
+/* ClickUp Research Page Exact Aesthetics */
+
+.research-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.research-hero-section {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background: #ffffff;
+}
+
+.research-hero-tag {
+  font-family: var(--font-sometype), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6647f0;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.research-hero-title {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .research-hero-title {
+    font-size: 3.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .research-hero-title {
+    font-size: 3.6rem;
+  }
+}
+
+.research-title-fade {
+  background: linear-gradient(90deg, #1c1c1c 45%, #888888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.research-hero-subtext {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #646464;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Stack container for cards attached to one single continuous grid line */
+.research-cards-stack {
+  position: relative;
+}
+
+/* Card Box — Zero vertical padding so graph box touches top & bottom lines */
+.research-card-container {
+  position: relative;
+  background: #ffffff;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Single horizontal dividing line after each card, fading at left & right edges */
+.research-card-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -8%;
+  right: -8%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 1) 15%, rgba(232, 232, 232, 1) 85%, rgba(232, 232, 232, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top border line ONLY for the very first card in the stack */
+.research-cards-stack > .research-card-container:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8%;
+  right: -8%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 1) 15%, rgba(232, 232, 232, 1) 85%, rgba(232, 232, 232, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.research-center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #e8e8e8;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .research-center-line {
+    display: block;
+  }
+}
+
+.research-card-label {
+  font-family: var(--font-sometype), monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6647f0;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.research-card-heading {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1c1c1c;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 1024px) {
+  .research-card-heading {
+    font-size: 2rem;
+  }
+}
+
+.research-card-desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #646464;
+  margin-bottom: 1.25rem;
+}
+
+/* 2x2 Quadrant Text Grid matching Image 2 */
+.research-quadrant-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .research-quadrant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.research-quadrant-text {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #52525b;
+}
+
+/* Read the Report Button matching Image 2 */
+.research-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background-color: #f0f0f0;
+  color: #202020;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.research-btn-pill:hover {
+  background-color: #dedede;
+  color: #000000;
+}
+
+/* Top and Bottom Arc Center Icons at Center Divider Line */
+.research-top-arc {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  pointer-events: none;
+  display: none;
+}
+
+.research-bottom-arc {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  pointer-events: none;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .research-top-arc,
+  .research-bottom-arc {
+    display: block;
+  }
+}
+
+/* Forrester Gradient Banner — Spacious vertical gaps and vibrant design */
+.forrester-banner-exact {
+  width: 100%;
+  border-radius: 28px;
+  background: linear-gradient(115deg, #0091ff 0%, #7612fa 32%, #fa12e3 68%, #fc6d2d 100%);
+  padding: 3rem 2.5rem 2.25rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(118, 18, 250, 0.25);
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.forrester-heading {
+  font-family: var(--font-jakarta), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.28;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  max-width: 520px;
+}
+
+@media (min-width: 640px) {
+  .forrester-heading {
+    font-size: 1.55rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .forrester-heading {
+    font-size: 1.65rem;
+  }
+}
+
+.forrester-btn-exact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  font-size: 13.5px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.forrester-btn-exact:hover {
+  background-color: #f4f4f5;
+  transform: translateY(-1px);
+}
+
+/* Infinite Logo Slider Animation */
+.forrester-slider-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2.25rem;
+  position: relative;
+}
+
+.forrester-slider-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: forresterScroll 25s linear infinite;
+}
+
+.forrester-slider-container:hover .forrester-slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes forresterScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

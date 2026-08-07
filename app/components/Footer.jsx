@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 function ClickUpLogoMark({ className = "size-6" }) {
@@ -137,13 +139,18 @@ const legalLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isResearchPage = pathname?.startsWith("/research");
+
   return (
-    <footer className="w-full bg-white text-[#52525b] pt-10 pb-12 border-t border-[#e5e7eb]">
+    <footer className={cn("w-full bg-white text-[#52525b] pt-10 pb-12", !isResearchPage && "border-t border-[#e5e7eb]")}>
       <div className="mx-auto w-full max-w-[1400px] px-6 sm:px-10 lg:px-12">
-        {/* Top Disclaimer Line */}
-        <div className="text-left text-[12.5px] text-[#71717a] font-normal pb-6 border-b border-[#e5e7eb] mb-8">
-          1. Our agreements ensure zero data training & retention on all third-party model providers
-        </div>
+        {/* Top Disclaimer Line (hidden on Research pages) */}
+        {!isResearchPage && (
+          <div className="text-left text-[12.5px] text-[#71717a] font-normal pb-6 border-b border-[#e5e7eb] mb-8">
+            1. Our agreements ensure zero data training & retention on all third-party model providers
+          </div>
+        )}
 
         {/* 5 Navigation Columns with Logo on Top of Column 1 */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 text-left mb-14">
@@ -246,7 +253,7 @@ export default function Footer() {
               {helpLinks.map((item) => (
                 <li key={item}>
                   <Link
-                    href={item === "Blog" ? "/blog" : "/learn"}
+                    href={item === "Blog" ? "/blog" : item === "Research" ? "/research" : "/learn"}
                     className="hover:text-[#111827] transition-colors leading-[1.7] block"
                   >
                     {item}
@@ -258,7 +265,7 @@ export default function Footer() {
         </div>
 
         {/* Social Icons & Security Badges Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pt-6 pb-6 border-t border-[#e5e7eb]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-6">
           {/* Social Icons */}
           <div className="flex items-center gap-5 text-[#71717a]">
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-[#111827] transition-colors" aria-label="LinkedIn">
@@ -276,22 +283,31 @@ export default function Footer() {
           </div>
 
           {/* Security Compliance Badges */}
-          <div className="flex flex-wrap items-center gap-3 text-[10.5px] font-mono text-[#52525b]">
-            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
-              <span className="font-bold text-[#111827]">SOC 2</span>
-              <span className="text-[#71717a]">CERTIFIED</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="flex items-center gap-1">
+              <Image src="/footer/cert-soc2.svg" alt="SOC 2" width={14} height={14} className="shrink-0" />
+              <span className="text-[9px] leading-[1.2] text-[#52525b]">
+                SOC 2
+                <br />
+                CERTIFIED
+              </span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
-              <span className="font-bold text-[#111827]">ISO 27001</span>
-              <span className="text-[#71717a]">CERTIFIED</span>
+            <Image src="/footer/cert-iso.png" alt="ISO 27001 Certified by Schellman" width={95} height={32} className="h-[20px] w-auto shrink-0" />
+            <div className="flex items-center gap-1">
+              <Image src="/footer/cert-gdpr.svg" alt="GDPR" width={14} height={13} className="shrink-0" />
+              <span className="text-[9px] leading-[1.2] text-[#52525b]">
+                GDPR
+                <br />
+                COMPLIANT
+              </span>
             </div>
-            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
-              <span className="font-bold text-[#111827]">GDPR</span>
-              <span className="text-[#71717a]">COMPLIANT</span>
-            </div>
-            <div className="flex items-center gap-1.5 rounded-lg border border-[#d4d4d8] bg-white px-3 py-1.5 shadow-2xs">
-              <span className="font-bold text-[#111827]">HIPAA</span>
-              <span className="text-[#71717a]">COMPLIANT</span>
+            <div className="flex items-center gap-1">
+              <Image src="/footer/cert-hipaa.svg" alt="HIPAA" width={13} height={12} className="shrink-0" />
+              <span className="text-[9px] leading-[1.2] text-[#52525b]">
+                HIPAA
+                <br />
+                COMPLIANT
+              </span>
             </div>
           </div>
         </div>
