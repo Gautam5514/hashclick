@@ -141,12 +141,13 @@ const legalLinks = [
 export default function Footer() {
   const pathname = usePathname();
   const isResearchPage = pathname?.startsWith("/research");
+  const isAboutPage = pathname?.startsWith("/about");
 
   return (
-    <footer className={cn("w-full bg-white text-[#52525b] pt-10 pb-12", !isResearchPage && "border-t border-[#e5e7eb]")}>
+    <footer className={cn("w-full bg-white text-[#52525b] pt-10 pb-12", !isResearchPage && !isAboutPage && "border-t border-[#e5e7eb]")}>
       <div className="mx-auto w-full max-w-[1400px] px-6 sm:px-10 lg:px-12">
-        {/* Top Disclaimer Line (hidden on Research pages) */}
-        {!isResearchPage && (
+        {/* Top Disclaimer Line (hidden on Research and About pages) */}
+        {!isResearchPage && !isAboutPage && (
           <div className="text-left text-[12.5px] text-[#71717a] font-normal pb-6 border-b border-[#e5e7eb] mb-8">
             1. Our agreements ensure zero data training & retention on all third-party model providers
           </div>

@@ -10,6 +10,13 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.cnippet.dev" },
+      { protocol: "https", hostname: "res.cloudinary.com" },
+      { protocol: "https", hostname: "clickup.com" },
+    ],
+  },
 };
 
 export default nextConfig;

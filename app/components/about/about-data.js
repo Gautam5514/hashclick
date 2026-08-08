@@ -146,3 +146,89 @@ export const LOCATIONS = [
   { city: "Sydney", country: "Australia", type: "APAC HQ" },
   { city: "Global Remote", country: "50+ Countries", type: "Distributed Workforce" }
 ];
+
+export const TEAM_MOSAIC = [
+  {
+    id: "female-1",
+    name: "Sarah Chen",
+    role: "VP of Product",
+    image: "/about/mosaic/female_1.png",
+    bgColor: "#fdeef3",
+    pos: "top-left"
+  },
+  {
+    id: "female-3",
+    name: "Mei Ling",
+    role: "Staff Engineer",
+    image: "/about/mosaic/female_3.png",
+    bgColor: "#edf6ff",
+    pos: "top-left-inner"
+  },
+  {
+    id: "male-2",
+    name: "David Miller",
+    role: "Head of AI",
+    image: "/about/mosaic/male_2.png",
+    bgColor: "#fff3eb",
+    pos: "bottom-left"
+  },
+  {
+    id: "male-1",
+    name: "Harjot Gill",
+    role: "CTO",
+    image: "/about/mosaic/male_1.png",
+    bgColor: "#fff0e8",
+    pos: "bottom-left-inner"
+  },
+  {
+    id: "zeb-ceo",
+    name: "Zeb Evans",
+    role: "Founder & CEO",
+    image: "/about/mosaic/zeb.png",
+    bgColor: "#fdf0f4",
+    isCenter: true,
+    pos: "center"
+  },
+  {
+    id: "female-2",
+    name: "Amber Allen",
+    role: "Chief People Officer",
+    image: "/about/mosaic/female_2.png",
+    bgColor: "#f3eefe",
+    pos: "top-right-inner"
+  },
+  {
+    id: "male-1-right",
+    name: "Alex Yaseen",
+    role: "Chief Product Officer",
+    image: "/about/mosaic/male_1.png",
+    bgColor: "#edf6ff",
+    pos: "top-right"
+  },
+  {
+    id: "male-2-right",
+    name: "Marcus Vance",
+    role: "Head of Infrastructure",
+    image: "/about/mosaic/male_2.png",
+    bgColor: "#fff1e8",
+    pos: "bottom-right-inner"
+  },
+  {
+    id: "female-3-right",
+    name: "Jessica Park",
+    role: "Design Lead",
+    image: "/about/mosaic/female_3.png",
+    bgColor: "#edf6ff",
+    pos: "bottom-right"
+  }
+];
+
+export const TRUSTED_LOGOS = [
+  { name: "Amazon", key: "amazon" },
+  { name: "NVIDIA", key: "nvidia" },
+  { name: "Wayfair", key: "wayfair" },
+  { name: "Verizon", key: "verizon" },
+  { name: "Spotify", key: "spotify" },
+  { name: "Stanford", key: "stanford" }
+];
+
