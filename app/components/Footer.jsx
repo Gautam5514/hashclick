@@ -142,6 +142,9 @@ export default function Footer() {
   const pathname = usePathname();
   const isResearchPage = pathname?.startsWith("/research");
   const isAboutPage = pathname?.startsWith("/about");
+  const isAuthPage = pathname === "/login" || pathname === "/signup";
+
+  if (isAuthPage) return null;
 
   return (
     <footer className={cn("w-full bg-white text-[#52525b] pt-10 pb-12", !isResearchPage && !isAboutPage && "border-t border-[#e5e7eb]")}>

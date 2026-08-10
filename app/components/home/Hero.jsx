@@ -95,8 +95,8 @@ export default function Hero() {
       >
         <span>{pill}</span>
         {isActive && (
-          <span className="absolute -top-1.5 -right-1.5 flex size-4.5 items-center justify-center rounded-full bg-[#0091ff] text-white shadow-xs z-10">
-            <Check className="size-3 stroke-[3.5]" />
+          <span className="absolute -top-2 -right-2 flex size-5 items-center justify-center rounded-full bg-[#0091ff] text-white shadow-xs z-10">
+            <Check className="size-3.5 stroke-[3.5]" />
           </span>
         )}
       </button>
@@ -127,9 +127,9 @@ export default function Hero() {
 
             {/* Main Headline */}
             <h1 className="font-display mt-5 text-[clamp(2.1rem,3.6vw,3.5rem)] leading-[1.03] font-bold tracking-[-0.03em] text-[#202020]">
-              <span>Software to</span>
+              <span>Software to run</span>
               <br />
-              <span className="normal sm:whitespace-nowrap">replace all software</span>
+              <span className="normal sm:whitespace-nowrap">your entire agency</span>
             </h1>
 
             {/* Checkmark Points */}

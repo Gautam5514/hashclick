@@ -43,7 +43,7 @@ function AdobeLogo() {
   );
 }
 
-function AmericanAirlinesLogo() {
+export function AmericanAirlinesLogo() {
   return (
     <div className="flex items-center gap-1 font-sans text-[17px] font-bold tracking-tight text-[#333333] select-none shrink-0">
       <span className="text-[#0078d4]">American</span>
@@ -54,7 +54,7 @@ function AmericanAirlinesLogo() {
   );
 }
 
-function NBCUniversalLogo() {
+export function NBCUniversalLogo() {
   return (
     <div className="flex items-center font-sans text-[17px] font-black tracking-tighter text-[#202020] select-none shrink-0">
       <span>NBC</span>
@@ -71,7 +71,7 @@ function IBMLogo() {
   );
 }
 
-function SpotifyLogo() {
+export function SpotifyLogo() {
   return (
     <div className="flex items-center gap-1.5 font-sans text-[18px] font-bold text-[#1ed760] select-none shrink-0">
       <svg viewBox="0 0 24 24" fill="currentColor" className="size-5">

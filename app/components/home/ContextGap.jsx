@@ -1,20 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Play, X } from "lucide-react";
 import { Container } from "../ui/Container";
+import { cn } from "@/lib/utils";
 
 export default function ContextGap() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [isBadgeVisible, setIsBadgeVisible] = useState(true);
+  const badgeRef = useRef(null);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    setCursorPos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setCursorPos({ x, y });
+
+    const badgeRect = badgeRef.current?.getBoundingClientRect();
+    const halfW = badgeRect ? badgeRect.width / 2 : 0;
+    const halfH = badgeRect ? badgeRect.height / 2 : 0;
+    setIsBadgeVisible(
+      x - halfW >= 0 &&
+        x + halfW <= rect.width &&
+        y - halfH >= 0 &&
+        y + halfH <= rect.height
+    );
   };
 
   return (
@@ -49,7 +61,11 @@ export default function ContextGap() {
           {/* Mouse-Following Custom "Play Video" Cursor Badge (High z-40 so it stays above all overlays) */}
           {isHovered && (
             <div
-              className="pointer-events-none absolute z-40 flex items-center gap-3 rounded-2xl bg-[#111111] px-5 py-3 text-[14px] font-bold text-white shadow-2xl transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2"
+              ref={badgeRef}
+              className={cn(
+                "pointer-events-none absolute z-40 flex items-center gap-3 rounded-2xl bg-[#111111] px-5 py-3 text-[14px] font-bold text-white shadow-2xl transition-[opacity,transform] duration-75 ease-out -translate-x-1/2 -translate-y-1/2",
+                isBadgeVisible ? "opacity-100" : "opacity-0"
+              )}
               style={{
                 left: `${cursorPos.x}px`,
                 top: `${cursorPos.y}px`,

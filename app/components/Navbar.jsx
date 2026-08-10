@@ -2,9 +2,11 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "./navbar.css";
 import { navMenus, navLinks } from "./nav-data";
 import { LOGO, CHEVRON, SMB, AGENTS, CARTOON } from "./nav-svgs";
+import DemoModal from "./DemoModal";
 
 const ART = { SMB, AGENTS, CARTOON };
 
@@ -102,9 +104,12 @@ export default function Navbar() {
   const [mobileSubmenu, setMobileSubmenu] = useState(null);
   const [mobileNav, setMobileNav] = useState(false);
   const [height, setHeight] = useState(0);
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
   const panelRefs = useRef({});
   const closeTimer = useRef(null);
   const baseId = useId();
+  const pathname = usePathname();
+  const isAuthPage = pathname === "/login" || pathname === "/signup";
 
   useEffect(() => {
     const onKey = (e) => {
@@ -120,6 +125,8 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => () => clearTimeout(closeTimer.current), []);
+
+  if (isAuthPage) return null;
 
   // Panels stay laid out (only faded), so their height is measurable on demand.
   const show = (id) => {
@@ -139,12 +146,12 @@ export default function Navbar() {
 
   return (
     <>
-      <Link href="/ai" className="cu-banner">
+      <Link href="/brain" className="cu-banner">
         <span className="cu-banner-text">
           <strong>
             NEW: Brain<sup>2</sup>
           </strong>{" "}
-          — The best AI is <i>your</i>{" "}AI. The world&apos;s first company Brain
+          - The best AI is <i>your</i>{" "}AI. The world&apos;s first company Brain
         </span>
         <svg
           className="cu-banner-chevron"
@@ -199,9 +206,9 @@ export default function Navbar() {
         </div>
 
         <div className="cu-cta">
-          <Link href="/demo" className="cu-demo">
+          <button type="button" className="cu-demo" onClick={() => setIsDemoOpen(true)}>
             Get a Demo
-          </Link>
+          </button>
           <Link href="/login" className="cu-login">
             Login
           </Link>
@@ -320,16 +327,17 @@ export default function Navbar() {
                 <span>Enterprise</span>
               </Link>
 
-              <Link
-                href="/demo"
+              <button
+                type="button"
                 className="cu-mobile-item"
                 onClick={() => {
                   setMobileNav(false);
                   setMobileSubmenu(null);
+                  setIsDemoOpen(true);
                 }}
               >
                 <span>Get a Demo</span>
-              </Link>
+              </button>
             </div>
 
             <div className="cu-mobile-footer">
@@ -466,6 +474,8 @@ export default function Navbar() {
         )}
       </div>
       </nav>
+
+      <DemoModal open={isDemoOpen} onClose={() => setIsDemoOpen(false)} />
     </>
   );
 }
