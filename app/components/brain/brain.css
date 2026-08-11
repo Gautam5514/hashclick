@@ -1268,6 +1268,53 @@
   font-weight: 700;
   font-size: 20px;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.bn-social-track {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .bn-social-inner {
+    display: none;
+  }
+
+  .bn-social-track {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .bn-social-track-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+    opacity: 0.55;
+    animation: bn-social-scroll 16s linear infinite;
+  }
+}
+
+@media (max-width: 600px) and (prefers-reduced-motion: reduce) {
+  .bn-social-track-group {
+    animation: none;
+  }
+  .bn-social-track {
+    overflow-x: auto;
+  }
+}
+
+@keyframes bn-social-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* ------------------------------------------------------------

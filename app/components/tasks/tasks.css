@@ -412,6 +412,13 @@
   .task-motion-banner h2 { font-size: 26px; }
   .task-motion-product { width: 100%; left: 0; }
   .task-btn { width: 100%; }
+  .task-ai-copy h3 { font-size: clamp(21px, 6vw, 27px); }
+  .task-ai-copy > p:not(.task-eyebrow) { font-size: 14px; line-height: 1.5; }
+  .task-inline-actions { flex-wrap: nowrap; gap: 8px; }
+  .task-ai-copy .task-btn { width: auto; min-height: 38px; padding: 0 14px; gap: 6px; font-size: 12.5px; white-space: nowrap; }
+  .task-ai-copy .task-btn svg { width: 14px; }
+  .task-dark-link { padding: 0 12px; font-size: 12px; white-space: nowrap; }
+  .task-dark-link svg { width: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
