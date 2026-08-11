@@ -45,7 +45,8 @@ export function SectionHeading({
       {eyebrow ? <Eyebrow tone={eyebrowTone}>{eyebrow}</Eyebrow> : null}
       <h2
         className={cn(
-          "font-display text-[clamp(2rem,4.2vw,3.25rem)] leading-[1.06] font-extrabold tracking-[-0.03em] text-ink text-balance",
+          "font-display text-[clamp(32px,3.6vw,48px)] leading-[1.15] font-[650] tracking-[-1.68px] text-balance",
+          "bg-[linear-gradient(97deg,#202020_43.17%,#8f8f8f_110.86%)] bg-clip-text text-transparent",
           titleClassName,
         )}
       >

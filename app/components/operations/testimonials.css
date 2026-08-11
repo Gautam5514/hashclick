@@ -76,7 +76,7 @@
 }
 
 /* Grid children fill their track, then centre the fixed-width card inside. */
-.tm-grid > li {
+.tm-grid>li {
   display: flex;
   justify-content: center;
   min-width: 100%;
@@ -159,54 +159,63 @@
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0), #000 10%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0), #000 10%);
 }
+
 .tm-blur-2 {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000 20%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000 20%);
 }
+
 .tm-blur-3 {
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, #000 30%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, #000 30%);
 }
+
 .tm-blur-4 {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000 40%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, #000 40%);
 }
+
 .tm-blur-5 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, #000 50%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, #000 50%);
 }
+
 .tm-blur-6 {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000 60%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000 60%);
 }
+
 .tm-blur-7 {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #000 70%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, #000 70%);
 }
+
 .tm-blur-8 {
   backdrop-filter: blur(31px);
   -webkit-backdrop-filter: blur(31px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #000 80%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #000 80%);
 }
+
 .tm-blur-9 {
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
   mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, #000 90%);
   -webkit-mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 80%, #000 90%);
 }
+
 .tm-blur-10 {
   backdrop-filter: blur(49px);
   -webkit-backdrop-filter: blur(49px);
@@ -307,6 +316,7 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
   .tm-award {
     align-items: flex-start;
   }
@@ -316,9 +326,11 @@
   .tm-wrapper {
     padding: 48px 20px;
   }
+
   .tm-grid {
     grid-template-columns: repeat(2, minmax(10px, 1fr));
   }
+
   .tm-card {
     --tm-card-h: 520px;
   }
@@ -329,17 +341,21 @@
     margin-bottom: 32px;
     padding: 0;
   }
+
   .tm-headline h2 {
     font-size: 34px;
     line-height: 120%;
     letter-spacing: -1.36px;
   }
+
   .tm-grid-wrapper {
     padding: 0;
   }
+
   .tm-grid {
     grid-template-columns: minmax(200px, 1fr);
   }
+
   .tm-card {
     --tm-card-h: 560px;
     max-width: none;

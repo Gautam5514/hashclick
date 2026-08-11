@@ -41,11 +41,15 @@
 }
 
 .chat-h2 {
-  font-size: clamp(1.875rem, 4.2vw, 3.25rem);
-  font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  color: #ffffff;
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -1.68px;
+  background: linear-gradient(97deg, #ffffff 43.17%, #8f8f8f 110.86%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .chat-h3 {
@@ -204,14 +208,18 @@
 
 .chat-hero {
   position: relative;
-  padding: 3.5rem 0 0;
+  padding: 2rem 0 0;
   text-align: center;
   overflow: hidden;
   background: #000000;
 }
 
 @media (min-width: 768px) {
-  .chat-hero { padding-top: 4.5rem; }
+  .chat-hero { padding-top: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .chat-hero { padding-top: 3.5rem; }
 }
 
 /* Barely-there purple lift behind the headline; keeps the canvas reading black */
@@ -1794,9 +1802,11 @@
 /* --------------------------------------------------------------------- FAQ */
 
 .chat-faq-header h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  background: linear-gradient(90deg, #ffffff 0%, #a1a1aa 100%);
+  font-size: clamp(32px, 3.6vw, 48px);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -1.68px;
+  background: linear-gradient(97deg, #ffffff 43.17%, #8f8f8f 110.86%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

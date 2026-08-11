@@ -2,10 +2,18 @@
 
 .about-hero-section {
   position: relative;
-  padding: 3.5rem 1.5rem 1rem;
+  padding: 2rem 1.5rem 1rem;
   background: #ffffff;
   text-align: center;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-hero-section { padding-top: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .about-hero-section { padding-top: 3.5rem; }
 }
 
 .about-hero-tag {

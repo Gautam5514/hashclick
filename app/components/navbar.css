@@ -800,7 +800,7 @@
   color: #111;
 }
 
-.cu-mobile-group + .cu-mobile-group {
+.cu-mobile-group+.cu-mobile-group {
   border-top: 0;
 }
 
@@ -910,13 +910,16 @@
 }
 
 @media (max-width: 1100px) {
+
   .cu-links,
   .cu-demo {
     display: none;
   }
+
   .cu-hamburger {
     display: flex;
   }
+
   .cu-container {
     gap: 16px;
   }
@@ -926,6 +929,7 @@
   .cu-cta .cu-login {
     display: none;
   }
+
   .cu-cta .cu-signup {
     padding: 6px 12px;
     font-size: 13px;
@@ -933,6 +937,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .cu-overlay,
   .cu-chevron,
   .cu-item-icon img {

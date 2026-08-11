@@ -35,7 +35,7 @@
 .bn-hero {
   position: relative;
   overflow: hidden;
-  padding-block-start: 24px;
+  padding-block-start: clamp(32px, 5vw, 56px);
   background: var(--bn-bg);
 }
 
@@ -1344,7 +1344,7 @@
   color: #fff;
   font-family: var(--bn-display);
   font-weight: 650;
-  font-size: clamp(30px, 4.2vw, 48px);
+  font-size: clamp(32px, 3.6vw, 48px);
   line-height: 1.15;
   letter-spacing: -1.68px;
   text-wrap: balance;
@@ -1442,7 +1442,7 @@
 .bn-icp-header { display: flex; flex-direction: column; align-items: flex-start; min-height: 560px; padding: 72px 22px 64px; }
 .bn-icp-header .bn-eyebrow { margin: 0 0 24px; font: 500 13px/1.2 var(--bn-mono); letter-spacing: .03em; text-transform: uppercase; }
 .bn-icp-rule { width: 100%; height: 1px; margin-bottom: 48px; background: #292929; }
-.bn-icp-header .bn-h2 { max-width: 790px; margin: 0; font-size: clamp(36px, 4.2vw, 48px); font-weight: 700; line-height: 1.08; letter-spacing: -.055em; }
+.bn-icp-header .bn-h2 { max-width: 790px; margin: 0; font-size: clamp(32px, 3.6vw, 48px); font-weight: 650; line-height: 1.15; letter-spacing: -1.68px; }
 .bn-icp-header .bn-h2 sup { position: relative; top: -.55em; font-size: .42em; }
 .bn-icp-header .bn-h2 em { color: #6d6d6d; font-style: normal; }
 .bn-icp-header .bn-lede { max-width: 760px; margin: 32px 0 26px; color: #aaa; font: 450 17px/1.5 var(--bn-sans); letter-spacing: -.02em; }
@@ -1594,9 +1594,9 @@
 .bn-cards-heading-row .bn-h2 {
   max-width: 780px;
   margin: 0;
-  font-size: clamp(38px, 4.1vw, 52px);
-  line-height: 1.08;
-  letter-spacing: -.05em;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1.68px;
 }
 
 .bn-cards-heading-row .bn-h2 sup {
@@ -2600,7 +2600,7 @@
 .bn-whatsnew-header .bn-eyebrow { margin: 0 0 24px; text-transform: uppercase; }
 .bn-whatsnew-rule { width: 100%; height: 1px; margin-bottom: 52px; background: #292929; }
 .bn-whatsnew-copy { display: grid; grid-template-columns: 1.65fr 1fr; gap: 80px; align-items: center; width: 100%; }
-.bn-whatsnew-copy .bn-h2 { max-width: 580px; margin: 0; font-size: clamp(42px, 4.8vw, 60px); line-height: 1.05; letter-spacing: -.055em; }
+.bn-whatsnew-copy .bn-h2 { max-width: 580px; margin: 0; font-size: clamp(32px, 3.6vw, 48px); line-height: 1.15; letter-spacing: -1.68px; }
 .bn-whatsnew-copy .bn-h2 sup { position: relative; top: -.55em; font-size: .42em; }
 .bn-whatsnew-side { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
 .bn-whatsnew-side .bn-lede { max-width: 350px; margin: 0; }

@@ -8,8 +8,16 @@
 
 .research-hero-section {
   text-align: center;
-  padding: 3rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   background: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .research-hero-section { padding-top: 3rem; }
+}
+
+@media (min-width: 1024px) {
+  .research-hero-section { padding-top: 3.5rem; }
 }
 
 .research-hero-tag {
