@@ -27,13 +27,6 @@ function Svg({ markup, className }) {
   );
 }
 
-const downloads = [
-  { name: "macOS", icon: ICON_APPLE, href: "/download" },
-  { name: "iOS", icon: ICON_APPLE, href: "/download" },
-  { name: "Windows", icon: ICON_WINDOWS, href: "/download" },
-  { name: "Android", icon: ICON_ANDROID, href: "/download" },
-];
-
 const models = [
   { name: "Brain", icon: "/brain-2/brain.svg" },
   { name: "GPT", icon: "/brain-2/logos/chatgpt.svg" },
@@ -524,19 +517,7 @@ export default function Brain2Section() {
             <p className="b2-subtitle">
               Already plugged into your team, your tools, and your tasks.
             </p>
-            <div className="b2-dl-group">
-              <span className="b2-dl-group-label">Available everywhere</span>
-              <ul className="b2-dl-list">
-                {downloads.map((d) => (
-                  <li key={d.name} className="b2-dl-item">
-                    <a className="b2-dl-link" href={d.href}>
-                      <Svg markup={d.icon} className="b2-dl-icon" />
-                      <span>{d.name}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
           </header>
           <img
             className="b2-hero-glow"

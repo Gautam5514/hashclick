@@ -189,7 +189,7 @@ export default function BrainHero() {
                 All new
                 <Image src="/brain-2/brain.svg" width={18} height={18} alt="" />
                 <strong>
-                  Brain<sup>2</sup>
+                  Hash AI
                 </strong>
               </span>
             </span>
