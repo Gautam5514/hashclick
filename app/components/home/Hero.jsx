@@ -43,29 +43,29 @@ function ClickUpFlowerIcon({ className = "size-4" }) {
 
 const valueProps = [
   {
-    title: "Save money.",
-    body: "All Apps, AI, Projects, Chat + 20 more.",
+    title: "Save Time.",
+    body: "Less switching, searching, and repetitive work",
   },
   {
-    title: "Save time.",
-    body: "All humans working together with perfect context.",
+    title: "Stay Organized.",
+    body: "Everything stays clear, connected, and accessible.",
   },
   {
-    title: "Create infinite productivity.",
-    body: "AI Agents & Workflows.",
+    title: "Scale Smoother.",
+    body: "Grow without adding operational chaos.",
   },
 ];
 
-const row1Pills = ["Projects", "Chat", "Brain MAX", "AI Agents", "Sprints"];
-const row2Pills = ["Time Tracking", "Calendar", "Docs", "Whiteboards"];
-const row3Pills = ["Automations", "Dashboards", "Scheduling"];
+const row1Pills = ["Projects", "Chat", "Hash AI", "Billing"];
+const row2Pills = ["Time Tracking", "Calendar", "Tasks", "Docs"];
+const row3Pills = ["Expenses", "Dashboards", "Analytics", "Integrations"];
 
 export default function Hero() {
   const [activePills, setActivePills] = useState([
     "Projects",
     "Chat",
-    "Brain MAX",
-    "AI Agents",
+    "Hash AI",
+    "Billing",
   ]);
   const [lastSelectedPill, setLastSelectedPill] = useState("Projects");
 
@@ -116,10 +116,10 @@ export default function Hero() {
               className="rainbow-pill-wrap group transition-transform hover:scale-[1.02]"
             >
               <div className="rainbow-pill-inner">
-                <span>The Best AI is</span>
+                <span>Powered By</span>
                 <ClickUpFlowerIcon className="size-4 shrink-0" />
                 <span className="font-extrabold text-[#202020]">
-                  Brain<sup className="text-[10px] font-bold">2</sup>
+                  Hash AI
                 </span>
                 <ChevronRight className="size-3.5 text-[#7b7b7b] transition-transform group-hover:translate-x-0.5" />
               </div>
@@ -157,11 +157,11 @@ export default function Hero() {
                 size="lg"
                 className="w-full sm:w-auto text-center rounded-2xl bg-[#202020] px-7 py-3.5 text-[16px] font-bold text-white shadow-md transition-all hover:bg-black hover:scale-[1.02]"
               >
-                Get started. It&apos;s FREE!
+                Get started. Now!
               </Button>
               <div className="text-[12.5px] font-medium leading-snug text-[#646464]">
-                Free forever. <br className="hidden sm:inline" />
-                No credit card.
+                Start 7 Days <br className="hidden sm:inline" />
+                Free Trial.
               </div>
             </div>
 
@@ -195,16 +195,7 @@ export default function Hero() {
                     key={waveKey}
                     className="absolute inset-0 rounded-full bg-[#e2e8f0] animate-clickup-wave pointer-events-none"
                   />
-
-                  {/* Inner Compact Dark Pill Button */}
-                  <button
-                    type="button"
-                    onClick={() => setWaveKey((prev) => prev + 1)}
-                    className="relative z-10 inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#282c35] to-[#181b22] px-4.5 py-1.5 text-[13.5px] font-bold text-white shadow-md transition-all hover:from-[#323844] hover:to-[#1e232d] hover:scale-[1.03] active:scale-95 cursor-pointer"
-                  >
-                    <span>Activate</span>
-                    <ArrowRight className="size-3.5 stroke-[2.8] transition-transform group-hover:translate-x-0.4" />
-                  </button>
+                
                 </div>
               </div>
             </div>

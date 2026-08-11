@@ -154,11 +154,11 @@ export default function FeatureWall() {
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center mb-12 md:mb-16">
           <h2 className="font-display text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[1.04] font-bold tracking-[-0.04em] text-[#202020]">
-            All apps, AI Agents, <br className="hidden sm:inline" />
-            and humans in <span className="text-[#646464]">ClickUp</span>
+            Your entire agency,  <br className="hidden sm:inline" />
+             connected in <span className="text-[#646464]">HashBoard</span>
           </h2>
           <p className="mt-4 text-[16px] font-medium text-[#7b7b7b]">
-            100+ products to replace fragmented software &amp; maximize human productivity.
+          HashBoard brings your entire agency operation into one connected platform, powered by Hash AI.
           </p>
         </div>
 

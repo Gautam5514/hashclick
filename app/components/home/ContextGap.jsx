@@ -35,14 +35,14 @@ export default function ContextGap() {
         {/* Section Header - Reduced font weight & formatted into 2 clean lines */}
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="font-display text-[clamp(2.1rem,4vw,3.4rem)] leading-[1.06] font-bold tracking-[-0.03em] text-[#202020]">
-            <span>60% of work is lost in context</span>
+            <span>Your agency shouldn’t run</span>
             <br />
             <span className="normal sm:whitespace-nowrap font-semibold text-[#646464]">
-              - and AI is lost without it
+              on scattered tools
             </span>
           </h2>
           <p className="mt-4 text-[15.5px] font-medium text-[#7b7b7b]">
-            Work Sprawl is killing context and destroying productivity.
+           When work lives across different tools, your team and your AI never see the complete picture.
           </p>
         </div>
 
