@@ -57,10 +57,10 @@ export default function AuthPanel({ mode = "signup" }) {
           <LogoMark className="size-11" />
         </Link>
 
-        <h1 className="font-display mt-5 text-center text-[26px] font-extrabold tracking-[-0.02em] text-ink">
+        <h1 className="font-display mt-5 text-center text-[22px] font-extrabold tracking-[-0.02em] text-ink">
           {isSignup ? "Seconds to sign up!" : "Welcome back!"}
         </h1>
-        <p className="mt-1.5 text-[15px] text-ink-secondary">
+        <p className="mt-1.5 text-[13px] text-ink-secondary">
           {isSignup ? (
             <>
               Already have an account?{" "}
@@ -81,19 +81,19 @@ export default function AuthPanel({ mode = "signup" }) {
         <div className="mt-8 w-full max-w-[420px]">
           <button
             type="button"
-            className="flex w-full items-center gap-3 rounded-xl border border-line-strong px-4 py-3 text-left transition-colors hover:bg-btn-secondary"
+            className="flex w-full items-center gap-3 rounded-xl border border-line-strong px-4 py-2.5 text-left transition-colors hover:bg-btn-secondary"
           >
             <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-btn-secondary text-ink-tertiary">
               <Globe className="size-4" />
             </span>
-            <span className="flex-1 text-[14px] font-semibold text-ink">Continue with Google</span>
+            <span className="flex-1 text-[13px] font-semibold text-ink">Continue with Google</span>
             <GoogleIcon className="size-5 shrink-0" />
           </button>
 
           {!isSignup ? (
             <button
               type="button"
-              className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-xl border border-line-strong px-4 py-3 text-[14px] font-semibold text-ink transition-colors hover:bg-btn-secondary"
+              className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-xl border border-line-strong px-4 py-2.5 text-[13px] font-semibold text-ink transition-colors hover:bg-btn-secondary"
             >
               <Cloud className="size-4.5 text-ink-tertiary" />
               Continue with SSO
@@ -102,7 +102,7 @@ export default function AuthPanel({ mode = "signup" }) {
 
           <div className="my-5 flex items-center gap-3">
             <span className="h-px flex-1 bg-line" />
-            <span className="text-[13px] text-ink-tertiary">or</span>
+            <span className="text-[12px] text-ink-tertiary">or</span>
             <span className="h-px flex-1 bg-line" />
           </div>
 
@@ -117,14 +117,14 @@ export default function AuthPanel({ mode = "signup" }) {
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   className={cn(
-                    "h-12 w-full rounded-xl border bg-bg-main px-4 text-[14px] text-ink outline-none placeholder:text-ink-disabled focus:ring-2",
+                    "h-11 w-full rounded-xl border bg-bg-main px-4 text-[13px] text-ink outline-none placeholder:text-ink-disabled focus:ring-2",
                     nameMissing
                       ? "border-red-500 focus:border-red-500 focus:ring-red-500/15"
                       : "border-line-strong focus:border-brand-purple focus:ring-brand-purple/15"
                   )}
                 />
                 {nameMissing ? (
-                  <p className="mt-1.5 text-[12.5px] font-medium text-red-500">Full name required</p>
+                  <p className="mt-1.5 text-[11.5px] font-medium text-red-500">Full name required</p>
                 ) : null}
               </div>
             ) : null}
@@ -136,7 +136,7 @@ export default function AuthPanel({ mode = "signup" }) {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-12 w-full rounded-xl border border-line-strong bg-bg-main px-4 text-[14px] text-ink outline-none placeholder:text-ink-disabled focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/15"
+              className="h-11 w-full rounded-xl border border-line-strong bg-bg-main px-4 text-[13px] text-ink outline-none placeholder:text-ink-disabled focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/15"
             />
 
             <div className="relative">
@@ -147,7 +147,7 @@ export default function AuthPanel({ mode = "signup" }) {
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="h-12 w-full rounded-xl border border-line-strong bg-bg-main px-4 pr-11 text-[14px] text-ink outline-none placeholder:text-ink-disabled focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/15"
+                className="h-11 w-full rounded-xl border border-line-strong bg-bg-main px-4 pr-11 text-[13px] text-ink outline-none placeholder:text-ink-disabled focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/15"
               />
               <button
                 type="button"
@@ -163,7 +163,7 @@ export default function AuthPanel({ mode = "signup" }) {
               type="submit"
               disabled={submitted && !canSubmit}
               className={cn(
-                "h-12 w-full rounded-xl text-[15px] font-bold transition-colors",
+                "h-11 w-full rounded-xl text-[14px] font-bold transition-colors",
                 canSubmit || !submitted
                   ? "bg-ink text-white hover:bg-black"
                   : "cursor-not-allowed bg-btn-secondary text-ink-disabled"
@@ -175,14 +175,14 @@ export default function AuthPanel({ mode = "signup" }) {
 
           {!isSignup ? (
             <div className="mt-4 text-center">
-              <Link href="#" className="text-[13.5px] font-medium text-accent-blue hover:underline">
+              <Link href="#" className="text-[12.5px] font-medium text-accent-blue hover:underline">
                 Forgot Password?
               </Link>
             </div>
           ) : null}
         </div>
 
-        <p className="mt-auto pt-16 text-center text-[12.5px] text-ink-tertiary">
+        <p className="mt-auto pt-16 text-center text-[11.5px] text-ink-tertiary">
           {isSignup ? (
             <>
               By continuing, you agree to our{" "}
