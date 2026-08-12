@@ -34,14 +34,14 @@ const workflow = [
     title: "Track progress and performance in real time",
     body: "Monitor sprint velocity, team workload, project status, and KPIs dynamically as work gets completed across your Workspace.",
     image: "/dashboards/dashboard-feature-1.png",
-    alt: "ClickUp Dashboard progress and performance widgets",
+    alt: "Hashboard Dashboard progress and performance widgets",
   },
   {
     eyebrow: "50+ Customizable Widgets",
     title: "Custom reporting tailored to every team",
     body: "Mix and match charts, time tracking summaries, custom fields, calculations, and embedded docs to build your dream dashboard.",
     image: "/dashboards/dashboard-feature-2.png",
-    alt: "ClickUp Dashboard 50+ widget gallery",
+    alt: "Hashboard Dashboard 50+ widget gallery",
     reverse: true,
   },
   {
@@ -49,7 +49,7 @@ const workflow = [
     title: "From high-level metrics to granular tasks",
     body: "Don't just look at numbers. Click into any bar, pie, or line chart segment to view task details, assign owners, and update status instantly.",
     image: "/dashboards/dashboard-feature-3.png",
-    alt: "ClickUp Dashboard interactive drill-down view",
+    alt: "Hashboard Dashboard interactive drill-down view",
   },
 ];
 
@@ -62,7 +62,7 @@ const dashboardFeatures = [
   [SlidersHorizontal, "Custom Field Rollups", "Aggregate custom numbers, currencies, ratings, and dropdown fields across workspaces."],
   [Share2, "Share & Export", "Share dashboards privately with clients, export PDFs, or publish public read-only links."],
   [ShieldCheck, "Permission Controls", "Control exactly who can view, edit, or manage dashboard widgets."],
-  [FileText, "Embedded Docs & Apps", "Embed Google Sheets, Figma designs, YouTube videos, and ClickUp Docs directly into dashboards."],
+  [FileText, "Embedded Docs & Apps", "Embed Google Sheets, Figma designs, YouTube videos, and Hashboard Docs directly into dashboards."],
 ];
 
 const platform = [
@@ -90,7 +90,7 @@ function DashboardsHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">DASHBOARDS IN CLICKUP</p>
+          <p className="task-eyebrow">DASHBOARDS IN HASHBOARD</p>
           <h1>Build custom reports you can actually work from</h1>
           <p className="task-hero-lede">
             See everything at a glance: campaign performance, team productivity, billable hours. Then update work directly from the dashboard without switching tools.
@@ -114,7 +114,7 @@ function DashboardsHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="ClickUp Dashboards analytics view"
+            alt="Hashboard Dashboards analytics view"
           />
         </div>
       </div>
@@ -129,7 +129,7 @@ function Comparison() {
       <div className="task-shell">
         <h2 className="task-gradient-title">A better way to report</h2>
         <div className="task-compare-grid">
-          {[["Without ClickUp Dashboards", comparison.without, false], ["With ClickUp Dashboards", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Dashboards", comparison.without, false], ["With Hashboard Dashboards", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -190,13 +190,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="ClickUp" />
+          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your team&apos;s performance is always in view. Make smarter decisions.</h2>
           <p>Join 3M+ teams who report and act from the same place. No credit card. Free forever.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="ClickUp Dashboards workspace" />
+          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Dashboards workspace" />
         </div>
       </div>
     </section>
@@ -206,14 +206,14 @@ function MotionBanner() {
 function AiFeatures() {
   const cards = [
     ["Super Agents", "Automated executive summaries & reports", "Super Agents aggregate task progress, analyze workload bottlenecks, and write weekly status summaries straight to your Dashboard.", "/tasks/super-agents.png"],
-    ["ClickUp Brain", "Ask questions about any metric or chart", "Ask Brain why sprint velocity dropped or which team has open blockers. Brain instantly pulls answers from your Workspace data.", "/tasks/clickup-brain.png"],
+    ["Hashboard Brain", "Ask questions about any metric or chart", "Ask Brain why sprint velocity dropped or which team has open blockers. Brain instantly pulls answers from your Workspace data.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
           <p className="task-eyebrow">AI powered reporting</p>
-          <h2>Instant insights and updates<br />powered by ClickUp Brain</h2>
+          <h2>Instant insights and updates<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -261,9 +261,9 @@ function FeaturesAndPlatform() {
       <section className="task-section task-platform">
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
-            <p className="task-eyebrow">The ClickUp platform</p>
+            <p className="task-eyebrow">The Hashboard platform</p>
             <h2>Dashboards are just the beginning</h2>
-            <p>Dashboards connect live metrics to the rest of ClickUp. Tasks, Docs, Chat, Whiteboards, and Automations in a single converged app. Explore everything you unlock in one place.</p>
+            <p>Dashboards connect live metrics to the rest of Hashboard. Tasks, Docs, Chat, Whiteboards, and Automations in a single converged app. Explore everything you unlock in one place.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -357,7 +357,7 @@ function DashboardsFinal() {
               src="/dashboards/dashboard-footer.png"
               width={1240}
               height={460}
-              alt="ClickUp Dashboards footer workspace"
+              alt="Hashboard Dashboards footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

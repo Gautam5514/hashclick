@@ -10,7 +10,7 @@ export const ABOUT_STATS = [
     value: "10M+",
     unit: "Users",
     label: "Across 180+ countries",
-    description: "Millions of knowledge workers trust ClickUp daily.",
+    description: "Millions of knowledge workers trust Hashboard daily.",
     color: "#fa12e3"
   },
   {

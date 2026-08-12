@@ -29,24 +29,24 @@ const workflow = [
   {
     eyebrow: "Everything included",
     title: "More than a to-do list",
-    body: "ClickUp Tasks come fully loaded with everything teams need to plan, assign, track, and finish work in one place.",
+    body: "Hashboard Tasks come fully loaded with everything teams need to plan, assign, track, and finish work in one place.",
     image: "/tasks/feature-included.png",
-    alt: "A ClickUp task with status, dates, assignee, priority, and custom fields",
+    alt: "A Hashboard task with status, dates, assignee, priority, and custom fields",
   },
   {
     eyebrow: "Connected work",
     title: "Connected to your entire workspace",
     body: "Tasks don’t live in isolation. They stay linked to docs, chat, goals, dashboards, and more so work stays clear and actionable.",
     image: "/tasks/feature-connected.png",
-    alt: "Relationships connecting ClickUp tasks and documents",
+    alt: "Relationships connecting Hashboard tasks and documents",
     reverse: true,
   },
   {
     eyebrow: "Execution at scale",
     title: "Built to run all your work",
-    body: "From daily action items to cross-team initiatives, ClickUp Tasks scale across every use case without stitching together multiple tools.",
+    body: "From daily action items to cross-team initiatives, Hashboard Tasks scale across every use case without stitching together multiple tools.",
     image: "/tasks/feature-scale.png",
-    alt: "ClickUp board with connected work cards",
+    alt: "Hashboard board with connected work cards",
   },
 ];
 
@@ -82,7 +82,7 @@ function TasksHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">ClickUp Tasks</p>
+          <p className="task-eyebrow">Hashboard Tasks</p>
           <h1>Never lose track of work again</h1>
           <p className="task-hero-lede">Capture every request, assign it in seconds, and always know who owns what so projects don’t stall, deadlines don’t slip, and work doesn’t disappear.</p>
           <div className="task-hero-action"><CTAButton /><span>No credit card.<br />Setup in 2 min.</span></div>
@@ -95,7 +95,7 @@ function TasksHero() {
           </div>
         </div>
         <div className="task-hero-visual">
-          <Image src="/tasks/task-hero.png" width={815} height={543} priority sizes="(max-width: 1000px) 100vw, 815px" alt="ClickUp Tasks list view" />
+          <Image src="/tasks/task-hero.png" width={815} height={543} priority sizes="(max-width: 1000px) 100vw, 815px" alt="Hashboard Tasks list view" />
         </div>
       </div>
       <LogoCloud className="task-hero-logo-cloud" />
@@ -105,12 +105,12 @@ function TasksHero() {
 
 function Comparison() {
   return <section className="task-section task-comparison"><div className="task-shell"><h2 className="task-gradient-title">A better way to work</h2><div className="task-compare-grid">
-    {[["Without ClickUp Tasks", comparison.without, false], ["With ClickUp Tasks", comparison.with, true]].map(([title, items, good]) => <article className={good ? "is-with" : "is-without"} key={title}><h3>{title}</h3><ul>{items.map(item => <li key={item}>{good ? <Check /> : <X />}{item}</li>)}</ul></article>)}
+    {[["Without Hashboard Tasks", comparison.without, false], ["With Hashboard Tasks", comparison.with, true]].map(([title, items, good]) => <article className={good ? "is-with" : "is-without"} key={title}><h3>{title}</h3><ul>{items.map(item => <li key={item}>{good ? <Check /> : <X />}{item}</li>)}</ul></article>)}
   </div></div></section>;
 }
 
 function WorkflowGrid() {
-  return <section className="task-section task-foundation"><div className="task-shell"><header className="task-heading task-foundation-heading"><h2>The foundation for every workflow</h2><p>Tasks power everything in ClickUp, so your work stays organized, connected,<br className="task-desktop-break" /> and moving no matter how complex it gets.</p></header><div className="task-workflow-grid">
+  return <section className="task-section task-foundation"><div className="task-shell"><header className="task-heading task-foundation-heading"><h2>The foundation for every workflow</h2><p>Tasks power everything in Hashboard, so your work stays organized, connected,<br className="task-desktop-break" /> and moving no matter how complex it gets.</p></header><div className="task-workflow-grid">
     {workflow.map((item, index) => <article className={`task-workflow-row${item.reverse ? " reverse" : ""}`} key={item.title}>
       <span className="task-grid-arc task-grid-arc-top" aria-hidden="true" />
       <span className="task-grid-arc task-grid-arc-bottom" aria-hidden="true" />
@@ -121,20 +121,20 @@ function WorkflowGrid() {
 }
 
 function MotionBanner() {
-  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="ClickUp" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. No credit card. Free forever.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="ClickUp Tasks workspace" /></div></div></section>;
+  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/tasks/hashboard-logo-dark.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. No credit card. Free forever.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
 }
 
 function AiFeatures() {
   const cards = [
     ["Super Agents", "Your tasks, created and assigned automatically", "Super Agents capture work from chat, threads, or anywhere you work, turning conversations into structured tasks with the right owner, due date, and priority.", "/tasks/super-agents.png"],
-    ["ClickUp Brain", "AI that works where you work", "Ask questions, generate updates, and create subtasks without leaving your workflow. Brain pulls context from your entire Workspace to deliver answers and take action on the spot.", "/tasks/clickup-brain.png"],
+    ["Hashboard Brain", "AI that works where you work", "Ask questions, generate updates, and create subtasks without leaving your workflow. Brain pulls context from your entire Workspace to deliver answers and take action on the spot.", "/tasks/hashboard-brain.png"],
   ];
   return <section className="task-section task-ai"><div className="task-shell"><header className="task-heading"><p className="task-eyebrow">AI powered efficiency</p><h2>You focus on real work,<br />AI handles the busywork</h2></header><div className="task-ai-grid">{cards.map(([eye, title, body, image]) => <article key={title}><div className="task-ai-copy"><p className="task-eyebrow">{eye}</p><h3>{title}</h3><p>{body}</p><div className="task-inline-actions"><CTAButton secondary>Get started</CTAButton><Link href="/brain" className="task-dark-link">Explore {eye}<ArrowRight /></Link></div></div><div className="task-ai-image"><Image src={image} fill sizes="(max-width: 760px) 100vw, 50vw" alt={title} /></div></article>)}</div></div></section>;
 }
 
 function FeaturesAndPlatform() {
   return <><section className="task-section task-feature-section"><div className="task-shell task-feature-shell"><header className="task-heading task-feature-heading"><h2>Plus, everything you need to get it done</h2></header><div className="task-feature-grid">{taskFeatures.map(([Icon, title, body]) => <article key={title}><span><Icon /></span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
-    <section className="task-section task-platform"><div className="task-shell task-platform-shell"><header className="task-heading task-platform-heading"><p className="task-eyebrow">The ClickUp platform</p><h2>Tasks are just the beginning</h2><p>Tasks are the connective tissue of the ClickUp platform. Docs, Dashboards, Chat, Whiteboards, and more in a single, converged app. Explore everything you unlock when your work lives in one place.</p></header><div className="task-platform-grid">            {platform.map(([Icon, title, body]) => (
+    <section className="task-section task-platform"><div className="task-shell task-platform-shell"><header className="task-heading task-platform-heading"><p className="task-eyebrow">The Hashboard platform</p><h2>Tasks are just the beginning</h2><p>Tasks are the connective tissue of the Hashboard platform. Docs, Dashboards, Chat, Whiteboards, and more in a single, converged app. Explore everything you unlock when your work lives in one place.</p></header><div className="task-platform-grid">            {platform.map(([Icon, title, body]) => (
               <Link
                 href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : "/product"}
                 key={title}
@@ -221,7 +221,7 @@ function TasksFinal() {
               src="/tasks/task-footer.png"
               width={1240}
               height={460}
-              alt="ClickUp Tasks footer workspace"
+              alt="Hashboard Tasks footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

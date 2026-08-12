@@ -9,25 +9,25 @@ const roiMetrics = [
     tag: "ROI",
     value: "384%",
     description:
-      "ClickUp delivered 384% ROI over three years, helping organizations unlock significant efficiency gains.",
+      "Hashboard delivered 384% ROI over three years, helping organizations unlock significant efficiency gains.",
   },
   {
     tag: "REVENUE INCREASE",
     value: "$3.9M",
     description:
-      "ClickUp projects drove $3.9M in revenue gains by streamlining work, consolidating tools, and scaling faster.",
+      "Hashboard projects drove $3.9M in revenue gains by streamlining work, consolidating tools, and scaling faster.",
   },
   {
     tag: "HOURS SAVED",
     value: "92,400",
     description:
-      "Organizations saved 92,400 hours with ClickUp, reducing manual work and recapturing productivity at scale.",
+      "Organizations saved 92,400 hours with Hashboard, reducing manual work and recapturing productivity at scale.",
   },
   {
     tag: "PAYBACK",
     value: "<6 mo",
     description:
-      "Customers reached payback in under six months, making ClickUp a proven investment with rapid returns.",
+      "Customers reached payback in under six months, making Hashboard a proven investment with rapid returns.",
   },
 ];
 
@@ -44,7 +44,7 @@ export function RoiSection() {
             </div>
             <div className="roi-subtext">
               <p>
-                According to third party research ClickUp saves the average company
+                According to third party research Hashboard saves the average company
                 over 30k hours per year, <br />
                 and delivers industry-leading ROI.
               </p>
@@ -74,7 +74,7 @@ export function RoiSection() {
 
         <div className="roi-footer">
           <p className="roi-footnote">
-            *from 2025 The Total Economic Impact™ of ClickUp report from Forrester
+            *from 2025 The Total Economic Impact™ of Hashboard report from Forrester
             Group.{" "}
             <Link href="/demo" className="roi-footnote-link">
               Get the report

@@ -6,28 +6,28 @@ import Link from "next/link";
 const PHOTOS = [
   {
     src: "https://clickup.com/images/careers/life-at-clickup-9.png",
-    alt: "ClickUp team collaboration and meetings",
+    alt: "Hashboard team collaboration and meetings",
     caption: "NY MeetUp",
     date: "01/03/2018",
     rotate: -7,
   },
   {
     src: "https://clickup.com/images/careers/life-at-clickup-6.png",
-    alt: "ClickUp team activities and events",
-    caption: "ClickUp New Year",
+    alt: "Hashboard team activities and events",
+    caption: "Hashboard New Year",
     date: "01/03/2018",
     rotate: 4,
   },
   {
     src: "https://clickup.com/images/careers/life-at-clickup-3.png",
-    alt: "ClickUp team members working together",
+    alt: "Hashboard team members working together",
     caption: "Prague events",
     date: "12/20/2019",
     rotate: -4,
   },
   {
     src: "https://clickup.com/images/careers/life-at-clickup-1.png",
-    alt: "ClickUp office culture and workspace",
+    alt: "Hashboard office culture and workspace",
     caption: "3.0 SF Event",
     date: "11/24/2020",
     rotate: 8,
@@ -44,7 +44,7 @@ export default function LifeAtClickUpSection() {
               Gallery
             </span>
             <h2 className="about-clickup-gradient mt-2 text-4xl font-extrabold font-display leading-none sm:text-5xl">
-              Life at ClickUp.
+              Life at Hashboard.
             </h2>
           </div>
           <div className="max-w-sm text-left md:text-right">

@@ -9,7 +9,7 @@
 export const navMenus = [
   {
     id: "brain-ai",
-    label: "Brain AI",
+    label: "Hash AI",
     columns: [
       {
         title: "AI Platform",
@@ -185,7 +185,7 @@ export const navMenus = [
         title: "Customer stories",
         kind: "story",
         story: {
-          quote: "\u201cCartoon Network doubles output in 50% less time with ClickUp\u201d",
+          quote: "\u201cCartoon Network doubles output in 50% less time with Hashboard\u201d",
           cta: "Read the story \u2192",
           href: "/learn",
           art: "CARTOON",

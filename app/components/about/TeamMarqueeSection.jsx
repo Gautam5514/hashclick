@@ -29,7 +29,7 @@ const teamMembers = [
   {
     image: "https://images.cnippet.dev/image/upload/v1770400411/a5.jpg",
     name: "Natalia Skinner",
-    role: "ClickUp Researcher",
+    role: "Hashboard Researcher",
   },
   {
     image: "https://images.cnippet.dev/image/upload/v1770400411/a6.jpg",
@@ -74,7 +74,7 @@ export default function TeamMarqueeSection() {
           </div>
 
           <h2 className="relative mb-4 font-display font-medium text-4xl text-neutral-900 tracking-tight sm:text-5xl">
-            The people behind ClickUp
+            The people behind Hashboard
             <svg
               className="absolute -top-2 -right-8 -z-10 w-24 text-neutral-200"
               fill="currentColor"
@@ -93,7 +93,7 @@ export default function TeamMarqueeSection() {
             </svg>
           </h2>
           <p className="max-w-2xl text-neutral-600">
-            ClickUppers are highly passionate, energetic, and unique people
+            Hashboarders are highly passionate, energetic, and unique people
             who align with the mission of saving people time and making the
             world more productive.
           </p>
@@ -131,7 +131,7 @@ export default function TeamMarqueeSection() {
 
         <div className="mx-auto mt-20 max-w-3xl px-6 text-center lg:px-0">
           <p className="mb-8 font-medium text-lg text-neutral-900 leading-relaxed md:text-xl">
-            The exceptional support from ClickUp truly impressed us. We
+            The exceptional support from Hashboard truly impressed us. We
             suggested an improvement, and their team implemented it with
             remarkable speed!
           </p>

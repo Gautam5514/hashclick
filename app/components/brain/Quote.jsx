@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 const words =
-  "ClickUp's AI levels the playing field — three-month-old project manager or a seasoned veteran, you tap into the same intelligence. Every project we run is backed by 150 years of our team's collective expertise, not just one person's memory.".split(
+  "Hashboard's AI levels the playing field — three-month-old project manager or a seasoned veteran, you tap into the same intelligence. Every project we run is backed by 150 years of our team's collective expertise, not just one person's memory.".split(
     " ",
   );
 

@@ -1,7 +1,7 @@
 import ResearchPage from "../components/research/ResearchPage";
 
 export const metadata = {
-  title: "Original Research and Data Studies by ClickUp | Workplace Productivity",
+  title: "Original Research and Data Studies by Hashboard | Workplace Productivity",
   description: "A centralized library of original workplace research on how modern teams use AI, run meetings, manage communication, juggle apps, and stay productive.",
 };
 

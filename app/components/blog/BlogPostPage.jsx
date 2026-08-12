@@ -70,13 +70,13 @@ export default function BlogPostPage() {
             
             {/* Monospace Category Tag */}
             <span className="text-xs font-mono font-bold text-[#7026e3] uppercase tracking-widest block">
-              USING CLICKUP
+              USING Hashboard
             </span>
 
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-neutral-900 tracking-tight leading-[1.12]">
               20 Automation Examples in <br className="hidden sm:inline" />
-              ClickUp Worth Stealing
+              Hashboard Worth Stealing
             </h1>
 
             {/* Author Metadata Row */}
@@ -104,7 +104,7 @@ export default function BlogPostPage() {
                 href="/signup"
                 className="inline-flex items-center justify-center bg-[#1c1c1e] hover:bg-neutral-800 text-white font-bold px-8 py-3.5 rounded-2xl text-sm transition-all shadow-sm"
               >
-                Create custom automations with ClickUp
+                Create custom automations with Hashboard
               </Link>
             </div>
 
@@ -115,7 +115,7 @@ export default function BlogPostPage() {
             <div className="relative aspect-[16/10] w-full rounded-[22px] overflow-hidden shadow-none border-0 bg-neutral-900">
               <Image
                 src="/blog/automation-dashboards.png"
-                alt="ClickUp Automations Example"
+                alt="Hashboard Automations Example"
                 fill
                 priority
                 className="object-cover object-top"
@@ -145,13 +145,13 @@ export default function BlogPostPage() {
             <p>
               They didn&apos;t hire more people to fix it. Instead, they automated more than 25 processes. Today, they run 60,000 automations a year, saving over 2,000 hours. Shift changes, progress updates, and client reports now run automatically in{" "}
               <Link href="#" className="text-[#0081fb] font-semibold hover:underline">
-                ClickUp
+                Hashboard
               </Link>
               . That saved time goes back into creative, strategic work.
             </p>
 
             <p>
-              You can do the same at any scale. Every time you reassign a task or alert a coworker by hand, you do work that a machine could handle. This article shares 20 automation examples in ClickUp. Each one shows you what to build and how to set it up without writing code.
+              You can do the same at any scale. Every time you reassign a task or alert a coworker by hand, you do work that a machine could handle. This article shares 20 automation examples in Hashboard. Each one shows you what to build and how to set it up without writing code.
             </p>
 
             {/* TL;DR BOX */}
@@ -180,7 +180,7 @@ export default function BlogPostPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-[#7026e3] font-bold">•</span>
                   <span>
-                    <strong>Team and integration automations</strong> connect ClickUp to external tools and AI. HubSpot deals become assigned tasks, GitHub commits update task statuses, and ClickUp Brain builds complex rules from plain-language descriptions
+                    <strong>Team and integration automations</strong> connect Hashboard to external tools and AI. HubSpot deals become assigned tasks, GitHub commits update task statuses, and Hashboard Brain builds complex rules from plain-language descriptions
                   </span>
                 </li>
               </ul>
@@ -197,15 +197,15 @@ export default function BlogPostPage() {
             {/* SECTION 1: WHAT ARE AUTOMATIONS */}
             <div className="pt-6 space-y-4">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
-                What Are Automations in ClickUp?
+                What Are Automations in Hashboard?
               </h2>
 
               <p className="text-base sm:text-lg">
                 A{" "}
                 <Link href="#" className="text-[#0081fb] font-semibold hover:underline">
-                  ClickUp Automation
+                  Hashboard Automation
                 </Link>{" "}
-                is a rule-based workflow that handles routine tasks for you. Instead of reassigning tasks and sending notifications manually, you define a rule once. ClickUp then executes that rule every time the event occurs.
+                is a rule-based workflow that handles routine tasks for you. Instead of reassigning tasks and sending notifications manually, you define a rule once. Hashboard then executes that rule every time the event occurs.
               </p>
 
               <p className="text-base font-semibold text-neutral-900 pt-2">
@@ -224,18 +224,18 @@ export default function BlogPostPage() {
                   The <strong>Condition</strong> is an optional filter that must be true for the rule to run (e.g., the priority must be &apos;Urgent&apos;)
                 </li>
                 <li>
-                  The <strong>Action</strong> is the automatic change ClickUp makes (e.g., reassigning the task)
+                  The <strong>Action</strong> is the automatic change Hashboard makes (e.g., reassigning the task)
                 </li>
               </ul>
 
               <p className="text-base sm:text-lg pt-2">
-                For example, say a task moves to &apos;Review,&apos; and its priority is &apos;Urgent.&apos; ClickUp automatically assigns it to the relevant team member. Here, the trigger is the move to Review, while the condition is the Urgent priority. And the action is the reassignment. A single automation supports up to 1 trigger, 15 conditions, and 6 actions. This allows one rule to manage a complex workflow.
+                For example, say a task moves to &apos;Review,&apos; and its priority is &apos;Urgent.&apos; Hashboard automatically assigns it to the relevant team member. Here, the trigger is the move to Review, while the condition is the Urgent priority. And the action is the reassignment. A single automation supports up to 1 trigger, 15 conditions, and 6 actions. This allows one rule to manage a complex workflow.
               </p>
 
               {/* Hierarchy Note Box */}
               <div className="bg-[#f8f8fa] p-6 rounded-2xl border border-neutral-200/60 my-6">
                 <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
-                  Automations in ClickUp are hierarchy-aware. It controls how widely they reach. An automation set on a List affects only the tasks in that List. Set on a Folder, it affects every List inside that Folder. Set on a Space, it governs every task beneath it. You build the rule at the level that matches its scope, rather than copying the same logic into projects.
+                  Automations in Hashboard are hierarchy-aware. It controls how widely they reach. An automation set on a List affects only the tasks in that List. Set on a Folder, it affects every List inside that Folder. Set on a Space, it governs every task beneath it. You build the rule at the level that matches its scope, rather than copying the same logic into projects.
                 </p>
               </div>
 
@@ -248,7 +248,7 @@ export default function BlogPostPage() {
                 <li>
                   Describe what you want in plain language and let{" "}
                   <Link href="#" className="text-[#0081fb] font-semibold hover:underline">
-                    ClickUp Brain
+                    Hashboard Brain
                   </Link>{" "}
                   generate the trigger-and-action logic
                 </li>
@@ -273,7 +273,7 @@ export default function BlogPostPage() {
                 {isVideoPlaying ? (
                   <iframe
                     src="https://www.youtube.com/embed/k1TDw14vsME?autoplay=1"
-                    title="Check out how ClickUp Automations can help your team"
+                    title="Check out how Hashboard Automations can help your team"
                     className="w-full h-full border-0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -285,7 +285,7 @@ export default function BlogPostPage() {
                   >
                     <Image
                       src="/blog/vids/vid-1.png"
-                      alt="Check out how ClickUp Automations can help your team"
+                      alt="Check out how Hashboard Automations can help your team"
                       fill
                       priority
                       className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
@@ -374,7 +374,7 @@ export default function BlogPostPage() {
               <p className="text-sm sm:text-base text-neutral-700">
                 The{" "}
                 <Link href="#" className="text-[#0081fb] font-semibold hover:underline">
-                  ClickUp Process and Procedures Template
+                  Hashboard Process and Procedures Template
                 </Link>{" "}
                 helps you break each workflow into clear, ordered stages with assigned owners. You can pinpoint where an automation should run and who should receive the handoff.
               </p>
@@ -382,17 +382,17 @@ export default function BlogPostPage() {
               <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden border border-neutral-200/80 shadow-md">
                 <Image
                   src="/blog/process-procedures.png"
-                  alt="ClickUp Process and Procedures Template"
+                  alt="Hashboard Process and Procedures Template"
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
 
-            {/* FAQ SECTION: ARE CLICKUP AUTOMATIONS FREE? (Exact matching user screenshot 4) */}
+            {/* FAQ SECTION: ARE HASHBOARD AUTOMATIONS FREE? (Exact matching user screenshot 4) */}
             <div className="pt-8 space-y-6">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight">
-                Are ClickUp automations free, and how many do I get?
+                Are Hashboard automations free, and how many do I get?
               </h2>
 
               <p className="text-base sm:text-lg text-neutral-700 leading-relaxed">
@@ -426,7 +426,7 @@ export default function BlogPostPage() {
                 <div className="relative aspect-[16/10] w-full sm:w-56 rounded-xl overflow-hidden border border-neutral-200/60 shadow-sm shrink-0">
                   <Image
                     src="/blog/newsletter-banner.png"
-                    alt="ClickUp Workspace App"
+                    alt="Hashboard Workspace App"
                     fill
                     className="object-cover"
                   />
@@ -463,7 +463,7 @@ export default function BlogPostPage() {
             {/* STICKY "Start using ClickUp today" DARK PROMO CARD */}
             <div className="bg-[#1c1c1e] text-white rounded-xl p-6 sm:p-7 shadow-xl space-y-5 min-h-[220px]">
               <h3 className="text-lg sm:text-xl font-extrabold text-white tracking-tight">
-                Start using ClickUp today
+                Start using Hashboard today
               </h3>
 
               <ul className="space-y-3.5 text-xs sm:text-sm font-medium text-neutral-300">
@@ -483,7 +483,7 @@ export default function BlogPostPage() {
                   <div className="w-5 h-5 rounded-full bg-white/15 text-white flex items-center justify-center shrink-0">
                     <Check className="w-3 h-3 stroke-[3]" />
                   </div>
-                  <span>Use ClickUp for FREE—forever</span>
+                  <span>Use Hashboard for FREE—forever</span>
                 </li>
               </ul>
 
@@ -574,7 +574,7 @@ export default function BlogPostPage() {
               <div className="relative w-full h-full [mask-image:linear-gradient(to_right,transparent_0%,black_30%)]">
                 <Image
                   src="/blog/newsletter-banner.png"
-                  alt="WriteClick Newsletter ClickUp Graphic"
+                  alt="WriteClick Newsletter Hashboard Graphic"
                   fill
                   className="object-cover object-left-top"
                   priority

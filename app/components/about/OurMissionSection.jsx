@@ -21,7 +21,7 @@ export default function OurMissionSection() {
           </h2>
           <Image
             src="/about/mountain-transparent.png"
-            alt="ClickUp flag planted on a mountain peak"
+            alt="Hashboard flag planted on a mountain peak"
             fill
             className="object-contain select-none z-10 relative pointer-events-none"
             priority
@@ -36,13 +36,13 @@ export default function OurMissionSection() {
 
           <div className="mt-6 space-y-[30px] text-justify text-lg text-[#646464] leading-relaxed font-normal">
             <p>
-              We started ClickUp because the way the world works is broken. Teams juggle dozens of disconnected tools - tasks in one place, conversations in another, documents somewhere else - and critical context gets lost in between. We always knew there had to be a better way. So we built one platform to replace them all. While others scramble to bundle fragmented tools or bolt on AI as an afterthought, we&apos;ve been building toward convergence from the start.
+              We started Hashboard because the way the world works is broken. Teams juggle dozens of disconnected tools - tasks in one place, conversations in another, documents somewhere else - and critical context gets lost in between. We always knew there had to be a better way. So we built one platform to replace them all. While others scramble to bundle fragmented tools or bolt on AI as an afterthought, we&apos;ve been building toward convergence from the start.
             </p>
             <p>
-              Today, we&apos;re at the most exciting inflection point in the history of software: the convergence of software, AI, and humans. For the first time, technology doesn&apos;t just organize your work - it understands it, anticipates it, and acts on it. ClickUp is where this convergence lives. Where humans and AI work side by side, in one place, with full context - and where every team can finally focus on the work that actually matters.
+              Today, we&apos;re at the most exciting inflection point in the history of software: the convergence of software, AI, and humans. For the first time, technology doesn&apos;t just organize your work - it understands it, anticipates it, and acts on it. Hashboard is where this convergence lives. Where humans and AI work side by side, in one place, with full context - and where every team can finally focus on the work that actually matters.
             </p>
             <p>
-              Millions of teams around the world already rely on ClickUp to power all of their work. We&apos;re laser-focused on removing the busywork from work - the constant toggling, the misalignment, the lost context that drains productivity every single day. We envision a world where work feels effortlessly organized, contagiously creative, and endlessly efficient.
+              Millions of teams around the world already rely on Hashboard to power all of their work. We&apos;re laser-focused on removing the busywork from work - the constant toggling, the misalignment, the lost context that drains productivity every single day. We envision a world where work feels effortlessly organized, contagiously creative, and endlessly efficient.
             </p>
             <p>
               Our mission is clear: maximize human productivity. Not by making people work harder, but by fundamentally reinventing how work gets done - through the convergence of everything.

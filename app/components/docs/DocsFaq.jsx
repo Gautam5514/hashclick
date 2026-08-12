@@ -5,20 +5,20 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Are ClickUp Docs free?",
-    "Yes! ClickUp Docs are available on the Free Forever plan with unlimited creation, rich text formatting, and real-time collaboration."
+    "Are Hashboard Docs free?",
+    "Yes! Hashboard Docs are available on the Free Forever plan with unlimited creation, rich text formatting, and real-time collaboration."
   ],
   [
     "Can I import Google Docs, Notion, or Confluence pages?",
-    "Yes! ClickUp provides 1-click importers to migrate your existing Google Docs, Notion pages, and Confluence spaces seamlessly with zero data loss."
+    "Yes! Hashboard provides 1-click importers to migrate your existing Google Docs, Notion pages, and Confluence spaces seamlessly with zero data loss."
   ],
   [
-    "Can I share ClickUp Docs with external clients or guests?",
+    "Can I share Hashboard Docs with external clients or guests?",
     "Absolutely. You can share docs privately with specific team members, grant view-only access to guests, or publish public read-only pages with custom web links."
   ],
   [
-    "How does ClickUp Brain AI work with Docs?",
-    "ClickUp Brain acts as your company assistant. You can ask Brain to write content, translate text, summarize meeting notes, or answer questions based on all documents in your workspace."
+    "How does Hashboard Hash AI work with Docs?",
+    "Hashboard Brain acts as your company assistant. You can ask Brain to write content, translate text, summarize meeting notes, or answer questions based on all documents in your workspace."
   ],
   [
     "Can I embed live tasks and views inside a Doc?",

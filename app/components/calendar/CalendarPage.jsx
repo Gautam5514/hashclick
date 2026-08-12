@@ -25,7 +25,7 @@ const comparison = {
     "Meetings and tasks synchronized in a single calendar view",
     "Drag and drop tasks onto your calendar to block focus time",
     "2-way real-time sync with Google Calendar & Outlook",
-    "ClickUp Brain AI schedules tasks based on priority and availability",
+    "Hashboard Hash AI schedules tasks based on priority and availability",
   ],
 };
 
@@ -33,16 +33,16 @@ const workflow = [
   {
     eyebrow: "2-Way Sync",
     title: "See and sync all your calendars",
-    body: "Sync Google Calendar, Outlook, and Apple Calendar with ClickUp. Any meeting created in ClickUp reflects instantly on your external calendar and vice versa.",
+    body: "Sync Google Calendar, Outlook, and Apple Calendar with Hashboard. Any meeting created in Hashboard reflects instantly on your external calendar and vice versa.",
     image: "/calendar/calendar-feature-1.png",
-    alt: "ClickUp 2-Way Calendar Sync",
+    alt: "Hashboard 2-Way Calendar Sync",
   },
   {
     eyebrow: "Automated Scheduling",
     title: "Auto-schedule tasks onto your calendar",
     body: "Turn project tasks into scheduled time blocks. Drag tasks directly onto your calendar grid to assign time slots and avoid overcommitting.",
     image: "/calendar/calendar-feature-2.png",
-    alt: "Auto-schedule tasks on ClickUp Calendar",
+    alt: "Auto-schedule tasks on Hashboard Calendar",
     reverse: true,
   },
   {
@@ -50,12 +50,12 @@ const workflow = [
     title: "Compare team schedules in one click",
     body: "Overlay team member calendars to find open meeting slots instantly without emailing back and forth.",
     image: "/calendar/calendar-feature-3.png",
-    alt: "Compare team member schedules in ClickUp Calendar",
+    alt: "Compare team member schedules in Hashboard Calendar",
   },
 ];
 
 const calendarFeatures = [
-  [RefreshCw, "2-Way Calendar Sync", "Sync Google, Outlook, and Apple calendars seamlessly with ClickUp."],
+  [RefreshCw, "2-Way Calendar Sync", "Sync Google, Outlook, and Apple calendars seamlessly with Hashboard."],
   [Clock, "Drag-and-Drop Time Blocking", "Drag tasks onto calendar slots to reserve focused work time."],
   [CalendarIcon, "Custom Views", "Switch between Day, 4-Day, Week, and Month calendar layouts."],
   [Users, "Team Workload Overlays", "See team availability at a glance to balance workload across projects."],
@@ -88,7 +88,7 @@ function CalendarHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">CLICKUP CALENDAR</p>
+          <p className="task-eyebrow">HASHBOARD CALENDAR</p>
           <h1>Schedule your meetings and your work—automatically</h1>
           <p className="task-hero-lede">
             Connect Google Calendar, Outlook, and your tasks in one unified view. Block focus time, resolve scheduling conflicts, and manage project timelines effortlessly.
@@ -112,7 +112,7 @@ function CalendarHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="ClickUp Calendar view"
+            alt="Hashboard Calendar view"
           />
         </div>
       </div>
@@ -127,7 +127,7 @@ function Comparison() {
       <div className="task-shell">
         <h2 className="task-gradient-title">A better way to manage your time</h2>
         <div className="task-compare-grid">
-          {[["Without ClickUp Calendar", comparison.without, false], ["With ClickUp Calendar", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Calendar", comparison.without, false], ["With Hashboard Calendar", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -153,7 +153,7 @@ function WorkflowGrid() {
         <header className="task-heading task-foundation-heading">
           <h2>Unified scheduling for every team</h2>
           <p>
-            ClickUp Calendar brings your meetings, project deadlines, and daily work<br className="task-desktop-break" /> together in one place for total clarity.
+            Hashboard Calendar brings your meetings, project deadlines, and daily work<br className="task-desktop-break" /> together in one place for total clarity.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -188,13 +188,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="ClickUp" />
+          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your meetings and work, synchronized seamlessly.</h2>
-          <p>Join 3M+ teams who schedule and deliver projects faster with ClickUp Calendar. Free forever.</p>
+          <p>Join 3M+ teams who schedule and deliver projects faster with Hashboard Calendar. Free forever.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="ClickUp Calendar workspace" />
+          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Calendar workspace" />
         </div>
       </div>
     </section>
@@ -203,15 +203,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["ClickUp Brain", "Ask AI to find open time & answer calendar queries", "ClickUp Brain finds available meeting slots, summarizes schedule conflicts, and answers questions about your upcoming agenda in seconds.", "/calendar/ai-calendar-1.png"],
-    ["Smart Meeting Notes", "Auto-generated meeting agendas and smart reminders", "Never start a meeting unprepared. ClickUp Brain automatically attaches relevant task docs, action items, and notes to your calendar events.", "/calendar/ai-calendar-2.png"],
+    ["Hashboard Brain", "Ask AI to find open time & answer calendar queries", "Hashboard Brain finds available meeting slots, summarizes schedule conflicts, and answers questions about your upcoming agenda in seconds.", "/calendar/ai-calendar-1.png"],
+    ["Smart Meeting Notes", "Auto-generated meeting agendas and smart reminders", "Never start a meeting unprepared. Hashboard Brain automatically attaches relevant task docs, action items, and notes to your calendar events.", "/calendar/ai-calendar-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
           <p className="task-eyebrow">AI Powered Scheduling</p>
-          <h2>Smart calendar management<br />powered by ClickUp Brain</h2>
+          <h2>Smart calendar management<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -259,7 +259,7 @@ function FeaturesAndPlatform() {
       <section className="task-section task-platform">
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
-            <p className="task-eyebrow">The ClickUp platform</p>
+            <p className="task-eyebrow">The Hashboard platform</p>
             <h2>Calendar is just the beginning</h2>
             <p>Calendar connects strategy to execution. Combine Calendar with Tasks, Docs, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
@@ -355,7 +355,7 @@ function CalendarFinal() {
               src="/calendar/calendar-footer.png"
               width={1240}
               height={460}
-              alt="ClickUp Calendar footer workspace"
+              alt="Hashboard Calendar footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

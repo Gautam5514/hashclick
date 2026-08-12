@@ -26,7 +26,7 @@ const comparison = {
     "Flexible boards connected to Docs, Chat, and Automations",
     "Custom status columns and WIP limits to prevent overload",
     "Group by Assignee, Priority, Due Date, or Custom Fields",
-    "ClickUp Brain AI surfaces stuck tasks and summarizes status",
+    "Hashboard Hash AI surfaces stuck tasks and summarizes status",
   ],
 };
 
@@ -36,14 +36,14 @@ const workflow = [
     title: "Build boards tailored to your workflow",
     body: "Create custom status columns, swimlanes, and color codes for any process—from Agile software sprints to content pipelines.",
     image: "/kanban/kanban-feature-1.png",
-    alt: "ClickUp Kanban Board custom workflows",
+    alt: "Hashboard Kanban Board custom workflows",
   },
   {
     eyebrow: "WIP Limits & Grouping",
     title: "Spot bottlenecks before they stall work",
     body: "Set Work-in-Progress (WIP) limits on columns and regroup boards by Assignee, Priority, or Tag to optimize team velocity.",
     image: "/kanban/kanban-feature-2.png",
-    alt: "ClickUp Kanban WIP limits and grouping",
+    alt: "Hashboard Kanban WIP limits and grouping",
     reverse: true,
   },
   {
@@ -51,7 +51,7 @@ const workflow = [
     title: "Automate repetitive board movements",
     body: "Trigger automatic status changes, assignee reassignments, and notifications whenever a card moves to a new column.",
     image: "/kanban/kanban-feature-3.png",
-    alt: "ClickUp Kanban board automations",
+    alt: "Hashboard Kanban board automations",
   },
 ];
 
@@ -89,7 +89,7 @@ function KanbanHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">KANBAN BOARD IN CLICKUP</p>
+          <p className="task-eyebrow">KANBAN BOARD IN HASHBOARD</p>
           <h1>Visualize work and move projects forward</h1>
           <p className="task-hero-lede">
             Drag and drop tasks, set WIP limits, customize status workflows, and track project progress across your entire team in real time.
@@ -113,7 +113,7 @@ function KanbanHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="ClickUp Kanban Board view"
+            alt="Hashboard Kanban Board view"
           />
         </div>
       </div>
@@ -128,7 +128,7 @@ function Comparison() {
       <div className="task-shell">
         <h2 className="task-gradient-title">A better way to run Kanban</h2>
         <div className="task-compare-grid">
-          {[["Without ClickUp Kanban", comparison.without, false], ["With ClickUp Kanban", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Kanban", comparison.without, false], ["With Hashboard Kanban", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -189,13 +189,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="ClickUp" />
+          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your team&apos;s visual workflow, always in sync.</h2>
-          <p>Join 3M+ teams who plan and track work on ClickUp Kanban boards. Free forever.</p>
+          <p>Join 3M+ teams who plan and track work on Hashboard Kanban boards. Free forever.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="ClickUp Kanban Board workspace" />
+          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Kanban Board workspace" />
         </div>
       </div>
     </section>
@@ -204,7 +204,7 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["ClickUp Brain", "Auto-summarize board status and surface stuck cards", "ClickUp Brain analyzes board columns to give instant progress summaries and alert leads about blocked tasks.", "/kanban/ai-kanban-1.png"],
+    ["Hashboard Brain", "Auto-summarize board status and surface stuck cards", "Hashboard Brain analyzes board columns to give instant progress summaries and alert leads about blocked tasks.", "/kanban/ai-kanban-1.png"],
     ["Smart Cards", "AI auto-populates subtasks and field details", "Card details, subtask checklists, and priority scores are generated automatically as work progresses.", "/kanban/ai-kanban-2.png"],
   ];
   return (
@@ -212,7 +212,7 @@ function AiFeatures() {
       <div className="task-shell">
         <header className="task-heading">
           <p className="task-eyebrow">AI Powered Board Intelligence</p>
-          <h2>Instant status updates and bottleneck detection<br />powered by ClickUp Brain</h2>
+          <h2>Instant status updates and bottleneck detection<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -260,7 +260,7 @@ function FeaturesAndPlatform() {
       <section className="task-section task-platform">
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
-            <p className="task-eyebrow">The ClickUp platform</p>
+            <p className="task-eyebrow">The Hashboard platform</p>
             <h2>Kanban Board is just the beginning</h2>
             <p>Board view connects strategy to execution. Combine Kanban Board with Tasks, Docs, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
@@ -356,7 +356,7 @@ function KanbanFinal() {
               src="/kanban/kanban-footer.png"
               width={1240}
               height={460}
-              alt="ClickUp Kanban Board footer workspace"
+              alt="Hashboard Kanban Board footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

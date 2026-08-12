@@ -13,7 +13,7 @@ const stories = [
     logoWidth: 179,
     logoHeight: 41,
     company: "DIGGS",
-    quote: '"ClickUp is serving us so we can serve our pet guardians."',
+    quote: '"Hashboard is serving us so we can serve our pet guardians."',
     name: "Samantha Dengate",
     role: "Sr. Project Manager",
   },
@@ -37,7 +37,7 @@ const stories = [
     logoWidth: 179,
     logoHeight: 41,
     company: "Hawke Media",
-    quote: '"ClickUp is the best thing I\'ve rolled out in the past two years."',
+    quote: '"Hashboard is the best thing I\'ve rolled out in the past two years."',
     name: "Lauren Makielski",
     role: "Chief of Staff",
   },
@@ -57,7 +57,7 @@ export default function Testimonials({ showHeadline = true }) {
               src="/testimonials/awards.svg"
               width="346"
               height="89"
-              alt="ClickUp awards"
+              alt="Hashboard awards"
               loading="lazy"
             />
           </div>

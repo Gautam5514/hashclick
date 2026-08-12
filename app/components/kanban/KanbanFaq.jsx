@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is ClickUp Kanban Board free to use?",
-    "Yes! ClickUp's Board view is available on the Free Forever plan with unlimited drag-and-drop cards, custom statuses, and group-by options."
+    "Is Hashboard Kanban Board free to use?",
+    "Yes! Hashboard's Board view is available on the Free Forever plan with unlimited drag-and-drop cards, custom statuses, and group-by options."
   ],
   [
     "Can I set Work-In-Progress (WIP) limits on Kanban columns?",
@@ -17,12 +17,12 @@ const items = [
     "Abolutely. With one click, you can regroup your entire board by Assignee, Priority, Due Date, Tags, or any Custom Field."
   ],
   [
-    "How does ClickUp Brain AI work with Kanban Boards?",
-    "ClickUp Brain AI can summarize column status across your entire workspace, draft subtasks for board cards, and alert team leads about stuck or overdue tasks."
+    "How does Hashboard Hash AI work with Kanban Boards?",
+    "Hashboard Hash AI can summarize column status across your entire workspace, draft subtasks for board cards, and alert team leads about stuck or overdue tasks."
   ],
   [
     "Can I automate card movements between columns?",
-    "Yes! ClickUp Automations can automatically reassign cards, add tags, update due dates, or post chat notifications whenever a card enters a specific column."
+    "Yes! Hashboard Automations can automatically reassign cards, add tags, update due dates, or post chat notifications whenever a card enters a specific column."
   ]
 ];
 

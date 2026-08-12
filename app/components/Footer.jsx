@@ -164,7 +164,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-6">
               <ClickUpLogoMark className="size-6" />
               <span className="font-display text-[20px] font-extrabold tracking-tight text-[#111827]">
-                ClickUp
+                Hashboard
               </span>
             </div>
 
@@ -257,7 +257,15 @@ export default function Footer() {
               {helpLinks.map((item) => (
                 <li key={item}>
                   <Link
-                    href={item === "Blog" ? "/blog" : item === "Research" ? "/research" : "/learn"}
+                    href={
+                      item === "Blog"
+                        ? "/blog"
+                        : item === "Research"
+                          ? "/research"
+                          : item === "Contact Us"
+                            ? "/contact"
+                            : "/learn"
+                    }
                     className="hover:text-[#111827] transition-colors leading-[1.7] block"
                   >
                     {item}
@@ -318,11 +326,15 @@ export default function Footer() {
 
         {/* Bottom Copyright & Legal Links */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#e5e7eb] text-[12.5px] text-[#71717a]">
-          <div>© 2026 ClickUp</div>
+          <div>© 2026 Hashboard</div>
 
           <div className="flex flex-wrap items-center gap-6">
             {legalLinks.map((item) => (
-              <Link key={item} href="/legal" className="hover:text-[#111827] transition-colors">
+              <Link
+                key={item}
+                href={item === "Privacy" ? "/privacy" : item === "Terms" ? "/terms" : "/legal"}
+                className="hover:text-[#111827] transition-colors"
+              >
                 {item}
               </Link>
             ))}

@@ -65,7 +65,7 @@ export default function MemoryImport() {
 
         <div className="bn-footnotes">
           <p>
-            <sup>*</sup> Best AI Guarantee: ClickUp provides a 100% satisfaction guarantee on
+            <sup>*</sup> Best AI Guarantee: Hashboard provides a 100% satisfaction guarantee on
             Brain². If you are not satisfied that Brain² delivers superior results compared to any
             competing AI product within 30 days, you&apos;ll get your money-back.
           </p>

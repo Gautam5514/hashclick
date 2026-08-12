@@ -1233,7 +1233,7 @@
     align-items: flex-start
 }
 
-.team-cta-wordmark svg {
+.team-cta-wordmark img {
     display: block;
     width: 160px;
     height: auto
@@ -1295,7 +1295,7 @@
         padding: 62px 30px 52px 48px
     }
 
-    .team-cta-wordmark svg {
+    .team-cta-wordmark img {
         width: 220px
     }
 
@@ -1363,7 +1363,7 @@
         padding: 42px 22px 20px
     }
 
-    .team-cta-wordmark svg {
+    .team-cta-wordmark img {
         width: 190px
     }
 

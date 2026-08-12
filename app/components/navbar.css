@@ -119,10 +119,12 @@
   align-items: center;
 }
 
-.cu-logo svg {
+.cu-logo svg,
+.cu-logo img {
   display: block;
   width: 100px;
   height: 30px;
+  object-fit: contain;
 }
 
 .cu-links {

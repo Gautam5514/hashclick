@@ -44,16 +44,16 @@ const groups = [
       ["Workload view to maximize resources", "Balance team assignments, prevent burnout, and identify resource constraints before they impact delivery.", "workload.png"],
       ["AI-powered fields track project data", "Track key details with custom fields that automatically update based on activity.", "fields.png"],
       ["Time tracking optimizes budget", "Monitor hours against estimates, track billable time, and keep projects financially on track.", "timesheets.png"],
-      ["AI-powered project updates", "ClickUp AI generates action items, summarizes discussions, and pulls updates automatically.", "updates.png"],
+      ["AI-powered project updates", "Hashboard AI generates action items, summarizes discussions, and pulls updates automatically.", "updates.png"],
     ],
   },
 ];
 
 const faqs = [
-  ["How does ClickUp support the five project phases?", "ClickUp connects planning, execution, monitoring, and wrap-up in one workspace. Use Whiteboards and Docs to define scope, Gantt and Calendar to plan, tasks to execute, and Dashboards to monitor KPIs."],
+  ["How does Hashboard support the five project phases?", "Hashboard connects planning, execution, monitoring, and wrap-up in one workspace. Use Whiteboards and Docs to define scope, Gantt and Calendar to plan, tasks to execute, and Dashboards to monitor KPIs."],
   ["Can I switch between Agile, Waterfall, and Kanban?", "Yes. Run sprints in Board view, manage Waterfall timelines with Gantt charts, or switch to Kanban at any time without moving your work."],
-  ["How does ClickUp compare to other project management tools?", "ClickUp combines tasks, docs, chat, dashboards, automation, and AI in one configurable platform, reducing context switching across separate tools."],
-  ["Does ClickUp have AI agents for project management?", "Yes. AI agents can help with planning, status updates, resource allocation, risk assessment, and project documentation."],
+  ["How does Hashboard compare to other project management tools?", "Hashboard combines tasks, docs, chat, dashboards, automation, and AI in one configurable platform, reducing context switching across separate tools."],
+  ["Does Hashboard have AI agents for project management?", "Yes. AI agents can help with planning, status updates, resource allocation, risk assessment, and project documentation."],
 ];
 
 function CTA({ children = "Get started. It's FREE", light = false, soft = false, sm = false, arrow = true }) {
@@ -66,11 +66,11 @@ function Hero() {
       <div className="pm-hero-copy">
         <p className="pm-kicker">AI-powered project management</p>
         <h1>The world&apos;s<br />most powerful &amp;<br />flexible project<br />management<br />software</h1>
-        <p className="pm-lede"><strong>Manage your projects, docs, and chat in one place—all powered by AI.</strong> ClickUp adapts to any project, eliminates busywork, and keeps everything organized so your team delivers projects on time, all the time.</p>
+        <p className="pm-lede"><strong>Manage your projects, docs, and chat in one place—all powered by AI.</strong> Hashboard adapts to any project, eliminates busywork, and keeps everything organized so your team delivers projects on time, all the time.</p>
         <div className="pm-action-row"><CTA /><span>Free forever.<br />No credit card.</span></div>
         <div className="pm-reviews"><StarRating /><span>25,000+ reviews from</span><ReviewLogos /></div>
       </div>
-      <div className="pm-hero-art"><Image src="/product-development/hero.png" alt="ClickUp project management workspace" width={3075} height={1800} priority /></div>
+      <div className="pm-hero-art"><Image src="/product-development/hero.png" alt="Hashboard project management workspace" width={3075} height={1800} priority /></div>
     </div>
   </section>;
 }
@@ -91,10 +91,10 @@ function OldNew() {
     ["AI-powered workflows", " manage tasks, dependencies, and deadlines"],
   ];
   return <section className="pm-way"><div className="pm-shell">
-    <header className="pm-center pm-way-head"><p className="pm-kicker">The ClickUp way</p><h2>Project management is <span>broken,</span><br />we fixed it</h2><p className="pm-way-lede">Disconnected tools sabotage projects. ClickUp brings everything into one place so teams <strong>focus on delivering their best work, not managing tools.</strong></p></header>
+    <header className="pm-center pm-way-head"><p className="pm-kicker">The Hashboard way</p><h2>Project management is <span>broken,</span><br />we fixed it</h2><p className="pm-way-lede">Disconnected tools sabotage projects. Hashboard brings everything into one place so teams <strong>focus on delivering their best work, not managing tools.</strong></p></header>
     <div className="pm-compare">
       <article className="bad"><h3>The old way</h3><ul>{old.map(([text, tail]) => <li key={text}><X /><span>{text}{tail && <u>{tail}</u>}</span></li>)}</ul></article>
-      <article className="good"><h3>The ClickUp way</h3><ul>{better.map(([lead, rest]) => <li key={lead}><Check /><span><strong>{lead}</strong>{rest}</span></li>)}</ul><CTA soft /></article>
+      <article className="good"><h3>The Hashboard way</h3><ul>{better.map(([lead, rest]) => <li key={lead}><Check /><span><strong>{lead}</strong>{rest}</span></li>)}</ul><CTA soft /></article>
     </div>
   </div></section>;
 }
@@ -102,12 +102,12 @@ function OldNew() {
 function AISection() {
   // [title, body, bold tail, image]
   const cards = [
-    ["Automates routine project tasks", "ClickUp AI generates project plans, assign tasks, and handle status updates—replacing busywork with execution and delivery.", "", "ai-platform.png"],
+    ["Automates routine project tasks", "Hashboard AI generates project plans, assign tasks, and handle status updates—replacing busywork with execution and delivery.", "", "ai-platform.png"],
     ["Moves decision to action", "Automatically capture tasks from project discussions and capture next steps—replacing information overload with clarity and action.", "", "ai-action.png"],
-    ["Finds project info, instantly", "Find projects and files in seconds across ClickUp and connected apps—", "replacing information gathering with instant context and insights.", "ai-search.png"],
+    ["Finds project info, instantly", "Find projects and files in seconds across Hashboard and connected apps—", "replacing information gathering with instant context and insights.", "ai-search.png"],
   ];
   return <section className="pm-section pm-ai"><div className="pm-shell">
-    <header className="pm-center pm-ai-head"><p className="pm-kicker">ClickUp AI</p><h2>The world&apos;s most complete<br />AI for project management</h2><p className="pm-ai-lede">Meet the first AI that works across your entire project lifecycle. From drafting project plans, capturing meetings, and setting priorities, <strong>ClickUp AI frees your team to focus on impact.</strong></p></header>
+    <header className="pm-center pm-ai-head"><p className="pm-kicker">Hashboard AI</p><h2>The world&apos;s most complete<br />AI for project management</h2><p className="pm-ai-lede">Meet the first AI that works across your entire project lifecycle. From drafting project plans, capturing meetings, and setting priorities, <strong>Hashboard AI frees your team to focus on impact.</strong></p></header>
     <div className="pm-ai-grid">{cards.map(([title, body, bold, image]) => <article key={title}><Image src={`/product-development/${image}`} alt={title} width={560} height={420} /><h3>{title}</h3><p>{body}{bold && <strong>{bold}</strong>}</p></article>)}</div>
   </div></section>;
 }
@@ -139,11 +139,11 @@ function TestimonialAndMore() {
   const logos = ["asana", "slack", "drive", "jira", "miro", "notion", "teams", "trello", "monday", "airtable", "linear", "loom", "openai", "salesforce", "hubspot", "confluence", "wrike", "smartsheet", "discord", "figma", "zoom", "dropbox", "github", "zendesk", "box", "intercom", "todoist", "calendly", "sharepoint"];
   return <>
     <section className="pm-results"><div className="pm-shell">
-      <header className="pm-results-head"><p className="pm-kicker">Why teams love ClickUp</p><h2>Real teams, unreal results</h2><p className="pm-results-lede">Whether you&apos;re supporting a small team or managing complex cross-functional projects—ClickUp helps project managers of all types deliver consistently.</p></header>
+      <header className="pm-results-head"><p className="pm-kicker">Why teams love Hashboard</p><h2>Real teams, unreal results</h2><p className="pm-results-lede">Whether you&apos;re supporting a small team or managing complex cross-functional projects—Hashboard helps project managers of all types deliver consistently.</p></header>
       <Testimonials showHeadline={false} />
     </div></section>
     <section className="pm-integrations">
-      <div className="pm-shell"><header className="pm-int-head"><p className="pm-kicker">Integrations</p><h2>ClickUp makes your other tools better</h2><p className="pm-int-lede">Bring your essential project tools into one place with over 1,000+ integrations. From cloud storage to communication apps, ClickUp connects to the tools your team relies on for project delivery.</p></header></div>
+      <div className="pm-shell"><header className="pm-int-head"><p className="pm-kicker">Integrations</p><h2>Hashboard makes your other tools better</h2><p className="pm-int-lede">Bring your essential project tools into one place with over 1,000+ integrations. From cloud storage to communication apps, Hashboard connects to the tools your team relies on for project delivery.</p></header></div>
       {/* Two belts drifting in opposite directions behind a centred badge */}
       <div className="pm-marquee">
         {[logos, [...logos].reverse()].map((row, i) => <div className="pm-marquee-row" key={i}>
@@ -151,11 +151,11 @@ function TestimonialAndMore() {
             {[...row, ...row].map((name, j) => <span className="pm-tile" key={`${name}-${j}`}><Image src={`/pricing/apps/${name}.svg`} width={38} height={38} alt="" /></span>)}
           </div>
         </div>)}
-        <span className="pm-marquee-badge"><Image src="/product-development/comparison-logo-mark.svg" alt="ClickUp" width={130} height={155} className="pm-marquee-mark" /></span>
+        <span className="pm-marquee-badge"><Image src="/product-development/comparison-logo-mark.svg" alt="Hashboard" width={130} height={155} className="pm-marquee-mark" /></span>
       </div>
     </section>
     <section className="pm-templates"><div className="pm-shell">
-      <header className="pm-tpl-head"><p className="pm-kicker">Templates</p><h2>Get started with a project<br />management template</h2><p className="pm-tpl-lede">Launch your ClickUp workflow in minutes with customizable templates for any team or project type.</p><CTA sm arrow={false}>Browse Templates</CTA></header>
+      <header className="pm-tpl-head"><p className="pm-kicker">Templates</p><h2>Get started with a project<br />management template</h2><p className="pm-tpl-lede">Launch your Hashboard workflow in minutes with customizable templates for any team or project type.</p><CTA sm arrow={false}>Browse Templates</CTA></header>
       <div className="pm-tpl-grid">{[["Project Management Template", "gantt.png"], ["Agile Management Template", "dashboards.png"], ["Team Requests Template", "forms.png"], ["Scope of Work Template", "docs.png"], ["OKRs Template", "workload.png"], ["Project Charter Template", "templates.png"]].map(([name, img]) => <Link href="/signup" key={name}>
         <span className="pm-tpl-shot"><Image src={`/product-development/${img}`} alt={name} width={900} height={620} /></span>
         <h3>{name}</h3>
@@ -165,14 +165,14 @@ function TestimonialAndMore() {
 }
 
 function Resources() {
-  // [title, author, role, art, avatar tone] — `brand` swaps in the ClickUp mark
+  // [title, author, role, art, avatar tone] — `brand` swaps in the Hashboard mark
   const posts = [
-    ["ClickUp Project Management Resources", "ClickUp", "Guest Author", "resource-1.svg", "brand"],
+    ["Hashboard Project Management Resources", "Hashboard", "Guest Author", "resource-1.svg", "brand"],
     ["What is Project Scope? Examples, Templates, and Resources to Succeed", "Alex York", "Senior Content Marketing Manager", "resource-2.svg", "blue"],
     ["Sprint Planning: A Project Manager’s Guide", "Zach Wills", "Product Marketing Manager", "resource-3.svg", "amber"],
   ];
   return <section className="pm-resources"><div className="pm-shell">
-    <header className="pm-res-head"><p className="pm-kicker">Resources</p><h2>ClickUp resources for<br />project management</h2></header>
+    <header className="pm-res-head"><p className="pm-kicker">Resources</p><h2>Hashboard resources for<br />project management</h2></header>
     <div className="pm-res-grid">{posts.map(([title, author, role, art, tone]) => <article key={title}>
       <span className="pm-res-art"><Image src={`/product-development/${art}`} alt="" width={380} height={240} /></span>
       <h3>{title}</h3>

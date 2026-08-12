@@ -72,7 +72,7 @@ function DotMatrix() {
       </div>
 
       <div className="mt-6 text-center text-[11px] font-mono font-bold tracking-[0.14em] text-[#9ca3af] uppercase">
-        FORTUNE 500 COMPANIES THAT USE CLICKUP
+        FORTUNE 500 COMPANIES THAT USE HASHBOARD
       </div>
     </div>
   );

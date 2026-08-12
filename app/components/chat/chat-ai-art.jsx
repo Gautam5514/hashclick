@@ -6,13 +6,13 @@
 
 import { SparkleMark } from "./chat-app-logos";
 
-/** "ClickUp Br·ai·n" — the AI inside Brain picks up the gradient. */
-export function BrainWordmark({ text = "ClickUp Brain" }) {
+/** "Hashboard Br·ai·n" — the AI inside Brain picks up the gradient. */
+export function BrainWordmark({ text = "Hashboard Brain" }) {
   return (
     <span className="ai-wordmark">
       <SparkleMark id="brain-spark" className="ai-wordmark-spark" aria-hidden="true" />
       <span aria-label={text}>
-        <span aria-hidden="true">ClickUp Br</span>
+        <span aria-hidden="true">Hashboard Br</span>
         <span aria-hidden="true" className="ai-wordmark-ai">ai</span>
         <span aria-hidden="true">n</span>
       </span>

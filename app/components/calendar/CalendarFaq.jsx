@@ -5,20 +5,20 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is ClickUp Calendar free to use?",
-    "Yes! ClickUp Calendar is available on the Free Forever plan with unlimited calendar views, Google Calendar sync, and drag-and-drop scheduling."
+    "Is Hashboard Calendar free to use?",
+    "Yes! Hashboard Calendar is available on the Free Forever plan with unlimited calendar views, Google Calendar sync, and drag-and-drop scheduling."
   ],
   [
-    "Does ClickUp Calendar sync with Google Calendar and Outlook?",
-    "Yes! ClickUp offers 2-way real-time synchronization with Google Calendar and Outlook. Changes made in ClickUp update your external calendar instantly."
+    "Does Hashboard Calendar sync with Google Calendar and Outlook?",
+    "Yes! Hashboard offers 2-way real-time synchronization with Google Calendar and Outlook. Changes made in Hashboard update your external calendar instantly."
   ],
   [
     "Can I block time for tasks directly on the calendar?",
     "Abolutely. You can drag and drop any task from your workspace directly onto your calendar grid to block focus time and set estimated durations."
   ],
   [
-    "How does ClickUp Brain AI help with calendar management?",
-    "ClickUp Brain AI can find open meeting slots across team schedules, summarize daily agendas, draft meeting notes, and auto-schedule tasks based on priority."
+    "How does Hashboard Hash AI help with calendar management?",
+    "Hashboard Hash AI can find open meeting slots across team schedules, summarize daily agendas, draft meeting notes, and auto-schedule tasks based on priority."
   ],
   [
     "Can I view my team's availability in a single calendar?",

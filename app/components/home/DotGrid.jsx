@@ -152,7 +152,7 @@ export default function DotGrid() {
         <span>
           Fortune 500 companies
           <br />
-          that use ClickUp
+          that use Hashboard
         </span>
       </figcaption>
     </figure>

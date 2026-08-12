@@ -23,7 +23,7 @@ const comparison = {
   with: [
     "Docs live directly alongside tasks, views, and projects",
     "Embed live tasks inside docs so status updates automatically",
-    "ClickUp Brain AI answers questions across all company docs",
+    "Hashboard Hash AI answers questions across all company docs",
     "Nested pages, wikis, and granular permission controls",
   ],
 };
@@ -34,14 +34,14 @@ const workflow = [
     title: "Docs that live next to the work",
     body: "Link docs directly to tasks, projects, and sprints. When work moves, docs update automatically—no separate browser tabs or drive searches needed.",
     image: "/docs/docs-feature-1.png",
-    alt: "ClickUp Docs linked directly to tasks and workflows",
+    alt: "Hashboard Docs linked directly to tasks and workflows",
   },
   {
     eyebrow: "Real-time collaboration",
     title: "Write together, decide faster",
     body: "Collaborate in real time with multiplayer editing, rich text formatting, nested subpages, banners, and interactive widgets.",
     image: "/docs/docs-feature-2.png",
-    alt: "ClickUp Docs real-time multiplayer editing",
+    alt: "Hashboard Docs real-time multiplayer editing",
     reverse: true,
   },
   {
@@ -49,7 +49,7 @@ const workflow = [
     title: "Knowledge that grows with your team",
     body: "Organize company wikis, onboarding guides, and standard operating procedures into beautiful, searchable knowledge bases.",
     image: "/docs/docs-feature-3.png",
-    alt: "ClickUp Docs organized company wikis",
+    alt: "Hashboard Docs organized company wikis",
   },
 ];
 
@@ -87,7 +87,7 @@ function DocsHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">DOCS IN CLICKUP</p>
+          <p className="task-eyebrow">DOCS IN HASHBOARD</p>
           <h1>Where knowledge meets action</h1>
           <p className="task-hero-lede">
             Create specs, wikis, and SOPs directly connected to your tasks and workflows. Stop searching through disconnected folders and stale Google Docs.
@@ -111,7 +111,7 @@ function DocsHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="ClickUp Docs workspace view"
+            alt="Hashboard Docs workspace view"
           />
         </div>
       </div>
@@ -126,7 +126,7 @@ function Comparison() {
       <div className="task-shell">
         <h2 className="task-gradient-title">A better way to document</h2>
         <div className="task-compare-grid">
-          {[["Without ClickUp Docs", comparison.without, false], ["With ClickUp Docs", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Docs", comparison.without, false], ["With Hashboard Docs", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -187,13 +187,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="ClickUp" />
+          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your team&apos;s knowledge is always connected. Never lose context again.</h2>
           <p>Join 3M+ teams who document and execute from the same place. No credit card. Free forever.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="ClickUp Docs workspace" />
+          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Docs workspace" />
         </div>
       </div>
     </section>
@@ -202,7 +202,7 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["ClickUp Brain", "AI that searches every doc to answer your questions", "Brain searches across all company docs, wikis, and tasks to give instant, accurate answers with citations to the exact source file.", "/docs/ai-feature-1.png"],
+    ["Hashboard Brain", "AI that searches every doc to answer your questions", "Brain searches across all company docs, wikis, and tasks to give instant, accurate answers with citations to the exact source file.", "/docs/ai-feature-1.png"],
     ["Super Agents", "Your docs, updated without manual effort", "Super Agents auto-generate meeting notes, update project specs when requirements change, and draft SOPs in seconds.", "/docs/ai-feature-2.png"],
   ];
   return (
@@ -210,7 +210,7 @@ function AiFeatures() {
       <div className="task-shell">
         <header className="task-heading">
           <p className="task-eyebrow">AI powered documentation</p>
-          <h2>Instant answers and automatic writing<br />powered by ClickUp Brain</h2>
+          <h2>Instant answers and automatic writing<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -258,7 +258,7 @@ function FeaturesAndPlatform() {
       <section className="task-section task-platform">
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
-            <p className="task-eyebrow">The ClickUp platform</p>
+            <p className="task-eyebrow">The Hashboard platform</p>
             <h2>Docs are just the beginning</h2>
             <p>Docs connect strategy to execution. Combine Docs with Tasks, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
@@ -354,7 +354,7 @@ function DocsFinal() {
               src="/docs/docs-footer.png"
               width={1240}
               height={460}
-              alt="ClickUp Docs footer workspace"
+              alt="Hashboard Docs footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

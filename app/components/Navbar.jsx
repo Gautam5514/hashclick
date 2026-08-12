@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./navbar.css";
 import { navMenus, navLinks } from "./nav-data";
-import { LOGO, CHEVRON, SMB, AGENTS, CARTOON } from "./nav-svgs";
+import { LOGO_LIGHT, CHEVRON, SMB, AGENTS, CARTOON } from "./nav-svgs";
 import DemoModal from "./DemoModal";
 
 const ART = { SMB, AGENTS, CARTOON };
@@ -177,7 +177,7 @@ export default function Navbar() {
       <div className="cu-container">
         <div className="cu-container-inner">
           <Link href="/" className="cu-logo" aria-label="Home">
-            <Raw markup={LOGO} />
+            <img src={LOGO_LIGHT} alt="Hashboard" />
           </Link>
 
           <div className="cu-links">
@@ -266,7 +266,7 @@ export default function Navbar() {
                 className="cu-mobile-item"
                 onClick={() => setMobileSubmenu("brain-ai")}
               >
-                <span>Brain AI</span>
+                <span>Hash AI</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
                   <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

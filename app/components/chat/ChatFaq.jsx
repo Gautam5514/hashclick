@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is ClickUp Chat included in the free plan?",
-    "Yes! ClickUp Chat is built directly into every ClickUp workspace, including the Free Forever plan."
+    "Is Hashboard Chat included in the free plan?",
+    "Yes! Hashboard Chat is built directly into every Hashboard workspace, including the Free Forever plan."
   ],
   [
-    "How is ClickUp Chat different from Slack or Microsoft Teams?",
-    "Traditional chat apps isolate communication from where work actually happens. ClickUp Chat unifies messaging, tasks, docs, and AI in a single app—so every message can instantly become a task and context is never lost."
+    "How is Hashboard Chat different from Slack or Microsoft Teams?",
+    "Traditional chat apps isolate communication from where work actually happens. Hashboard Chat unifies messaging, tasks, docs, and AI in a single app—so every message can instantly become a task and context is never lost."
   ],
   [
     "Can I import my existing Slack channels and message history?",
-    "Yes! ClickUp provides a 1-click Slack migration tool that transfers channels, message history, users, and attachments in minutes with zero downtime."
+    "Yes! Hashboard provides a 1-click Slack migration tool that transfers channels, message history, users, and attachments in minutes with zero downtime."
   ],
   [
-    "Does ClickUp Chat support video and voice huddles?",
-    "Yes, ClickUp SyncUp allows you to start instant 1-click voice and video calls directly inside any chat thread."
+    "Does Hashboard Chat support video and voice huddles?",
+    "Yes, Hashboard SyncUp allows you to start instant 1-click voice and video calls directly inside any chat thread."
   ],
   [
-    "How do AI Chat Agents work in ClickUp Chat?",
-    "ClickUp Brain AI agents can answer questions based on your workspace data, draft replies, summarize long threads, and automatically create tasks from action items."
+    "How do AI Chat Agents work in Hashboard Chat?",
+    "Hashboard Hash AI agents can answer questions based on your workspace data, draft replies, summarize long threads, and automatically create tasks from action items."
   ]
 ];
 

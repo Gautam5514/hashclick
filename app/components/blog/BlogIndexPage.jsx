@@ -10,8 +10,8 @@ const initialArticles = [
     id: 1,
     type: "article",
     slug: "automation-examples",
-    title: "How ClickUp's Marketing Team Uses ClickUp",
-    category: "USING CLICKUP",
+    title: "How Hashboard's Marketing Team Uses Hashboard",
+    category: "USING HASHBOARD",
     readTime: "Max 18min read",
     author: "Garima Behal",
     authorAvatar: "/blog/author-1.jpg",
@@ -47,7 +47,7 @@ const initialArticles = [
     id: 5,
     type: "article",
     slug: "automation-examples",
-    title: "ClickUp's G2 Winter 2026 Performance Signals The Rise of a Converged, AI-Native System of Work",
+    title: "Hashboard's G2 Winter 2026 Performance Signals The Rise of a Converged, AI-Native System of Work",
     category: "NEWS",
     readTime: "Max 7min read",
     author: "Kyle Coleman",
@@ -91,8 +91,8 @@ const initialArticles = [
     id: 9,
     type: "article",
     slug: "automation-examples",
-    title: "20 Automation Examples in ClickUp Worth Stealing",
-    category: "USING CLICKUP",
+    title: "20 Automation Examples in Hashboard Worth Stealing",
+    category: "USING HASHBOARD",
     readTime: "Max 31min read",
     author: "Praburam Srinivasan",
     authorAvatar: "/blog/author-2.jpeg",
@@ -105,7 +105,7 @@ const extraArticles = [
     id: 10,
     type: "article",
     slug: "automation-examples",
-    title: "Mastering Agile Sprints with ClickUp Brain & Automations",
+    title: "Mastering Agile Sprints with Hashboard Brain & Automations",
     category: "PROJECT MANAGEMENT",
     readTime: "Max 11min read",
     author: "Alex Rivera",
@@ -128,13 +128,13 @@ const extraArticles = [
 const topVideos = [
   {
     id: 1,
-    title: "Introducing ClickUp AI Super Agents",
+    title: "Introducing Hashboard AI Super Agents",
     image: "/blog/vids/vid-1.png",
     embedUrl: "https://www.youtube.com/embed/k1TDw14vsME?autoplay=1",
   },
   {
     id: 2,
-    title: "Introducing ClickUp 4.0",
+    title: "Introducing Hashboard 4.0",
     image: "/blog/vids/vid-2.png",
     embedUrl: "https://www.youtube.com/embed/feAJjhF4_-M?autoplay=1",
   },
@@ -146,7 +146,7 @@ const topVideos = [
   },
   {
     id: 4,
-    title: "Introducing ClickUp Chat",
+    title: "Introducing Hashboard Chat",
     image: "/blog/vids/vid-4.png",
     embedUrl: "https://www.youtube.com/embed/-QZ7TDSJgLg?autoplay=1",
   },
@@ -211,7 +211,7 @@ export default function BlogIndexPage() {
             </h1>
 
             <p className="text-neutral-500 text-base sm:text-lg font-normal max-w-lg leading-relaxed">
-              Join productivity hackers from around the world that receive WriteClick—the ClickUp Blog Newsletter.
+              Join productivity hackers from around the world that receive WriteClick—the Hashboard Blog Newsletter.
             </p>
 
             {/* Email Form */}
@@ -589,7 +589,7 @@ export default function BlogIndexPage() {
               <div className="relative w-full h-full [mask-image:linear-gradient(to_right,transparent_0%,black_30%)]">
                 <Image
                   src="/blog/newsletter-banner.png"
-                  alt="WriteClick Newsletter ClickUp Graphic"
+                  alt="WriteClick Newsletter Hashboard Graphic"
                   fill
                   className="object-cover object-left-top"
                   priority

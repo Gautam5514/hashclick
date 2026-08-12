@@ -128,7 +128,7 @@ export default function AppMockup({ className, activePill = "Projects" }) {
             <source srcSet={currentImageSrc} type="image/avif" />
             <img
               src={currentImageSrc}
-              alt={`ClickUp ${activePill} UI Preview`}
+              alt={`Hashboard ${activePill} UI Preview`}
               onError={() => setImgError(true)}
               className="h-auto w-full max-h-[580px] rounded-2xl object-cover object-left-top transition-all duration-300 shadow-lg"
               loading="eager"
@@ -148,7 +148,7 @@ export default function AppMockup({ className, activePill = "Projects" }) {
                 <span className="flex size-3.5 items-center justify-center rounded-full bg-[#fc6d2d] text-white text-[8px]">
                   ✳
                 </span>
-                <span>Mango Inc.</span>
+                <span>Hashboard Inc.</span>
                 <ChevronDown className="size-3 text-[#7b7b7b]" />
               </button>
             </div>

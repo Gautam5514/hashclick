@@ -259,7 +259,7 @@ export default function ResearchPage() {
       {/* Hero Section — Exact like Image 1 */}
       <section className="research-hero-section">
         <div className="research-container">
-          <span className="research-hero-tag">INSIGHTS FROM CLICKUP</span>
+          <span className="research-hero-tag">INSIGHTS FROM Hashboard</span>
           
           <h1 className="research-hero-title">
             Workplace <br className="hidden sm:inline" />
@@ -283,7 +283,7 @@ export default function ResearchPage() {
         <div className="forrester-banner-exact my-16 sm:my-20">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <h2 className="forrester-heading">
-              According to a study by Forrester, ClickUp saves the average company over 30k hours per year.
+              According to a study by Forrester, Hashboard saves the average company over 30k hours per year.
             </h2>
             <div className="shrink-0">
               <button

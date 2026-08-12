@@ -25,7 +25,7 @@ export default function AboutPage() {
           
           {/* Main Title - Smaller Text with Gradient ONLY on ClickUp. */}
           <h1 className="about-hero-title">
-            We are <span className="about-clickup-gradient">ClickUp.</span>
+            We are <span className="about-clickup-gradient">Hashboard.</span>
           </h1>
 
           {/* Subtitle */}
@@ -43,7 +43,7 @@ export default function AboutPage() {
           >
             <Image
               src="/about/cards_subtle_bottom_fade.png"
-              alt="We are ClickUp - Software, AI, Humans"
+              alt="We are Hashboard - Software, AI, Humans"
               width={2240}
               height={710}
               className="w-full h-auto object-contain"
@@ -116,7 +116,7 @@ export default function AboutPage() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between p-4 bg-[#18181b] text-white border-b border-white/10">
-              <span className="font-bold text-sm">We are ClickUp — The Story</span>
+              <span className="font-bold text-sm">We are Hashboard — The Story</span>
               <button
                 onClick={() => setIsVideoOpen(false)}
                 className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white font-bold text-sm transition-all cursor-pointer"
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube-nocookie.com/embed/0a5_2o79_R0?autoplay=1"
-                title="We Are ClickUp Video"
+                title="We Are Hashboard Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />

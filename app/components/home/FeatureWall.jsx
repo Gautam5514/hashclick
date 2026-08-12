@@ -44,6 +44,7 @@ import {
   Map,
   Inbox,
   Users,
+  ReceiptText,
 } from "lucide-react";
 import { Container } from "../ui/Container";
 import { cn } from "@/lib/utils";
@@ -100,7 +101,7 @@ const lowerRowItemsRight = [
 const extraRowItemsLeft = [
   { name: "Emails", icon: Mail },
   { name: "Dashboards", icon: LayoutDashboard },
-  { name: "Time Tracking", icon: Timer },
+  { name: "Tracking", icon: Timer },
 ];
 
 const extraRowItemsRight = [
@@ -115,7 +116,7 @@ const bottomRowItems = [
   { name: "Checklists", icon: ListChecks },
   { name: "Scheduling", icon: CalendarClock },
   { name: "Spreadsheets", icon: Table2 },
-  { name: "Whiteboards", icon: PenTool },
+  { name: "Billing", icon: ReceiptText},
   { name: "Gantt Charts", icon: GanttChartSquare },
   { name: "Roadmaps", icon: Map },
   { name: "Inbox", icon: Inbox },

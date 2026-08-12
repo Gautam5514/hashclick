@@ -9,9 +9,6 @@ import {
   CA_ICON4,
   CHECK,
   DEEP_SEARCH_PILL,
-  ICON_ANDROID,
-  ICON_APPLE,
-  ICON_WINDOWS,
   MCP_LOGO,
 } from "./brain2-svgs";
 
@@ -401,7 +398,7 @@ const whatsNew = [
     id: "memory-preferences",
     label: "Memory & Preferences",
     description:
-      "Brain² keeps track of how you like to work, and gets smarter every time you use the workspace.",
+      "Hash AI keeps track of how you like to work, and gets smarter every time you use the workspace.",
     Visual: MemoryVisual,
   },
   {
@@ -422,21 +419,21 @@ const whatsNew = [
     id: "connected-apps",
     label: "Connected Apps & Any MCP",
     description:
-      "Brain² taps Google Drive, GitHub, Salesforce, and more to get you answers and insights.",
+      "Hash AI taps Google Drive, GitHub, Salesforce, and more to get you answers and insights.",
     Visual: ConnectedAppsVisual,
   },
   {
     id: "ambient-intelligence",
     label: "Ambient Intelligence",
     description:
-      "Brain² surfaces relevant context, related tasks, and smart suggestions before you even ask.",
+      "Hash AI surfaces relevant context, related tasks, and smart suggestions before you even ask.",
     Visual: AmbientVisual,
   },
   {
     id: "deep-search",
     label: "Deep Search",
     description:
-      "Ask something complex. Brain² checks your workspace, apps, and the web for answers.",
+      "Ask something complex. Hash AI checks your workspace, apps, and the web for answers.",
     Visual: DeepSearchVisual,
   },
 ];
@@ -446,21 +443,21 @@ const cards = [
     id: "context",
     label: "Context",
     description:
-      "Brain² sees your tasks, docs, and conversations. It doesn't need a brief because it knows what's happening in real-time.",
+      "Hash AI sees your tasks, docs, and conversations. It doesn't need a brief because it knows what's happening in real-time.",
     Visual: ContextVisual,
   },
   {
     id: "intelligence",
     label: "Intelligence",
     description:
-      "Brain² picks the best AI model for each job. One subscription. Every frontier model running with full context.",
+      "Hash AI picks the best AI model for each job. One subscription. Every frontier model running with full context.",
     Visual: IntelligenceVisual,
   },
   {
     id: "personality",
     label: "Personality",
     description:
-      "Brain² learns how you and your team talk: your tone, your shorthand, your preferences.",
+      "Hash AI learns how you and your team talk: your tone, your shorthand, your preferences.",
     Visual: PersonalityVisual,
   },
 ];
@@ -492,9 +489,9 @@ export function BrainWhatsNewSection() {
     <div className="b2-pillars-band">
       <header className="b2-pillars-header">
         <h3 className="b2-pillars-title">
-          Nothing comes close to Brain<sup>2</sup>
+          Nothing comes close to Hash AI
         </h3>
-        <p className="b2-pillars-sub">We rebuilt Brain from the ground up.</p>
+        <p className="b2-pillars-sub">We rebuilt Hash AI from the ground up.</p>
       </header>
       <BrainWhatsNewGrid />
     </div>

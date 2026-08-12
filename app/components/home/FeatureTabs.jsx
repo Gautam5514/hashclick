@@ -159,7 +159,7 @@ export default function FeatureTabs() {
         <h2>AI solutions for every team</h2>
       </div>
       <div className="ft-subtext">
-        <p>Your key workflows, powered by ClickUp Agents.</p>
+        <p>Your key workflows, powered by Hashboard Agents.</p>
       </div>
 
       <div className="ft-container">

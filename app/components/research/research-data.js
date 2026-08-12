@@ -246,11 +246,11 @@ export const RESEARCH_STUDIES = [
 ];
 
 export const FORRESTER_STUDY = {
-  title: "According to a study by Forrester, ClickUp saves the average company over 30k hours per year.",
+  title: "According to a study by Forrester, Hashboard saves the average company over 30k hours per year.",
   metric: "30,000+ Hours Saved",
   roi: "301% ROI",
   payback: "< 6 Months",
-  description: "The Total Economic Impact™ Of ClickUp, a commissioned study conducted by Forrester Consulting on behalf of ClickUp.",
+  description: "The Total Economic Impact™ Of Hashboard, a commissioned study conducted by Forrester Consulting on behalf of Hashboard.",
   keyFindings: [
     "Average company recouped their investment in under 6 months.",
     "301% return on investment over 3 years.",

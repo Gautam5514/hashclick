@@ -7,8 +7,8 @@ export async function generateMetadata({ params }) {
     : "Research Paper";
 
   return {
-    title: `${formattedTitle} | ClickUp Workplace Research`,
-    description: `Read the full research paper on ${formattedTitle} by ClickUp Research.`,
+    title: `${formattedTitle} | Hashboard Workplace Research`,
+    description: `Read the full research paper on ${formattedTitle} by Hashboard Research.`,
   };
 }
 

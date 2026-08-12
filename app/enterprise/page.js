@@ -24,12 +24,12 @@ const capabilityCards = [
 
 
 const support = [
-  ["Self-serve onboarding", "Access complimentary resources, checklists, and templates to customize ClickUp at your pace, creating a workspace uniquely yours.", "self-serve-onboarding.png"],
-  ["Guided onboarding", "Our incredible customer success team provides personalized guidance and best practices for you to fully leverage ClickUp's potential.", "guided-onboarding.png"],
+  ["Self-serve onboarding", "Access complimentary resources, checklists, and templates to customize Hashboard at your pace, creating a workspace uniquely yours.", "self-serve-onboarding.png"],
+  ["Guided onboarding", "Our incredible customer success team provides personalized guidance and best practices for you to fully leverage Hashboard's potential.", "guided-onboarding.png"],
   ["Dedicated professional services", "Our specialists assess your needs and tailor a workspace to your business objectives for a streamlined setup and onboarding.", "professional-services.png"],
   ["Dedicated support", "Our award-winning support team, responsive and available 24/7 to support your team no matter the scale or timezone.", "dedicated-support.png"],
-  ["ClickUp University", "Enroll in many of our comprehensive courses to deepen your understanding of ClickUp, ensuring it works exactly how you need it to.", "clickup-university.png"],
-  ["Vetted consultants", "Work with our carefully vetted ClickUp consultants for support ranging from compliance advice to strategic platform utilization.", "vetted-consultants.png"],
+  ["Hashboard University", "Enroll in many of our comprehensive courses to deepen your understanding of Hashboard, ensuring it works exactly how you need it to.", "hashboard-university.png"],
+  ["Vetted consultants", "Work with our carefully vetted Hashboard consultants for support ranging from compliance advice to strategic platform utilization.", "vetted-consultants.png"],
 ];
 
 function Stars() {
@@ -42,9 +42,9 @@ export default function EnterprisePage() {
       <section className="ent-hero">
         <Container>
           <div className="ent-hero-copy">
-            <span className="ent-kicker">CLICKUP ENTERPRISE</span>
+            <span className="ent-kicker">HASHBOARD ENTERPRISE</span>
             <h1>The world&apos;s most powerful,<br/>flexible, and intuitive<br/>enterprise software.</h1>
-            <p>Break down silos, align teams, and accelerate AI transformation with ClickUp. Run all your key business<br className="ent-desktop-break"/> processes with ultimate security, scalability, and reliability.</p>
+            <p>Break down silos, align teams, and accelerate AI transformation with Hashboard. Run all your key business<br className="ent-desktop-break"/> processes with ultimate security, scalability, and reliability.</p>
             <div className="ent-actions">
               <Link href="/demo" className="ent-primary">Contact sales <ArrowRight size={17} /></Link>
               <Link href="/signup" className="ent-secondary">Get started free</Link>
@@ -85,19 +85,19 @@ export default function EnterprisePage() {
 
       <section className="ent-support" id="support">
         <Container>
-          <div className="ent-heading"><h2>Supporting your team around the clock and across all fronts</h2><p>Dedicated onboarding, world-class support, and incredibly responsive success managers make getting started and migrating to ClickUp a breeze.</p></div>
+          <div className="ent-heading"><h2>Supporting your team around the clock and across all fronts</h2><p>Dedicated onboarding, world-class support, and incredibly responsive success managers make getting started and migrating to Hashboard a breeze.</p></div>
           <div className="ent-support-grid">{support.map(([title, body, image]) => <article key={title}><Image src={`/enterprise/${image}`} alt="" width={1080} height={484}/><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>
         </Container>
       </section>
 
-      <section className="enterprise-comparison"><Container><div className="ent-heading"><span>WHY CLICKUP?</span><h2>Unmatched insight and efficiency</h2><p>ClickUp is the only platform that empowers you to visualize and report on all your data from a single, comprehensive view.</p></div><div className="enterprise-table-wrap"><table><thead><tr><th></th><th>ClickUp</th><th>Monday</th><th>Asana</th><th>Jira</th><th>Notion</th></tr></thead><tbody>{[
+      <section className="enterprise-comparison"><Container><div className="ent-heading"><span>WHY HASHBOARD?</span><h2>Unmatched insight and efficiency</h2><p>Hashboard is the only platform that empowers you to visualize and report on all your data from a single, comprehensive view.</p></div><div className="enterprise-table-wrap"><table><thead><tr><th></th><th>Hashboard</th><th>Monday</th><th>Asana</th><th>Jira</th><th>Notion</th></tr></thead><tbody>{[
         ["Visualize tasks across the entire enterprise in one place, with more than 13 different views for unmatched visibility and seamless workspace management.",[1,1,1,0,0]],
         ["Natively search across your workspace and third-party apps. Get contextual answers with Connected Search and AI.",[1,1,0,0,0]],
         ["Drive informed decisions through comprehensive reporting and dashboards across unlimited projects.",[1,0,1,0,0]],
         ["Boost efficiency by adding tasks to multiple lists simultaneously, cutting duplicate effort.",[1,0,1,0,0]],
       ].map(([label,values]) => <tr key={label}><td>{label}</td>{values.map((value,index) => <td key={index} className={index===0?"clickup-col":""}><i className={value?"yes":"no"}>{value?"✓":"×"}</i></td>)}</tr>)}</tbody></table></div><Image className="enterprise-awards" src="/enterprise/users-love-us.svg" alt="Enterprise software awards" width={1220} height={195}/></Container></section>
 
-      <CtaBanner title="Ready to bring all your work together?" subtitle="See how ClickUp can fit your teams, controls, and growth plan." primaryLabel="Contact sales" primaryHref="/demo" secondaryLabel="Get started free" secondaryHref="/signup" />
+      <CtaBanner title="Ready to bring all your work together?" subtitle="See how Hashboard can fit your teams, controls, and growth plan." primaryLabel="Contact sales" primaryHref="/demo" secondaryLabel="Get started free" secondaryHref="/signup" />
     </>
   );
 }

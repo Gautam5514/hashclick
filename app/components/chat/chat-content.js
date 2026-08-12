@@ -8,15 +8,15 @@
  */
 
 export const hero = {
-  eyebrow: { symbol: "#", label: "ClickUp Chat", tag: "New" },
+  eyebrow: { symbol: "#", label: "Hashboard Chat", tag: "New" },
   title: "Chat, Meet Work",
   subtitle:
     "Unlock unparalleled productivity with the world’s first Everything App.",
-  cta: { label: "Try ClickUp Chat", href: "/signup" },
+  cta: { label: "Try Hashboard Chat", href: "/signup" },
   note: "It’s free. No credit card required",
   media: {
     src: "/chat/Mask_group__6_.avif",
-    alt: "ClickUp Chat workspace with channels, threads, and connected tasks",
+    alt: "Hashboard Chat workspace with channels, threads, and connected tasks",
     width: 2160,
     height: 1216,
   },
@@ -113,7 +113,7 @@ export const valueProps = [
 export const chatAgents = {
   eyebrow: "Chat Agents",
   title: "See the power of AI in every Chat. Get started with a single click.",
-  body: "Turn on AI agents in any Chat—use the ones created by the ClickUp team or set up your own with just a prompt.",
+  body: "Turn on AI agents in any Chat—use the ones created by the Hashboard team or set up your own with just a prompt.",
   video: {
     src: "/chat/answer-agent.mp4",
     poster: "/chat/ai-poster.png",
@@ -132,7 +132,7 @@ export const bento = {
   title: "Projects and Chats are better together",
   subtitle:
     "Context and clarity instead of chaos. Save more than one day every week with everything in one place.",
-  cta: { label: "Try ClickUp Chat", href: "/signup" },
+  cta: { label: "Try Hashboard Chat", href: "/signup" },
   tiles: [
     {
       title: "Connect Tasks.",
@@ -188,7 +188,7 @@ export const importBanner = {
   // Slack mark → toggle → ClickUp mark lockup, at its natural size
   image: {
     src: "/chat/slack-import.svg",
-    alt: "Slack switching over to ClickUp Chat",
+    alt: "Slack switching over to Hashboard Chat",
     width: 254,
     height: 78,
   },
@@ -216,13 +216,13 @@ export const coreFeatures = {
 };
 
 export const aiSection = {
-  eyebrow: "ClickUp Brain",
+  eyebrow: "Hashboard Brain",
   title: "Get 10x more done with AI that’s your productivity partner",
   features: [
     {
       title: "Ask AI.",
       description:
-        "Get the right answer right away, using knowledge from ClickUp and any connected apps.",
+        "Get the right answer right away, using knowledge from Hashboard and any connected apps.",
       image: {
         src: "/chat/ai-2.svg",
         alt: "Launch, GitHub, Google Drive, campaigns, and more",
@@ -278,7 +278,7 @@ export const mobile = {
   ],
   image: {
     src: "/chat/mobile-v5.avif",
-    alt: "ClickUp Chat running on a phone",
+    alt: "Hashboard Chat running on a phone",
     width: 1419,
     height: 1257,
   },
@@ -291,7 +291,7 @@ export const closingCta = {
     strike: "on the planet",
     tail: "in the universe.",
   },
-  cta: { label: "Try ClickUp Chat", href: "/signup" },
+  cta: { label: "Try Hashboard Chat", href: "/signup" },
   image: {
     src: "/chat/space-guy.png",
     alt: "An astronaut floating in front of the moon",
@@ -321,10 +321,10 @@ export const testimonials = [
       height: 47,
     },
     headline:
-      "ClickUp takes on Slack and Teams with its AI-powered ‘everything’ app",
+      "Hashboard takes on Slack and Teams with its AI-powered ‘everything’ app",
     link: { label: "Read more", href: "#" },
   },
 ];
 
 export const disclaimer =
-  "*ClickUp Chat is free for now. Certain restrictions may apply later.";
+  "*Hashboard Chat is free for now. Certain restrictions may apply later.";

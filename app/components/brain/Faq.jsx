@@ -4,15 +4,15 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "What makes ClickUp Brain² different from ChatGPT, Claude, or Gemini?",
+    q: "What makes Hashboard Brain² different from ChatGPT, Claude, or Gemini?",
     a: "Those tools don't know your work. Brain² lives inside your tasks, docs, chat, calendar, email, and connected apps. You never have to explain what you're working on, who's involved, or what's blocking you.",
   },
   {
-    q: "Does ClickUp allow AI providers to train on my data?",
-    a: "Never. Your data is never used to train third-party AI models. ClickUp maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance, enforces strict zero-retention policies with all AI subprocessors, and Brain² only surfaces information you already have permission to access.",
+    q: "Does Hashboard allow AI providers to train on my data?",
+    a: "Never. Your data is never used to train third-party AI models. Hashboard maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance, enforces strict zero-retention policies with all AI subprocessors, and Brain² only surfaces information you already have permission to access.",
   },
   {
-    q: "How much does ClickUp Brain² cost?",
+    q: "How much does Hashboard Brain² cost?",
     a: "Brain² AI starts at $9/user/month and includes unlimited access to Brain², premium models (ChatGPT, Claude, Gemini), and 1,500 AI Super Credits. Free plans can try Brain² before committing. For teams that want the full AI stack (Notetaker, AI Fields, Automations, Super Agents), the Everything AI plan is $28/user/month.",
   },
   {
@@ -28,7 +28,7 @@ const faqs = [
     a: "No. Your conversations with Brain² are private to you. Admins cannot view them.",
   },
   {
-    q: "Does ClickUp Brain² remember my preferences and past conversations?",
+    q: "Does Hashboard Brain² remember my preferences and past conversations?",
     a: 'Yes. Brain² has something called "persistent memory". This means Brain² memorizes your role, workflows, and communication style. You can view, edit, or delete personal preferences anytime. Switching from ChatGPT or Claude? You can import your existing memories directly.',
   },
 ];

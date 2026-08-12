@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Are ClickUp Dashboards free?",
-    "Yes! ClickUp Dashboards are available on the Free Forever plan with standard widgets. Advanced reporting and unlimited widgets are available on Unlimited and Business plans."
+    "Are Hashboard Dashboards free?",
+    "Yes! Hashboard Dashboards are available on the Free Forever plan with standard widgets. Advanced reporting and unlimited widgets are available on Unlimited and Business plans."
   ],
   [
     "What kinds of charts and widgets can I build?",
@@ -22,7 +22,7 @@ const items = [
   ],
   [
     "Can I edit tasks directly from a Dashboard widget?",
-    "Yes! ClickUp Dashboards are fully interactive. Clicking on any chart segment or widget list item opens the task card directly so you can edit assignees, due dates, and statuses without leaving the dashboard."
+    "Yes! Hashboard Dashboards are fully interactive. Clicking on any chart segment or widget list item opens the task card directly so you can edit assignees, due dates, and statuses without leaving the dashboard."
   ]
 ];
 

@@ -51,7 +51,7 @@ const trustedLogos = [
 const benefits = [
   "Zero-pressure demo showcasing 20+ work apps – docs, projects, chat – in one place.",
   "Explore AI Agents and workflow solutions for your team.",
-  "Discuss your goals and uncover how ClickUp can help.",
+  "Discuss your goals and uncover how Hashboard can help.",
 ];
 
 const employeeOptions = ["1 - 10", "11 - 50", "51 - 200", "201 - 1,000", "1,000+"];
