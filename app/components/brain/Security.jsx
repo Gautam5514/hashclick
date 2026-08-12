@@ -126,7 +126,7 @@ const pillars = [
 
 export default function Security() {
   return (
-    <section className="bn-security" aria-label="Brain² security">
+    <section className="bn-security" aria-label="Hash AI security">
       <div className="bn-security-inner">
         <header className="bn-security-header">
           <p className="bn-eyebrow bn-eyebrow-purple">Secure</p>

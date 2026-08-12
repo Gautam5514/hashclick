@@ -7,7 +7,7 @@ const platforms = [
 
 export default function Accessibility() {
   return (
-    <section className="bn-access" aria-label="One Brain, every device">
+    <section className="bn-access" aria-label="One Hash AI, every device">
       <div className="bn-access-frame">
         <header className="bn-access-heading">
           <div className="bn-access-kicker">
@@ -15,7 +15,7 @@ export default function Accessibility() {
               Fully native desktop &amp; mobile
             </p>
           </div>
-          <h2 className="bn-access-title">One Brain, every device</h2>
+          <h2 className="bn-access-title">One Hash AI, every device</h2>
         </header>
 
         <div className="bn-access-hero">
@@ -78,12 +78,12 @@ export default function Accessibility() {
             <div className="bn-access-cap-visual bn-access-mention">
               <div className="bn-access-message">
                 <img src="/brain-2/accessible-anywhere/avatar-oliver.png" alt="" />
-                <p><strong>Oliver</strong><br /><b>@Brain</b> pull the latest report</p>
+                <p><strong>Oliver</strong><br /><b>@HashAI</b> pull the latest report</p>
               </div>
             </div>
             <div className="bn-access-cap-copy">
               <h3>Mention Anywhere</h3>
-              <p>Instant context and answers wherever you @Brain</p>
+              <p>Instant context and answers wherever you @HashAI</p>
             </div>
           </article>
 

@@ -5,31 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-function ClickUpLogoMark({ className = "size-6" }) {
-  return (
-    <svg viewBox="0 0 40 40" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M10 22L20 14L30 22"
-        stroke="url(#ft_logo_grad_2)"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M13 29C17 32 23 32 27 29"
-        stroke="url(#ft_logo_grad_2)"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-      />
-      <defs>
-        <linearGradient id="ft_logo_grad_2" x1="10" y1="14" x2="30" y2="32" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#7612fa" />
-          <stop offset="0.5" stopColor="#fa12e3" />
-          <stop offset="1" stopColor="#fc6d2d" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
+function HashboardLogoMark({ className = "size-6" }) {
+  return <img src="/hashboard-2.svg" alt="" aria-hidden="true" className={cn(className, "object-contain")} />;
 }
 
 function LinkedinIcon(props) {
@@ -160,9 +137,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-10 text-left mb-14">
           {/* Column 1: Logo + AI + Download */}
           <div>
-            {/* ClickUp Logo */}
+            {/* Hashboard Logo */}
             <div className="flex items-center gap-2 mb-6">
-              <ClickUpLogoMark className="size-6" />
+              <HashboardLogoMark className="size-6" />
               <span className="font-display text-[20px] font-extrabold tracking-tight text-[#111827]">
                 Hashboard
               </span>

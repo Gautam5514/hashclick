@@ -1,20 +1,17 @@
 /**
- * Chrome for the ClickUp Brain section: the wordmark and the circuit-trace
+ * Chrome for the Hash AI section: the wordmark and the circuit-trace
  * backdrop. The three card illustrations are SVG files in /public/chat
  * (ai-1/2/3.svg), wired up from `aiSection` in chat-content.js.
  */
 
-import { SparkleMark } from "./chat-app-logos";
-
-/** "Hashboard Br·ai·n" — the AI inside Brain picks up the gradient. */
-export function BrainWordmark({ text = "Hashboard Brain" }) {
+/** "Hash AI" — the AI half picks up the gradient. */
+export function HashAiWordmark({ text = "Hash AI" }) {
   return (
     <span className="ai-wordmark">
-      <SparkleMark id="brain-spark" className="ai-wordmark-spark" aria-hidden="true" />
+      <img src="/hashai.svg" className="ai-wordmark-spark" alt="" aria-hidden="true" />
       <span aria-label={text}>
-        <span aria-hidden="true">Hashboard Br</span>
-        <span aria-hidden="true" className="ai-wordmark-ai">ai</span>
-        <span aria-hidden="true">n</span>
+        <span aria-hidden="true">Hash </span>
+        <span aria-hidden="true" className="ai-wordmark-ai">AI</span>
       </span>
     </span>
   );

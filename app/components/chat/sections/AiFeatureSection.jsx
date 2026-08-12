@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BrainWordmark, CircuitBackdrop } from "../chat-ai-art";
+import { HashAiWordmark, CircuitBackdrop } from "../chat-ai-art";
 import { aiSection } from "../chat-content";
 
 export default function AiFeatureSection({ content = aiSection }) {
@@ -8,7 +8,7 @@ export default function AiFeatureSection({ content = aiSection }) {
       <CircuitBackdrop />
 
       <div className="chat-shell text-center chat-ai-inner">
-        <BrainWordmark text={content.eyebrow} />
+        <HashAiWordmark text={content.eyebrow} />
 
         <h2 id="chat-ai-title" className="chat-h2 chat-ai-title">
           {content.title}

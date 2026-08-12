@@ -13,7 +13,7 @@ const roles = [
       ["Sam", "Design is done, but legal still owes us copy", "2:14 pm", "S"],
       ["Priya", "I can pick it up after the mobile handoff", "2:15 pm", "P"],
     ],
-    action: "Brain rebalanced 6 tasks and updated the launch plan",
+    action: "Hash AI rebalanced 6 tasks and updated the launch plan",
   },
   {
     title: "Engineering Lead",
@@ -25,7 +25,7 @@ const roles = [
       ["Sam", "we’re gonna miss the sprint", "2:14 pm", "S"],
       ["Priya", "Marcus had to hop on the incident", "2:15 pm", "P"],
     ],
-    action: "Brain reassigned the review and rebuilt the sprint plan",
+    action: "Hash AI reassigned the review and rebuilt the sprint plan",
   },
   {
     title: "Agency Owner",
@@ -37,7 +37,7 @@ const roles = [
       ["Alex", "Vertex hasn’t approved the last round", "9:42 am", "A"],
       ["Jon", "I’ve got capacity after lunch", "9:43 am", "J"],
     ],
-    action: "Brain drafted both check-ins and shifted the creative team",
+    action: "Hash AI drafted both check-ins and shifted the creative team",
   },
   {
     title: "Head of Ops",
@@ -49,7 +49,7 @@ const roles = [
       ["Ava", "Product is tracking a different deadline", "11:07 am", "A"],
       ["Mia", "Can we get one source of truth?", "11:08 am", "M"],
     ],
-    action: "Brain merged both workflows and notified every owner",
+    action: "Hash AI merged both workflows and notified every owner",
   },
   {
     title: "Marketing Manager",
@@ -61,7 +61,7 @@ const roles = [
       ["Eli", "The landing page copy needs one more pass", "3:22 pm", "E"],
       ["Nina", "Launch calendar still has two gaps", "3:23 pm", "N"],
     ],
-    action: "Brain filled the calendar and created the missing briefs",
+    action: "Hash AI filled the calendar and created the missing briefs",
   },
   {
     title: "Founder / CEO",
@@ -73,7 +73,7 @@ const roles = [
       ["Owen", "Two company OKRs moved to amber", "8:32 am", "O"],
       ["Kai", "Hiring is behind by three roles", "8:33 am", "K"],
     ],
-    action: "Brain prepared the brief and assigned every follow-up",
+    action: "Hash AI prepared the brief and assigned every follow-up",
   },
 ];
 
@@ -127,14 +127,14 @@ export default function IcpStories() {
     <section className="bn-icp" aria-labelledby="bn-icp-title">
       <div className="bn-container bn-icp-container">
         <header className="bn-icp-header">
-          <p className="bn-eyebrow bn-eyebrow-purple">One Brain. Any job.</p>
+          <p className="bn-eyebrow bn-eyebrow-purple">One Hash AI. Any job.</p>
           <div className="bn-icp-rule" />
           <h2 className="bn-h2" id="bn-icp-title">
-            Brain<sup>2</sup> already knows what to do,<br />
+            Hash AI already knows what to do,<br />
             <em>watch it work.</em>
           </h2>
           <p className="bn-lede">
-            Your team&apos;s entire way of working is already inside Brain². Just ask. It produces what you
+            Your team&apos;s entire way of working is already inside Hash AI. Just ask. It produces what you
             need, the right way, every time.
           </p>
           <a href="/signup" className="bn-btn bn-btn-light bn-btn-inline">Get started</a>
@@ -182,7 +182,7 @@ export default function IcpStories() {
                 ))}
                 <div className="bn-brain-action">
                   <span><Sparkle /></span>
-                  <div><strong>Brain² is working</strong><p>{role.action}</p></div>
+                  <div><strong>Hash AI is working</strong><p>{role.action}</p></div>
                 </div>
               </div>
               <button className="bn-demo-pause" type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play demo" : "Pause demo"}>

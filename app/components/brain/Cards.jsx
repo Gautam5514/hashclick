@@ -21,7 +21,7 @@ const callers = [
 const completed = [
   ["Built the sales kickoff deck", "Slides agent", "9:02 AM"],
   ["Shipped the Q3 pricing page redesign", "Web agent", "9:14 AM"],
-  ["Drafted the Brain² launch PRD", "Product agent", "9:21 AM"],
+  ["Drafted the Hash AI launch PRD", "Product agent", "9:21 AM"],
   ["Forecasted FY26 revenue scenarios", "Finance agent", "9:36 AM"],
   ["Designed the new onboarding flow", "Design agent", "9:48 AM"],
   ["Wrote the SOC 2 readiness checklist", "Ops agent", "10:05 AM"],
@@ -39,7 +39,7 @@ export default function Cards() {
           <div className="bn-cards-rule" aria-hidden="true" />
           <div className="bn-cards-heading-row">
             <h2 className="bn-h2">
-              Cowork with Brain<sup>2</sup> feels like you aren&apos;t actually working
+              Cowork with Hash AI feels like you aren&apos;t actually working
             </h2>
             <a href="/signup" className="bn-btn bn-btn-light">Get started</a>
           </div>
@@ -50,7 +50,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Personality</p>
               <p className="bn-card-desc">
-                Brain² learns how you and your team talks: your tone, your shorthand, your
+                Hash AI learns how you and your team talks: your tone, your shorthand, your
                 preferences.
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Intelligence</p>
               <p className="bn-card-desc">
-                Brain² picks the best AI model for each job. One subscription. Every frontier model
+                Hash AI picks the best AI model for each job. One subscription. Every frontier model
                 running with full context.
               </p>
             </div>
@@ -76,7 +76,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Context</p>
               <p className="bn-card-desc">
-                Brain² sees your tasks, docs, and conversations. It doesn&apos;t need a brief
+                Hash AI sees your tasks, docs, and conversations. It doesn&apos;t need a brief
                 because it knows what&apos;s happening in real-time.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Skills</p>
               <p className="bn-card-desc">
-                Teach Brain² your exact workflows. It runs them on command, every time, no
+                Teach Hash AI your exact workflows. It runs them on command, every time, no
                 re-prompting.
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Presence</p>
               <p className="bn-card-desc">
-                Brain² joins your calls, takes notes, knows your schedule, and builds context from
+                Hash AI joins your calls, takes notes, knows your schedule, and builds context from
                 every interaction automatically.
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function Cards() {
                   ))}
                   <span className="bn-pres-note">
                     <i className="bn-pres-spinner" aria-hidden="true" />
-                    Brain is taking notes
+                    Hash AI is taking notes
                   </span>
                 </div>
                 <p className="bn-pres-line">
@@ -148,7 +148,7 @@ export default function Cards() {
               <div className="bn-done-head">
                 <span className="bn-done-title">
                   <i className="bn-done-live" aria-hidden="true" />
-                  Brain² tasks completed
+                  Hash AI tasks completed
                 </span>
                 <span className="bn-done-count">9 working</span>
               </div>

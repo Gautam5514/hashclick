@@ -11,9 +11,13 @@ import {
   AlarmClock,
   Asterisk,
   Bell,
+  Building2,
   Globe,
   Headphones,
   List,
+  Paperclip,
+  Pin,
+  Search,
   Send,
   SmilePlus,
 } from "lucide-react";
@@ -169,6 +173,52 @@ function DraftsSent({ label }) {
   );
 }
 
+function ClientChat({ label }) {
+  return (
+    <>
+      <Label icon={Building2}>{label}</Label>
+      <Row><Avatar sm /><Bar w="30%" sm /><span className="cf-pill">External</span></Row>
+      <Row><Avatar /><Bar w="42%" /></Row>
+    </>
+  );
+}
+
+function FileSharing({ label }) {
+  return (
+    <>
+      <Label icon={Paperclip}>{label}</Label>
+      <Row><Square /><Bar w="38%" sm /></Row>
+      <Row><Square /><Bar w="26%" sm /></Row>
+    </>
+  );
+}
+
+function MessageSearch({ label }) {
+  return (
+    <>
+      <Row>
+        <span className="cf-label-icon"><Search className="w-3.5 h-3.5" aria-hidden="true" /></span>
+        <Bar w="46%" />
+      </Row>
+      <Label bare>{label}</Label>
+      <Row><Avatar sm /><Bar w="30%" sm /></Row>
+    </>
+  );
+}
+
+function PinnedMessages({ label }) {
+  return (
+    <>
+      <Row>
+        <Label bare>{label}</Label>
+        <span className="cf-label-icon cf-tone-purple"><Pin className="w-3.5 h-3.5" /></span>
+      </Row>
+      <Row className="cf-row-boxed"><Square /><Bar w="48%" sm /></Row>
+      <Row><Avatar /><Bar w="24%" /></Row>
+    </>
+  );
+}
+
 function Integrations({ label }) {
   return (
     <>
@@ -193,4 +243,8 @@ export const MOCKUPS = {
   customSidebar: CustomSidebar,
   draftsSent: DraftsSent,
   integrations: Integrations,
+  clientChat: ClientChat,
+  fileSharing: FileSharing,
+  messageSearch: MessageSearch,
+  pinnedMessages: PinnedMessages,
 };

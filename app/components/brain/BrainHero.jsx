@@ -5,7 +5,7 @@ import { ICON_APPLE, ICON_WINDOWS, ICON_ANDROID } from "../home/brain2-svgs";
 const checks = [
   "Multiplayer AI with your context",
   "Every model. One subscription.",
-  "Self-updating Company Brain",
+  "Self-updating Company Hash AI",
 ];
 
 const CHROME =
@@ -180,14 +180,14 @@ function Pillar({ pillar }) {
 
 export default function BrainHero() {
   return (
-    <section className="bn-hero" aria-label="Brain² hero">
+    <section className="bn-hero" aria-label="Hash AI hero">
       <div className="bn-container bn-hero-inner">
         <div className="bn-hero-content">
           <div className="bn-pill-row">
             <span className="bn-pill">
               <span className="bn-pill-inner">
                 All new
-                <Image src="/brain-2/brain.svg" width={18} height={18} alt="" />
+                <Image src="/hashai.svg" width={18} height={18} alt="" />
                 <strong>
                   Hash AI
                 </strong>
@@ -198,11 +198,7 @@ export default function BrainHero() {
           <h1 className="bn-hero-title">
             The best AI is <em>your</em> AI.
             <br />
-            Your Company&apos;s{" "}
-            <span className="bn-brain-mark">
-              <span>Brain</span>
-              <span className="bn-brain-sup">2</span>
-            </span>
+            Your Company&apos;s Hash AI
           </h1>
 
           <ul className="bn-checks">
@@ -217,7 +213,7 @@ export default function BrainHero() {
           <div className="bn-actions">
             <div className="bn-buttons">
               <a href="/signup" className="bn-btn bn-btn-primary">
-                Try Brain² FREE
+                Try Hash AI FREE
               </a>
               <a href="/signup" className="bn-btn bn-btn-import">
                 <span className="bn-logo-stack" aria-hidden="true">
@@ -242,7 +238,7 @@ export default function BrainHero() {
 
       {/* System map: events stream in, the Brain orchestrates, knowledge flows out. */}
       <div className="bn-loop-section">
-        <div className="bn-loop-stage" aria-label="Brain² system map">
+        <div className="bn-loop-stage" aria-label="Hash AI system map">
           <div className="bn-cv-zone bn-cv-zone-input" aria-hidden="true">
             {inputTracks.map((pills, i) => (
               <Track key={i} pills={pills} index={i} />
@@ -306,10 +302,8 @@ export default function BrainHero() {
             <span className="bn-cv-core-glow" aria-hidden="true" />
             <span className="bn-cv-core-ring" aria-hidden="true" />
             <span className="bn-cv-core-k">COMPANY</span>
-            <Image className="bn-cv-core-mark" src="/brain-2/brain.svg" width={52} height={52} alt="" />
-            <span className="bn-cv-core-v">
-              Brain<sup>2</sup>
-            </span>
+            <Image className="bn-cv-core-mark" src="/hashai.svg" width={52} height={52} alt="" />
+            <span className="bn-cv-core-v">Hash AI</span>
           </div>
 
           <div className="bn-cv-models" aria-hidden="true">

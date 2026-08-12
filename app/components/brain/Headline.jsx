@@ -2,7 +2,7 @@ export default function Headline() {
   return (
     <section className="bn-headline" aria-label="The best AI is your AI">
       <div className="bn-headline-inner">
-        <img className="bn-headline-brain" src="/brain-2/brain.svg" width="90" height="90" alt="" />
+        <img className="bn-headline-brain" src="/hashai.svg" width="90" height="90" alt="" />
         <h2 className="bn-headline-title">
           The best AI is
           <br />

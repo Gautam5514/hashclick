@@ -22,7 +22,7 @@ const items = [
   ],
   [
     "How do AI Chat Agents work in Hashboard Chat?",
-    "Hashboard Hash AI agents can answer questions based on your workspace data, draft replies, summarize long threads, and automatically create tasks from action items."
+    "Hash AI agents can answer questions using context from across your agency — not just the current chat — draft replies, summarize long threads, and automatically create tasks from action items."
   ]
 ];
 

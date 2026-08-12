@@ -4,31 +4,8 @@ import Link from "next/link";
 import AppMockup from "./AppMockup";
 import { cn } from "@/lib/utils";
 
-function ClickUpLogoMark({ className = "size-8" }) {
-  return (
-    <svg viewBox="0 0 40 40" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M10 22L20 14L30 22"
-        stroke="url(#cta_logo_grad)"
-        strokeWidth="5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M13 29C17 32 23 32 27 29"
-        stroke="url(#cta_logo_grad)"
-        strokeWidth="4.5"
-        strokeLinecap="round"
-      />
-      <defs>
-        <linearGradient id="cta_logo_grad" x1="10" y1="14" x2="30" y2="32" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#7612fa" />
-          <stop offset="0.5" stopColor="#fa12e3" />
-          <stop offset="1" stopColor="#fc6d2d" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
+function HashboardLogoMark({ className = "size-8" }) {
+  return <img src="/hashboard-2.svg" alt="" aria-hidden="true" className={cn(className, "object-contain")} />;
 }
 
 export default function CtaBanner({
@@ -55,7 +32,7 @@ export default function CtaBanner({
           <div className="relative z-10 mx-auto max-w-3xl">
             {/* Top White Logo Tile */}
             <div className="mx-auto mb-6 flex size-16 items-center justify-center rounded-2xl bg-white shadow-xl p-3 hover:scale-105 transition-transform">
-              <ClickUpLogoMark className="size-9" />
+              <HashboardLogoMark className="size-9" />
             </div>
 
             {/* Headline */}

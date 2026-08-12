@@ -5,14 +5,14 @@ import { useEffect, useRef, useState } from "react";
 const features = [
   {
     title: "Presentation-ready in one prompt",
-    body: "Real typography. Curated palettes. Brain² builds your next all-hands, sprint review, or client pitch, and it's actually polished, so you can present in minutes, without touching a slide.",
+    body: "Real typography. Curated palettes. Hash AI builds your next all-hands, sprint review, or client pitch, and it's actually polished, so you can present in minutes, without touching a slide.",
     image: "/brain-2/sticky-1.png",
     bg: "/brain-2/bg-1.png",
   },
   {
     title: "Dashboards, pages, tools, prototypes",
     em: "built before you ask",
-    body: "Brain² sees your work and creates finished, shareable deliverables on the spot. Not suggestions. Not outlines. Working pages, real code, ready to use or share immediately.",
+    body: "Hash AI sees your work and creates finished, shareable deliverables on the spot. Not suggestions. Not outlines. Working pages, real code, ready to use or share immediately.",
     image: "/brain-2/sticky-2.png",
     bg: "/brain-2/bg-2.png",
   },
@@ -72,7 +72,7 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="bn-features" aria-label="Brain² features">
+    <section className="bn-features" aria-label="Hash AI features">
       <div className="bn-features-inner">
         {/* Desktop: copy scrolls in column one, the visual stays pinned in column two. */}
         <div className="bn-features-grid">

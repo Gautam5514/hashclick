@@ -4,32 +4,32 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "What makes Hashboard Brain² different from ChatGPT, Claude, or Gemini?",
-    a: "Those tools don't know your work. Brain² lives inside your tasks, docs, chat, calendar, email, and connected apps. You never have to explain what you're working on, who's involved, or what's blocking you.",
+    q: "What makes Hashboard's Hash AI different from ChatGPT, Claude, or Gemini?",
+    a: "Those tools don't know your work. Hash AI lives inside your tasks, docs, chat, calendar, email, and connected apps. You never have to explain what you're working on, who's involved, or what's blocking you.",
   },
   {
     q: "Does Hashboard allow AI providers to train on my data?",
-    a: "Never. Your data is never used to train third-party AI models. Hashboard maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance, enforces strict zero-retention policies with all AI subprocessors, and Brain² only surfaces information you already have permission to access.",
+    a: "Never. Your data is never used to train third-party AI models. Hashboard maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance, enforces strict zero-retention policies with all AI subprocessors, and Hash AI only surfaces information you already have permission to access.",
   },
   {
-    q: "How much does Hashboard Brain² cost?",
-    a: "Brain² AI starts at $9/user/month and includes unlimited access to Brain², premium models (ChatGPT, Claude, Gemini), and 1,500 AI Super Credits. Free plans can try Brain² before committing. For teams that want the full AI stack (Notetaker, AI Fields, Automations, Super Agents), the Everything AI plan is $28/user/month.",
+    q: "How much does Hashboard's Hash AI cost?",
+    a: "Hash AI starts at $9/user/month and includes unlimited access to Hash AI, premium models (ChatGPT, Claude, Gemini), and 1,500 AI Super Credits. Free plans can try Hash AI before committing. For teams that want the full AI stack (Notetaker, AI Fields, Automations, Super Agents), the Everything AI plan is $28/user/month.",
   },
   {
     q: "Are there usage limits or caps?",
-    a: "Brain² conversations are unlimited on any paid plan and do not use AI Super Credits. Day-to-day conversations with Brain² won't run out on you. AI Super Credits (1,500/month included) are used for advanced capabilities like Super Agents, AI Automations, and AI-powered fields.",
+    a: "Hash AI conversations are unlimited on any paid plan and do not use AI Super Credits. Day-to-day conversations with Hash AI won't run out on you. AI Super Credits (1,500/month included) are used for advanced capabilities like Super Agents, AI Automations, and AI-powered fields.",
   },
   {
-    q: "Can I choose which AI model Brain² uses?",
-    a: "Yes. Brain² lets you switch between leading models (Claude, GPT, Gemini, and more) with a single click. Every model gets full access to your Workspace context and tools. One subscription, every premium LLM, no separate accounts needed.",
+    q: "Can I choose which AI model Hash AI uses?",
+    a: "Yes. Hash AI lets you switch between leading models (Claude, GPT, Gemini, and more) with a single click. Every model gets full access to your Workspace context and tools. One subscription, every premium LLM, no separate accounts needed.",
   },
   {
-    q: "Can my manager/admin see my Brain² conversations?",
-    a: "No. Your conversations with Brain² are private to you. Admins cannot view them.",
+    q: "Can my manager/admin see my Hash AI conversations?",
+    a: "No. Your conversations with Hash AI are private to you. Admins cannot view them.",
   },
   {
-    q: "Does Hashboard Brain² remember my preferences and past conversations?",
-    a: 'Yes. Brain² has something called "persistent memory". This means Brain² memorizes your role, workflows, and communication style. You can view, edit, or delete personal preferences anytime. Switching from ChatGPT or Claude? You can import your existing memories directly.',
+    q: "Does Hashboard's Hash AI remember my preferences and past conversations?",
+    a: 'Yes. Hash AI has something called "persistent memory". This means Hash AI memorizes your role, workflows, and communication style. You can view, edit, or delete personal preferences anytime. Switching from ChatGPT or Claude? You can import your existing memories directly.',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Faq() {
           <h2 className="bn-h2">
             You have questions
             <br />
-            Brain has answers.
+            Hash AI has answers.
           </h2>
         </header>
 

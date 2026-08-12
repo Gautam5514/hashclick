@@ -148,10 +148,8 @@ export default function Navbar() {
     <>
       <Link href="/brain" className="cu-banner">
         <span className="cu-banner-text">
-          <strong>
-            NEW: Brain<sup>2</sup>
-          </strong>{" "}
-          - The best AI is <i>your</i>{" "}AI. The world&apos;s first company Brain
+          <strong>NEW: Hash AI</strong>{" "}
+          - The best AI is <i>your</i>{" "}AI. The world&apos;s first company Hash AI
         </span>
         <svg
           className="cu-banner-chevron"

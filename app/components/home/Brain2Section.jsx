@@ -1,7 +1,6 @@
 import "./brain2.css";
 import {
   AMBIENT_SPINNER,
-  BRAIN_LOGO,
   CA_CONNECTOR,
   CA_ICON1,
   CA_ICON2,
@@ -22,6 +21,11 @@ function Svg({ markup, className }) {
       dangerouslySetInnerHTML={{ __html: markup }}
     />
   );
+}
+
+/** The Hash AI icon + wordmark lockup — replaces the old Brain² artwork. */
+function HashAiLockup({ className }) {
+  return <img src="/full_hashai.svg" alt="Hash AI" className={className} />;
 }
 
 const models = [
@@ -230,7 +234,7 @@ function EveryModelVisual() {
           </div>
           <div className="b2-em-item" data-model-id="brain">
             <div className="b2-em-content">
-              <Svg markup={BRAIN_LOGO} className="b2-em-lockup" />
+              <HashAiLockup className="b2-em-lockup" />
             </div>
           </div>
           <div className="b2-em-item" data-model-id="claude">
@@ -412,7 +416,7 @@ const whatsNew = [
     id: "super-agents",
     label: "Multiplayer AI",
     description:
-      "The more your team uses Brain², the more it knows, the more useful it gets for everyone.",
+      "The more your team uses Hash AI, the more it knows, the more useful it gets for everyone.",
     Visual: SuperAgentsVisual,
   },
   {
@@ -464,7 +468,7 @@ const cards = [
 
 export function BrainWhatsNewGrid() {
   return (
-    <div className="b2-wn" aria-label="What's new in Brain²">
+    <div className="b2-wn" aria-label="What's new in Hash AI">
       <div className="b2-wn-container">
         <div className="b2-wn-grid">
           {whatsNew.map(({ id, label, description, Visual }) => (
@@ -506,7 +510,7 @@ export default function Brain2Section() {
         <div className="b2-hero">
           <header className="b2-hero-inner">
             <div className="b2-logo-wrap">
-              <Svg markup={BRAIN_LOGO} className="b2-brain-logo" />
+              <HashAiLockup className="b2-brain-logo" />
             </div>
             <h2 className="b2-title" id="brain2-title">
               The best AI is <i>your</i> AI

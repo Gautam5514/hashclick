@@ -8,7 +8,7 @@ const sources = [
 
 export default function MemoryImport() {
   return (
-    <section className="bn-import" aria-label="Import memories into Brain²">
+    <section className="bn-import" aria-label="Import memories into Hash AI">
       <div className="bn-import-container">
         <div className="bn-import-card">
           <Image
@@ -40,16 +40,16 @@ export default function MemoryImport() {
             </div>
             <span className="bn-import-connector" />
             <span className="bn-import-brain">
-              <Image src="/brain-2/brain.svg" width={46} height={46} alt="" unoptimized />
+              <Image src="/hashai.svg" width={46} height={46} alt="" unoptimized />
             </span>
           </div>
 
           <div className="bn-import-copy">
             <h2 className="bn-import-title">
-              Bring your memory into Brain<sup>2</sup> with one-click.
+              Bring your memory into Hash AI with one-click.
             </h2>
             <p className="bn-import-lede">
-              Import your ChatGPT, Claude, or any AI memory into Brain<sup>2</sup> instantly.
+              Import your ChatGPT, Claude, or any AI memory into Hash AI instantly.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function MemoryImport() {
         <div className="bn-footnotes">
           <p>
             <sup>*</sup> Best AI Guarantee: Hashboard provides a 100% satisfaction guarantee on
-            Brain². If you are not satisfied that Brain² delivers superior results compared to any
+            Hash AI. If you are not satisfied that Hash AI delivers superior results compared to any
             competing AI product within 30 days, you&apos;ll get your money-back.
           </p>
           <p>

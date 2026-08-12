@@ -1331,7 +1331,7 @@
   color: #ffffff;
 }
 
-.ai-wordmark-spark { width: 1.5rem; height: 1.5rem; }
+.ai-wordmark-spark { width: 1.5rem; height: 1.5rem; object-fit: contain; }
 
 .ai-wordmark-ai {
   background: linear-gradient(90deg, #7b6cff, #d92ec0 55%, #ff7a45);

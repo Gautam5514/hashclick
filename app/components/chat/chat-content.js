@@ -9,9 +9,9 @@
 
 export const hero = {
   eyebrow: { symbol: "#", label: "Hashboard Chat", tag: "New" },
-  title: "Chat, Meet Work",
+  title: "Agency conversations, without losing context",
   subtitle:
-    "Unlock unparalleled productivity with the world’s first Everything App.",
+    "Chat with your team and clients while keeping projects, tasks, files, and agency knowledge connected in one workspace.",
   cta: { label: "Try Hashboard Chat", href: "/signup" },
   note: "It’s free. No credit card required",
   media: {
@@ -24,13 +24,13 @@ export const hero = {
 
 export const problemSolution = {
   problem: {
-    title: "Chat is broken.",
-    body: "Chat and work are in different apps, disconnected.",
+    title: "Agency chat is broken.",
+    body: "Team chat, client chat, and your projects live in separate apps, disconnected.",
   },
   solution: {
     title: "We fixed it.",
-    body: "The everything app combines chat and work.",
-    highlight: "With AI superpowers",
+    body: "Hashboard connects chat with your projects, tasks, and clients.",
+    highlight: "With Hash AI superpowers",
   },
   /**
    * The two dashed rings of disconnected apps.
@@ -78,7 +78,7 @@ export const valueProps = [
   {
     title: "Work from Chat",
     description:
-      "Create & manage work while messaging. Turn messages into tasks with one click.",
+      "Create and manage work without leaving the conversation. Turn any message into a task in one click.",
     duration: 6000,
     media: {
       type: "image",
@@ -89,7 +89,7 @@ export const valueProps = [
   {
     title: "Context always Connected",
     description:
-      "Every conversation automatically linked to related tasks, docs, and chats.",
+      "Every conversation — team or client — automatically linked to its project, tasks, and files.",
     duration: 6000,
     media: {
       type: "image",
@@ -98,9 +98,9 @@ export const valueProps = [
     },
   },
   {
-    title: "AI Keeps Chat Manageable",
+    title: "Hash AI Keeps Chat Manageable",
     description:
-      "Get suggested answers, auto-created tasks, summarized threads, and more.",
+      "Ask questions across your agency, get auto-created tasks, and summarized threads.",
     duration: 6000,
     media: {
       type: "image",
@@ -112,8 +112,8 @@ export const valueProps = [
 
 export const chatAgents = {
   eyebrow: "Chat Agents",
-  title: "See the power of AI in every Chat. Get started with a single click.",
-  body: "Turn on AI agents in any Chat—use the ones created by the Hashboard team or set up your own with just a prompt.",
+  title: "See the power of Hash AI in every Chat. Get started with a single click.",
+  body: "Turn on Hash AI agents in any Chat — use the ones built by the Hashboard team, or set up your own with just a prompt.",
   video: {
     src: "/chat/answer-agent.mp4",
     poster: "/chat/ai-poster.png",
@@ -136,7 +136,7 @@ export const bento = {
   tiles: [
     {
       title: "Connect Tasks.",
-      description: "Link tasks and messages together so context is never lost.",
+      description: "Link tasks to any message — team or client — so context is never lost.",
       layout: "tall",
       glow: { color: "pink", corner: "bottom-left" },
       media: { type: "image", src: "/chat/bento-1.png", alt: "A task being connected to a chat message" },
@@ -173,7 +173,7 @@ export const bento = {
     {
       title: "Organize Chats into Spaces.",
       description:
-        "Structure your conversations the way you work and get things done.",
+        "Structure conversations by project or client, the way your agency actually works.",
       layout: "third",
       glow: { color: "blue", corner: "top-right" },
       media: { type: "image", src: "/chat/bento-6.png", alt: "Chats organized into spaces alongside work" },
@@ -200,29 +200,29 @@ export const importBanner = {
  */
 export const coreFeatures = {
   eyebrow: "Core features",
-  title: "Everything you’d expect from Chat",
+  title: "Everything your agency needs from Chat",
   items: [
-    { label: "Chats & Channels", mockup: "chatsChannels" },
-    { label: "Direct messages", mockup: "directMessages" },
-    { label: "Threads", mockup: "threads" },
-    { label: "Voice & Video Calls", mockup: "voiceVideo" },
-    { label: "Activity feed", mockup: "activityFeed" },
-    { label: "Push Notifications", mockup: "pushNotifications" },
-    { label: "Reminders", mockup: "reminders" },
-    { label: "Custom sidebar", mockup: "customSidebar" },
-    { label: "Drafts & Sent", mockup: "draftsSent" },
-    { label: "Integrations", mockup: "integrations" },
+    { label: "Team Chat", mockup: "chatsChannels" },
+    { label: "Project Chats", mockup: "customSidebar" },
+    { label: "Client Chat", mockup: "clientChat" },
+    { label: "Direct Messages", mockup: "directMessages" },
+    { label: "File Sharing", mockup: "fileSharing" },
+    { label: "Mentions", mockup: "activityFeed" },
+    { label: "Threaded Replies", mockup: "threads" },
+    { label: "Message Search", mockup: "messageSearch" },
+    { label: "Notifications", mockup: "pushNotifications" },
+    { label: "Pinned Messages", mockup: "pinnedMessages" },
   ],
 };
 
 export const aiSection = {
-  eyebrow: "Hashboard Brain",
-  title: "Get 10x more done with AI that’s your productivity partner",
+  eyebrow: "Hash AI",
+  title: "Hash AI that knows your whole agency — not just this chat",
   features: [
     {
       title: "Ask AI.",
       description:
-        "Get the right answer right away, using knowledge from Hashboard and any connected apps.",
+        "Ask “What did the client approve?” or “What’s blocking this project?” — get answers pulled from across your agency, not just this chat.",
       image: {
         src: "/chat/ai-2.svg",
         alt: "Launch, GitHub, Google Drive, campaigns, and more",
@@ -232,13 +232,13 @@ export const aiSection = {
     },
     {
       title: "AI Task Creation.",
-      description: "Action items automatically created, assigned, and linked.",
+      description: "Action items from any conversation automatically created, assigned, and linked to the right project.",
       image: { src: "/chat/ai-3.svg", alt: "Create task", width: 340, height: 238 },
     },
     {
       title: "AI CatchUp.",
       description:
-        "Get up to speed instantly on important topics and action items.",
+        "“Summarize today’s updates.” Catch up on any project or client thread in seconds.",
       image: { src: "/chat/ai-1.svg", alt: "Catch me up", width: 340, height: 238 },
     },
   ],
