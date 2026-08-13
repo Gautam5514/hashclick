@@ -3,62 +3,62 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, BarChart3, Bell, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock, Clock3, Columns3, FileText, GanttChart, Globe, Grid2X2, Inbox, Link2, MessageCircle, PanelsTopLeft, Shuffle, Users, Video, X, Zap,
+  ArrowRight, Banknote, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, HandCoins, Inbox, Landmark, MessageCircle, PanelsTopLeft, PieChart, Video, Wallet, X, Zap,
 } from "lucide-react";
-import SchedulingFaq from "./SchedulingFaq";
+import PayrollFaq from "./PayrollFaq";
 import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Endless email threads just to land on a meeting time",
-    "Double-bookings because availability lives in your head",
-    "Manually re-typing the same slots for every invitee",
-    "No easy way to split bookings across a team",
+    "Hours re-entered by hand from a separate timesheet tool",
+    "Tax calculations done manually and double-checked by hand",
+    "Payslips emailed one by one at the end of the month",
+    "No clear audit trail if a number ever gets questioned",
   ],
   with: [
-    "Share one link, invitees pick a slot instantly",
-    "Live sync with your calendar rules out double-booking",
-    "Buffers, limits, and notice windows protect your day",
-    "Round-robin and collective booking route work automatically",
+    "Approved attendance hours flow straight into payroll",
+    "Tax withholding calculated automatically, every run",
+    "Payslips generated and delivered the moment payroll runs",
+    "A full audit trail for every pay run, always available",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Booking Pages",
-    title: "One link, zero back-and-forth",
-    body: "Share a personal or team booking page that only shows the times you’re actually free. Invitees pick a slot and it’s confirmed instantly on both calendars.",
-    image: "/calendar/calendar-feature-1.png",
-    alt: "Hashboard Scheduling booking page",
+    eyebrow: "Automated Pay Runs",
+    title: "From hours worked to payslip, automatically",
+    body: "Approved attendance and timesheet data feed directly into each pay run, so nobody re-types a single number.",
+    image: "/dashboards/dashboard-feature-1.png",
+    alt: "Automated payroll run in Hashboard",
   },
   {
-    eyebrow: "Smart Availability",
-    title: "Rules that protect your time",
-    body: "Set buffers between meetings, daily booking limits, and minimum notice periods so your calendar never gets overrun by last-minute requests.",
-    image: "/calendar/calendar-feature-2.png",
-    alt: "Availability rules in Hashboard Scheduling",
+    eyebrow: "Tax & Compliance",
+    title: "Withholding calculated correctly, every time",
+    body: "Hashboard applies the right tax rules automatically so every pay run stays compliant without manual lookups.",
+    image: "/dashboards/dashboard-feature-2.png",
+    alt: "Payroll tax compliance in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Team Booking",
-    title: "Route meetings across your team",
-    body: "Use round-robin to balance bookings evenly, or collective scheduling to find one slot that works for every required host at once.",
-    image: "/calendar/calendar-feature-3.png",
-    alt: "Team round-robin scheduling in Hashboard",
+    eyebrow: "Payslips & Reports",
+    title: "Payslips delivered the moment payroll runs",
+    body: "Every team member gets a clear, itemized payslip automatically, while finance gets a full payroll report for the books.",
+    image: "/dashboards/dashboard-feature-3.png",
+    alt: "Payroll reports in Hashboard",
   },
 ];
 
-const schedulingFeatures = [
-  [Link2, "Custom Booking Links", "Create personal or team booking pages branded to match your workflow."],
-  [Clock, "Buffers & Limits", "Add gaps between meetings and cap daily bookings to protect focus time."],
-  [Shuffle, "Round-Robin Routing", "Distribute inbound meetings evenly across a team automatically."],
-  [Users, "Collective Scheduling", "Find one slot that works across every required attendee’s calendar."],
-  [Bell, "Automated Reminders", "Send confirmation emails and reminders so no one misses a booking."],
-  [Globe, "Time Zone Detection", "Booking pages auto-adjust to each invitee’s local time zone."],
+const payrollFeatures = [
+  [Banknote, "Automated Pay Runs", "Turn approved hours into a completed pay run automatically."],
+  [Landmark, "Tax Compliance", "Withholding calculated correctly based on current tax rules."],
+  [HandCoins, "Direct Deposit", "Pay your whole team directly, on schedule, every cycle."],
+  [FileText, "Digital Payslips", "Itemized payslips delivered automatically to every employee."],
+  [Wallet, "Deductions & Benefits", "Handle benefits and deductions consistently across the team."],
+  [PieChart, "Payroll Reports", "Get a full report of every pay run, ready for the books."],
 ];
 
 const platform = [
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
+  [Banknote, "Payroll", "Run accurate pay runs"],
   [BarChart3, "Dashboards", "Visualize your data"],
   [Columns3, "Board view", "Kanban-style workflow"],
   [GanttChart, "Gantt", "Timeline and dependencies"],
@@ -86,15 +86,15 @@ function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   );
 }
 
-function SchedulingHero() {
+function PayrollHero() {
   return (
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
-          <h1>Let people book time with you—automatically</h1>
+          <p className="task-eyebrow">HASHBOARD PAYROLL</p>
+          <h1>Run payroll without the spreadsheet gymnastics</h1>
           <p className="task-hero-lede">
-            Share a booking link that only shows real availability. Invitees pick a slot, both calendars update instantly, and you never chase a meeting time again.
+            Approved hours, tax withholding, and payslips handled automatically. Hashboard Payroll turns attendance data straight into an accurate pay run.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -110,12 +110,12 @@ function SchedulingHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/calendar/calendar-hero.png"
+            src="/dashboards/dashboard-hero.png"
             width={815}
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Scheduling booking view"
+            alt="Hashboard Payroll run view"
           />
         </div>
       </div>
@@ -128,9 +128,9 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to book meetings</h2>
+        <h2 className="task-gradient-title">A better way to run payroll</h2>
         <div className="task-compare-grid">
-          {[["Without Hashboard Scheduling", comparison.without, false], ["With Hashboard Scheduling", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Payroll", comparison.without, false], ["With Hashboard Payroll", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -154,9 +154,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Scheduling needs, in one place</h2>
+          <h2>Everything Payroll needs, in one place</h2>
           <p>
-            Hashboard Scheduling keeps everything connected, so nothing falls through the cracks.
+            Hashboard Payroll keeps everything connected, so nothing falls through the cracks.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,12 +192,12 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Scheduling, handled automatically.</h2>
-          <p>Join 3M+ teams who run scheduling without the busywork. Start your 7-day free trial.</p>
+          <h2>Payroll, handled automatically.</h2>
+          <p>Join 3M+ teams who run payroll without the busywork. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Scheduling workspace" />
+          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Payroll workspace" />
         </div>
       </div>
     </section>
@@ -206,14 +206,14 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI to find the best slot across every calendar", "Hashboard Brain scans host and invitee availability, suggests the fastest slot to close a meeting, and can send the booking link for you.", "/calendar/ai-calendar-1.png"],
-    ["Smart Follow-ups", "Auto-generated reminders and reschedule links", "Never lose a booking to a no-show. Hashboard Brain sends timely reminders and one-click reschedule links so meetings actually happen.", "/calendar/ai-calendar-2.png"],
+    ["Hashboard Brain", "Ask AI about this pay run", "Ask Brain to flag any unusual hours, missing timesheets, or outliers before you approve a pay run, not after.", "/tasks/super-agents.png"],
+    ["Smart Reconciliation", "Attendance and payroll, automatically matched", "Hashboard Brain cross-checks approved hours against the pay run so discrepancies get caught before payday.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Scheduling</p>
+          <p className="task-eyebrow">AI Powered Payroll</p>
           <h2>Work smarter,<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
@@ -245,10 +245,10 @@ function FeaturesAndPlatform() {
       <section className="task-section task-feature-section">
         <div className="task-shell task-feature-shell">
           <header className="task-heading task-feature-heading">
-            <h2>Plus, everything you need for scheduling</h2>
+            <h2>Plus, everything you need for payroll</h2>
           </header>
           <div className="task-feature-grid">
-            {schedulingFeatures.map(([Icon, title, body]) => (
+            {payrollFeatures.map(([Icon, title, body]) => (
               <article key={title}>
                 <span><Icon /></span>
                 <h3>{title}</h3>
@@ -263,13 +263,13 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Scheduling is just the beginning</h2>
-            <p>Scheduling connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Payroll is just the beginning</h2>
+            <p>Payroll connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Scheduling" ? "/features/scheduling" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
+                href={title === "Payroll" ? "/features/payroll" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>
@@ -283,7 +283,7 @@ function FeaturesAndPlatform() {
   );
 }
 
-function SchedulingFinal() {
+function PayrollFinal() {
   const logoItems = [
     { name: "Adobe", text: "Adobe" },
     { name: "American", text: "American" },
@@ -309,7 +309,7 @@ function SchedulingFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Scheduling, made simple.
+              Payroll, made simple.
             </h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
@@ -354,10 +354,10 @@ function SchedulingFinal() {
             />
 
             <Image
-              src="/calendar/calendar-footer.png"
+              src="/dashboards/dashboard-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Scheduling footer workspace"
+              alt="Hashboard Payroll footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"
@@ -370,17 +370,17 @@ function SchedulingFinal() {
   );
 }
 
-export default function SchedulingPage() {
+export default function PayrollPage() {
   return (
     <div className="tasks-page">
-      <SchedulingHero />
+      <PayrollHero />
       <Comparison />
       <WorkflowGrid />
       <MotionBanner />
       <AiFeatures />
       <FeaturesAndPlatform />
-      <SchedulingFaq />
-      <SchedulingFinal />
+      <PayrollFaq />
+      <PayrollFinal />
     </div>
   );
 }

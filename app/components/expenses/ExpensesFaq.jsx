@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Expenses free to use?",
+    "Yes! Hashboard Expenses is available on the Free Forever plan with unlimited receipt captures and reports."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Expenses work?",
+    "Photograph a receipt and Hashboard extracts the vendor, amount, and date automatically, then routes it for approval."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Expenses connect to the rest of Hashboard?",
+    "Yes! Expenses stays linked to Invoicing and Payroll, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Expenses for my team?",
+    "Yes, set approval chains and category rules by team, amount, or vendor."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Expenses?",
+    "Yes! Hashboard Brain can flag which teams are closest to going over budget before it happens."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function ExpensesFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

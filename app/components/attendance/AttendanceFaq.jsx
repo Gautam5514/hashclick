@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Attendance free to use?",
+    "Yes! Hashboard Attendance is available on the Free Forever plan with unlimited clock-ins and timesheet exports."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Attendance work?",
+    "Team members clock in and out from any device, and every entry is timestamped and rolled into a timesheet automatically."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Attendance connect to the rest of Hashboard?",
+    "Yes! Attendance stays linked to Payroll and Leave, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Attendance for my team?",
+    "Yes, set shift schedules, geofenced locations, and break rules per team."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Attendance?",
+    "Yes! Hashboard Brain can flag late arrivals, missed shifts, and unusual overtime before payroll runs."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function AttendanceFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

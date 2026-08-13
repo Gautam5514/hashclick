@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Spaces free to use?",
+    "Yes! Hashboard Spaces is available on the Free Forever plan with unlimited Spaces, Folders, and Lists."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Spaces work?",
+    "Organize work into a Space → Folder → List hierarchy, with permissions and templates for every team."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Spaces connect to the rest of Hashboard?",
+    "Yes! Spaces stays linked to Tasks, Docs, and Dashboards, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Spaces for my team?",
+    "Yes, set permissions and templates per Space, down to individual Lists."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Spaces?",
+    "Yes! Hashboard Brain can search across every Space you have access to and point you to the right project instantly."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function SpacesFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

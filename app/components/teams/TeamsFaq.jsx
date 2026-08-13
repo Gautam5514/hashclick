@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Teams free to use?",
+    "Yes! Hashboard Teams is available on the Free Forever plan with unlimited team members and directory entries."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Teams work?",
+    "Every team, member, and role lives in one searchable directory with permissions applied consistently."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Teams connect to the rest of Hashboard?",
+    "Yes! Teams stays linked to Attendance and Payroll, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Teams for my team?",
+    "Yes, assign roles and onboarding checklists per team."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Teams?",
+    "Yes! Hashboard Brain can flag who’s overloaded this week so managers can rebalance work before burnout."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function TeamsFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

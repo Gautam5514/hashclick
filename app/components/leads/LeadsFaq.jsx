@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Leads free to use?",
+    "Yes! Hashboard Leads is available on the Free Forever plan with unlimited pipeline stages and contacts."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Leads work?",
+    "Every inbound lead lands in a visual pipeline automatically, and you drag it through stages until it’s won."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Leads connect to the rest of Hashboard?",
+    "Yes! Leads stays linked to Clients and Invoicing, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Leads for my team?",
+    "Yes, build a pipeline with exactly the stages your sales process needs."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Leads?",
+    "Yes! Hashboard Brain can score leads by engagement and flag which deals need attention this week."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function LeadsFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

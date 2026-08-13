@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Is Hashboard Invoicing free to use?",
+    "Yes! Hashboard Invoicing is available on the Free Forever plan with unlimited invoices sent."
   ],
   [
-    "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "How does Hashboard Invoicing work?",
+    "Generate a branded invoice straight from tracked time or tasks, then send it and track payment status automatically."
   ],
   [
-    "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Does Invoicing connect to the rest of Hashboard?",
+    "Yes! Invoicing stays linked to Clients and Expenses, so your data never lives in a separate tool."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "Can I customize Invoicing for my team?",
+    "Yes, set recurring schedules, currencies, and payment reminders per client."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Does Hashboard Brain help with Invoicing?",
+    "Yes! Hashboard Brain can flag which clients are past due and draft the follow-up reminder for you."
   ],
 ];
 
-export default function SchedulingFaq() {
+export default function InvoicingFaq() {
   const [open, setOpen] = useState(-1);
   return (
     <section className="task-section task-faq">

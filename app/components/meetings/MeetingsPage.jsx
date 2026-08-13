@@ -3,62 +3,62 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, BarChart3, Bell, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock, Clock3, Columns3, FileText, GanttChart, Globe, Grid2X2, Inbox, Link2, MessageCircle, PanelsTopLeft, Shuffle, Users, Video, X, Zap,
+  ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, ListChecks, MessageCircle, MessageSquareText, PanelsTopLeft, Video, X, Zap,
 } from "lucide-react";
-import SchedulingFaq from "./SchedulingFaq";
+import MeetingsFaq from "./MeetingsFaq";
 import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Endless email threads just to land on a meeting time",
-    "Double-bookings because availability lives in your head",
-    "Manually re-typing the same slots for every invitee",
-    "No easy way to split bookings across a team",
+    "A separate app just to start a video call",
+    "Notes taken by hand, or not taken at all",
+    "Action items forgotten the moment the call ends",
+    "No record of what was actually decided",
   ],
   with: [
-    "Share one link, invitees pick a slot instantly",
-    "Live sync with your calendar rules out double-booking",
-    "Buffers, limits, and notice windows protect your day",
-    "Round-robin and collective booking route work automatically",
+    "Start a call from the same place you plan the work",
+    "AI notes and a summary land automatically after every call",
+    "Action items become real tasks, assigned before you hang up",
+    "Every decision stays linked to the project it belongs to",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Booking Pages",
-    title: "One link, zero back-and-forth",
-    body: "Share a personal or team booking page that only shows the times you’re actually free. Invitees pick a slot and it’s confirmed instantly on both calendars.",
-    image: "/calendar/calendar-feature-1.png",
-    alt: "Hashboard Scheduling booking page",
+    eyebrow: "One-Click Video",
+    title: "Start a call without leaving your workspace",
+    body: "Launch a meeting straight from a task, doc, or channel—no separate video app, no extra login.",
+    image: "/chat/bento-1.png",
+    alt: "One-click video call in Hashboard Meetings",
   },
   {
-    eyebrow: "Smart Availability",
-    title: "Rules that protect your time",
-    body: "Set buffers between meetings, daily booking limits, and minimum notice periods so your calendar never gets overrun by last-minute requests.",
-    image: "/calendar/calendar-feature-2.png",
-    alt: "Availability rules in Hashboard Scheduling",
+    eyebrow: "AI Notes",
+    title: "Notes and summaries, written for you",
+    body: "Hashboard Brain transcribes the call, writes a clean summary, and highlights the decisions that were made.",
+    image: "/chat/bento-2.png",
+    alt: "AI meeting notes in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Team Booking",
-    title: "Route meetings across your team",
-    body: "Use round-robin to balance bookings evenly, or collective scheduling to find one slot that works for every required host at once.",
-    image: "/calendar/calendar-feature-3.png",
-    alt: "Team round-robin scheduling in Hashboard",
+    eyebrow: "Action Items",
+    title: "Leave with tasks already assigned",
+    body: "Action items called out during the meeting become real tasks with owners and due dates before the call even ends.",
+    image: "/chat/bento-3.png",
+    alt: "Meeting action items in Hashboard",
   },
 ];
 
-const schedulingFeatures = [
-  [Link2, "Custom Booking Links", "Create personal or team booking pages branded to match your workflow."],
-  [Clock, "Buffers & Limits", "Add gaps between meetings and cap daily bookings to protect focus time."],
-  [Shuffle, "Round-Robin Routing", "Distribute inbound meetings evenly across a team automatically."],
-  [Users, "Collective Scheduling", "Find one slot that works across every required attendee’s calendar."],
-  [Bell, "Automated Reminders", "Send confirmation emails and reminders so no one misses a booking."],
-  [Globe, "Time Zone Detection", "Booking pages auto-adjust to each invitee’s local time zone."],
+const meetingsFeatures = [
+  [Video, "One-Click Video", "Start a call from any task, doc, or channel instantly."],
+  [ClipboardList, "Auto Agendas", "Build an agenda from linked tasks before the call starts."],
+  [MessageSquareText, "AI Notetaking", "Get a transcript and summary without typing a word."],
+  [ListChecks, "Action Items", "Turn call decisions into assigned tasks automatically."],
+  [Clapperboard, "Recording & Clips", "Record full calls or share short clips of key moments."],
+  [BarChart3, "Meeting Analytics", "See how much time your team spends in meetings each week."],
 ];
 
 const platform = [
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
+  [Video, "Meetings", "Video calls that create tasks"],
   [BarChart3, "Dashboards", "Visualize your data"],
   [Columns3, "Board view", "Kanban-style workflow"],
   [GanttChart, "Gantt", "Timeline and dependencies"],
@@ -86,15 +86,15 @@ function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   );
 }
 
-function SchedulingHero() {
+function MeetingsHero() {
   return (
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
-          <h1>Let people book time with you—automatically</h1>
+          <p className="task-eyebrow">HASHBOARD MEETINGS</p>
+          <h1>Meetings that turn into action, automatically</h1>
           <p className="task-hero-lede">
-            Share a booking link that only shows real availability. Invitees pick a slot, both calendars update instantly, and you never chase a meeting time again.
+            Start a call in one click, get notes and action items without lifting a finger, and leave every meeting with tasks already assigned.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -110,12 +110,12 @@ function SchedulingHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/calendar/calendar-hero.png"
+            src="/chat/chat-poster.png"
             width={815}
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Scheduling booking view"
+            alt="Hashboard Meetings video call view"
           />
         </div>
       </div>
@@ -128,9 +128,9 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to book meetings</h2>
+        <h2 className="task-gradient-title">A better way to run meetings</h2>
         <div className="task-compare-grid">
-          {[["Without Hashboard Scheduling", comparison.without, false], ["With Hashboard Scheduling", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Meetings", comparison.without, false], ["With Hashboard Meetings", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -154,9 +154,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Scheduling needs, in one place</h2>
+          <h2>Everything Meetings needs, in one place</h2>
           <p>
-            Hashboard Scheduling keeps everything connected, so nothing falls through the cracks.
+            Hashboard Meetings keeps everything connected, so nothing falls through the cracks.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,12 +192,12 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Scheduling, handled automatically.</h2>
-          <p>Join 3M+ teams who run scheduling without the busywork. Start your 7-day free trial.</p>
+          <h2>Meetings, handled automatically.</h2>
+          <p>Join 3M+ teams who run meetings without the busywork. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Scheduling workspace" />
+          <Image className="task-motion-product" src="/chat/chat-poster.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Meetings workspace" />
         </div>
       </div>
     </section>
@@ -206,14 +206,14 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI to find the best slot across every calendar", "Hashboard Brain scans host and invitee availability, suggests the fastest slot to close a meeting, and can send the booking link for you.", "/calendar/ai-calendar-1.png"],
-    ["Smart Follow-ups", "Auto-generated reminders and reschedule links", "Never lose a booking to a no-show. Hashboard Brain sends timely reminders and one-click reschedule links so meetings actually happen.", "/calendar/ai-calendar-2.png"],
+    ["Smart Meeting Notes", "Auto-generated summaries and transcripts", "Every call gets a searchable transcript and a clean summary, so anyone who missed it can catch up in a minute.", "/chat/meeting-summary.png"],
+    ["Hashboard Brain", "Ask AI what was decided in any call", "Ask Brain to recap last week’s client call or list every action item assigned to a teammate—get an instant answer.", "/chat/ai-poster.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Scheduling</p>
+          <p className="task-eyebrow">AI Powered Meetings</p>
           <h2>Work smarter,<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
@@ -245,10 +245,10 @@ function FeaturesAndPlatform() {
       <section className="task-section task-feature-section">
         <div className="task-shell task-feature-shell">
           <header className="task-heading task-feature-heading">
-            <h2>Plus, everything you need for scheduling</h2>
+            <h2>Plus, everything you need for meetings</h2>
           </header>
           <div className="task-feature-grid">
-            {schedulingFeatures.map(([Icon, title, body]) => (
+            {meetingsFeatures.map(([Icon, title, body]) => (
               <article key={title}>
                 <span><Icon /></span>
                 <h3>{title}</h3>
@@ -263,13 +263,13 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Scheduling is just the beginning</h2>
-            <p>Scheduling connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Meetings is just the beginning</h2>
+            <p>Meetings connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Scheduling" ? "/features/scheduling" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
+                href={title === "Meetings" ? "/features/meetings" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>
@@ -283,7 +283,7 @@ function FeaturesAndPlatform() {
   );
 }
 
-function SchedulingFinal() {
+function MeetingsFinal() {
   const logoItems = [
     { name: "Adobe", text: "Adobe" },
     { name: "American", text: "American" },
@@ -309,7 +309,7 @@ function SchedulingFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Scheduling, made simple.
+              Meetings, made simple.
             </h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
@@ -354,10 +354,10 @@ function SchedulingFinal() {
             />
 
             <Image
-              src="/calendar/calendar-footer.png"
+              src="/chat/chat-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Scheduling footer workspace"
+              alt="Hashboard Meetings footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"
@@ -370,17 +370,17 @@ function SchedulingFinal() {
   );
 }
 
-export default function SchedulingPage() {
+export default function MeetingsPage() {
   return (
     <div className="tasks-page">
-      <SchedulingHero />
+      <MeetingsHero />
       <Comparison />
       <WorkflowGrid />
       <MotionBanner />
       <AiFeatures />
       <FeaturesAndPlatform />
-      <SchedulingFaq />
-      <SchedulingFinal />
+      <MeetingsFaq />
+      <MeetingsFinal />
     </div>
   );
 }

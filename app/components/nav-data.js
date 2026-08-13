@@ -50,8 +50,8 @@ export const navMenus = [
         items: [
           { label: "Tasks", href: "/features/tasks", icon: "nav-icon-tasks" },
           { label: "Dashboards", href: "/features/dashboards", icon: "nav-icon-dashboards" },
-          { label: "Board", href: "/features/kanban-board", icon: "nav-icon-views" },
-          { label: "Gantt", href: "/product", icon: "nav-icon-hierarchy" },
+          { label: "Attendance", href: "/features/attendance", icon: "nav-icon-views" },
+          { label: "Spaces", href: "/features/spaces", icon: "nav-icon-hierarchy" },
         ],
       },
       {
@@ -59,9 +59,9 @@ export const navMenus = [
         kind: "product",
         items: [
           { label: "Chat", href: "/features/chat", icon: "nav-icon-chat" },
-          { label: "SyncUp", href: "/product", icon: "nav-icon-syncup" },
-          { label: "Inbox", href: "/product", icon: "nav-icon-inbox" },
-          { label: "Clips", href: "/product", icon: "nav-icon-rapid-views" },
+          { label: "Expenses", href: "/features/expenses", icon: "nav-icon-syncup" },
+          { label: "Invoicing", href: "/features/invoicing", icon: "nav-icon-inbox" },
+          { label: "Meetings", href: "/features/meetings", icon: "nav-icon-rapid-views" },
         ],
       },
       {
@@ -69,9 +69,9 @@ export const navMenus = [
         kind: "product",
         items: [
           { label: "Docs", href: "/features/docs", icon: "nav-icon-docs" },
-          { label: "Whiteboards", href: "/product", icon: "nav-icon-whiteboards" },
-          { label: "Wiki", href: "/features/docs", icon: "nav-icon-wiki" },
-          { label: "Forms", href: "/product", icon: "nav-icon-forms" },
+          { label: "Leads", href: "/features/leads", icon: "nav-icon-whiteboards" },
+          { label: "Clients", href: "/features/clients", icon: "nav-icon-wiki" },
+          { label: "Teams", href: "/features/teams", icon: "nav-icon-forms" },
         ],
       },
       {
@@ -80,8 +80,8 @@ export const navMenus = [
         items: [
           { label: "Calendar", href: "/features/calendar", icon: "nav-icon-calendar" },
           { label: "Scheduling", href: "/features/scheduling", icon: "nav-icon-scheduling" },
-          { label: "Automations", href: "/product", icon: "nav-icon-automations" },
-          { label: "Time tracking", href: "/product", icon: "nav-icon-time-tracking" },
+          { label: "Payroll", href: "/features/payroll", icon: "nav-icon-automations" },
+          { label: "Leave", href: "/features/leave", icon: "nav-icon-time-tracking" },
         ],
       },
       {

@@ -3,62 +3,62 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, BarChart3, Bell, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock, Clock3, Columns3, FileText, GanttChart, Globe, Grid2X2, Inbox, Link2, MessageCircle, PanelsTopLeft, Shuffle, Users, Video, X, Zap,
+  ArrowRight, BarChart3, BookOpen, Briefcase, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, Eye, FileText, GanttChart, Grid2X2, Inbox, MessageCircle, PanelsTopLeft, Share2, Star, UserSquare, Video, X, Zap,
 } from "lucide-react";
-import SchedulingFaq from "./SchedulingFaq";
+import ClientsFaq from "./ClientsFaq";
 import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Endless email threads just to land on a meeting time",
-    "Double-bookings because availability lives in your head",
-    "Manually re-typing the same slots for every invitee",
-    "No easy way to split bookings across a team",
+    "Client details scattered across email and spreadsheets",
+    "No single view of every project tied to a client",
+    "New team members can’t find client history quickly",
+    "Clients get updates through inconsistent channels",
   ],
   with: [
-    "Share one link, invitees pick a slot instantly",
-    "Live sync with your calendar rules out double-booking",
-    "Buffers, limits, and notice windows protect your day",
-    "Round-robin and collective booking route work automatically",
+    "One profile holds every detail, file, and contact",
+    "All projects and invoices for a client in one place",
+    "Anyone can get up to speed on a client in minutes",
+    "A shared portal keeps clients updated automatically",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Booking Pages",
-    title: "One link, zero back-and-forth",
-    body: "Share a personal or team booking page that only shows the times you’re actually free. Invitees pick a slot and it’s confirmed instantly on both calendars.",
+    eyebrow: "Client Profiles",
+    title: "Every detail in one place",
+    body: "Contacts, contracts, notes, and history live on a single client profile, so nothing lives only in someone’s inbox.",
     image: "/calendar/calendar-feature-1.png",
-    alt: "Hashboard Scheduling booking page",
+    alt: "Client profile in Hashboard",
   },
   {
-    eyebrow: "Smart Availability",
-    title: "Rules that protect your time",
-    body: "Set buffers between meetings, daily booking limits, and minimum notice periods so your calendar never gets overrun by last-minute requests.",
+    eyebrow: "Shared Portals",
+    title: "Keep clients in the loop automatically",
+    body: "Give clients a branded portal to track project progress and invoices, without giving them access to your whole workspace.",
     image: "/calendar/calendar-feature-2.png",
-    alt: "Availability rules in Hashboard Scheduling",
+    alt: "Client portal in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Team Booking",
-    title: "Route meetings across your team",
-    body: "Use round-robin to balance bookings evenly, or collective scheduling to find one slot that works for every required host at once.",
+    eyebrow: "Project Visibility",
+    title: "See every project tied to a client",
+    body: "Every task, doc, and invoice linked to a client rolls up automatically, so account owners always have the full picture.",
     image: "/calendar/calendar-feature-3.png",
-    alt: "Team round-robin scheduling in Hashboard",
+    alt: "Client project visibility in Hashboard",
   },
 ];
 
-const schedulingFeatures = [
-  [Link2, "Custom Booking Links", "Create personal or team booking pages branded to match your workflow."],
-  [Clock, "Buffers & Limits", "Add gaps between meetings and cap daily bookings to protect focus time."],
-  [Shuffle, "Round-Robin Routing", "Distribute inbound meetings evenly across a team automatically."],
-  [Users, "Collective Scheduling", "Find one slot that works across every required attendee’s calendar."],
-  [Bell, "Automated Reminders", "Send confirmation emails and reminders so no one misses a booking."],
-  [Globe, "Time Zone Detection", "Booking pages auto-adjust to each invitee’s local time zone."],
+const clientsFeatures = [
+  [UserSquare, "Client Profiles", "Store contacts, contracts, and notes in one place per client."],
+  [Share2, "Shared Portals", "Give clients branded visibility into their projects and invoices."],
+  [Eye, "Project Visibility", "See every task and doc tied to a client in one view."],
+  [FileText, "Contracts & Files", "Attach contracts and key files directly to a client profile."],
+  [MessageCircle, "Client Communication", "Keep every message thread linked to the right account."],
+  [Star, "Satisfaction Tracking", "Log check-ins and health scores to catch churn risk early."],
 ];
 
 const platform = [
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
+  [Briefcase, "Clients", "Manage client accounts"],
   [BarChart3, "Dashboards", "Visualize your data"],
   [Columns3, "Board view", "Kanban-style workflow"],
   [GanttChart, "Gantt", "Timeline and dependencies"],
@@ -86,15 +86,15 @@ function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   );
 }
 
-function SchedulingHero() {
+function ClientsHero() {
   return (
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
-          <h1>Let people book time with you—automatically</h1>
+          <p className="task-eyebrow">HASHBOARD CLIENTS</p>
+          <h1>Give every client a home inside your workspace</h1>
           <p className="task-hero-lede">
-            Share a booking link that only shows real availability. Invitees pick a slot, both calendars update instantly, and you never chase a meeting time again.
+            Keep client details, projects, files, and communication in one profile, so anyone on your team can get up to speed in seconds.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -115,7 +115,7 @@ function SchedulingHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Scheduling booking view"
+            alt="Hashboard Clients profile view"
           />
         </div>
       </div>
@@ -128,9 +128,9 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to book meetings</h2>
+        <h2 className="task-gradient-title">A better way to manage clients</h2>
         <div className="task-compare-grid">
-          {[["Without Hashboard Scheduling", comparison.without, false], ["With Hashboard Scheduling", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Clients", comparison.without, false], ["With Hashboard Clients", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -154,9 +154,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Scheduling needs, in one place</h2>
+          <h2>Everything Clients needs, in one place</h2>
           <p>
-            Hashboard Scheduling keeps everything connected, so nothing falls through the cracks.
+            Hashboard Clients keeps everything connected, so nothing falls through the cracks.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,12 +192,12 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Scheduling, handled automatically.</h2>
-          <p>Join 3M+ teams who run scheduling without the busywork. Start your 7-day free trial.</p>
+          <h2>Clients, handled automatically.</h2>
+          <p>Join 3M+ teams who run clients without the busywork. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Scheduling workspace" />
+          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Clients workspace" />
         </div>
       </div>
     </section>
@@ -206,14 +206,14 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI to find the best slot across every calendar", "Hashboard Brain scans host and invitee availability, suggests the fastest slot to close a meeting, and can send the booking link for you.", "/calendar/ai-calendar-1.png"],
-    ["Smart Follow-ups", "Auto-generated reminders and reschedule links", "Never lose a booking to a no-show. Hashboard Brain sends timely reminders and one-click reschedule links so meetings actually happen.", "/calendar/ai-calendar-2.png"],
+    ["Hashboard Brain", "Ask AI for a client’s full history", "Ask Brain to summarize everything happening with a client—open projects, outstanding invoices, and recent conversations—in seconds.", "/tasks/super-agents.png"],
+    ["Smart Summaries", "Catch up on any account instantly", "Hashboard Brain writes a quick status summary for any client, so account handoffs never lose context.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Scheduling</p>
+          <p className="task-eyebrow">AI Powered Client Management</p>
           <h2>Work smarter,<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
@@ -245,10 +245,10 @@ function FeaturesAndPlatform() {
       <section className="task-section task-feature-section">
         <div className="task-shell task-feature-shell">
           <header className="task-heading task-feature-heading">
-            <h2>Plus, everything you need for scheduling</h2>
+            <h2>Plus, everything you need for clients</h2>
           </header>
           <div className="task-feature-grid">
-            {schedulingFeatures.map(([Icon, title, body]) => (
+            {clientsFeatures.map(([Icon, title, body]) => (
               <article key={title}>
                 <span><Icon /></span>
                 <h3>{title}</h3>
@@ -263,13 +263,13 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Scheduling is just the beginning</h2>
-            <p>Scheduling connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Clients is just the beginning</h2>
+            <p>Clients connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Scheduling" ? "/features/scheduling" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
+                href={title === "Clients" ? "/features/clients" : title === "Dashboards" ? "/features/dashboards" : title === "Chat" ? "/features/chat" : title === "Docs" ? "/features/docs" : title === "Wiki" ? "/features/docs" : title === "Calendar" ? "/features/calendar" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>
@@ -283,7 +283,7 @@ function FeaturesAndPlatform() {
   );
 }
 
-function SchedulingFinal() {
+function ClientsFinal() {
   const logoItems = [
     { name: "Adobe", text: "Adobe" },
     { name: "American", text: "American" },
@@ -309,7 +309,7 @@ function SchedulingFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Scheduling, made simple.
+              Clients, made simple.
             </h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
@@ -357,7 +357,7 @@ function SchedulingFinal() {
               src="/calendar/calendar-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Scheduling footer workspace"
+              alt="Hashboard Clients footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"
@@ -370,17 +370,17 @@ function SchedulingFinal() {
   );
 }
 
-export default function SchedulingPage() {
+export default function ClientsPage() {
   return (
     <div className="tasks-page">
-      <SchedulingHero />
+      <ClientsHero />
       <Comparison />
       <WorkflowGrid />
       <MotionBanner />
       <AiFeatures />
       <FeaturesAndPlatform />
-      <SchedulingFaq />
-      <SchedulingFinal />
+      <ClientsFaq />
+      <ClientsFinal />
     </div>
   );
 }
