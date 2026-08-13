@@ -73,7 +73,7 @@ const platform = [
   [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. It's FREE" }) {
+function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   return <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>{children}<ArrowRight aria-hidden="true" /></Link>;
 }
 
@@ -85,7 +85,7 @@ function TasksHero() {
           <p className="task-eyebrow">Hashboard Tasks</p>
           <h1>Never lose track of work again</h1>
           <p className="task-hero-lede">Capture every request, assign it in seconds, and always know who owns what so projects don’t stall, deadlines don’t slip, and work doesn’t disappear.</p>
-          <div className="task-hero-action"><CTAButton /><span>No credit card.<br />Setup in 2 min.</span></div>
+          <div className="task-hero-action"><CTAButton /><span>Start 7 Days<br />Free Trial.</span></div>
           <div className="task-reviews">
             <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
             <span>25,000+ reviews from</span>
@@ -121,7 +121,7 @@ function WorkflowGrid() {
 }
 
 function MotionBanner() {
-  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/tasks/hashboard-logo-dark.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. No credit card. Free forever.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
+  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. No credit card. Start your 7-day free trial.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
 }
 
 function AiFeatures() {
@@ -179,11 +179,11 @@ function TasksFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap transition-all hover:bg-neutral-100"
               >
-                <span>Get started. It&apos;s FREE</span>
+                <span>Get started. Now!</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Free forever. <br /> No credit card.
+                Start 7 Days <br /> Free Trial.
               </div>
             </div>
           </div>

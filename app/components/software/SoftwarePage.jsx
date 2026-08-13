@@ -55,7 +55,7 @@ function CTA({ children = "Get started. It's FREE", light = false }) {
 }
 
 function Hero() {
-  return <section className="pm-hero sw-hero"><div className="pm-shell pm-hero-grid"><div className="pm-hero-copy"><p className="pm-kicker"><Code2 /> AI-powered software management</p><h1>The everything app for <span>software teams</span></h1><p className="pm-lede">Plan, build, and ship all in one place. Hashboard centralizes your entire engineering lifecycle, from roadmap to release, so your teams ship faster without roadblocks.</p><div className="pm-action-row"><CTA /><span>Free forever.<br />No credit card.</span></div><div className="pm-reviews"><b>★★★★★</b><span>4.6 stars · 25,000+ reviews</span></div></div><div className="pm-hero-art"><Image src="/software/hero.png" alt="Hashboard software team List view" width={1460} height={828} priority /></div></div></section>;
+  return <section className="pm-hero sw-hero"><div className="pm-shell pm-hero-grid"><div className="pm-hero-copy"><p className="pm-kicker"><Code2 /> AI-powered software management</p><h1>The everything app for <span>software teams</span></h1><p className="pm-lede">Plan, build, and ship all in one place. Hashboard centralizes your entire engineering lifecycle, from roadmap to release, so your teams ship faster without roadblocks.</p><div className="pm-action-row"><CTA /><span>Start 7 Days<br />Free Trial.</span></div><div className="pm-reviews"><b>★★★★★</b><span>4.6 stars · 25,000+ reviews</span></div></div><div className="pm-hero-art"><Image src="/software/hero.png" alt="Hashboard software team List view" width={1460} height={828} priority /></div></div></section>;
 }
 
 function Comparison() {

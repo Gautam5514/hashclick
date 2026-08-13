@@ -178,7 +178,10 @@ export default function Navbar() {
             <img src={LOGO_LIGHT} alt="Hashboard" />
           </Link>
 
-          <div className="cu-links">
+         
+        </div>
+
+         <div className="cu-links">
             {navMenus.map((menu) => (
               <button
                 key={menu.id}
@@ -201,7 +204,6 @@ export default function Navbar() {
               </Link>
             ))}
           </div>
-        </div>
 
         <div className="cu-cta">
           <button type="button" className="cu-demo" onClick={() => setIsDemoOpen(true)}>

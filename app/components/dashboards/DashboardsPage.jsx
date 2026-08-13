@@ -76,7 +76,7 @@ const platform = [
   [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. It's FREE" }) {
+function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -97,7 +97,7 @@ function DashboardsHero() {
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>No credit card.<br />Setup in 2 min.</span>
+            <span>Start 7 Days<br />Free Trial.</span>
           </div>
           <div className="task-reviews">
             <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
@@ -192,7 +192,7 @@ function MotionBanner() {
         <div className="task-motion-copy">
           <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your team&apos;s performance is always in view. Make smarter decisions.</h2>
-          <p>Join 3M+ teams who report and act from the same place. No credit card. Free forever.</p>
+          <p>Join 3M+ teams who report and act from the same place. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -315,11 +315,11 @@ function DashboardsFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. It&apos;s FREE</span>
+                <span>Get started. Now!</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Free forever. <br className="hidden sm:inline" /> No credit card.
+                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
               </div>
             </div>
           </div>

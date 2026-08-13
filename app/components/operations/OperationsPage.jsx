@@ -67,7 +67,7 @@ function Hero() {
         <p className="pm-kicker">AI-powered project management</p>
         <h1>The world&apos;s<br />most powerful &amp;<br />flexible project<br />management<br />software</h1>
         <p className="pm-lede"><strong>Manage your projects, docs, and chat in one place—all powered by AI.</strong> Hashboard adapts to any project, eliminates busywork, and keeps everything organized so your team delivers projects on time, all the time.</p>
-        <div className="pm-action-row"><CTA /><span>Free forever.<br />No credit card.</span></div>
+        <div className="pm-action-row"><CTA /><span>Start 7 Days<br />Free Trial.</span></div>
         <div className="pm-reviews"><StarRating /><span>25,000+ reviews from</span><ReviewLogos /></div>
       </div>
       <div className="pm-hero-art"><Image src="/operations/hero.png" alt="Hashboard project management workspace" width={3075} height={1800} priority /></div>

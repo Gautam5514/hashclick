@@ -191,7 +191,7 @@ function MotionBanner() {
         <div className="task-motion-copy">
           <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your team&apos;s visual workflow, always in sync.</h2>
-          <p>Join 3M+ teams who plan and track work on Hashboard Kanban boards. Free forever.</p>
+          <p>Join 3M+ teams who plan and track work on Hashboard Kanban boards. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -318,7 +318,7 @@ function KanbanFinal() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Free forever. <br /> No credit card.
+                Start 7 Days <br /> Free Trial.
               </div>
             </div>
           </div>
