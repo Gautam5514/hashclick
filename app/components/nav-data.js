@@ -79,7 +79,7 @@ export const navMenus = [
         kind: "product",
         items: [
           { label: "Calendar", href: "/features/calendar", icon: "nav-icon-calendar" },
-          { label: "Scheduling", href: "/product", icon: "nav-icon-scheduling" },
+          { label: "Scheduling", href: "/features/scheduling", icon: "nav-icon-scheduling" },
           { label: "Automations", href: "/product", icon: "nav-icon-automations" },
           { label: "Time tracking", href: "/product", icon: "nav-icon-time-tracking" },
         ],

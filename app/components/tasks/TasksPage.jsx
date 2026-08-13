@@ -121,7 +121,7 @@ function WorkflowGrid() {
 }
 
 function MotionBanner() {
-  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. No credit card. Start your 7-day free trial.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
+  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. Start your 7-day free trial.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
 }
 
 function AiFeatures() {
@@ -136,7 +136,7 @@ function FeaturesAndPlatform() {
   return <><section className="task-section task-feature-section"><div className="task-shell task-feature-shell"><header className="task-heading task-feature-heading"><h2>Plus, everything you need to get it done</h2></header><div className="task-feature-grid">{taskFeatures.map(([Icon, title, body]) => <article key={title}><span><Icon /></span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
     <section className="task-section task-platform"><div className="task-shell task-platform-shell"><header className="task-heading task-platform-heading"><p className="task-eyebrow">The Hashboard platform</p><h2>Tasks are just the beginning</h2><p>Tasks are the connective tissue of the Hashboard platform. Docs, Dashboards, Chat, Whiteboards, and more in a single, converged app. Explore everything you unlock when your work lives in one place.</p></header><div className="task-platform-grid">            {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : "/product"}
+                href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>

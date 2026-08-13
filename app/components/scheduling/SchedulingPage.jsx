@@ -3,75 +3,71 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, Check, X, SlidersHorizontal, LayoutGrid, Workflow,
-  GitBranch, ListChecks, Users, Repeat2, MessageSquareText, Timer,
+  ArrowRight, Check, X, Link2, Bell, Globe,
+  Shuffle, CalendarClock, Users, Clock,
   BarChart3, Columns3, GanttChart, MessageCircle, Video, Inbox,
   FileText, PanelsTopLeft, BookOpen, ClipboardList, CalendarDays,
-  CalendarClock, Zap, Clock3, Clapperboard, Grid2X2, PieChart,
-  TrendingUp, Activity, ShieldCheck, Share2
+  Zap, Clock3, Clapperboard, Grid2X2,
 } from "lucide-react";
-import DashboardsFaq from "./DashboardsFaq";
+import SchedulingFaq from "./SchedulingFaq";
 import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Data scattered across spreadsheets, slides, and separate tools",
-    "Manual weekly status reports take hours to compile",
-    "Metrics are outdated the minute you present them",
-    "Static charts that don't let you drill down into real work",
+    "Endless email threads just to land on a meeting time",
+    "Double-bookings because availability lives in your head",
+    "Manually re-typing the same slots for every invitee",
+    "No easy way to split bookings across a team",
   ],
   with: [
-    "Live, real-time metrics connected directly to active work",
-    "Automated executive reporting compiled in a single click",
-    "50+ customizable widgets for time, velocity, and sprints",
-    "Click any chart item to view and update the underlying task",
+    "Share one link, invitees pick a slot instantly",
+    "Live sync with your calendar rules out double-booking",
+    "Buffers, limits, and notice windows protect your day",
+    "Round-robin and collective booking route work automatically",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Real-time analytics",
-    title: "Track progress and performance in real time",
-    body: "Monitor sprint velocity, team workload, project status, and KPIs dynamically as work gets completed across your Workspace.",
-    image: "/dashboards/dashboard-feature-1.png",
-    alt: "Hashboard Dashboard progress and performance widgets",
+    eyebrow: "Booking Pages",
+    title: "One link, zero back-and-forth",
+    body: "Share a personal or team booking page that only shows the times you're actually free. Invitees pick a slot and it's confirmed instantly on both calendars.",
+    image: "/calendar/calendar-feature-1.png",
+    alt: "Hashboard Scheduling booking page",
   },
   {
-    eyebrow: "50+ Customizable Widgets",
-    title: "Custom reporting tailored to every team",
-    body: "Mix and match charts, time tracking summaries, custom fields, calculations, and embedded docs to build your dream dashboard.",
-    image: "/dashboards/dashboard-feature-2.png",
-    alt: "Hashboard Dashboard 50+ widget gallery",
+    eyebrow: "Smart Availability",
+    title: "Rules that protect your time",
+    body: "Set buffers between meetings, daily booking limits, and minimum notice periods so your calendar never gets overrun by last-minute requests.",
+    image: "/calendar/calendar-feature-2.png",
+    alt: "Availability rules in Hashboard Scheduling",
     reverse: true,
   },
   {
-    eyebrow: "Actionable visibility",
-    title: "From high-level metrics to granular tasks",
-    body: "Don't just look at numbers. Click into any bar, pie, or line chart segment to view task details, assign owners, and update status instantly.",
-    image: "/dashboards/dashboard-feature-3.png",
-    alt: "Hashboard Dashboard interactive drill-down view",
+    eyebrow: "Team Booking",
+    title: "Route meetings across your team",
+    body: "Use round-robin to balance bookings evenly, or collective scheduling to find one slot that works for every required host at once.",
+    image: "/calendar/calendar-feature-3.png",
+    alt: "Team round-robin scheduling in Hashboard",
   },
 ];
 
-const dashboardFeatures = [
-  [PieChart, "50+ Widget types", "Line graphs, pie charts, calculation cards, sprint charts, and custom field summaries."],
-  [Activity, "Real-time sync", "Widgets update instantly as soon as team members log time or update task status."],
-  [Timer, "Time & Cost Tracking", "Track billable hours, team estimates, and budget vs actual spent across projects."],
-  [TrendingUp, "Sprint & Velocity", "Burn-down, burn-up, cumulative flow, and velocity charts for Agile teams."],
-  [Users, "Workload & Capacity", "Visualize team capacity and prevent burnout with workload allocation charts."],
-  [SlidersHorizontal, "Custom Field Rollups", "Aggregate custom numbers, currencies, ratings, and dropdown fields across workspaces."],
-  [Share2, "Share & Export", "Share dashboards privately with clients, export PDFs, or publish public read-only links."],
-  [ShieldCheck, "Permission Controls", "Control exactly who can view, edit, or manage dashboard widgets."],
-  [FileText, "Embedded Docs & Apps", "Embed Google Sheets, Figma designs, YouTube videos, and Hashboard Docs directly into dashboards."],
+const schedulingFeatures = [
+  [Link2, "Custom Booking Links", "Create personal or team booking pages branded to match your workflow."],
+  [Clock, "Buffers & Limits", "Add gaps between meetings and cap daily bookings to protect focus time."],
+  [Shuffle, "Round-Robin Routing", "Distribute inbound meetings evenly across a team automatically."],
+  [Users, "Collective Scheduling", "Find one slot that works across every required attendee's calendar."],
+  [Bell, "Automated Reminders", "Send confirmation emails and reminders so no one misses a booking."],
+  [Globe, "Time Zone Detection", "Booking pages auto-adjust to each invitee's local time zone."],
 ];
 
 const platform = [
-  [BarChart3, "Dashboards", "Visualize your data"], [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"], [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"], [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
+  [CalendarClock, "Scheduling", "Automate calendar booking"], [CalendarDays, "Calendar", "Schedule and manage time"],
+  [FileText, "Docs", "Connected documentation"], [BarChart3, "Dashboards", "Visualize your data"],
+  [Columns3, "Board view", "Kanban-style workflow"], [GanttChart, "Gantt", "Timeline and dependencies"],
+  [MessageCircle, "Chat", "Real-time team messaging"], [Video, "SyncUp", "Video meetings & huddles"],
+  [Inbox, "Inbox", "Centralize notifications"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
   [BookOpen, "Wiki", "Knowledge base"], [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"], [CalendarClock, "Scheduling", "Automate calendar booking"],
   [Zap, "Automations", "Workflow automation"], [Clock3, "Time tracking", "Monitor time spent"],
   [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
 ];
@@ -85,19 +81,19 @@ function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   );
 }
 
-function DashboardsHero() {
+function SchedulingHero() {
   return (
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">DASHBOARDS IN HASHBOARD</p>
-          <h1>Build custom reports you can actually work from</h1>
+          <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
+          <h1>Let people book time with you—automatically</h1>
           <p className="task-hero-lede">
-            See everything at a glance: campaign performance, team productivity, billable hours. Then update work directly from the dashboard without switching tools.
+            Share a booking link that only shows real availability. Invitees pick a slot, both calendars update instantly, and you never chase a meeting time again.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 Days<br />Free Trial.</span>
+            <span>Start 7 days<br />Free Trial.</span>
           </div>
           <div className="task-reviews">
             <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
@@ -109,12 +105,12 @@ function DashboardsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/dashboards/dashboard-hero.png"
+            src="/calendar/calendar-hero.png"
             width={815}
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Dashboards analytics view"
+            alt="Hashboard Scheduling booking view"
           />
         </div>
       </div>
@@ -127,9 +123,9 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to report</h2>
+        <h2 className="task-gradient-title">A better way to book meetings</h2>
         <div className="task-compare-grid">
-          {[["Without Hashboard Dashboards", comparison.without, false], ["With Hashboard Dashboards", comparison.with, true]].map(([title, items, good]) => (
+          {[["Without Hashboard Scheduling", comparison.without, false], ["With Hashboard Scheduling", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
               <h3>{title}</h3>
               <ul>
@@ -153,9 +149,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>The foundation for data-driven decisions</h2>
+          <h2>Booking that runs itself</h2>
           <p>
-            Dashboards power complete visibility across your workspace, so leadership,<br className="task-desktop-break" /> managers, and teams stay aligned.
+            Hashboard Scheduling turns your live availability into a link anyone<br className="task-desktop-break" /> can book, with rules that keep your calendar sane.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -190,13 +186,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Your team&apos;s performance is always in view. Make smarter decisions.</h2>
-          <p>Join 3M+ teams who report and act from the same place. Start your 7-day free trial.</p>
+          <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
+          <h2>Your bookings, handled automatically.</h2>
+          <p>Join 3M+ teams who fill their calendar without the back-and-forth. Start your 7-day free trial.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Dashboards workspace" />
+          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Scheduling workspace" />
         </div>
       </div>
     </section>
@@ -205,15 +201,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Super Agents", "Automated executive summaries & reports", "Super Agents aggregate task progress, analyze workload bottlenecks, and write weekly status summaries straight to your Dashboard.", "/tasks/super-agents.png"],
-    ["Hashboard Brain", "Ask questions about any metric or chart", "Ask Brain why sprint velocity dropped or which team has open blockers. Brain instantly pulls answers from your Workspace data.", "/tasks/clickup-brain.png"],
+    ["Hashboard Brain", "Ask AI to find the best slot across every calendar", "Hashboard Brain scans host and invitee availability, suggests the fastest slot to close a meeting, and can send the booking link for you.", "/calendar/ai-calendar-1.png"],
+    ["Smart Follow-ups", "Auto-generated reminders and reschedule links", "Never lose a booking to a no-show. Hashboard Brain sends timely reminders and one-click reschedule links so meetings actually happen.", "/calendar/ai-calendar-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI powered reporting</p>
-          <h2>Instant insights and updates<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">AI Powered Booking</p>
+          <h2>Smarter scheduling<br />powered by Hashboard Brain</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -244,10 +240,10 @@ function FeaturesAndPlatform() {
       <section className="task-section task-feature-section">
         <div className="task-shell task-feature-shell">
           <header className="task-heading task-feature-heading">
-            <h2>Plus, everything you need to visualize work</h2>
+            <h2>Plus, everything you need to fill your calendar</h2>
           </header>
           <div className="task-feature-grid">
-            {dashboardFeatures.map(([Icon, title, body]) => (
+            {schedulingFeatures.map(([Icon, title, body]) => (
               <article key={title}>
                 <span><Icon /></span>
                 <h3>{title}</h3>
@@ -262,13 +258,13 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Dashboards are just the beginning</h2>
-            <p>Dashboards connect live metrics to the rest of Hashboard. Tasks, Docs, Chat, Whiteboards, and Automations in a single converged app. Explore everything you unlock in one place.</p>
+            <h2>Scheduling is just the beginning</h2>
+            <p>Scheduling turns availability into action. Combine it with Calendar, Tasks, Docs, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Scheduling" ? "/features/scheduling" : "/product"}
+                href={title === "Scheduling" ? "/features/scheduling" : title === "Calendar" ? "/features/calendar" : title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Chat" ? "/features/chat" : title === "Docs" || title === "Wiki" ? "/features/docs" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>
@@ -282,7 +278,7 @@ function FeaturesAndPlatform() {
   );
 }
 
-function DashboardsFinal() {
+function SchedulingFinal() {
   const logoItems = [
     { name: "Adobe", text: "Adobe" },
     { name: "American", text: "American" },
@@ -308,7 +304,7 @@ function DashboardsFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Build your first custom dashboard in minutes.
+              Never chase a meeting time again.
             </h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
@@ -338,12 +334,11 @@ function DashboardsFinal() {
             </div>
           </div>
 
-          {/* ClickUp Exact Mockup Image Container (_mockupContainer & _mockupImageContainer) */}
+          {/* Mockup Image Container */}
           <div
             className="relative w-full max-w-[1140px] mx-auto mt-6 md:mt-10 overflow-hidden flex justify-center leading-none"
             style={{ marginBottom: 0, paddingBottom: 0 }}
           >
-            {/* White Glow Center & Left Layers (_whiteGlowCenter & _whiteGlowLeft) */}
             <div
               className="absolute -top-10 left-1/2 -translate-x-1/2 w-[80%] h-[80%] bg-white/40 blur-3xl pointer-events-none rounded-full"
               aria-hidden="true"
@@ -354,10 +349,10 @@ function DashboardsFinal() {
             />
 
             <Image
-              src="/dashboards/dashboard-footer.png"
+              src="/calendar/calendar-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Dashboards footer workspace"
+              alt="Hashboard Scheduling footer workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"
@@ -370,17 +365,17 @@ function DashboardsFinal() {
   );
 }
 
-export default function DashboardsPage() {
+export default function SchedulingPage() {
   return (
     <div className="tasks-page">
-      <DashboardsHero />
+      <SchedulingHero />
       <Comparison />
       <WorkflowGrid />
       <MotionBanner />
       <AiFeatures />
       <FeaturesAndPlatform />
-      <DashboardsFaq />
-      <DashboardsFinal />
+      <SchedulingFaq />
+      <SchedulingFinal />
     </div>
   );
 }

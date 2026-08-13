@@ -74,7 +74,7 @@ const platform = [
   [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. It's FREE" }) {
+function CTAButton({ secondary = false, children = "Get started. Now!" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -95,7 +95,7 @@ function CalendarHero() {
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>No credit card.<br />Setup in 2 min.</span>
+            <span>Start 7 days<br />Free Trial.</span>
           </div>
           <div className="task-reviews">
             <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
@@ -266,7 +266,7 @@ function FeaturesAndPlatform() {
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
               <Link
-                href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Chat" ? "/features/chat" : title === "Docs" || title === "Wiki" ? "/features/docs" : "/product"}
+                href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Chat" ? "/features/chat" : title === "Docs" || title === "Wiki" ? "/features/docs" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
               >
                 <i><Icon /></i>
@@ -313,7 +313,7 @@ function CalendarFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. It&apos;s FREE</span>
+                <span>Get started. Now!</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
