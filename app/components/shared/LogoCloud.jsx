@@ -145,7 +145,7 @@ export default function LogoCloud({ className }) {
         <div className="group/logos flex flex-col lg:flex-row lg:items-center gap-4 sm:gap-6 lg:gap-12 cursor-pointer max-lg:text-center">
           {/* Label on Far Left */}
           <div className="text-[11px] font-mono font-bold tracking-[0.2em] text-[#8e8e8e] uppercase shrink-0 transition-colors group-hover/logos:text-[#202020]">
-            TRUSTED BY THE BEST
+            BUILT TO CONNECT EVERY TEAM
           </div>
 
           {/* 6 Logos at a time, hover over ANY logo turns ALL logos colorful */}

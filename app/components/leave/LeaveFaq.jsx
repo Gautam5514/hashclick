@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Leave free to use?",
-    "Yes! Hashboard Leave is available on the Free Forever plan with unlimited leave requests."
+    "What can be configured for a leave type?",
+    "A leave type can specify whether it is paid, whether it requires a balance, its optional yearly limit, and whether it is active."
   ],
   [
     "How does Hashboard Leave work?",
-    "Submit a request that routes straight to the right approver, with balance and policy checked automatically."
+    "An employee submits a request against a leave type and date range. Authorized admins or managers then approve or reject an eligible pending request."
   ],
   [
     "Does Leave connect to the rest of Hashboard?",
-    "Yes! Leave stays linked to Attendance and Payroll, so your data never lives in a separate tool."
+    "Approved leave is considered by supported attendance reporting and payroll calculations, alongside working days, holidays, and week-offs."
   ],
   [
-    "Can I customize Leave for my team?",
-    "Yes, set accrual, carryover, and holiday rules per team or location."
+    "How are leave balances tracked?",
+    "Balances are maintained per employee, leave type, and year using opening, credited, used, and remaining values."
   ],
   [
-    "Does Hashboard Brain help with Leave?",
-    "Yes! Hashboard Brain can tell you who’s out this week and how many days someone has left."
+    "Can approved leave be cancelled?",
+    "Yes. Employees can request cancellation, while authorized admins or managers can approve or reject that cancellation and restore balance when applicable."
   ],
 ];
 

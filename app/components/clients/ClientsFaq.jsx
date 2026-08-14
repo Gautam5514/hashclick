@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Clients free to use?",
-    "Yes! Hashboard Clients is available on the Free Forever plan with unlimited client profiles."
+    "What information can a client profile hold?",
+    "A client can include contact, address, website, industry, referral, notes, status, and optional tax and banking details."
   ],
   [
     "How does Hashboard Clients work?",
-    "Every contact, project, invoice, and file for a client rolls up onto one profile automatically."
+    "Admins create or import client records, then connect relevant projects, bookings, leads, billing agreements, invoices, and portal users to the client."
   ],
   [
     "Does Clients connect to the rest of Hashboard?",
-    "Yes! Clients stays linked to Leads and Invoicing, so your data never lives in a separate tool."
+    "Yes. Client relationships are used by projects, bookings, leads, agreements, invoices, and client-portal access."
   ],
   [
-    "Can I customize Clients for my team?",
-    "Yes, give each client a branded portal and control exactly what they can see."
+    "Can clients access Hashboard?",
+    "Admins can create or invite a client owner. Additional client users can be assigned to supported projects, with access limited by their client and project relationships."
   ],
   [
-    "Does Hashboard Brain help with Clients?",
-    "Yes! Hashboard Brain can summarize a client’s full history—open projects, invoices, and recent conversations—in seconds."
+    "Can client records be imported in bulk?",
+    "Yes. Admins can create multiple client records from supported CSV data, including optional billing details."
   ],
 ];
 

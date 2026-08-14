@@ -5,11 +5,11 @@ import {
 } from "../home/Brain2Section";
 
 const skillRows = [
-  ["Write copy", "Analyze data", "Draft emails", "Track expenses", "Manage invoices", "Track keywords"],
-  ["Create briefs", "Monitor trends", "Triage bugs", "Book meetings", "Set reminders", "Track conversions"],
-  ["Proofread content", "Scope projects", "Send messages", "Create dashboards", "Design mockups", "Debug code"],
-  ["Update styleguides", "Survey users", "Track backlinks", "Fix errors", "Send updates", "Log feedback"],
-  ["Competitive analysis", "Automate tasks", "Design logos", "Optimize content", "Troubleshoot issues", "Manage calendars"],
+  ["Create tasks", "Update status", "Set priority", "Change deadlines", "Assign teammates", "Find overdue work"],
+  ["Summarize tasks", "Review projects", "Check workload", "List spaces", "Find clients", "Review meetings"],
+  ["Check attendance", "Review leave", "View invoices", "Check expenses", "Review payroll", "List employees"],
+  ["Suggest deadlines", "Compare workloads", "Explain tasks", "Find priorities", "Review progress", "Check activity"],
+  ["Choose a model", "Use MCP", "Ask naturally", "Get current facts", "Respect roles", "Take permitted action"],
 ];
 
 const callers = [
@@ -19,15 +19,15 @@ const callers = [
 ];
 
 const completed = [
-  ["Built the sales kickoff deck", "Slides agent", "9:02 AM"],
-  ["Shipped the Q3 pricing page redesign", "Web agent", "9:14 AM"],
-  ["Drafted the Hash AI launch PRD", "Product agent", "9:21 AM"],
-  ["Forecasted FY26 revenue scenarios", "Finance agent", "9:36 AM"],
-  ["Designed the new onboarding flow", "Design agent", "9:48 AM"],
-  ["Wrote the SOC 2 readiness checklist", "Ops agent", "10:05 AM"],
-  ["Summarized 47 customer interviews", "Research agent", "10:19 AM"],
-  ["Mapped the GA launch project plan", "Project agent", "10:33 AM"],
-  ["Planned the 2026 hiring roadmap", "People agent", "10:51 AM"],
+  ["Created the launch checklist task", "Hash AI action", "9:02 AM"],
+  ["Updated the task priority", "Hash AI action", "9:14 AM"],
+  ["Changed the project task deadline", "Hash AI action", "9:21 AM"],
+  ["Assigned the task to a teammate", "Hash AI action", "9:36 AM"],
+  ["Summarized today’s open work", "Hash AI answer", "9:48 AM"],
+  ["Listed overdue project tasks", "Hash AI answer", "10:05 AM"],
+  ["Reviewed current team workload", "Hash AI answer", "10:19 AM"],
+  ["Explained the task requirements", "Hash AI answer", "10:33 AM"],
+  ["Suggested a working-day deadline", "Hash AI suggestion", "10:51 AM"],
 ];
 
 export default function Cards() {
@@ -35,11 +35,11 @@ export default function Cards() {
     <section className="bn-cards" aria-label="System of intelligence">
       <div className="bn-container">
         <header className="bn-cards-header">
-          <p className="bn-eyebrow bn-eyebrow-purple">Multiplayer Cowork</p>
+          <p className="bn-eyebrow bn-eyebrow-purple">Workspace assistance</p>
           <div className="bn-cards-rule" aria-hidden="true" />
           <div className="bn-cards-heading-row">
             <h2 className="bn-h2">
-              Cowork with Hash AI feels like you aren&apos;t actually working
+              Ask, understand, and act from one conversation
             </h2>
             <a href="/signup" className="bn-btn bn-btn-light">Get started</a>
           </div>
@@ -48,10 +48,9 @@ export default function Cards() {
         <ul className="bn-card-grid">
           <li className="bn-card bn-card-feature">
             <div className="bn-card-copy">
-              <p className="bn-card-label">Personality</p>
+              <p className="bn-card-label">Built for action</p>
               <p className="bn-card-desc">
-                Hash AI learns how you and your team talks: your tone, your shorthand, your
-                preferences.
+                Create and update supported work through clear, user-requested actions.
               </p>
             </div>
             <div className="bn-card-visual">
@@ -61,10 +60,9 @@ export default function Cards() {
 
           <li className="bn-card bn-card-feature">
             <div className="bn-card-copy">
-              <p className="bn-card-label">Intelligence</p>
+              <p className="bn-card-label">Model choice</p>
               <p className="bn-card-desc">
-                Hash AI picks the best AI model for each job. One subscription. Every frontier model
-                running with full context.
+                Choose from the AI models configured and available in your workspace.
               </p>
             </div>
             <div className="bn-card-visual">
@@ -76,8 +74,7 @@ export default function Cards() {
             <div className="bn-card-copy">
               <p className="bn-card-label">Context</p>
               <p className="bn-card-desc">
-                Hash AI sees your tasks, docs, and conversations. It doesn&apos;t need a brief
-                because it knows what&apos;s happening in real-time.
+                Get answers from current Hashboard information you are permitted to access.
               </p>
             </div>
             <div className="bn-card-visual">
@@ -87,10 +84,9 @@ export default function Cards() {
 
           <li className="bn-card bn-card-half">
             <div className="bn-card-copy">
-              <p className="bn-card-label">Skills</p>
+              <p className="bn-card-label">Supported workflows</p>
               <p className="bn-card-desc">
-                Teach Hash AI your exact workflows. It runs them on command, every time, no
-                re-prompting.
+                Ask questions and take supported actions across tasks, projects, people, and operations.
               </p>
             </div>
             <div className="bn-card-visual">
@@ -114,10 +110,9 @@ export default function Cards() {
 
           <li className="bn-card bn-card-half">
             <div className="bn-card-copy">
-              <p className="bn-card-label">Presence</p>
+              <p className="bn-card-label">Workspace access</p>
               <p className="bn-card-desc">
-                Hash AI joins your calls, takes notes, knows your schedule, and builds context from
-                every interaction automatically.
+                Use Hash AI within Hashboard or connect compatible AI clients through MCP.
               </p>
             </div>
             <div className="bn-card-visual">
@@ -131,7 +126,7 @@ export default function Cards() {
                   ))}
                   <span className="bn-pres-note">
                     <i className="bn-pres-spinner" aria-hidden="true" />
-                    Hash AI is taking notes
+                    Checking workspace data
                   </span>
                 </div>
                 <p className="bn-pres-line">
@@ -148,9 +143,9 @@ export default function Cards() {
               <div className="bn-done-head">
                 <span className="bn-done-title">
                   <i className="bn-done-live" aria-hidden="true" />
-                  Hash AI tasks completed
+                  Recent Hash AI activity
                 </span>
-                <span className="bn-done-count">9 working</span>
+                <span className="bn-done-count">9 examples</span>
               </div>
               <ul className="bn-done-list">
                 {completed.map(([task, agent, at], index) => (

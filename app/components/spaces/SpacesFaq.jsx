@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Spaces free to use?",
-    "Yes! Hashboard Spaces is available on the Free Forever plan with unlimited Spaces, Folders, and Lists."
+    "What is a Space in Hashboard?",
+    "A Space is a team-level home for members, projects, project templates, related bookings, and activity."
   ],
   [
     "How does Hashboard Spaces work?",
-    "Organize work into a Space → Folder → List hierarchy, with permissions and templates for every team."
+    "Managers and admins can create spaces with a name, description, icon, and initial members. Projects are then created within the appropriate space."
   ],
   [
     "Does Spaces connect to the rest of Hashboard?",
-    "Yes! Spaces stays linked to Tasks, Docs, and Dashboards, so your data never lives in a separate tool."
+    "Yes. Projects, tasks, project channels, templates, and supported bookings retain their space context."
   ],
   [
-    "Can I customize Spaces for my team?",
-    "Yes, set permissions and templates per Space, down to individual Lists."
+    "What roles are available inside a Space?",
+    "Space memberships support Manager, Member, and Viewer roles. Company-level permissions also affect who can create, update, or delete spaces."
   ],
   [
-    "Does Hashboard Brain help with Spaces?",
-    "Yes! Hashboard Brain can search across every Space you have access to and point you to the right project instantly."
+    "Can Spaces use reusable templates?",
+    "Spaces can contain project templates made from predefined tasks, priorities, ordering, subtasks, and optional due-date offsets."
   ],
 ];
 

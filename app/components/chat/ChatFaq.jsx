@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Chat included in the free plan?",
-    "Yes! Hashboard Chat is built directly into every Hashboard workspace, including the Free Forever plan."
+    "What types of channels can I create?",
+    "Hashboard supports company channels for organization-wide communication and project channels for discussions tied to individual projects."
   ],
   [
-    "How is Hashboard Chat different from Slack or Microsoft Teams?",
-    "Traditional chat apps isolate communication from where work actually happens. Hashboard Chat unifies messaging, tasks, docs, and AI in a single app—so every message can instantly become a task and context is never lost."
+    "Who can access a project channel?",
+    "Access is based on company, project, channel membership, and user permissions. People only see conversations they are authorized to access."
   ],
   [
-    "Can I import my existing Slack channels and message history?",
-    "Yes! Hashboard provides a 1-click Slack migration tool that transfers channels, message history, users, and attachments in minutes with zero downtime."
+    "Does Hashboard Chat support threaded replies?",
+    "Yes. Team members can reply to individual messages in threads, keeping focused discussions separate from the main channel."
   ],
   [
-    "Does Hashboard Chat support video and voice huddles?",
-    "Yes, Hashboard SyncUp allows you to start instant 1-click voice and video calls directly inside any chat thread."
+    "Can files be shared in Chat?",
+    "Yes. Supported files can be attached to messages and accessed by authorized channel members."
   ],
   [
-    "How do AI Chat Agents work in Hashboard Chat?",
-    "Hash AI agents can answer questions using context from across your agency — not just the current chat — draft replies, summarize long threads, and automatically create tasks from action items."
+    "Can I search and save previous messages?",
+    "Yes. Search helps you find accessible messages, while pins and bookmarks keep important information easy to revisit."
   ]
 ];
 

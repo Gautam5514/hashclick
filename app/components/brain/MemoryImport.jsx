@@ -8,7 +8,7 @@ const sources = [
 
 export default function MemoryImport() {
   return (
-    <section className="bn-import" aria-label="Import memories into Hash AI">
+    <section className="bn-import" aria-label="Choose an AI model in Hash AI">
       <div className="bn-import-container">
         <div className="bn-import-card">
           <Image
@@ -46,10 +46,10 @@ export default function MemoryImport() {
 
           <div className="bn-import-copy">
             <h2 className="bn-import-title">
-              Bring your memory into Hash AI with one-click.
+              Choose the AI model that fits your work.
             </h2>
             <p className="bn-import-lede">
-              Import your ChatGPT, Claude, or any AI memory into Hash AI instantly.
+              Use the models configured for your Hashboard workspace while keeping control of the selection.
             </p>
           </div>
 
@@ -59,21 +59,13 @@ export default function MemoryImport() {
                 <Image src={source.icon} width={20} height={20} alt="" unoptimized key={source.name} />
               ))}
             </span>
-            <span>Import Memory</span>
+            <span>Get started with Hash AI</span>
           </a>
         </div>
 
         <div className="bn-footnotes">
-          <p>
-            <sup>*</sup> Best AI Guarantee: Hashboard provides a 100% satisfaction guarantee on
-            Hash AI. If you are not satisfied that Hash AI delivers superior results compared to any
-            competing AI product within 30 days, you&apos;ll get your money-back.
-          </p>
-          <p>
-            <sup>**</sup> A three-week, multi-site study was conducted across California, Florida,
-            and New Mexico. Participants were randomly recruited and presented with pairwise
-            comparisons of AI client outputs, then asked to select the superior result.
-          </p>
+          <p>Available models depend on provider configuration and workspace access.</p>
+          <p>Hash AI responses and actions are limited to supported workflows and user permissions.</p>
         </div>
       </div>
     </section>

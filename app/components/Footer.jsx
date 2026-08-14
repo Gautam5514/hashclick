@@ -42,12 +42,12 @@ function XIcon(props) {
 }
 
 const aiLinks = [
-  "Brain",
-  "Super Agents",
-  "Ambient Agents",
-  "Notetaker",
-  "Enterprise Search",
-  "Talk to Text",
+  "Hash AI",
+  "Workspace Answers",
+  "Task Actions",
+  "AI Summaries",
+  "Workspace Search",
+  "MCP Access",
 ];
 
 const downloadLinks = ["iOS & Android", "Mac & Windows", "Brain MAX"];
@@ -55,15 +55,15 @@ const downloadLinks = ["iOS & Android", "Mac & Windows", "Brain MAX"];
 const productLinks = [
   "Chat",
   "Projects",
-  "Docs & Wikis",
+  "Tasks",
   "Calendar",
-  "Dashboards",
-  "Time Tracking",
-  "Gantt Charts",
-  "Automations",
-  "Whiteboards",
-  "API",
-  "Integrations",
+  "Attendance",
+  "Leave",
+  "Clients",
+  "Billing",
+  "Payroll",
+  "People",
+  "MCP",
 ];
 
 const compareLinks = [
@@ -95,7 +95,7 @@ const companyLinks = [
 ];
 
 const helpLinks = [
-  "24/7 Support",
+  "Support",
   "Contact Us",
   "Get a Demo",
   "Import",

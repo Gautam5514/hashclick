@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Leave requests buried in email threads or Slack DMs",
-    "No live view of who’s out on a given day",
-    "Balances tracked by hand, often out of date",
-    "Different rules applied inconsistently across teams",
+    "Leave requests handled through scattered messages",
+    "No consistent status for pending or decided requests",
+    "Balances disconnected from approved leave",
+    "Cancellations handled without restoring balance correctly",
   ],
   with: [
-    "One request form routes straight to the right approver",
-    "A shared calendar shows who’s out at a glance",
-    "Balances update automatically the moment leave is approved",
-    "Custom policies applied consistently, team by team",
+    "Structured full-day and half-day leave requests",
+    "Pending, approved, rejected, and cancellation states",
+    "Balance validation and updates on approval",
+    "Controlled cancellation with balance restoration",
   ],
 };
 
 const workflow = [
   {
     eyebrow: "Leave Requests",
-    title: "Request time off in a few clicks",
-    body: "Submit a leave request that routes straight to the right approver, with balance and policy checked automatically.",
+    title: "Submit the dates and leave type clearly",
+    body: "Choose an active leave type, start and end dates, full- or half-day units where supported, and include the reason for the request.",
     image: "/docs/docs-feature-1.png",
     alt: "Leave request form in Hashboard",
   },
   {
     eyebrow: "Approval Workflows",
-    title: "Approvals that don’t sit in an inbox",
-    body: "Managers approve or decline directly from a notification, and the requester hears back the same day.",
+    title: "Keep each decision in a defined workflow",
+    body: "Authorized admins or managers can review pending requests, approve or reject them, and preserve approver, decision, and status context.",
     image: "/docs/docs-feature-2.png",
     alt: "Leave approval workflow in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Team Calendar View",
-    title: "See who’s out before you plan a meeting",
-    body: "A shared calendar shows approved leave across the whole team, so scheduling never collides with someone’s vacation.",
+    eyebrow: "Balances and Cancellations",
+    title: "Keep approved days and remaining balance aligned",
+    body: "Balance-backed leave is deducted when approved. Supported cancellations restore that balance after the required decision flow.",
     image: "/docs/docs-feature-3.png",
     alt: "Team leave calendar in Hashboard",
   },
 ];
 
 const leaveFeatures = [
-  [Plane, "Leave Requests", "Submit and route time-off requests in a couple of clicks."],
-  [ClipboardCheck, "Approval Workflows", "Approvals go straight to the right manager automatically."],
-  [CalendarCheck2, "Leave Balances", "Balances update automatically the moment leave is approved."],
-  [CalendarDays, "Team Calendar View", "See approved leave across the whole team in one view."],
-  [SlidersHorizontal, "Custom Policies", "Set accrual and carryover rules by team or location."],
-  [CalendarOff, "Holiday Calendars", "Apply company and regional holidays automatically."],
+  [Plane, "Leave requests", "Submit dated requests against an active company leave type."],
+  [ClipboardCheck, "Approval decisions", "Approve or reject pending requests with authorized roles."],
+  [CalendarCheck2, "Leave balances", "Track opening, credited, used, and remaining days by year and type."],
+  [CalendarDays, "Full or half days", "Represent supported leave as full-day or half-day units."],
+  [SlidersHorizontal, "Leave types", "Configure paid status, balance requirements, yearly limits, and active state."],
+  [CalendarOff, "Cancellation flow", "Cancel pending requests or request cancellation of approved leave."],
 ];
 
 const platform = [
   [Plane, "Leave", "Manage time off"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Payroll", "Prepare payroll periods"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Attendance", "Record working days"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer context"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function LeaveHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD LEAVE</p>
-          <h1>Time off, approved without the email chain</h1>
+          <h1>Manage leave requests, decisions, and balances</h1>
           <p className="task-hero-lede">
-            Request, approve, and track leave from one place. Hashboard Leave keeps balances accurate and the whole team’s calendar in sync.
+            Configure leave types, submit full- or half-day requests, review balances, and manage approval and cancellation states from one workspace.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Leave types, balances, requests, and decisions connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Leave needs, in one place</h2>
+          <h2>A clear lifecycle for every leave request</h2>
           <p>
-            Hashboard Leave keeps everything connected, so nothing falls through the cracks.
+            Keep employee requests, balance rules, approval decisions, and cancellations consistent and permission-aware.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Leave, handled automatically.</h2>
-          <p>Join 3M+ teams who run leave without the busywork. Start your 7-day free trial.</p>
+          <h2>Leave records that stay accountable.</h2>
+          <p>Track request status, balance use, approver decisions, and supported cancellations without relying on inbox history.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI who’s out this month", "Ask Brain who’s on leave next week or how many vacation days someone has left, and get an instant answer.", "/docs/ai-feature-1.png"],
-    ["Smart Policy Checks", "Balances and policy, verified automatically", "Hashboard Brain checks each request against remaining balance and team policy before it ever reaches an approver.", "/docs/ai-feature-2.png"],
+    ["Hash AI", "Ask for your remaining leave balance", "Employees can request their own balance context, while supported team-level leave information remains limited to authorized roles.", "/docs/ai-feature-1.png"],
+    ["Supported Decisions", "Approve leave within permissions", "Authorized admins or managers can use supported tools to approve eligible pending requests while preserving the normal balance rules.", "/docs/ai-feature-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Leave Management</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">AI-assisted leave context</p>
+          <h2>Ask within access.<br />Decide within policy.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Leave is just the beginning</h2>
-            <p>Leave connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Leave connects to people operations</h2>
+            <p>Keep leave alongside employee records, attendance, payroll, holidays, week-offs, projects, tasks, and team workflows.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function LeaveFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Leave", text: "Leave" },
+    { name: "Balances", text: "Balances" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "Payroll", text: "Payroll" },
+    { name: "People", text: "People" },
+    { name: "Holidays", text: "Holidays" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "Hash AI", text: "Hash AI" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function LeaveFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

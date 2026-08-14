@@ -18,10 +18,10 @@ const comparison = {
     "Projects stall quietly until it’s too late",
   ],
   with: [
-    "Every request captured and assigned instantly",
+    "Work is captured inside the right project",
     "Everyone knows priorities, owners, and next steps",
-    "Progress stays visible without chasing updates",
-    "Work moves forward automatically",
+    "Owners, priorities, and deadlines stay visible",
+    "Progress stays visible from start to finish",
   ],
 };
 
@@ -29,51 +29,51 @@ const workflow = [
   {
     eyebrow: "Everything included",
     title: "More than a to-do list",
-    body: "Hashboard Tasks come fully loaded with everything teams need to plan, assign, track, and finish work in one place.",
+    body: "Add descriptions, priorities, deadlines, statuses, assignees, and subtasks so every task has the information needed to complete it.",
     image: "/tasks/feature-included.png",
-    alt: "A Hashboard task with status, dates, assignee, priority, and custom fields",
+    alt: "A Hashboard task with status, due date, assignees, and priority",
   },
   {
     eyebrow: "Connected work",
-    title: "Connected to your entire workspace",
-    body: "Tasks don’t live in isolation. They stay linked to docs, chat, goals, dashboards, and more so work stays clear and actionable.",
+    title: "Keep work in the right context",
+    body: "Every team task belongs to a project and workspace, helping people understand where the work fits and who can access it.",
     image: "/tasks/feature-connected.png",
-    alt: "Relationships connecting Hashboard tasks and documents",
+    alt: "A Hashboard task shown in its project workspace",
     reverse: true,
   },
   {
-    eyebrow: "Execution at scale",
-    title: "Built to run all your work",
-    body: "From daily action items to cross-team initiatives, Hashboard Tasks scale across every use case without stitching together multiple tools.",
+    eyebrow: "Built for teams",
+    title: "Clear ownership at every stage",
+    body: "Assign one or more team members, move tasks through defined statuses, and keep responsibility visible throughout delivery.",
     image: "/tasks/feature-scale.png",
     alt: "Hashboard board with connected work cards",
   },
 ];
 
 const taskFeatures = [
-  [SlidersHorizontal, "Custom fields", "Add dropdowns, priorities, dates, budgets, regions, deal sizes—anything your workflow needs."],
-  [LayoutGrid, "Multiple views", "See your work as Lists, Boards, Calendars, Timelines, or Gantt charts."],
-  [Workflow, "Automations", "Trigger status changes, assignments, and notifications automatically."],
-  [GitBranch, "Dependencies", "Map blockers and get alerts when work stalls."],
-  [ListChecks, "Subtasks & Checklists", "Break big work into trackable, manageable pieces."],
+  [SlidersHorizontal, "Task details", "Add a title and description so expectations remain clear."],
+  [LayoutGrid, "Statuses", "Move work through Backlog, To Do, In Progress, In Review, and Done."],
+  [Workflow, "Priorities", "Mark tasks as Low, Medium, High, or Urgent."],
+  [GitBranch, "Due dates", "Set deadlines and see which tasks are upcoming or overdue."],
+  [ListChecks, "Subtasks", "Break big work into smaller, trackable pieces."],
   [Users, "Multiple Assignees", "Assign tasks to multiple people at once."],
-  [Repeat2, "Recurring Tasks", "Set once, recreates automatically on your schedule."],
-  [MessageSquareText, "Comments & Clips", "Discuss work in context with mentions and clips."],
-  [Timer, "Time Tracking", "Track time spent with timers and estimates."],
+  [Repeat2, "Project organization", "Keep team tasks associated with the relevant project and workspace."],
+  [MessageSquareText, "Personal tasks", "Manage private action items separately from shared project work."],
+  [Timer, "Hash AI support", "Summarize work, find tasks, and make permitted updates through conversation."],
 ];
 
 const platform = [
-  [BarChart3, "Dashboards", "Visualize your data"], [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"], [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"], [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"], [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"], [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"], [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
+  [BarChart3, "Spaces", "Organize teams and work"], [Columns3, "Projects", "Coordinate shared initiatives"],
+  [GanttChart, "Task Boards", "Follow work by status"], [MessageCircle, "Chat", "Team and project conversations"],
+  [Video, "Meetings", "Schedule team conversations"], [Inbox, "Notifications", "See relevant activity"],
+  [FileText, "Files", "Keep project resources accessible"], [PanelsTopLeft, "Attendance", "Review working-day attendance"],
+  [BookOpen, "People", "Organize employee information"], [ClipboardList, "Leave", "Manage balances and requests"],
+  [CalendarDays, "Calendar", "View scheduled work"], [CalendarClock, "Scheduling", "Manage meeting bookings"],
+  [Zap, "Hash AI", "Ask questions and take permitted actions"], [Clock3, "Payroll", "Manage permitted payroll workflows"],
+  [Clapperboard, "Clients", "Track business relationships"], [Grid2X2, "All features", "Explore the platform"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>{children}<ArrowRight aria-hidden="true" /></Link>;
 }
 
@@ -83,14 +83,14 @@ function TasksHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">Hashboard Tasks</p>
-          <h1>Never lose track of work again</h1>
-          <p className="task-hero-lede">Capture every request, assign it in seconds, and always know who owns what so projects don’t stall, deadlines don’t slip, and work doesn’t disappear.</p>
-          <div className="task-hero-action"><CTAButton /><span>Start 7 Days<br />Free Trial.</span></div>
+          <h1>Keep every piece of work accounted for</h1>
+          <p className="task-hero-lede">Create tasks, set priorities and deadlines, assign the right people, and follow progress from backlog to completion.</p>
+          <div className="task-hero-action"><CTAButton>Get started</CTAButton><span>Create your workspace<br />and organize work.</span></div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
+            <Image src="/tasks/stars.png" width={97} height={20} alt="" />
+            <span>Projects · Team tasks · Personal tasks</span>
+            <span className="task-review-sources" aria-label="Task statuses and priorities">
+              <i className="review-g2">To Do</i><i className="review-capterra">In Progress</i><i className="review-getapp">Review</i><i className="review-trustradius">Done</i><i className="review-ph">Urgent</i>
             </span>
           </div>
         </div>
@@ -121,20 +121,20 @@ function WorkflowGrid() {
 }
 
 function MotionBanner() {
-  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already in motion. Make sure nothing falls through.</h2><p>Join 3M+ teams who report and act from the same place. Start your 7-day free trial.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
+  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already moving. Keep every task visible.</h2><p>Bring responsibilities, deadlines, and project progress together in Hashboard.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
 }
 
 function AiFeatures() {
   const cards = [
-    ["Super Agents", "Your tasks, created and assigned automatically", "Super Agents capture work from chat, threads, or anywhere you work, turning conversations into structured tasks with the right owner, due date, and priority.", "/tasks/super-agents.png"],
-    ["Hashboard Brain", "AI that works where you work", "Ask questions, generate updates, and create subtasks without leaving your workflow. Brain pulls context from your entire Workspace to deliver answers and take action on the spot.", "/tasks/hashboard-brain.png"],
+    ["Hash AI Actions", "Create and update tasks through conversation", "Ask Hash AI to create a task, change its status or priority, update its deadline, or assign it to a team member.", "/tasks/super-agents.png"],
+    ["Workspace Answers", "Understand what needs attention", "Ask about assigned tasks, overdue work, project status, upcoming deadlines, or team workload using permitted workspace data.", "/tasks/hashboard-brain.png"],
   ];
-  return <section className="task-section task-ai"><div className="task-shell"><header className="task-heading"><p className="task-eyebrow">AI powered efficiency</p><h2>You focus on real work,<br />AI handles the busywork</h2></header><div className="task-ai-grid">{cards.map(([eye, title, body, image]) => <article key={title}><div className="task-ai-copy"><p className="task-eyebrow">{eye}</p><h3>{title}</h3><p>{body}</p><div className="task-inline-actions"><CTAButton secondary>Get started</CTAButton><Link href="/brain" className="task-dark-link">Explore {eye}<ArrowRight /></Link></div></div><div className="task-ai-image"><Image src={image} fill sizes="(max-width: 760px) 100vw, 50vw" alt={title} /></div></article>)}</div></div></section>;
+  return <section className="task-section task-ai"><div className="task-shell"><header className="task-heading"><p className="task-eyebrow">AI-assisted work</p><h2>Find answers faster,<br />then take action</h2></header><div className="task-ai-grid">{cards.map(([eye, title, body, image]) => <article key={title}><div className="task-ai-copy"><p className="task-eyebrow">{eye}</p><h3>{title}</h3><p>{body}</p><div className="task-inline-actions"><CTAButton secondary>Get started</CTAButton><Link href="/brain" className="task-dark-link">Explore {eye}<ArrowRight /></Link></div></div><div className="task-ai-image"><Image src={image} fill sizes="(max-width: 760px) 100vw, 50vw" alt={title} /></div></article>)}</div></div></section>;
 }
 
 function FeaturesAndPlatform() {
   return <><section className="task-section task-feature-section"><div className="task-shell task-feature-shell"><header className="task-heading task-feature-heading"><h2>Plus, everything you need to get it done</h2></header><div className="task-feature-grid">{taskFeatures.map(([Icon, title, body]) => <article key={title}><span><Icon /></span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
-    <section className="task-section task-platform"><div className="task-shell task-platform-shell"><header className="task-heading task-platform-heading"><p className="task-eyebrow">The Hashboard platform</p><h2>Tasks are just the beginning</h2><p>Tasks are the connective tissue of the Hashboard platform. Docs, Dashboards, Chat, Whiteboards, and more in a single, converged app. Explore everything you unlock when your work lives in one place.</p></header><div className="task-platform-grid">            {platform.map(([Icon, title, body]) => (
+    <section className="task-section task-platform"><div className="task-shell task-platform-shell"><header className="task-heading task-platform-heading"><p className="task-eyebrow">The Hashboard platform</p><h2>Tasks are just the beginning</h2><p>Manage tasks alongside projects, people, conversations, clients, attendance, leave, meetings, billing, and other everyday operations.</p></header><div className="task-platform-grid">            {platform.map(([Icon, title, body]) => (
               <Link
                 href={title === "Dashboards" ? "/features/dashboards" : title === "Tasks" ? "/features/tasks" : title === "Scheduling" ? "/features/scheduling" : "/product"}
                 key={title}
@@ -147,16 +147,16 @@ function FeaturesAndPlatform() {
 
 function TasksFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Statuses", text: "Clear statuses" },
+    { name: "Priorities", text: "Visible priorities" },
+    { name: "Owners", text: "Assigned owners" },
+    { name: "Deadlines", text: "Due dates" },
+    { name: "Subtasks", text: "Trackable subtasks" },
+    { name: "Projects", text: "Project context" },
+    { name: "Personal", text: "Personal tasks" },
+    { name: "Team", text: "Team tasks" },
+    { name: "AI", text: "Hash AI support" },
+    { name: "Progress", text: "Visible progress" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -179,11 +179,11 @@ function TasksFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap transition-all hover:bg-neutral-100"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br /> Free Trial.
+                Create your workspace <br /> and organize work.
               </div>
             </div>
           </div>

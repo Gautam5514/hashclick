@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Receipts scattered across email, Slack, and shoeboxes",
-    "Approvals stuck waiting on someone to check a spreadsheet",
-    "No real-time view of budget versus actual spend",
-    "Reimbursements delayed for weeks at a time",
+    "Expense details recorded without a consistent structure",
+    "Goods and services treated the same for tax records",
+    "Invoice and receipt references stored separately",
+    "Finding spend by date or category takes manual work",
   ],
   with: [
-    "Snap a receipt and it’s logged, categorized, and searchable",
-    "Approvals route automatically to the right manager",
-    "Live budgets show spend the moment it happens",
-    "Reimbursements clear in days, not weeks",
+    "Structured expense date, category, amount, and invoice number",
+    "Goods and services use the appropriate HSN or SAC field",
+    "Receipt links, notes, and creator details stay attached",
+    "Search and filters narrow the company expense record",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Receipt Capture",
-    title: "Snap a photo, done",
-    body: "Photograph a receipt and Hashboard extracts the vendor, amount, and date automatically—no manual entry required.",
+    eyebrow: "Expense Records",
+    title: "Capture the details finance needs",
+    body: "Record the expense date, category, amount, goods or services type, invoice number, notes, and an optional receipt link.",
     image: "/dashboards/dashboard-feature-1.png",
     alt: "Receipt capture in Hashboard Expenses",
   },
   {
-    eyebrow: "Approval Workflows",
-    title: "Route spend to the right approver",
-    body: "Expenses route automatically based on amount, category, or team, so nothing sits waiting in an inbox.",
+    eyebrow: "Tax Details",
+    title: "Keep GST treatment explicit",
+    body: "For GST expenses, record GSTIN, tax percentage, inclusive or exclusive amount treatment, and source and destination of supply.",
     image: "/dashboards/dashboard-feature-2.png",
     alt: "Expense approval workflow in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Budget Tracking",
-    title: "See spend against budget live",
-    body: "Every approved expense updates the relevant budget instantly, so finance always knows where the company stands.",
+    eyebrow: "Search and Filters",
+    title: "Find the expense record you need",
+    body: "Filter company expenses by goods or services, GST use, category, or date range, and search invoice numbers, categories, and notes.",
     image: "/dashboards/dashboard-feature-3.png",
     alt: "Budget tracking dashboard in Hashboard",
   },
 ];
 
 const expensesFeatures = [
-  [Receipt, "Receipt Capture", "Photograph or forward receipts and Hashboard logs the details."],
-  [ClipboardCheck, "Approval Workflows", "Route expenses to the right approver automatically by rule."],
-  [Wallet, "Budget Tracking", "Watch spend against budget update in real time."],
-  [Tag, "Category Rules", "Auto-categorize expenses by vendor, team, or project."],
-  [HandCoins, "Fast Reimbursements", "Push approved reimbursements out in days, not weeks."],
-  [PieChart, "Expense Reports", "Break down spend by team, category, or time period instantly."],
+  [Receipt, "Receipt reference", "Attach an optional receipt URL to the expense record."],
+  [ClipboardCheck, "Validated details", "Require the applicable category, amount, type, invoice, and tax fields."],
+  [Wallet, "Goods and services", "Classify expenses and use HSN or SAC codes accordingly."],
+  [Tag, "Categories", "Use category names to organize and filter company spending."],
+  [HandCoins, "GST treatment", "Record tax percentage and inclusive or exclusive amount handling."],
+  [PieChart, "Expense history", "Review records by date, category, type, GST use, or search terms."],
 ];
 
 const platform = [
   [Receipt, "Expenses", "Track spend and receipts"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Invoices", "Manage customer billing"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Clients", "Keep customer context"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leads", "Track prospects"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Attendance", "Record working days"],
+  [Clapperboard, "Payroll", "Prepare payroll periods"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function ExpensesHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD EXPENSES</p>
-          <h1>Track spend without chasing receipts</h1>
+          <h1>Keep company expenses structured and searchable</h1>
           <p className="task-hero-lede">
-            Capture receipts, route approvals, and see budgets in real time. Hashboard Expenses keeps company spend visible without a single spreadsheet.
+            Record goods and service expenses with the invoice, receipt, category, amount, supply, and tax details required for a usable history.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Expense, invoice, receipt, and GST details in one record</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Expenses needs, in one place</h2>
+          <h2>A consistent record for company spending</h2>
           <p>
-            Hashboard Expenses keeps everything connected, so nothing falls through the cracks.
+            Create, review, update, filter, and delete tenant-scoped expense records with clear creator context.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Expenses, handled automatically.</h2>
-          <p>Join 3M+ teams who run expenses without the busywork. Start your 7-day free trial.</p>
+          <h2>Expense details without invented automation.</h2>
+          <p>Capture the required information accurately, then retrieve it through practical filters and search.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI about spend and budgets", "Ask Brain which team is closest to going over budget this quarter, and get a direct answer pulled straight from your live data.", "/tasks/super-agents.png"],
-    ["Smart Categorization", "Receipts sorted automatically", "Hashboard Brain reads each receipt and assigns the right category and budget line, cutting manual coding to zero.", "/tasks/clickup-brain.png"],
+    ["Structured Data", "Keep each expense understandable", "Expense records retain their date, category, type, amount, invoice number, tax treatment, notes, receipt link, and creator.", "/tasks/super-agents.png"],
+    ["Reliable Validation", "Collect the right details for each case", "Goods require an HSN code, services require a SAC code, and GST expenses require the relevant tax and supply fields.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Expense Tracking</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Structured expense tracking</p>
+          <h2>Record clearly.<br />Review confidently.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Expenses is just the beginning</h2>
-            <p>Expenses connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Expenses sit alongside business operations</h2>
+            <p>Keep spending records in the same platform as clients, invoices, projects, payroll, people, meetings, and everyday team work.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function ExpensesFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Expenses", text: "Expenses" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Clients", text: "Clients" },
+    { name: "Projects", text: "Projects" },
+    { name: "Payroll", text: "Payroll" },
+    { name: "People", text: "People" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function ExpensesFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

@@ -12,10 +12,10 @@ const stories = [
     logo: "/testimonials/home_diggs_logo.webp",
     logoWidth: 179,
     logoHeight: 41,
-    company: "DIGGS",
-    quote: '"Hashboard is serving us so we can serve our pet guardians."',
-    name: "Samantha Dengate",
-    role: "Sr. Project Manager",
+    company: "PROJECT TEAMS",
+    quote: '"Keep responsibilities, priorities, and deadlines clear from one shared workspace."',
+    name: "Project workflows",
+    role: "Plan, assign, and track work",
   },
   {
     id: "finastra",
@@ -24,10 +24,10 @@ const stories = [
     logo: "/testimonials/home_finastra_logo.webp",
     logoWidth: 289,
     logoHeight: 41,
-    company: "FINASTRA",
-    quote: '"It\'s a low-code platform that helps us automate processes."',
-    name: "Joerg Klueckmann",
-    role: "VP of Marketing",
+    company: "OPERATIONS",
+    quote: '"Bring attendance, leave, clients, meetings, billing, and daily work together."',
+    name: "Business operations",
+    role: "Coordinate everyday workflows",
   },
   {
     id: "hawke",
@@ -36,10 +36,10 @@ const stories = [
     logo: "/testimonials/home_hawke_logo.webp",
     logoWidth: 179,
     logoHeight: 41,
-    company: "Hawke Media",
-    quote: '"Hashboard is the best thing I\'ve rolled out in the past two years."',
-    name: "Lauren Makielski",
-    role: "Chief of Staff",
+    company: "HASH AI",
+    quote: '"Ask questions, review workspace information, and take permitted actions conversationally."',
+    name: "AI-assisted work",
+    role: "Answers grounded in your workspace",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function Testimonials({ showHeadline = true }) {
       {showHeadline && (
         <div className="tm-headline-row">
           <div className="tm-headline">
-            <h2>Loved by 5+ million teams, backed by 100+ awards</h2>
+            <h2>Built around the way modern teams work</h2>
           </div>
           <div className="tm-award">
             <img

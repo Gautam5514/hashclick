@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Endless email threads just to land on a meeting time",
-    "Double-bookings because availability lives in your head",
-    "Manually re-typing the same slots for every invitee",
-    "No easy way to split bookings across a team",
+    "Meeting requests collected without a consistent form",
+    "Availability offered without checking existing busy time",
+    "Provider and host details configured separately",
+    "Downstream systems lack a supported booking event",
   ],
   with: [
-    "Share one link, invitees pick a slot instantly",
-    "Live sync with your calendar rules out double-booking",
-    "Buffers, limits, and notice windows protect your day",
-    "Round-robin and collective booking route work automatically",
+    "Active public page identified by company and page slug",
+    "Slots checked against bookings and Google Calendar busy time",
+    "Configured host and Google Meet, Zoom, or no-video option",
+    "Optional signed webhook for supported booking events",
   ],
 };
 
 const workflow = [
   {
     eyebrow: "Booking Pages",
-    title: "One link, zero back-and-forth",
-    body: "Share a personal or team booking page that only shows the times you’re actually free. Invitees pick a slot and it’s confirmed instantly on both calendars.",
+    title: "Publish a tenant-specific booking experience",
+    body: "Admins create an active page with a unique slug, page name, tenant branding, sidebar content, and configurable form fields.",
     image: "/calendar/calendar-feature-1.png",
     alt: "Hashboard Scheduling booking page",
   },
   {
-    eyebrow: "Smart Availability",
-    title: "Rules that protect your time",
-    body: "Set buffers between meetings, daily booking limits, and minimum notice periods so your calendar never gets overrun by last-minute requests.",
+    eyebrow: "Availability",
+    title: "Offer slots around current commitments",
+    body: "Hashboard builds candidate slots for the requested time range and duration, excluding active bookings and the host’s Google Calendar busy periods.",
     image: "/calendar/calendar-feature-2.png",
     alt: "Availability rules in Hashboard Scheduling",
     reverse: true,
   },
   {
-    eyebrow: "Team Booking",
-    title: "Route meetings across your team",
-    body: "Use round-robin to balance bookings evenly, or collective scheduling to find one slot that works for every required host at once.",
+    eyebrow: "Host and Provider",
+    title: "Send the booking to a configured internal host",
+    body: "Choose an eligible company user as host and use Google Meet, Zoom, or no video provider. Provider connections are validated where required.",
     image: "/calendar/calendar-feature-3.png",
-    alt: "Team round-robin scheduling in Hashboard",
+    alt: "Configured booking host and provider in Hashboard",
   },
 ];
 
 const schedulingFeatures = [
-  [Link2, "Custom Booking Links", "Create personal or team booking pages branded to match your workflow."],
-  [Clock, "Buffers & Limits", "Add gaps between meetings and cap daily bookings to protect focus time."],
-  [Shuffle, "Round-Robin Routing", "Distribute inbound meetings evenly across a team automatically."],
-  [Users, "Collective Scheduling", "Find one slot that works across every required attendee’s calendar."],
-  [Bell, "Automated Reminders", "Send confirmation emails and reminders so no one misses a booking."],
-  [Globe, "Time Zone Detection", "Booking pages auto-adjust to each invitee’s local time zone."],
+  [Link2, "Public page slugs", "Publish active booking pages under the correct company context."],
+  [Clock, "Slot generation", "Build available slots from a range, duration, step, and current busy time."],
+  [Shuffle, "Provider choice", "Configure Google Meet, Zoom, or a calendar event without video."],
+  [Users, "Internal host", "Assign an eligible employee, manager, or admin with Google Calendar connected."],
+  [Bell, "Optional webhooks", "Send supported booking lifecycle events to a configured endpoint."],
+  [Globe, "Booking timezone", "Store the selected timezone with each confirmed booking."],
 ];
 
 const platform = [
   [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Clients", "Keep customer context"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage provider-backed meetings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Forms", "Collect booking information"],
+  [CalendarDays, "Calendar", "View connected events"],
+  [CalendarClock, "Booking Pages", "Publish booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Attendance", "Record working days"],
+  [Clapperboard, "Expenses", "Record business expenses"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function SchedulingHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
-          <h1>Let people book time with you—automatically</h1>
+          <h1>Create public booking pages around real availability</h1>
           <p className="task-hero-lede">
-            Share a booking link that only shows real availability. Invitees pick a slot, both calendars update instantly, and you never chase a meeting time again.
+            Configure page content and form fields, assign a host and provider, check Google Calendar busy time, and create a connected booking.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Booking pages, hosts, providers, calendars, and webhooks connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Scheduling needs, in one place</h2>
+          <h2>A configurable path from page to booking</h2>
           <p>
-            Hashboard Scheduling keeps everything connected, so nothing falls through the cracks.
+            Keep public form content, tenant branding, host configuration, availability, and booking creation in one workflow.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Scheduling, handled automatically.</h2>
-          <p>Join 3M+ teams who run scheduling without the busywork. Start your 7-day free trial.</p>
+          <h2>Scheduling built on current availability.</h2>
+          <p>Offer supported slots, validate the host and provider, and create the corresponding Google Calendar event.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI to find the best slot across every calendar", "Hashboard Brain scans host and invitee availability, suggests the fastest slot to close a meeting, and can send the booking link for you.", "/calendar/ai-calendar-1.png"],
-    ["Smart Follow-ups", "Auto-generated reminders and reschedule links", "Never lose a booking to a no-show. Hashboard Brain sends timely reminders and one-click reschedule links so meetings actually happen.", "/calendar/ai-calendar-2.png"],
+    ["Availability Engine", "Generate candidate slots from current busy time", "Availability uses the configured company and host context, active Hashboard bookings, and the host’s connected Google Calendar.", "/calendar/ai-calendar-1.png"],
+    ["Booking Events", "Send supported updates downstream", "An optional webhook can receive supported booking lifecycle events using the page’s configured endpoint and secret.", "/calendar/ai-calendar-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Scheduling</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected scheduling</p>
+          <h2>Publish the page.<br />Create the booking.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Scheduling is just the beginning</h2>
-            <p>Scheduling connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Scheduling connects to customer operations</h2>
+            <p>Keep booking pages alongside calendar events, meetings, leads, clients, spaces, projects, tasks, and chat.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function SchedulingFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Scheduling", text: "Scheduling" },
+    { name: "Booking Pages", text: "Booking Pages" },
+    { name: "Calendar", text: "Calendar" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Google Meet", text: "Google Meet" },
+    { name: "Zoom", text: "Zoom" },
+    { name: "Leads", text: "Leads" },
+    { name: "Clients", text: "Clients" },
+    { name: "Spaces", text: "Spaces" },
+    { name: "Webhooks", text: "Webhooks" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function SchedulingFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

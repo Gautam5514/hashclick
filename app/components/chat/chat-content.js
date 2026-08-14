@@ -8,12 +8,12 @@
  */
 
 export const hero = {
-  eyebrow: { symbol: "#", label: "Hashboard Chat", tag: "New" },
-  title: "Agency conversations, without losing context",
+  eyebrow: { symbol: "#", label: "Hashboard Chat", tag: "" },
+  title: "Conversations connected to the work",
   subtitle:
-    "Chat with your team and clients while keeping projects, tasks, files, and agency knowledge connected in one workspace.",
-  cta: { label: "Try Hashboard Chat", href: "/signup" },
-  note: "It’s free. No credit card required",
+    "Bring team and project discussions into Hashboard, where messages, files, members, and project activity remain in one accessible workspace.",
+  cta: { label: "Get started with Hashboard Chat", href: "/signup" },
+  note: "Available as part of the Hashboard workspace",
   media: {
     src: "/chat/Mask_group__6_.avif",
     alt: "Hashboard Chat workspace with channels, threads, and connected tasks",
@@ -24,13 +24,13 @@ export const hero = {
 
 export const problemSolution = {
   problem: {
-    title: "Agency chat is broken.",
-    body: "Team chat, client chat, and your projects live in separate apps, disconnected.",
+    title: "Work conversations lose value when they live apart.",
+    body: "Important decisions, project details, and follow-ups can become difficult to find when conversations and work are managed separately.",
   },
   solution: {
-    title: "We fixed it.",
-    body: "Hashboard connects chat with your projects, tasks, and clients.",
-    highlight: "With Hash AI superpowers",
+    title: "Keep communication closer to execution.",
+    body: "Use company and project channels to discuss work with people who already have access to the relevant workspace.",
+    highlight: "Organized around your work",
   },
   /**
    * The two dashed rings of disconnected apps.
@@ -76,9 +76,9 @@ export const problemSolution = {
  */
 export const valueProps = [
   {
-    title: "Work from Chat",
+    title: "Organized communication",
     description:
-      "Create and manage work without leaving the conversation. Turn any message into a task in one click.",
+      "Separate company-wide communication from project-specific discussions.",
     duration: 6000,
     media: {
       type: "image",
@@ -87,9 +87,9 @@ export const valueProps = [
     },
   },
   {
-    title: "Context always Connected",
+    title: "Project context",
     description:
-      "Every conversation — team or client — automatically linked to its project, tasks, and files.",
+      "Use project channels to keep relevant conversations close to the project and its members.",
     duration: 6000,
     media: {
       type: "image",
@@ -98,26 +98,26 @@ export const valueProps = [
     },
   },
   {
-    title: "Hash AI Keeps Chat Manageable",
+    title: "Clear follow-ups",
     description:
-      "Ask questions across your agency, get auto-created tasks, and summarized threads.",
+      "Share task activity in project chat so responsibilities and progress stay visible alongside discussion.",
     duration: 6000,
     media: {
       type: "image",
       src: "/chat/meeting-summary.png",
-      alt: "An AI summary of a long thread with action items",
+      alt: "Project activity displayed alongside a team conversation",
     },
   },
 ];
 
 export const chatAgents = {
-  eyebrow: "Chat Agents",
-  title: "See the power of Hash AI in every Chat. Get started with a single click.",
-  body: "Turn on Hash AI agents in any Chat — use the ones built by the Hashboard team, or set up your own with just a prompt.",
+  eyebrow: "Communication that supports the work",
+  title: "Move from discussion to action.",
+  body: "Discuss projects, share information, and keep important messages accessible with essential team communication tools.",
   video: {
     src: "/chat/answer-agent.mp4",
     poster: "/chat/ai-poster.png",
-    alt: "An AI agent answering a teammate’s question inside a channel",
+    alt: "A Hashboard project conversation",
   },
 };
 
@@ -131,49 +131,49 @@ export const chatAgents = {
 export const bento = {
   title: "Projects and Chats are better together",
   subtitle:
-    "Context and clarity instead of chaos. Save more than one day every week with everything in one place.",
+    "Give every project a place for discussion so communication remains organized around the work.",
   cta: { label: "Try Hashboard Chat", href: "/signup" },
   tiles: [
     {
-      title: "Connect Tasks.",
-      description: "Link tasks to any message — team or client — so context is never lost.",
+      title: "Project activity.",
+      description: "Keep supported task activity visible alongside the relevant project conversation.",
       layout: "tall",
       glow: { color: "pink", corner: "bottom-left" },
       media: { type: "image", src: "/chat/bento-1.png", alt: "A task being connected to a chat message" },
     },
     {
-      title: "Posts.",
+      title: "Important updates.",
       description:
         "Keep everyone in the loop on important announcements, updates, and discussions.",
       layout: "half",
       media: { type: "image", src: "/chat/bento-2.png", alt: "An announcement post published to a channel" },
     },
     {
-      title: "FollowUps.",
+      title: "Threaded replies.",
       description:
-        "Triage comments and turn them into actionable tasks, ensuring nothing slips through the cracks.",
+        "Continue focused discussions beneath a message without interrupting the main channel.",
       layout: "half",
       glow: { color: "blue", corner: "bottom-left" },
-      media: { type: "video", src: "/chat/syncup-huddle.mp4", alt: "A comment being turned into a task" },
+      media: { type: "video", src: "/chat/syncup-huddle.mp4", alt: "A focused project discussion in Hashboard Chat" },
     },
     {
-      title: "Sync Threads to Tasks.",
-      description: "Keep all of your conversations in sync across tasks and Chat.",
+      title: "Pinned messages.",
+      description: "Keep decisions, instructions, and important updates easy to revisit.",
       layout: "third",
       glow: { color: "pink", corner: "top-left" },
       media: { type: "image", src: "/chat/bento-4.png", alt: "A thread kept in sync with its task" },
     },
     {
-      title: "Relationships and references.",
+      title: "Searchable conversations.",
       description:
-        "Get the complete picture across all your work right where the action is.",
+        "Find previous decisions and updates across conversations you can access.",
       layout: "third",
       media: { type: "image", src: "/chat/bento-5.png", alt: "Related work referenced from a chat" },
     },
     {
-      title: "Organize Chats into Spaces.",
+      title: "Company and project channels.",
       description:
-        "Structure conversations by project or client, the way your agency actually works.",
+        "Separate organization-wide communication from discussions tied to individual projects.",
       layout: "third",
       glow: { color: "blue", corner: "top-right" },
       media: { type: "image", src: "/chat/bento-6.png", alt: "Chats organized into spaces alongside work" },
@@ -182,13 +182,13 @@ export const bento = {
 };
 
 export const importBanner = {
-  title: "Ready to switch?",
-  body: "Import your channels, message history, team members and custom emojis in one click.",
-  cta: { label: "Import from Slack", href: "/signup" },
+  title: "Ready to bring conversations closer to the work?",
+  body: "Create company and project channels, add the right members, and start communicating inside Hashboard.",
+  cta: { label: "Create your first channel", href: "/signup" },
   // Slack mark → toggle → ClickUp mark lockup, at its natural size
   image: {
     src: "/chat/slack-import.svg",
-    alt: "Slack switching over to Hashboard Chat",
+    alt: "Decorative communication setup artwork",
     width: 254,
     height: 78,
   },
@@ -200,12 +200,12 @@ export const importBanner = {
  */
 export const coreFeatures = {
   eyebrow: "Core features",
-  title: "Everything your agency needs from Chat",
+  title: "Everything teams need for focused communication",
   items: [
     { label: "Team Chat", mockup: "chatsChannels" },
     { label: "Project Chats", mockup: "customSidebar" },
-    { label: "Client Chat", mockup: "clientChat" },
-    { label: "Direct Messages", mockup: "directMessages" },
+    { label: "Channel Membership", mockup: "clientChat" },
+    { label: "Reactions", mockup: "directMessages" },
     { label: "File Sharing", mockup: "fileSharing" },
     { label: "Mentions", mockup: "activityFeed" },
     { label: "Threaded Replies", mockup: "threads" },
@@ -217,12 +217,12 @@ export const coreFeatures = {
 
 export const aiSection = {
   eyebrow: "Hash AI",
-  title: "Hash AI that knows your whole agency — not just this chat",
+  title: "Keep communication close to execution",
   features: [
     {
-      title: "Ask AI.",
+      title: "Task activity in Chat.",
       description:
-        "Ask “What did the client approve?” or “What’s blocking this project?” — get answers pulled from across your agency, not just this chat.",
+        "Share supported task activity in the relevant project channel and keep the team informed about new work.",
       image: {
         src: "/chat/ai-2.svg",
         alt: "Launch, GitHub, Google Drive, campaigns, and more",
@@ -231,14 +231,14 @@ export const aiSection = {
       },
     },
     {
-      title: "AI Task Creation.",
-      description: "Action items from any conversation automatically created, assigned, and linked to the right project.",
+      title: "Hash AI workspace actions.",
+      description: "Use Hash AI to find accessible tasks, review project information, and create or update permitted workspace tasks.",
       image: { src: "/chat/ai-3.svg", alt: "Create task", width: 340, height: 238 },
     },
     {
-      title: "AI CatchUp.",
+      title: "Permission-aware answers.",
       description:
-        "“Summarize today’s updates.” Catch up on any project or client thread in seconds.",
+        "Get answers from workspace information you are authorized to access without claiming that AI reads every conversation.",
       image: { src: "/chat/ai-1.svg", alt: "Catch me up", width: 340, height: 238 },
     },
   ],
@@ -251,17 +251,17 @@ export const aiSection = {
  * loose over the section.
  */
 export const voiceVideo = {
-  eyebrow: "Voice and Video Calls",
-  title: "One-click calls with automatic summaries and action items",
+  eyebrow: "Workspace communication",
+  title: "Discuss work with the people who have access",
   app: {
     src: "/chat/chat-preview.png",
-    alt: "A meeting summary doc with AI-generated action items",
+    alt: "A Hashboard workspace conversation",
     width: 2160,
     height: 1216,
   },
   call: {
     src: "/chat/one-click-absolute_2.avif",
-    alt: "A team on a video call with recording in progress",
+    alt: "Team members collaborating in a workspace",
     width: 1547,
     height: 1199,
   },
@@ -269,12 +269,12 @@ export const voiceVideo = {
 
 /** `icon` names a line-art glyph in chat-mobile-icons.jsx. */
 export const mobile = {
-  eyebrow: "Mobile",
-  title: "World-class performance that works wherever you work",
+  eyebrow: "Built around your workspace",
+  title: "Communication with access and notification controls",
   stats: [
-    { icon: "speed", label: "10x faster with Instant Load Framework™" },
-    { icon: "gauge", label: "99.9% guaranteed reliability" },
-    { icon: "offline", label: "Offline mode for seamless syncing" },
+    { icon: "speed", label: "Access-aware company and project channels" },
+    { icon: "gauge", label: "Real-time messages and conversation updates" },
+    { icon: "offline", label: "Per-channel notification preferences" },
   ],
   image: {
     src: "/chat/mobile-v5.avif",
@@ -287,9 +287,9 @@ export const mobile = {
 /** `strike` renders struck through — "on the planet" crossed out for "in the universe". */
 export const closingCta = {
   title: {
-    lead: "The most powerful productivity platform",
-    strike: "on the planet",
-    tail: "in the universe.",
+    lead: "Keep conversations",
+    strike: "scattered",
+    tail: "connected to the work.",
   },
   cta: { label: "Try Hashboard Chat", href: "/signup" },
   image: {
@@ -304,9 +304,9 @@ export const testimonials = [
   {
     type: "quote",
     quote:
-      "Times have changed. The way we work hasn't - and it's about time it did.",
-    author: "Zeb Evans",
-    role: "CEO",
+      "Organize company and project communication without separating conversations from the workspace.",
+    author: "Connected communication",
+    role: "Built into Hashboard",
     link: { label: "Read more", href: "#" },
     // Drop a portrait in here to replace the lit-stage gradient backdrop.
     // Wants a wide, dark, low-contrast shot — the copy sits on top of it.
@@ -316,15 +316,15 @@ export const testimonials = [
     type: "press",
     logo: {
       src: "/chat/venture-beat.png",
-      alt: "VentureBeat",
+      alt: "Hashboard",
       width: 358,
       height: 47,
     },
     headline:
-      "Hashboard takes on Slack and Teams with its AI-powered ‘everything’ app",
+      "Threads, files, mentions, reactions, search, pins, bookmarks, and notification controls in one workspace",
     link: { label: "Read more", href: "#" },
   },
 ];
 
 export const disclaimer =
-  "*Hashboard Chat is free for now. Certain restrictions may apply later.";
+  "Chat availability and usage limits may vary by workspace and subscription.";

@@ -144,7 +144,7 @@ export function IntelligenceVisual() {
   return (
     <div className="b2-int-visual" role="presentation" aria-hidden="true">
       <div className="b2-int-menu">
-        <p className="b2-int-heading">Best models</p>
+        <p className="b2-int-heading">Choose a model</p>
         <div className="b2-int-list">
           <span className="b2-int-selection">
             <Svg markup={CHECK} />
@@ -191,7 +191,7 @@ function MemoryVisual() {
       <div className="b2-mem-cardwrap">
         <div className="b2-mem-card">
           <div className="b2-mem-row">
-            <span className="b2-mem-badge">Memory Updated</span>
+            <span className="b2-mem-badge">Task Summary Ready</span>
             <img
               className="b2-mem-brain"
               src="/brain-2/brain.svg"
@@ -323,7 +323,7 @@ function AmbientVisual() {
       <div className="b2-am-pill">
         <div className="b2-am-pill-glow" />
         <Svg markup={AMBIENT_SPINNER} className="b2-am-pill-icon" />
-        <span className="b2-am-pill-label">Gathering Data</span>
+        <span className="b2-am-pill-label">Checking Workspace</span>
         <span className="b2-am-brain">
           <img src="/brain-2/brain.svg" width="30" height="30" alt="" />
         </span>
@@ -400,44 +400,44 @@ function DeepSearchVisual() {
 const whatsNew = [
   {
     id: "memory-preferences",
-    label: "Memory & Preferences",
+    label: "Task Summaries",
     description:
-      "Hash AI keeps track of how you like to work, and gets smarter every time you use the workspace.",
+      "Turn open tasks, priorities, and deadlines into a clear summary of what needs your attention.",
     Visual: MemoryVisual,
   },
   {
     id: "every-model",
-    label: "Every AI, Unlimited",
+    label: "Multiple AI Models",
     description:
-      "GPT, Claude Opus, Gemini, and more. Every model runs with full knowledge of your work.",
+      "Choose from the AI models configured for your workspace while staying in control of the selection.",
     Visual: EveryModelVisual,
   },
   {
     id: "super-agents",
-    label: "Multiplayer AI",
+    label: "Team Insights",
     description:
-      "The more your team uses Hash AI, the more it knows, the more useful it gets for everyone.",
+      "Review workloads, project progress, and overdue work using information you are permitted to access.",
     Visual: SuperAgentsVisual,
   },
   {
     id: "connected-apps",
-    label: "Connected Apps & Any MCP",
+    label: "Connect Through MCP",
     description:
-      "Hash AI taps Google Drive, GitHub, Salesforce, and more to get you answers and insights.",
+      "Connect compatible AI clients such as ChatGPT and Claude to your Hashboard workspace through MCP.",
     Visual: ConnectedAppsVisual,
   },
   {
     id: "ambient-intelligence",
-    label: "Ambient Intelligence",
+    label: "Smart Recommendations",
     description:
-      "Hash AI surfaces relevant context, related tasks, and smart suggestions before you even ask.",
+      "Get practical suggestions for deadlines, task assignment, and next steps using current workspace information.",
     Visual: AmbientVisual,
   },
   {
     id: "deep-search",
-    label: "Deep Search",
+    label: "Workspace Search",
     description:
-      "Ask something complex. Hash AI checks your workspace, apps, and the web for answers.",
+      "Ask naturally about tasks, projects, people, clients, meetings, invoices, and more.",
     Visual: DeepSearchVisual,
   },
 ];
@@ -445,23 +445,23 @@ const whatsNew = [
 const cards = [
   {
     id: "context",
-    label: "Context",
+    label: "Workspace Context",
     description:
-      "Hash AI sees your tasks, docs, and conversations. It doesn't need a brief because it knows what's happening in real-time.",
+      "Get answers grounded in your current tasks, projects, people, and other permitted workspace data.",
     Visual: ContextVisual,
   },
   {
     id: "intelligence",
-    label: "Intelligence",
+    label: "Choose Your AI",
     description:
-      "Hash AI picks the best AI model for each job. One subscription. Every frontier model running with full context.",
+      "Use the AI model you prefer from the models available in your workspace. You stay in control.",
     Visual: IntelligenceVisual,
   },
   {
     id: "personality",
-    label: "Personality",
+    label: "Built for Action",
     description:
-      "Hash AI learns how you and your team talk: your tone, your shorthand, your preferences.",
+      "Create and update tasks, review workloads, check progress, and handle everyday work through conversation.",
     Visual: PersonalityVisual,
   },
 ];
@@ -493,9 +493,9 @@ export function BrainWhatsNewSection() {
     <div className="b2-pillars-band">
       <header className="b2-pillars-header">
         <h3 className="b2-pillars-title">
-          Nothing comes close to Hash AI
+          More than answers. Work gets done.
         </h3>
-        <p className="b2-pillars-sub">We rebuilt Hash AI from the ground up.</p>
+        <p className="b2-pillars-sub">Hash AI brings assistance and action together inside Hashboard.</p>
       </header>
       <BrainWhatsNewGrid />
     </div>
@@ -513,10 +513,10 @@ export default function Brain2Section() {
               <HashAiLockup className="b2-brain-logo" />
             </div>
             <h2 className="b2-title" id="brain2-title">
-              The best AI is <i>your</i> AI
+              Your work. One intelligent assistant.
             </h2>
             <p className="b2-subtitle">
-              Already plugged into your team, your tools, and your tasks.
+              Ask questions, find what matters, and take action across your Hashboard workspace.
             </p>
             
           </header>
@@ -591,10 +591,10 @@ export default function Brain2Section() {
           </div>
           <div className="b2-closing-topfade" aria-hidden="true" />
           <div className="b2-closing-inner">
-            <h3 className="b2-closing-title">The only AI that actually knows your work</h3>
+            <h3 className="b2-closing-title">AI assistance grounded in your workspace</h3>
             <div className="b2-closing-ctas">
               <a className="b2-closing-primary" href="/signup">
-                Get Started with Brain
+                Get started with Hash AI
               </a>
               <a className="b2-closing-learn" href="/ai">
                 Learn more

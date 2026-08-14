@@ -1,12 +1,12 @@
 export default function Headline() {
   return (
-    <section className="bn-headline" aria-label="The best AI is your AI">
+    <section className="bn-headline" aria-label="Workspace AI that works with your data">
       <div className="bn-headline-inner">
         <img className="bn-headline-brain" src="/hashai.svg" width="90" height="90" alt="" />
         <h2 className="bn-headline-title">
-          The best AI is
+          Workspace AI that
           <br />
-          <em>your</em> AI
+          works with your data
         </h2>
         <a href="/signup" className="bn-btn bn-btn-light">
           Get started

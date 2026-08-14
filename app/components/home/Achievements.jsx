@@ -61,9 +61,9 @@ function BadgeRow({ badges, duration, reverse }) {
       <div className="ach-marquee-track" style={{ "--row-duration": duration }}>
         {[0, 1].map((g) => (
           <div className="ach-marquee-group" key={g}>
-            {group.map(([src, alt], i) => (
+            {group.map(([src], i) => (
               <div className="ach-badge" key={`${g}-${i}`} aria-hidden="true">
-                <img src={src} width="82" height="94" alt={alt} loading="lazy" />
+                <img src={src} width="82" height="94" alt="" loading="lazy" />
               </div>
             ))}
           </div>
@@ -83,13 +83,13 @@ export default function Achievements() {
 
         <div className="ach-content">
           <div className="ach-title">
-            <div className="ach-label">Rated 4.7/5 by 10,000+ users on G2</div>
-            <h2>#1 most referenced company on G2 reports</h2>
+            <div className="ach-label">Connected work, without the scattered context</div>
+            <h2>Core business workflows in one workspace</h2>
           </div>
           <div className="ach-secondary">
             <div>
               <Link href="/customers" className="ach-button">
-                Read customer stories
+                Explore Hashboard
               </Link>
             </div>
           </div>
@@ -99,7 +99,7 @@ export default function Achievements() {
         <div className="ach-media-wrap">
           <div className="ach-media">
             <div className="ach-vignette">
-              <div className="ach-marquee" role="img" aria-label="Collection of G2 award badges">
+              <div className="ach-marquee" role="img" aria-label="Product capability artwork">
                 {rows.map((row, i) => (
                   <BadgeRow key={i} {...row} />
                 ))}
@@ -110,24 +110,24 @@ export default function Achievements() {
         </div>
       </div>
 
-      {/* Fortune 500 */}
+      {/* Product scale */}
       <div className="ach-box ach-box-media-first ach-box-flush">
         <div className="ach-center-line" />
         <Arcs />
 
         <div className="ach-content">
           <div className="ach-title">
-            <div className="ach-label">Convergence powerhouse</div>
-            <h2>Powering businesses of all sizes</h2>
+            <div className="ach-label">Built for modern teams</div>
+            <h2>One workspace for every stage of growth</h2>
           </div>
           <dl className="ach-stats">
             <div className="ach-stat">
-              <dt>85%</dt>
-              <dd>of Fortune 500 companies</dd>
+              <dt>10+</dt>
+              <dd>business workflows brought together</dd>
             </div>
             <div className="ach-stat">
-              <dt>3M+</dt>
-              <dd>tasks automated by Agents</dd>
+              <dt>4+</dt>
+              <dd>AI providers supported in one experience</dd>
             </div>
           </dl>
           <Corners />

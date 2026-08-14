@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "A separate app just to start a video call",
-    "Notes taken by hand, or not taken at all",
-    "Action items forgotten the moment the call ends",
-    "No record of what was actually decided",
+    "Meeting details spread across calendars and messages",
+    "Hosts and attendees updated through separate tools",
+    "Rescheduling creates avoidable coordination work",
+    "Customer and project context is easy to lose",
   ],
   with: [
-    "Start a call from the same place you plan the work",
-    "AI notes and a summary land automatically after every call",
-    "Action items become real tasks, assigned before you hang up",
-    "Every decision stays linked to the project it belongs to",
+    "Create internal meetings from the Hashboard workspace",
+    "Use Google Meet, Zoom, or a calendar event without video",
+    "Add attendees, delegate hosts, reschedule, or cancel",
+    "Keep supported space, client, lead, and booking-page context",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "One-Click Video",
-    title: "Start a call without leaving your workspace",
-    body: "Launch a meeting straight from a task, doc, or channel—no separate video app, no extra login.",
+    eyebrow: "Internal Meetings",
+    title: "Create meetings from your workspace",
+    body: "Set the title, description, start and end time, timezone, attendees, and optional workspace context for an internal meeting.",
     image: "/chat/bento-1.png",
-    alt: "One-click video call in Hashboard Meetings",
+    alt: "Internal meeting details in Hashboard",
   },
   {
-    eyebrow: "AI Notes",
-    title: "Notes and summaries, written for you",
-    body: "Hashboard Brain transcribes the call, writes a clean summary, and highlights the decisions that were made.",
+    eyebrow: "Meeting Providers",
+    title: "Use the meeting provider your team has connected",
+    body: "Create supported meetings with Google Meet or Zoom, or schedule the calendar event without a video provider when appropriate.",
     image: "/chat/bento-2.png",
     alt: "AI meeting notes in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Action Items",
-    title: "Leave with tasks already assigned",
-    body: "Action items called out during the meeting become real tasks with owners and due dates before the call even ends.",
+    eyebrow: "Meeting Management",
+    title: "Keep changes under control",
+    body: "Authorized users can update details, add or remove internal attendees, delegate the host, reschedule the meeting, or cancel it.",
     image: "/chat/bento-3.png",
     alt: "Meeting action items in Hashboard",
   },
 ];
 
 const meetingsFeatures = [
-  [Video, "One-Click Video", "Start a call from any task, doc, or channel instantly."],
-  [ClipboardList, "Auto Agendas", "Build an agenda from linked tasks before the call starts."],
-  [MessageSquareText, "AI Notetaking", "Get a transcript and summary without typing a word."],
-  [ListChecks, "Action Items", "Turn call decisions into assigned tasks automatically."],
-  [Clapperboard, "Recording & Clips", "Record full calls or share short clips of key moments."],
-  [BarChart3, "Meeting Analytics", "See how much time your team spends in meetings each week."],
+  [Video, "Google Meet and Zoom", "Use a supported provider connected by the meeting owner."],
+  [ClipboardList, "Meeting details", "Store a title, description, time window, and timezone."],
+  [MessageSquareText, "Internal attendees", "Add permitted teammates as meeting attendees."],
+  [ListChecks, "Host delegation", "Transfer meeting responsibility when the user’s role allows it."],
+  [Clapperboard, "Reschedule and cancel", "Manage booking status and calendar updates from Hashboard."],
+  [BarChart3, "Connected context", "Associate supported meetings with spaces, clients, leads, or booking pages."],
 ];
 
 const platform = [
   [Video, "Meetings", "Video calls that create tasks"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Clients", "Keep customer context"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Zoom", "Use a connected provider"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leads", "Keep prospect context"],
+  [CalendarDays, "Calendar", "See scheduled meetings"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Attendance", "Record working days"],
+  [Clapperboard, "Expenses", "Record business expenses"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function MeetingsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD MEETINGS</p>
-          <h1>Meetings that turn into action, automatically</h1>
+          <h1>Schedule and manage meetings with the right context</h1>
           <p className="task-hero-lede">
-            Start a call in one click, get notes and action items without lifting a finger, and leave every meeting with tasks already assigned.
+            Create internal meetings, use a connected provider, manage attendees and hosts, and keep scheduling changes in one workspace.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Meetings, attendees, calendars, and workspace context connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Meetings needs, in one place</h2>
+          <h2>Plan and manage meetings in one place</h2>
           <p>
-            Hashboard Meetings keeps everything connected, so nothing falls through the cracks.
+            Coordinate provider-backed meetings and calendar events while respecting company roles and attendee access.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Meetings, handled automatically.</h2>
-          <p>Join 3M+ teams who run meetings without the busywork. Start your 7-day free trial.</p>
+          <h2>Meeting logistics, connected.</h2>
+          <p>Create, update, reschedule, cancel, and delegate supported meetings without losing their workspace context.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Smart Meeting Notes", "Auto-generated summaries and transcripts", "Every call gets a searchable transcript and a clean summary, so anyone who missed it can catch up in a minute.", "/chat/meeting-summary.png"],
-    ["Hashboard Brain", "Ask AI what was decided in any call", "Ask Brain to recap last week’s client call or list every action item assigned to a teammate—get an instant answer.", "/chat/ai-poster.png"],
+    ["Calendar Context", "Keep the scheduled details accessible", "Review supported booking details such as the host, attendees, timing, status, provider, and connected business context.", "/chat/meeting-summary.png"],
+    ["Permission-aware Management", "Make changes within your role", "Hosts, admins, and managers can perform supported updates while employee visibility remains limited to meetings they host or attend.", "/chat/ai-poster.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Meetings</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected meeting context</p>
+          <h2>See the details.<br />Manage the next step.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Meetings is just the beginning</h2>
-            <p>Meetings connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Meetings connect to everyday operations</h2>
+            <p>Keep meetings alongside scheduling, spaces, clients, leads, projects, tasks, chat, people, and business workflows.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function MeetingsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Scheduling", text: "Scheduling" },
+    { name: "Calendar", text: "Calendar" },
+    { name: "Spaces", text: "Spaces" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "Clients", text: "Clients" },
+    { name: "Leads", text: "Leads" },
+    { name: "People", text: "People" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function MeetingsFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

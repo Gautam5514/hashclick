@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Scheduling free to use?",
-    "Yes! Hashboard Scheduling is available on the Free Forever plan with unlimited booking pages."
+    "Who can configure booking pages?",
+    "Company admins can create, update, activate, deactivate, and delete tenant-scoped booking page configurations."
   ],
   [
     "How does Hashboard Scheduling work?",
-    "Share your booking link — invitees pick an open slot based on your live availability, and a confirmed meeting is created instantly on both calendars."
+    "A public page loads its configured content and fields. Availability is checked for the selected range, and a valid submission creates a booking and supported calendar or provider event."
   ],
   [
     "Does Scheduling connect to the rest of Hashboard?",
-    "Yes! Scheduling stays linked to Calendar and Meetings, so your data never lives in a separate tool."
+    "Yes. Booking pages create bookings that retain host, provider, calendar, lead, client, space, and form context where applicable."
   ],
   [
-    "Can I customize Scheduling for my team?",
-    "Yes, set buffers, daily limits, and minimum notice so bookings never overwhelm your schedule."
+    "What can be customized on a booking page?",
+    "The configuration supports tenant branding, sidebar content, discussion points, form fields, an internal host, meeting provider, active state, and optional webhook settings."
   ],
   [
-    "Does Hashboard Brain help with Scheduling?",
-    "Yes! Hashboard Brain can find the best open slot across every calendar and send the booking link for you."
+    "Which meeting providers are available?",
+    "A booking page can use Google Meet, Zoom, or no video provider. The chosen host must have the connections required by that configuration."
   ],
 ];
 

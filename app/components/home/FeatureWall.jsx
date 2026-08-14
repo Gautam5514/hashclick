@@ -50,76 +50,76 @@ import { Container } from "../ui/Container";
 import { cn } from "@/lib/utils";
 
 const topRowItems = [
-  { name: "Dependencies", icon: GitBranch },
-  { name: "Connected Search", icon: Search },
+  { name: "Spaces", icon: GitBranch },
+  { name: "Workspace Search", icon: Search },
   { name: "Tasks", icon: CheckSquare },
-  { name: "Mind Maps", icon: Network },
-  { name: "Wikis", icon: BookOpen },
-  { name: "AI Notetaker", icon: NotebookPen },
+  { name: "Subtasks", icon: Network },
+  { name: "Files", icon: BookOpen },
+  { name: "Hash AI", icon: NotebookPen },
   { name: "Calendar", icon: CalendarDays },
-  { name: "Proofing", icon: Stamp },
-  { name: "Portfolios", icon: Briefcase },
-  { name: "Templates", icon: LayoutTemplate },
+  { name: "Attendance", icon: Stamp },
+  { name: "Clients", icon: Briefcase },
+  { name: "Project Templates", icon: LayoutTemplate },
 ];
 
 const sideRowItemsLeft = [
-  { name: "Reminders", icon: BellRing },
-  { name: "Reporting", icon: BarChart3 },
-  { name: "Goals", icon: Target },
+  { name: "Notifications", icon: BellRing },
+  { name: "Workspace Insights", icon: BarChart3 },
+  { name: "Projects", icon: Target },
 ];
 
 const sideRowItemsRight = [
-  { name: "Sprints", icon: Gauge },
-  { name: "Custom Status", icon: CircleDot },
-  { name: "AI Writer", icon: PenLine },
+  { name: "Workload", icon: Gauge },
+  { name: "Task Statuses", icon: CircleDot },
+  { name: "AI Summaries", icon: PenLine },
 ];
 
 const midRowItemsLeft = [
-  { name: "API Calls", icon: Code2 },
-  { name: "Milestones", icon: Flag },
-  { name: "Forms", icon: ClipboardList },
+  { name: "MCP Access", icon: Code2 },
+  { name: "Project Status", icon: Flag },
+  { name: "Leave Requests", icon: ClipboardList },
 ];
 
 const midRowItemsRight = [
-  { name: "Automations", icon: Workflow },
-  { name: "Custom Fields", icon: ListPlus },
-  { name: "Timesheets", icon: Timer },
+  { name: "Task Actions", icon: Workflow },
+  { name: "Task Priorities", icon: ListPlus },
+  { name: "Payroll", icon: Timer },
 ];
 
 const lowerRowItemsLeft = [
   { name: "AI Q&A", icon: MessagesSquare },
   { name: "Priorities", icon: ArrowUpNarrowWide },
-  { name: "Time Estimates", icon: Hourglass },
+  { name: "Due Dates", icon: Hourglass },
 ];
 
 const lowerRowItemsRight = [
-  { name: "Clips", icon: Video },
-  { name: "Everything view", icon: Eye },
-  { name: "Single Sign-on", icon: KeyRound },
+  { name: "Meetings", icon: Video },
+  { name: "Role-based Views", icon: Eye },
+  { name: "Secure Access", icon: KeyRound },
 ];
 
 const extraRowItemsLeft = [
-  { name: "Emails", icon: Mail },
-  { name: "Dashboards", icon: LayoutDashboard },
-  { name: "Tracking", icon: Timer },
+  { name: "Chat Mentions", icon: Mail },
+  { name: "Project Overview", icon: LayoutDashboard },
+  { name: "Attendance Tracking", icon: Timer },
 ];
 
 const extraRowItemsRight = [
-  { name: "Kanban Boards", icon: Columns3 },
-  { name: "Integrations", icon: Plug },
-  { name: "Guests", icon: UserPlus },
+  { name: "Task Boards", icon: Columns3 },
+  { name: "AI Providers", icon: Plug },
+  { name: "Team Members", icon: UserPlus },
 ];
 
 const bottomRowItems = [
-  { name: "Tags", icon: Tags },
-  { name: "24/7 Support", icon: Headphones },
-  { name: "Checklists", icon: ListChecks },
+  { name: "Task Priority", icon: Tags },
+  { name: "People", icon: Headphones },
+  { name: "Subtasks", icon: ListChecks },
   { name: "Scheduling", icon: CalendarClock },
-  { name: "Spreadsheets", icon: Table2 },
+  { name: "Invoices", icon: Table2 },
   { name: "Billing", icon: ReceiptText},
-  { name: "Gantt Charts", icon: GanttChartSquare },
-  { name: "Roadmaps", icon: Map },
-  { name: "Inbox", icon: Inbox },
+  { name: "Project Progress", icon: GanttChartSquare },
+  { name: "Spaces", icon: Map },
+  { name: "Chat", icon: Inbox },
   { name: "Teams", icon: Users },
 ];
 
@@ -155,11 +155,11 @@ export default function FeatureWall() {
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center mb-12 md:mb-16">
           <h2 className="font-display text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[1.04] font-bold tracking-[-0.04em] text-[#202020]">
-            Your entire agency,  <br className="hidden sm:inline" />
-             connected in <span className="text-[#646464]">HashBoard</span>
+            Your entire business,  <br className="hidden sm:inline" />
+             connected in <span className="text-[#646464]">Hashboard</span>
           </h2>
           <p className="mt-4 text-[16px] font-medium text-[#7b7b7b]">
-          HashBoard brings your entire agency operation into one connected platform, powered by Hash AI.
+          Bring projects, tasks, people, clients, communication, and daily operations into one connected workspace.
           </p>
         </div>
 

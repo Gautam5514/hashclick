@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Every team invents its own folder structure",
-    "No consistent place to find a given project’s work",
-    "Permissions are all-or-nothing across the whole account",
-    "New teams start from a blank page every time",
+    "Projects are difficult to group by team or function",
+    "Membership is managed separately from the work",
+    "People see work that is not relevant to their role",
+    "Project conversations lose their team context",
   ],
   with: [
-    "A consistent Space → Folder → List hierarchy for every team",
-    "Anyone can find the right project in a couple of clicks",
-    "Granular permissions down to the Space and List level",
-    "Space templates get new teams running in minutes",
+    "A dedicated space for each team or area of work",
+    "Projects grouped under the space where they belong",
+    "Manager, Member, and Viewer space roles",
+    "Space membership reflected in related project channels",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Nested Hierarchy",
-    title: "A home for every team and project",
-    body: "Organize work into Spaces, Folders, and Lists so every department has structure without stepping on anyone else’s.",
+    eyebrow: "Team Structure",
+    title: "Give related projects a shared home",
+    body: "Create a space with a name, description, icon, and members, then organize the team’s projects inside it.",
     image: "/kanban/kanban-feature-1.png",
     alt: "Nested Space hierarchy in Hashboard",
   },
   {
-    eyebrow: "Granular Permissions",
-    title: "Control access down to the List",
-    body: "Decide exactly who can view, edit, or manage each Space—public to the company, private to a team, or shared with guests.",
+    eyebrow: "Space Roles",
+    title: "Match access to each person’s responsibility",
+    body: "Assign Manager, Member, or Viewer roles. Non-admin users see the spaces they belong to, while company admins can manage spaces across the organization.",
     image: "/kanban/kanban-feature-2.png",
     alt: "Space permissions in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Space Templates",
-    title: "Stand up a new team in minutes",
-    body: "Launch a new Space from a template with statuses, views, and fields already configured, so nobody starts from zero.",
+    eyebrow: "Project Templates",
+    title: "Reuse project structure within a space",
+    body: "Create project templates with predefined tasks, priorities, order, subtasks, and due-date offsets, then use them for repeatable work.",
     image: "/kanban/kanban-feature-3.png",
     alt: "Space templates in Hashboard",
   },
 ];
 
 const spacesFeatures = [
-  [Boxes, "Nested Hierarchy", "Structure work into Spaces, Folders, and Lists that mirror your org."],
-  [ShieldCheck, "Granular Permissions", "Control exactly who can see or edit each Space and List."],
-  [LayoutGrid, "Space Templates", "Launch new teams from ready-made Space templates."],
-  [Search, "Cross-Space Search", "Find any task, doc, or file across every Space you access."],
-  [UserPlus, "Guest Access", "Bring clients or contractors into a single Space securely."],
-  [BarChart3, "Space Dashboards", "Roll up progress across every project inside a Space."],
+  [Boxes, "Space organization", "Group related projects around a team or business function."],
+  [ShieldCheck, "Role-aware access", "Use Manager, Member, and Viewer roles inside each space."],
+  [LayoutGrid, "Project templates", "Reuse task structures for recurring project types."],
+  [Search, "Accessible space list", "Let members find the spaces their role allows them to access."],
+  [UserPlus, "Member management", "Add company users to a space and update their space role."],
+  [BarChart3, "Connected projects", "Keep project membership, tasks, and progress under the right space."],
 ];
 
 const platform = [
   [Boxes, "Spaces", "Organize every team"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Payroll", "Prepare payroll periods"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate team delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Attendance", "Record working days"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leave", "Request and approve time off"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer records"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function SpacesHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD SPACES</p>
-          <h1>Organize every team without the chaos</h1>
+          <h1>Organize teams, access, and projects in Spaces</h1>
           <p className="task-hero-lede">
-            Spaces give every team, department, or client its own home—with the hierarchy, permissions, and templates to keep hundreds of projects from turning into a mess.
+            Give each team or function a dedicated space, add the right members, assign clear roles, and keep related projects together.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Spaces, roles, projects, and project channels kept together</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Spaces needs, in one place</h2>
+          <h2>A clear structure for every team</h2>
           <p>
-            Hashboard Spaces keeps everything connected, so nothing falls through the cracks.
+            Spaces connect membership and permissions to the projects and conversations that belong to each team.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Spaces, handled automatically.</h2>
-          <p>Join 3M+ teams who run spaces without the busywork. Start your 7-day free trial.</p>
+          <h2>Structure that stays connected to the work.</h2>
+          <p>Keep team membership, project access, templates, and related channels aligned from one space.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Enterprise Search", "Search across every Space at once", "Hashboard Brain searches tasks, docs, and files across every Space you have access to, so you never have to remember which team owns what.", "/kanban/ai-kanban-1.png"],
-    ["Hashboard Brain", "Ask AI where work actually lives", "Ask Brain which Space owns a given client or initiative, and get pointed straight to the right Folder and List.", "/kanban/ai-kanban-2.png"],
+    ["Hash AI", "List the spaces you can access", "Ask for available spaces and use that context to understand where projects and team work are organized.", "/kanban/ai-kanban-1.png"],
+    ["Project Context", "Find projects within their space", "Use permission-aware project and space information when asking about current work, ownership, status, or priorities.", "/kanban/ai-kanban-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Organization</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">AI-assisted organization</p>
+          <h2>Ask with the right<br />workspace context.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Spaces is just the beginning</h2>
-            <p>Spaces connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Spaces connect the rest of your work</h2>
+            <p>Bring projects, tasks, chat, people, attendance, leave, meetings, clients, invoices, expenses, and AI assistance into one organized workspace.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function SpacesFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Spaces", text: "Spaces" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "People", text: "People" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "Leave", text: "Leave" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Clients", text: "Clients" },
+    { name: "Invoices", text: "Invoices" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function SpacesFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

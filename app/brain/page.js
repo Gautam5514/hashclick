@@ -13,9 +13,9 @@ import Faq from "../components/brain/Faq";
 import MemoryImport from "../components/brain/MemoryImport";
 
 export const metadata = {
-  title: "Hash AI — The best AI is your AI",
+  title: "Hash AI — Workspace answers and actions",
   description:
-    "Multiplayer AI with your context. Every model, one subscription, and a self-updating company Hash AI.",
+    "Ask questions about permitted workspace data, choose an available AI model, and take supported actions across Hashboard.",
 };
 
 export default function BrainPage() {

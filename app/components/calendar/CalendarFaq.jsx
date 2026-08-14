@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Calendar free to use?",
-    "Yes! Hashboard Calendar is available on the Free Forever plan with unlimited calendar views, Google Calendar sync, and drag-and-drop scheduling."
+    "Which external calendar does Hashboard support?",
+    "The implemented calendar connection uses Google Calendar. Hashboard reads supported primary-calendar events and creates or updates Google events for managed bookings."
   ],
   [
-    "Does Hashboard Calendar sync with Google Calendar and Outlook?",
-    "Yes! Hashboard offers 2-way real-time synchronization with Google Calendar and Outlook. Changes made in Hashboard update your external calendar instantly."
+    "What appears in the Hashboard calendar feed?",
+    "The event feed combines accessible Hashboard bookings with supported events from the connected Google Calendar for the requested time range."
   ],
   [
-    "Can I block time for tasks directly on the calendar?",
-    "Abolutely. You can drag and drop any task from your workspace directly onto your calendar grid to block focus time and set estimated durations."
+    "How does Hashboard check availability?",
+    "Availability considers active Hashboard bookings and busy intervals from the relevant connected Google Calendar before a slot is returned or accepted."
   ],
   [
-    "How does Hashboard Hash AI help with calendar management?",
-    "Hashboard Hash AI can find open meeting slots across team schedules, summarize daily agendas, draft meeting notes, and auto-schedule tasks based on priority."
+    "Which booking changes update Google Calendar?",
+    "Supported updates, rescheduling, cancellation, attendee changes, and host delegation patch or remove the connected event when the user has permission."
   ],
   [
-    "Can I view my team's availability in a single calendar?",
-    "Yes! You can overlay multiple team members' calendars side-by-side to compare schedules, check workload, and find available meeting times effortlessly."
+    "Who can see a meeting?",
+    "Employees are limited to meetings they host or attend. Admins and managers receive broader tenant-scoped visibility according to the booking rules."
   ]
 ];
 

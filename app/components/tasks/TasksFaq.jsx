@@ -4,11 +4,11 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const items = [
-  ["Is Hashboard Tasks really free?", "Yes. Hashboard Tasks is free forever with unlimited tasks and users. You can upgrade anytime if you need advanced features, but you can start organizing your work today with no credit card required."],
-  ["How is this different from a simple to-do app?", "Most to-do apps stop at checklists. Hashboard Tasks turns your to-dos into a complete system—connecting tasks to docs, chat, dashboards, and automation so work doesn’t just get tracked, it actually gets done."],
-  ["Will this work for personal tasks and team projects?", "Absolutely. Start with simple personal to-dos, then scale into shared projects, workflows, and cross-team collaboration—without changing tools or rebuilding your system."],
-  ["How long does it take to get set up?", "Most people are up and running in minutes. Create tasks instantly, organize as you go, and add structure only when you need it."],
-  ["What happens when my work gets more complex?", "Nothing breaks. Hashboard Tasks scales with you—from quick checklists to fully automated workflows—so you never outgrow your system."],
+  ["Is Hashboard Tasks included with Hashboard?", "Tasks are a core part of the Hashboard workspace. Available features and usage limits may depend on your selected subscription plan."],
+  ["How is this different from a simple to-do app?", "Hashboard connects work to projects, workspaces, priorities, deadlines, statuses, and team members so responsibilities remain clear."],
+  ["Can I manage personal and team tasks?", "Yes. Personal tasks manage your own action items, while project tasks coordinate shared work with assignees, priorities, deadlines, statuses, and subtasks."],
+  ["Can more than one person be assigned to a task?", "Yes. A project task can be assigned to one or multiple members of your organization."],
+  ["Can Hash AI help manage tasks?", "Yes. Hash AI can answer questions about accessible workspace data and help create or update tasks through conversation, subject to your permissions."],
 ];
 
 export default function TasksFaq() {

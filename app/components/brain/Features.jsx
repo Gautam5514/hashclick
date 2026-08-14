@@ -4,21 +4,21 @@ import { useEffect, useRef, useState } from "react";
 
 const features = [
   {
-    title: "Presentation-ready in one prompt",
-    body: "Real typography. Curated palettes. Hash AI builds your next all-hands, sprint review, or client pitch, and it's actually polished, so you can present in minutes, without touching a slide.",
+    title: "Clear task summaries on demand",
+    body: "Turn assigned tasks, priorities, deadlines, and overdue work into a focused summary of what needs attention.",
     image: "/brain-2/sticky-1.png",
     bg: "/brain-2/bg-1.png",
   },
   {
-    title: "Dashboards, pages, tools, prototypes",
-    em: "built before you ask",
-    body: "Hash AI sees your work and creates finished, shareable deliverables on the spot. Not suggestions. Not outlines. Working pages, real code, ready to use or share immediately.",
+    title: "Workspace answers",
+    em: "based on current data",
+    body: "Ask about accessible projects, tasks, people, clients, meetings, attendance, leave, invoices, and other supported workflows.",
     image: "/brain-2/sticky-2.png",
     bg: "/brain-2/bg-2.png",
   },
   {
-    title: "Your data, actually crunched",
-    body: "Ask for a chart of sprint velocity across 6 months, get a rendered image back. Parse 200 accounts from a CSV, cross-reference two task lists, export the result as a spreadsheet. Real answers, computed and visualized in real time.",
+    title: "Actions without leaving the conversation",
+    body: "Create tasks, update statuses and priorities, change deadlines, and manage assignments through supported Hash AI actions.",
     image: "/brain-2/sticky-3.png",
     bg: "/brain-2/bg-3.png",
   },

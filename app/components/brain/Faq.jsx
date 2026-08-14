@@ -5,31 +5,31 @@ import { useState } from "react";
 const faqs = [
   {
     q: "What makes Hashboard's Hash AI different from ChatGPT, Claude, or Gemini?",
-    a: "Those tools don't know your work. Hash AI lives inside your tasks, docs, chat, calendar, email, and connected apps. You never have to explain what you're working on, who's involved, or what's blocking you.",
+    a: "Hash AI works inside Hashboard with workspace information and actions the signed-in user is permitted to access. It also lets users choose from configured models rather than requiring separate product experiences.",
   },
   {
-    q: "Does Hashboard allow AI providers to train on my data?",
-    a: "Never. Your data is never used to train third-party AI models. Hashboard maintains SOC 2, ISO 27001, GDPR, and HIPAA compliance, enforces strict zero-retention policies with all AI subprocessors, and Hash AI only surfaces information you already have permission to access.",
+    q: "What workspace information can Hash AI access?",
+    a: "Hash AI uses supported Hashboard information within the authenticated company and the user's role scope. Available answers depend on permissions and the workflow being requested.",
   },
   {
-    q: "How much does Hashboard's Hash AI cost?",
-    a: "Hash AI starts at $9/user/month and includes unlimited access to Hash AI, premium models (ChatGPT, Claude, Gemini), and 1,500 AI Super Credits. Free plans can try Hash AI before committing. For teams that want the full AI stack (Notetaker, AI Fields, Automations, Super Agents), the Everything AI plan is $28/user/month.",
+    q: "Which AI models can I use?",
+    a: "Available models depend on which providers are configured for the workspace. Hashboard supports models from OpenAI, Anthropic, Google, and xAI in its current model catalog.",
   },
   {
-    q: "Are there usage limits or caps?",
-    a: "Hash AI conversations are unlimited on any paid plan and do not use AI Super Credits. Day-to-day conversations with Hash AI won't run out on you. AI Super Credits (1,500/month included) are used for advanced capabilities like Super Agents, AI Automations, and AI-powered fields.",
+    q: "Can Hash AI make changes in my workspace?",
+    a: "Yes, for supported actions such as creating tasks or updating status, priority, deadlines, and assignments. Actions remain subject to membership, role, and workspace validation.",
   },
   {
     q: "Can I choose which AI model Hash AI uses?",
-    a: "Yes. Hash AI lets you switch between leading models (Claude, GPT, Gemini, and more) with a single click. Every model gets full access to your Workspace context and tools. One subscription, every premium LLM, no separate accounts needed.",
+    a: "Yes. You can choose from the models available in your workspace. If a requested model is unavailable, Hashboard uses the configured default model.",
   },
   {
-    q: "Can my manager/admin see my Hash AI conversations?",
-    a: "No. Your conversations with Hash AI are private to you. Admins cannot view them.",
+    q: "Does Hash AI respect workspace permissions?",
+    a: "Yes. Workspace facts and actions are scoped by company, role, project membership, and the permissions enforced by each supported workflow.",
   },
   {
-    q: "Does Hashboard's Hash AI remember my preferences and past conversations?",
-    a: 'Yes. Hash AI has something called "persistent memory". This means Hash AI memorizes your role, workflows, and communication style. You can view, edit, or delete personal preferences anytime. Switching from ChatGPT or Claude? You can import your existing memories directly.',
+    q: "Can I connect another AI client to Hashboard?",
+    a: "Yes. Hashboard provides MCP access for compatible clients such as ChatGPT and Claude, using scoped authentication and supported Hashboard tools.",
   },
 ];
 

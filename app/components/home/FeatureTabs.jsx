@@ -3,126 +3,119 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./feature-tabs.css";
-import { REPLACES_LOGOS } from "./replaces-logos";
 
 const teams = [
   {
     tab: "Projects",
-    lead: "Deliver projects on time,",
-    highlight: "every time",
+    lead: "Turn plans into",
+    highlight: "completed work",
     description:
-      "Get your team, department, and company running smoothly with the industry's best project management solution.",
-    replaces: ["Monday", "Asana", "Smartsheet", "Wrike"],
+      "Organize projects, assign responsibilities, and keep delivery moving from one shared workspace.",
     points: [
-      "Manage complex projects at scale",
-      "Bring strategic initiatives to life",
-      "Detect and mitigate project risks",
+      "Organize work across spaces and projects",
+      "Keep owners, priorities, and deadlines clear",
+      "Track progress without chasing updates",
     ],
     agents: [
-      { img: "agent-001", text: "Intake Agent standardizes project kickoff" },
-      { img: "agent-002", text: "Assign Agent determines task owners" },
-      { img: "agent-003", text: "PM Agent tracks deliverables + timelines" },
-      { img: "agent-004", text: "Live Answers Agent keeps everyone informed" },
+      { img: "agent-001", text: "Create and assign project tasks" },
+      { img: "agent-002", text: "Summarize project progress" },
+      { img: "agent-003", text: "Find overdue and high-priority work" },
+      { img: "agent-004", text: "Update tasks through Hash AI" },
     ],
     href: "/solutions",
   },
   {
     tab: "Marketing",
-    lead: "Maximize marketing's",
-    highlight: "impact and results",
+    lead: "Keep every campaign",
+    highlight: "moving",
     description:
-      "Coordinate content, creative, and campaigns in a single workspace purpose-built for marketers.",
-    replaces: ["Monday", "Asana", "Notion", "Slack"],
+      "Plan campaigns, coordinate responsibilities, and track delivery from one shared workspace.",
     points: [
-      "Execute campaigns with velocity",
-      "Coordinate + run seamless events",
-      "Eliminate content + creative bottlenecks",
+      "Plan campaigns with projects and tasks",
+      "Keep owners, priorities, and deadlines clear",
+      "Track progress and identify overdue work",
     ],
     agents: [
-      { img: "agent-001", text: "Brief Agent creates campaign briefs" },
-      { img: "agent-005", text: "Content Agent drafts promo copy" },
-      { img: "agent-006", text: "Brand Agent applies guidelines" },
-      { img: "agent-002", text: "Live Intel Agent updates core docs" },
+      { img: "agent-001", text: "Create and assign campaign tasks" },
+      { img: "agent-005", text: "Summarize campaign progress" },
+      { img: "agent-006", text: "Review deadlines and team workload" },
+      { img: "agent-002", text: "Update tasks through Hash AI" },
     ],
     href: "/solutions",
   },
   {
     tab: "Product & Eng",
-    lead: "Ship faster,",
-    highlight: "more reliable software",
+    lead: "Build with clarity",
+    highlight: "from idea to release",
     description:
-      "Streamline the entire strategy + dev process in a single, connected workspace.",
-    replaces: ["Jira", "Slack", "Notion", "Trello"],
+      "Coordinate product and engineering work, manage priorities, and keep everyone aligned on delivery.",
     points: [
-      "Plan + execute the roadmap",
-      "Identify + resolve bugs",
-      "Integrate with AI coders",
+      "Plan features, fixes, and release work",
+      "Assign clear owners and priorities",
+      "Track progress across active projects",
     ],
     agents: [
-      { img: "agent-007", text: "PRD Agent creates docs from voice notes" },
-      { img: "agent-004", text: "Triage Agent prioritizes bugs" },
-      { img: "agent-008", text: "Live Answers Agent keeps everyone informed" },
-      { img: "agent-002", text: "Codegen Agent produces quality code" },
+      { img: "agent-007", text: "Create and update development tasks" },
+      { img: "agent-004", text: "Check priorities and upcoming deadlines" },
+      { img: "agent-008", text: "Summarize project and release progress" },
+      { img: "agent-002", text: "Review workload before assigning work" },
     ],
     href: "/solutions",
   },
   {
-    tab: "IT",
-    lead: "Create the systems,",
-    highlight: "for scale",
+    tab: "Operations",
+    lead: "Keep internal operations",
+    highlight: "on track",
     description:
-      "Give IT and operations one connected system for assets, requests, contracts, and vendors.",
-    replaces: ["Jira", "Slack", "Notion", "Trello"],
+      "Manage requests and recurring work with clear ownership, priorities, and deadlines.",
     points: [
-      "Manage vendors + budgeting",
-      "Run tight asset management",
-      "Streamline contracts + procurement",
+      "Organize operational requests as tasks",
+      "Assign work to the right team members",
+      "Monitor urgent and overdue items",
     ],
     agents: [
-      { img: "agent-007", text: "Assets Agent tracks inventory" },
-      { img: "agent-004", text: "RFP Agent manages reqs docs" },
-      { img: "agent-005", text: "Contracts Agent standardizes terms" },
-      { img: "agent-002", text: "Live Intel Agent identifies redundancies" },
+      { img: "agent-007", text: "Create and assign support tasks" },
+      { img: "agent-004", text: "Update task status and priority" },
+      { img: "agent-005", text: "Find overdue operational work" },
+      { img: "agent-002", text: "Summarize active requests with Hash AI" },
     ],
     href: "/solutions",
   },
   {
     tab: "HR",
-    lead: "Build the process",
-    highlight: "that power your people",
+    lead: "Support your people",
+    highlight: "from one workspace",
     description:
-      "Run onboarding, training, and employee feedback from one workspace your whole company already uses.",
-    replaces: ["Monday", "Asana", "Slack", "Notion"],
+      "Coordinate employee records, attendance, leave, payroll workflows, and important team activities.",
     points: [
-      "Streamline employee onboarding",
-      "Roll out effective training programs",
-      "Keep a pulse on employee NPS",
+      "Manage attendance and leave workflows",
+      "Keep employee information organized",
+      "Coordinate HR tasks and follow-ups",
     ],
     agents: [
-      { img: "agent-001", text: "Onboarding Agent monitors progress + feedback" },
-      { img: "agent-002", text: "Pulse Check Agent collects employee sentiment" },
-      { img: "agent-003", text: "Trainer Agent analyzes course performance" },
-      { img: "agent-004", text: "Live Answers Agent provides real-time info" },
+      { img: "agent-001", text: "Review attendance information" },
+      { img: "agent-002", text: "Check leave balances and requests" },
+      { img: "agent-003", text: "Access permitted payroll information" },
+      { img: "agent-004", text: "Organize employee-related tasks" },
     ],
     href: "/solutions",
   },
   {
     tab: "Leadership",
-    lead: "Close the strategy-",
-    highlight: "execution gap",
+    lead: "See what needs",
+    highlight: "your attention",
     description:
-      "Get your company rowing in the same direction with one AI workspace to define, execute, and track your top-line goals.",
-    replaces: ["Monday", "Asana", "Slack", "Notion"],
+      "Get a clearer view of projects, workload, deadlines, clients, and business activity across your organization.",
     points: [
-      "Set the strategy and actually execute it",
-      "Drive organizational focus with tighter alignment",
-      "Enforce accountability and ownership with ultimate visibility",
+      "Monitor progress across teams and projects",
+      "Identify overdue and high-priority work",
+      "Make decisions using current workspace data",
     ],
     agents: [
-      { img: "agent-001", text: "Goal Reminder Agent removes tedious check-ins" },
-      { img: "agent-002", text: "Alignment Agent ensures cross-functional cohesion" },
-      { img: "agent-003", text: "Key Results Agent suggest relevant KPIs" },
-      { img: "agent-004", text: "Status Update Agent gives always-on visibility" },
+      { img: "agent-001", text: "Get a workspace summary" },
+      { img: "agent-002", text: "Review project and team workload" },
+      { img: "agent-003", text: "Check client and invoice information" },
+      { img: "agent-004", text: "Ask Hash AI for role-based insights" },
     ],
     href: "/solutions",
   },
@@ -156,10 +149,10 @@ export default function FeatureTabs() {
   return (
     <section className="ft-wrapper" data-testid="home-teams-tab">
       <div className="ft-headline">
-        <h2>AI solutions for every team</h2>
+        <h2>One workspace for every team</h2>
       </div>
       <div className="ft-subtext">
-        <p>Your key workflows, powered by Hashboard Agents.</p>
+        <p>Plan work, stay aligned, and get answers with Hashboard and Hash AI.</p>
       </div>
 
       <div className="ft-container">
@@ -195,17 +188,7 @@ export default function FeatureTabs() {
 
               <div>
                 <div className="ft-replaces">
-                  <h4 className="ft-replaces-title">REPLACES</h4>
-                  <div className="ft-replaces-list">
-                    {team.replaces.map((name) => (
-                      <div
-                        key={name}
-                        className="ft-replaces-item"
-                        aria-label={name}
-                        dangerouslySetInnerHTML={{ __html: REPLACES_LOGOS[name] }}
-                      />
-                    ))}
-                  </div>
+                  <h4 className="ft-replaces-title">BUILT FOR</h4>
                 </div>
 
                 <ul className="ft-points">

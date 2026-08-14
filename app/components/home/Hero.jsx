@@ -57,8 +57,8 @@ const valueProps = [
 ];
 
 const row1Pills = ["Projects", "Chat", "Hash AI", "Billing"];
-const row2Pills = ["Time Tracking", "Calendar", "Tasks", "Docs"];
-const row3Pills = ["Expenses", "Dashboards", "Analytics", "Integrations"];
+const row2Pills = ["Attendance", "Calendar", "Tasks", "Leave"];
+const row3Pills = ["Expenses", "Clients", "Payroll", "MCP"];
 
 export default function Hero() {
   const [activePills, setActivePills] = useState([
@@ -129,7 +129,7 @@ export default function Hero() {
             <h1 className="font-display mt-5 text-[clamp(2.1rem,3.6vw,3.5rem)] leading-[1.03] font-bold tracking-[-0.03em] text-[#202020]">
               <span>Software to run</span>
               <br />
-              <span className="normal sm:whitespace-nowrap">your entire agency</span>
+              <span className="normal sm:whitespace-nowrap">your entire business</span>
             </h1>
 
             {/* Checkmark Points */}
@@ -157,17 +157,17 @@ export default function Hero() {
                 size="lg"
                 className="w-full sm:w-auto text-center rounded-2xl bg-[#202020] px-7 py-3.5 text-[16px] font-bold text-white shadow-md transition-all hover:bg-black hover:scale-[1.02]"
               >
-                Get started. Now!
+                Get started
               </Button>
               <div className="text-[12.5px] font-medium leading-snug text-[#646464]">
-                Start 7 Days <br className="hidden sm:inline" />
-                Free Trial.
+                Create your workspace <br className="hidden sm:inline" />
+                and bring work together.
               </div>
             </div>
 
             {/* Sub-label for Pills */}
             <div className="mt-9 text-[11px] font-mono font-bold tracking-normal sm:tracking-[0.14em] text-[#374151] uppercase">
-              GET 400% MORE DONE • CUSTOMIZE YOUR WORKSPACE
+              CHOOSE THE WORKFLOWS YOUR TEAM NEEDS
             </div>
 
             {/* ALL 3 ROWS OF PILLS */}

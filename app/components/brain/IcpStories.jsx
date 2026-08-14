@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const roles = [
   {
     title: "Project Manager",
-    desc: "Plans and rebalances the week",
+    desc: "Reviews projects and priorities",
     project: "Phoenix",
     accent: "#7b68ee",
     messages: [
@@ -13,11 +13,11 @@ const roles = [
       ["Sam", "Design is done, but legal still owes us copy", "2:14 pm", "S"],
       ["Priya", "I can pick it up after the mobile handoff", "2:15 pm", "P"],
     ],
-    action: "Hash AI rebalanced 6 tasks and updated the launch plan",
+    action: "Hash AI summarized the project and highlighted the blocked task",
   },
   {
     title: "Engineering Lead",
-    desc: "Triages and runs engineering",
+    desc: "Reviews development workload",
     project: "Platform",
     accent: "#7357ff",
     messages: [
@@ -25,11 +25,11 @@ const roles = [
       ["Sam", "we’re gonna miss the sprint", "2:14 pm", "S"],
       ["Priya", "Marcus had to hop on the incident", "2:15 pm", "P"],
     ],
-    action: "Hash AI reassigned the review and rebuilt the sprint plan",
+    action: "Hash AI showed the overdue review and current assignee workload",
   },
   {
     title: "Agency Owner",
-    desc: "Manages every client account",
+    desc: "Reviews client delivery work",
     project: "Client Delivery",
     accent: "#ff5b8d",
     messages: [
@@ -37,11 +37,11 @@ const roles = [
       ["Alex", "Vertex hasn’t approved the last round", "9:42 am", "A"],
       ["Jon", "I’ve got capacity after lunch", "9:43 am", "J"],
     ],
-    action: "Hash AI drafted both check-ins and shifted the creative team",
+    action: "Hash AI summarized the client projects and upcoming deadlines",
   },
   {
     title: "Head of Ops",
-    desc: "Keeps every team in sync",
+    desc: "Monitors operational work",
     project: "Operations",
     accent: "#00b884",
     messages: [
@@ -49,11 +49,11 @@ const roles = [
       ["Ava", "Product is tracking a different deadline", "11:07 am", "A"],
       ["Mia", "Can we get one source of truth?", "11:08 am", "M"],
     ],
-    action: "Hash AI merged both workflows and notified every owner",
+    action: "Hash AI listed active work, owners, and overdue items",
   },
   {
     title: "Marketing Manager",
-    desc: "Ships campaigns end to end",
+    desc: "Tracks campaign delivery",
     project: "Q3 Launch",
     accent: "#ff9f1a",
     messages: [
@@ -61,11 +61,11 @@ const roles = [
       ["Eli", "The landing page copy needs one more pass", "3:22 pm", "E"],
       ["Nina", "Launch calendar still has two gaps", "3:23 pm", "N"],
     ],
-    action: "Hash AI filled the calendar and created the missing briefs",
+    action: "Hash AI summarized campaign tasks and identified missing owners",
   },
   {
     title: "Founder / CEO",
-    desc: "Your always-on chief of staff",
+    desc: "Reviews business activity",
     project: "Company HQ",
     accent: "#ef4c5b",
     messages: [
@@ -73,7 +73,7 @@ const roles = [
       ["Owen", "Two company OKRs moved to amber", "8:32 am", "O"],
       ["Kai", "Hiring is behind by three roles", "8:33 am", "K"],
     ],
-    action: "Hash AI prepared the brief and assigned every follow-up",
+    action: "Hash AI prepared a role-based workspace summary",
   },
 ];
 
@@ -127,15 +127,14 @@ export default function IcpStories() {
     <section className="bn-icp" aria-labelledby="bn-icp-title">
       <div className="bn-container bn-icp-container">
         <header className="bn-icp-header">
-          <p className="bn-eyebrow bn-eyebrow-purple">One Hash AI. Any job.</p>
+          <p className="bn-eyebrow bn-eyebrow-purple">One assistant. Many workflows.</p>
           <div className="bn-icp-rule" />
           <h2 className="bn-h2" id="bn-icp-title">
-            Hash AI already knows what to do,<br />
-            <em>watch it work.</em>
+            Ask about the work that matters,<br />
+            <em>then take action.</em>
           </h2>
           <p className="bn-lede">
-            Your team&apos;s entire way of working is already inside Hash AI. Just ask. It produces what you
-            need, the right way, every time.
+            Hash AI works with supported workspace data and actions while respecting each user&apos;s role and access.
           </p>
           <a href="/signup" className="bn-btn bn-btn-light bn-btn-inline">Get started</a>
         </header>
@@ -182,7 +181,7 @@ export default function IcpStories() {
                 ))}
                 <div className="bn-brain-action">
                   <span><Sparkle /></span>
-                  <div><strong>Hash AI is working</strong><p>{role.action}</p></div>
+                  <div><strong>Hash AI response</strong><p>{role.action}</p></div>
                 </div>
               </div>
               <button className="bn-demo-pause" type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play demo" : "Pause demo"}>

@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Invoicing free to use?",
-    "Yes! Hashboard Invoicing is available on the Free Forever plan with unlimited invoices sent."
+    "How is an invoice created in Hashboard?",
+    "An invoice starts as a draft under a client billing agreement. Eligible users can then update its dates, notes, tax details, and line items before finalization."
   ],
   [
     "How does Hashboard Invoicing work?",
-    "Generate a branded invoice straight from tracked time or tasks, then send it and track payment status automatically."
+    "Draft invoices are reviewed and finalized to receive a controlled invoice number. Payments are recorded manually against the invoice with their method and reference details."
   ],
   [
     "Does Invoicing connect to the rest of Hashboard?",
-    "Yes! Invoicing stays linked to Clients and Expenses, so your data never lives in a separate tool."
+    "Each invoice belongs to a client and billing agreement and can optionally retain project context. Payments and line items remain attached to that invoice."
   ],
   [
-    "Can I customize Invoicing for my team?",
-    "Yes, set recurring schedules, currencies, and payment reminders per client."
+    "Which invoice statuses are supported?",
+    "Invoices support Draft, Finalized, Partially Paid, Paid, Cancelled, and Void states. Available actions depend on the current state."
   ],
   [
-    "Does Hashboard Brain help with Invoicing?",
-    "Yes! Hashboard Brain can flag which clients are past due and draft the follow-up reminder for you."
+    "What payment information can be recorded?",
+    "A payment record can include amount, method, reference, note, payment date, and the user who recorded it."
   ],
 ];
 

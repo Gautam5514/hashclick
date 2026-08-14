@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Client details scattered across email and spreadsheets",
-    "No single view of every project tied to a client",
-    "New team members can’t find client history quickly",
-    "Clients get updates through inconsistent channels",
+    "Contact and billing details stored in separate places",
+    "Projects disconnected from the client they support",
+    "Invoices and agreements lack consistent account context",
+    "External access is difficult to scope safely",
   ],
   with: [
-    "One profile holds every detail, file, and contact",
-    "All projects and invoices for a client in one place",
-    "Anyone can get up to speed on a client in minutes",
-    "A shared portal keeps clients updated automatically",
+    "One client record for contact and business details",
+    "Projects, bookings, agreements, and invoices connected",
+    "Search and filter clients by useful account fields",
+    "Client-owner and project-member portal access",
   ],
 };
 
 const workflow = [
   {
     eyebrow: "Client Profiles",
-    title: "Every detail in one place",
-    body: "Contacts, contracts, notes, and history live on a single client profile, so nothing lives only in someone’s inbox.",
+    title: "Keep the essential account details together",
+    body: "Store the client name, contact person, email, phone, website, country, address, industry, referral source, notes, and status.",
     image: "/calendar/calendar-feature-1.png",
     alt: "Client profile in Hashboard",
   },
   {
-    eyebrow: "Shared Portals",
-    title: "Keep clients in the loop automatically",
-    body: "Give clients a branded portal to track project progress and invoices, without giving them access to your whole workspace.",
+    eyebrow: "Client Portal Access",
+    title: "Give external users scoped access",
+    body: "Create or invite client-owner users and add client members to permitted projects without exposing unrelated company work.",
     image: "/calendar/calendar-feature-2.png",
     alt: "Client portal in Hashboard",
     reverse: true,
   },
   {
     eyebrow: "Project Visibility",
-    title: "See every project tied to a client",
-    body: "Every task, doc, and invoice linked to a client rolls up automatically, so account owners always have the full picture.",
+    title: "Connect delivery and billing to the client",
+    body: "Link projects, bookings, leads, billing agreements, and invoices to the correct client record for consistent account context.",
     image: "/calendar/calendar-feature-3.png",
     alt: "Client project visibility in Hashboard",
   },
 ];
 
 const clientsFeatures = [
-  [UserSquare, "Client Profiles", "Store contacts, contracts, and notes in one place per client."],
-  [Share2, "Shared Portals", "Give clients branded visibility into their projects and invoices."],
-  [Eye, "Project Visibility", "See every task and doc tied to a client in one view."],
-  [FileText, "Contracts & Files", "Attach contracts and key files directly to a client profile."],
-  [MessageCircle, "Client Communication", "Keep every message thread linked to the right account."],
-  [Star, "Satisfaction Tracking", "Log check-ins and health scores to catch churn risk early."],
+  [UserSquare, "Client profiles", "Store contact, company, industry, address, referral, and status details."],
+  [Share2, "Portal users", "Invite client owners and scope project members to permitted client work."],
+  [Eye, "Project relationships", "See projects associated with the selected client."],
+  [FileText, "Billing details", "Store GST, PAN, bank account, IFSC, and SWIFT information where needed."],
+  [MessageCircle, "Project channels", "Include permitted client project members in the relevant project channel."],
+  [Star, "CSV import", "Create multiple client records from supported structured client data."],
 ];
 
 const platform = [
   [Briefcase, "Clients", "Manage client accounts"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Invoices", "Manage customer billing"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage customer bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Agreements", "Define billing terms"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leads", "Track prospects"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Payroll", "Prepare payroll periods"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function ClientsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD CLIENTS</p>
-          <h1>Give every client a home inside your workspace</h1>
+          <h1>Keep client delivery and billing connected</h1>
           <p className="task-hero-lede">
-            Keep client details, projects, files, and communication in one profile, so anyone on your team can get up to speed in seconds.
+            Manage client details, portal access, projects, bookings, billing agreements, and invoices around one account record.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Clients, projects, bookings, agreements, and invoices connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Clients needs, in one place</h2>
+          <h2>A reliable account record for every client</h2>
           <p>
-            Hashboard Clients keeps everything connected, so nothing falls through the cracks.
+            Keep client identity, portal access, delivery relationships, and billing information in the same operational system.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Clients, handled automatically.</h2>
-          <p>Join 3M+ teams who run clients without the busywork. Start your 7-day free trial.</p>
+          <h2>Client context where your team needs it.</h2>
+          <p>Keep account details connected to the projects, meetings, agreements, and invoices they belong to.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI for a client’s full history", "Ask Brain to summarize everything happening with a client—open projects, outstanding invoices, and recent conversations—in seconds.", "/tasks/super-agents.png"],
-    ["Smart Summaries", "Catch up on any account instantly", "Hashboard Brain writes a quick status summary for any client, so account handoffs never lose context.", "/tasks/clickup-brain.png"],
+    ["Connected Context", "Keep client relationships queryable", "Use current client, project, booking, agreement, and invoice relationships as the basis for permitted workspace questions.", "/tasks/super-agents.png"],
+    ["Role-aware Access", "Respect internal and client boundaries", "Company users and client users receive different access based on their role, client relationship, and project membership.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Client Management</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected client context</p>
+          <h2>Find the account.<br />Follow the relationship.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Clients is just the beginning</h2>
-            <p>Clients connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Clients connect to business operations</h2>
+            <p>Keep client records alongside projects, tasks, chat, meetings, leads, billing agreements, invoices, expenses, and team workflows.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function ClientsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Clients", text: "Clients" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Leads", text: "Leads" },
+    { name: "Agreements", text: "Agreements" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Payments", text: "Payments" },
+    { name: "Chat", text: "Chat" },
+    { name: "People", text: "People" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function ClientsFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

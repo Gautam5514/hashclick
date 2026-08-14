@@ -6,32 +6,32 @@ import "./roi-section.css";
 
 const roiMetrics = [
   {
-    tag: "ROI",
-    value: "384%",
+    tag: "ESTIMATED TIME SAVED",
+    value: "5+ hrs",
     description:
-      "Hashboard delivered 384% ROI over three years, helping organizations unlock significant efficiency gains.",
+      "Potential time saved per employee each month by reducing status checks, manual updates, and information searching.",
   },
   {
-    tag: "REVENUE INCREASE",
-    value: "$3.9M",
+    tag: "ANNUAL TEAM CAPACITY",
+    value: "1,200 hrs",
     description:
-      "Hashboard projects drove $3.9M in revenue gains by streamlining work, consolidating tools, and scaling faster.",
+      "Estimated annual time recovered for a 20-person team using Hashboard consistently.",
   },
   {
-    tag: "HOURS SAVED",
-    value: "92,400",
+    tag: "ESTIMATED VALUE",
+    value: "₹6L+",
     description:
-      "Organizations saved 92,400 hours with Hashboard, reducing manual work and recapturing productivity at scale.",
+      "Potential annual productivity value based on an assumed ₹500 hourly employment cost.",
   },
   {
-    tag: "PAYBACK",
-    value: "<6 mo",
+    tag: "ESTIMATED PAYBACK",
+    value: "Calculate yours",
     description:
-      "Customers reached payback in under six months, making Hashboard a proven investment with rapid returns.",
+      "Compare your estimated productivity value with your Hashboard subscription cost.",
   },
 ];
 
-const compliance = ["SOC 2 Type II", "ISO 27001", "GDPR", "HIPAA"];
+const compliance = ["Role-based access", "Workspace permissions", "Tenant isolation", "MCP OAuth"];
 
 export function RoiSection() {
   return (
@@ -40,13 +40,12 @@ export function RoiSection() {
         <div className="roi-title-row">
           <div className="roi-title-wrap">
             <div className="roi-title">
-              <h2>It&apos;s like adding 15 full-time employees</h2>
+              <h2>See what your team could save with Hashboard</h2>
             </div>
             <div className="roi-subtext">
               <p>
-                According to third party research Hashboard saves the average company
-                over 30k hours per year, <br />
-                and delivers industry-leading ROI.
+                Estimate the impact of bringing everyday workflows and AI assistance
+                into one connected workspace.
               </p>
             </div>
           </div>
@@ -74,11 +73,9 @@ export function RoiSection() {
 
         <div className="roi-footer">
           <p className="roi-footnote">
-            *from 2025 The Total Economic Impact™ of Hashboard report from Forrester
-            Group.{" "}
-            <Link href="/demo" className="roi-footnote-link">
-              Get the report
-            </Link>
+            *Illustrative estimates, not guaranteed results. Example assumes 20 employees,
+            five hours saved per employee per month, and an average employment cost of ₹500
+            per hour. Actual results depend on adoption, workflows, pricing, and usage.
           </p>
         </div>
       </div>
@@ -94,12 +91,11 @@ export function ScaleSection() {
           <div className="grid items-center gap-10 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <h2 className="font-display text-[clamp(1.75rem,3.2vw,2.5rem)] leading-[1.08] font-bold tracking-[-0.03em] text-[#111827]">
-                85% of the Fortune 500 already runs work here
+                One connected workspace for growing teams
               </h2>
               <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-[#4b5563]">
-                From two-person startups to 100,000-seat rollouts — with the
-                governance, residency and audit controls security teams ask for
-                on day one.
+                Bring projects, people, clients, operations, and AI assistance
+                together with access controls designed around each workspace.
               </p>
               <ul className="mt-7 flex flex-wrap gap-2.5">
                 {compliance.map((c) => (
@@ -116,9 +112,9 @@ export function ScaleSection() {
 
             <dl className="grid grid-cols-2 gap-6 lg:grid-cols-1">
               {[
-                { v: "5M+", l: "teams" },
-                { v: "3M+", l: "tasks automated by agents monthly" },
-                { v: "99.9%", l: "uptime SLA" },
+                { v: "10+", l: "business workflows brought together" },
+                { v: "4+", l: "AI providers supported" },
+                { v: "1", l: "connected workspace for your operations" },
               ].map((s) => (
                 <div key={s.l}>
                   <dt className="font-display text-[32px] leading-none font-bold tracking-[-0.04em] text-[#7612fa]">

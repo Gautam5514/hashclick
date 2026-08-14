@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Attendance free to use?",
-    "Yes! Hashboard Attendance is available on the Free Forever plan with unlimited clock-ins and timesheet exports."
+    "What does Hashboard Attendance record?",
+    "Attendance stores the attendance date, check-in and check-out times, worked time, status, and any permitted manual adjustment details."
   ],
   [
     "How does Hashboard Attendance work?",
-    "Team members clock in and out from any device, and every entry is timestamped and rolled into a timesheet automatically."
+    "Employees enroll a face profile and use face verification to submit their daily check-in and check-out. Their status and worked time are then available in the permitted attendance views."
   ],
   [
     "Does Attendance connect to the rest of Hashboard?",
-    "Yes! Attendance stays linked to Payroll and Leave, so your data never lives in a separate tool."
+    "Attendance and approved leave can be used as inputs to supported payroll calculations, alongside configured holidays, week-offs, and payroll rules."
   ],
   [
-    "Can I customize Attendance for my team?",
-    "Yes, set shift schedules, geofenced locations, and break rules per team."
+    "Who can view team attendance?",
+    "Employees can review their own attendance. Team-wide summaries, individual employee history, and manual corrections are limited to authorized roles."
   ],
   [
-    "Does Hashboard Brain help with Attendance?",
-    "Yes! Hashboard Brain can flag late arrivals, missed shifts, and unusual overtime before payroll runs."
+    "Can attendance records be corrected?",
+    "Authorized admins can add or deduct minutes for a specific employee and date, with a note that preserves the reason for the correction."
   ],
 ];
 

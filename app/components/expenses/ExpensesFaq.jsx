@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Expenses free to use?",
-    "Yes! Hashboard Expenses is available on the Free Forever plan with unlimited receipt captures and reports."
+    "What information is required for an expense?",
+    "Each expense requires a date, category, positive amount, goods or services type, and invoice number. Additional fields depend on its type and GST treatment."
   ],
   [
     "How does Hashboard Expenses work?",
-    "Photograph a receipt and Hashboard extracts the vendor, amount, and date automatically, then routes it for approval."
+    "A user enters the structured expense details and may include notes and a receipt URL. The record remains associated with its creator and company."
   ],
   [
     "Does Expenses connect to the rest of Hashboard?",
-    "Yes! Expenses stays linked to Invoicing and Payroll, so your data never lives in a separate tool."
+    "Expenses are managed alongside Hashboard’s other business and people workflows, but they remain distinct records from customer invoices and payroll entries."
   ],
   [
-    "Can I customize Expenses for my team?",
-    "Yes, set approval chains and category rules by team, amount, or vendor."
+    "How are goods and service expenses different?",
+    "Goods expenses require an HSN code, while service expenses require a SAC code. Hashboard validates the applicable field when the record is saved."
   ],
   [
-    "Does Hashboard Brain help with Expenses?",
-    "Yes! Hashboard Brain can flag which teams are closest to going over budget before it happens."
+    "Can I filter and search expenses?",
+    "Yes. Filter by type, GST use, category, or date range, and search across category names, invoice numbers, and notes."
   ],
 ];
 

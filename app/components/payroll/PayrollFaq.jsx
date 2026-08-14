@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Payroll free to use?",
-    "Yes! Hashboard Payroll is available on the Free Forever plan with unlimited pay runs."
+    "What information is used to generate payroll?",
+    "A run uses eligible employee salary data, attendance, approved leave, company holidays, week-offs, and the payroll period’s working-day calculations."
   ],
   [
     "How does Hashboard Payroll work?",
-    "Approved attendance hours flow straight into each pay run, with tax withholding and payslips generated automatically."
+    "An authorized user generates a monthly draft, reviews employee entries, applies supported adjustments, and an admin finalizes the run when it is ready."
   ],
   [
     "Does Payroll connect to the rest of Hashboard?",
-    "Yes! Payroll stays linked to Attendance and Leave, so your data never lives in a separate tool."
+    "Yes. Attendance, approved leave, holidays, week-offs, and employee salary snapshots are used as payroll calculation inputs."
   ],
   [
-    "Can I customize Payroll for my team?",
-    "Yes, set deductions, benefits, and pay schedules per team or location."
+    "Can a payroll entry be adjusted?",
+    "Authorized users can apply a supported manual addition or deduction with context while the run is in Draft. Finalized runs must be reopened before changes."
   ],
   [
-    "Does Hashboard Brain help with Payroll?",
-    "Yes! Hashboard Brain can flag unusual hours or missing timesheets before you approve a pay run."
+    "What can employees see?",
+    "Employees can view their own finalized payroll history and entries. Draft runs and administrative controls remain restricted."
   ],
 ];
 

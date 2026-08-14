@@ -1,8 +1,8 @@
-const logos = ["Cartoon Network", "Siemens", "Finastra", "Diggs", "Hawke Media", "IBM", "Netflix"];
+const logos = ["Projects", "Tasks", "People", "Clients", "Attendance", "Billing", "MCP"];
 
 export default function SocialProof() {
   return (
-    <section className="bn-social" aria-label="Hash AI customers">
+    <section className="bn-social" aria-label="Hash AI supported workflows">
       <div className="bn-container bn-social-inner">
         {logos.map((l) => (
           <span key={l}>{l}</span>

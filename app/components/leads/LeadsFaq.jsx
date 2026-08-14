@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Leads free to use?",
-    "Yes! Hashboard Leads is available on the Free Forever plan with unlimited pipeline stages and contacts."
+    "Which pipeline stages are supported?",
+    "Leads can be New, Contacted, Qualified, Proposal, Negotiation, Won, or Lost."
   ],
   [
     "How does Hashboard Leads work?",
-    "Every inbound lead lands in a visual pipeline automatically, and you drag it through stages until it’s won."
+    "Create or import a lead, maintain its prospect and opportunity details, assign ownership, update its stage, and record activity as the opportunity progresses."
   ],
   [
     "Does Leads connect to the rest of Hashboard?",
-    "Yes! Leads stays linked to Clients and Invoicing, so your data never lives in a separate tool."
+    "Leads can connect to bookings and booking forms, retain activity history, reference a source client where applicable, and convert into a new client record."
   ],
   [
-    "Can I customize Leads for my team?",
-    "Yes, build a pipeline with exactly the stages your sales process needs."
+    "What activities can be recorded?",
+    "Supported activity types include notes, calls, emails, meetings, follow-ups, status changes, and assignments. Follow-ups can have scheduled and completed times."
   ],
   [
-    "Does Hashboard Brain help with Leads?",
-    "Yes! Hashboard Brain can score leads by engagement and flag which deals need attention this week."
+    "Can a lead become a client?",
+    "Yes. The supported conversion flow creates and links a client record while preserving the original lead and its activity history."
   ],
 ];
 

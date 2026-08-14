@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Meetings free to use?",
-    "Yes! Hashboard Meetings is available on the Free Forever plan with unlimited video calls and AI notes."
+    "Which meeting providers does Hashboard support?",
+    "Internal meetings can use Google Meet or Zoom when the meeting owner has the required connection. A calendar event can also be created without a video provider."
   ],
   [
     "How does Hashboard Meetings work?",
-    "Start a call from any task or doc, and Hashboard Brain writes the notes, summary, and action items automatically."
+    "Create an internal meeting with its title, description, timing, timezone, provider, and attendees. Hashboard creates the supported calendar and meeting-provider records."
   ],
   [
     "Does Meetings connect to the rest of Hashboard?",
-    "Yes! Meetings stays linked to Chat and Tasks, so your data never lives in a separate tool."
+    "Bookings can retain supported links to a space, client, lead, booking page, host, and internal attendees."
   ],
   [
-    "Can I customize Meetings for my team?",
-    "Yes, build agendas from linked tasks and assign action items straight from the call."
+    "Can a meeting be rescheduled or cancelled?",
+    "Yes. Authorized hosts, admins, or managers can reschedule supported meetings, and permitted users can cancel or update them according to the booking rules."
   ],
   [
-    "Does Hashboard Brain help with Meetings?",
-    "Yes! Hashboard Brain can write the meeting summary and turn decisions into assigned tasks automatically."
+    "Can another teammate host the meeting?",
+    "Supported meetings can be delegated to another internal host when the current user has permission and the new host has the required provider connection."
   ],
 ];
 

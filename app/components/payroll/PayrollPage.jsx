@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Hours re-entered by hand from a separate timesheet tool",
-    "Tax calculations done manually and double-checked by hand",
-    "Payslips emailed one by one at the end of the month",
-    "No clear audit trail if a number ever gets questioned",
+    "Attendance and approved leave reviewed separately from salary",
+    "Working days calculated without holiday or week-off context",
+    "Manual adjustments made outside the payroll record",
+    "Final numbers changed without a controlled run state",
   ],
   with: [
-    "Approved attendance hours flow straight into payroll",
-    "Tax withholding calculated automatically, every run",
-    "Payslips generated and delivered the moment payroll runs",
-    "A full audit trail for every pay run, always available",
+    "Attendance, leave, holiday, and week-off credits calculated together",
+    "Configured salary components and statutory deductions applied",
+    "Manual adjustments stored with their payroll entry",
+    "Draft, finalized, and administrator-controlled reopen workflow",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Automated Pay Runs",
-    title: "From hours worked to payslip, automatically",
-    body: "Approved attendance and timesheet data feed directly into each pay run, so nobody re-types a single number.",
+    eyebrow: "Monthly Generation",
+    title: "Calculate a payroll period from current records",
+    body: "Generate monthly entries using eligible employee salary snapshots, attendance, approved leave, holidays, week-offs, and working-day rules.",
     image: "/dashboards/dashboard-feature-1.png",
     alt: "Automated payroll run in Hashboard",
   },
   {
-    eyebrow: "Tax & Compliance",
-    title: "Withholding calculated correctly, every time",
-    body: "Hashboard applies the right tax rules automatically so every pay run stays compliant without manual lookups.",
+    eyebrow: "Salary and Deductions",
+    title: "Apply the configured compensation inputs",
+    body: "Use basic pay, allowances, configured statutory deductions, earned credits, unpaid deficits, and preserved manual adjustments to calculate net pay.",
     image: "/dashboards/dashboard-feature-2.png",
-    alt: "Payroll tax compliance in Hashboard",
+    alt: "Payroll salary and deduction calculation in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Payslips & Reports",
-    title: "Payslips delivered the moment payroll runs",
-    body: "Every team member gets a clear, itemized payslip automatically, while finance gets a full payroll report for the books.",
+    eyebrow: "Review and Finalization",
+    title: "Lock a reviewed run before employees see it",
+    body: "Admins can finalize a non-empty draft. Employees see their own finalized payroll history, and admins can reopen a run when a correction is required.",
     image: "/dashboards/dashboard-feature-3.png",
     alt: "Payroll reports in Hashboard",
   },
 ];
 
 const payrollFeatures = [
-  [Banknote, "Automated Pay Runs", "Turn approved hours into a completed pay run automatically."],
-  [Landmark, "Tax Compliance", "Withholding calculated correctly based on current tax rules."],
-  [HandCoins, "Direct Deposit", "Pay your whole team directly, on schedule, every cycle."],
-  [FileText, "Digital Payslips", "Itemized payslips delivered automatically to every employee."],
-  [Wallet, "Deductions & Benefits", "Handle benefits and deductions consistently across the team."],
-  [PieChart, "Payroll Reports", "Get a full report of every pay run, ready for the books."],
+  [Banknote, "Monthly payroll runs", "Generate draft employee entries for a selected month."],
+  [Landmark, "Working-day calendar", "Use configured holidays and week-offs in period calculations."],
+  [HandCoins, "Attendance and leave credits", "Calculate payable credits from attendance and approved leave."],
+  [FileText, "Employee payroll history", "Let employees view their own finalized monthly entries."],
+  [Wallet, "Deductions and adjustments", "Apply configured deductions and supported manual additions or deductions."],
+  [PieChart, "Finalization controls", "Finalize, protect, and administratively reopen payroll runs."],
 ];
 
 const platform = [
   [Banknote, "Payroll", "Run accurate pay runs"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Attendance", "Record working days"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leave", "Manage approved time off"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Holidays", "Configure working-day exceptions"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer context"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function PayrollHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD PAYROLL</p>
-          <h1>Run payroll without the spreadsheet gymnastics</h1>
+          <h1>Generate and review payroll from connected records</h1>
           <p className="task-hero-lede">
-            Approved hours, tax withholding, and payslips handled automatically. Hashboard Payroll turns attendance data straight into an accurate pay run.
+            Calculate monthly entries from salary, attendance, approved leave, holidays, week-offs, deductions, and reviewed manual adjustments.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Salary, attendance, leave, calendar, and adjustments connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Payroll needs, in one place</h2>
+          <h2>A reviewable calculation for every payroll period</h2>
           <p>
-            Hashboard Payroll keeps everything connected, so nothing falls through the cracks.
+            Generate a draft, inspect employee entries, apply supported corrections, and finalize only when the period is ready.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Payroll, handled automatically.</h2>
-          <p>Join 3M+ teams who run payroll without the busywork. Start your 7-day free trial.</p>
+          <h2>Payroll calculations with human review.</h2>
+          <p>Hashboard calculates from configured records while keeping finalization and corrections under explicit administrator control.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI about this pay run", "Ask Brain to flag any unusual hours, missing timesheets, or outliers before you approve a pay run, not after.", "/tasks/super-agents.png"],
-    ["Smart Reconciliation", "Attendance and payroll, automatically matched", "Hashboard Brain cross-checks approved hours against the pay run so discrepancies get caught before payday.", "/tasks/clickup-brain.png"],
+    ["Payroll Context", "Review the inputs behind each entry", "Inspect required workdays, attendance credits, leave credits, holiday credits, deficits, salary components, deductions, and net pay.", "/tasks/super-agents.png"],
+    ["Permission-aware Access", "Keep sensitive payroll appropriately scoped", "Employees can access their finalized history, while generation, adjustment, finalization, and reopening remain limited by role.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Payroll</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected payroll context</p>
+          <h2>Understand the inputs.<br />Control the outcome.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Payroll is just the beginning</h2>
-            <p>Payroll connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Payroll connects to people operations</h2>
+            <p>Keep payroll alongside employee salary records, attendance, leave, holidays, week-offs, people information, and company workflows.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function PayrollFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Payroll", text: "Payroll" },
+    { name: "Salary", text: "Salary" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "Leave", text: "Leave" },
+    { name: "Holidays", text: "Holidays" },
+    { name: "Week-offs", text: "Week-offs" },
+    { name: "People", text: "People" },
+    { name: "Adjustments", text: "Adjustments" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function PayrollFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

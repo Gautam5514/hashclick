@@ -1,24 +1,23 @@
 const stats = [
-  { k: "Quality", v: "#1", d: "vs OpenAI & Claude" },
-  { k: "Cost", v: "85%", d: "↓ cheaper" },
-  { k: "Context Engine", v: "92%", d: "+34/min" },
-  { k: "Win-rate", v: "100%", d: "+22/min" },
+  { k: "Workspace", v: "1", d: "connected source of work" },
+  { k: "AI providers", v: "4+", d: "supported when configured" },
+  { k: "Business workflows", v: "10+", d: "available in Hashboard" },
+  { k: "Model selection", v: "Your choice", d: "from available models" },
 ];
 
 export default function Benchmark() {
   return (
-    <section className="bn-benchmark" aria-label="Hash AI benchmark">
+    <section className="bn-benchmark" aria-label="Hash AI product capabilities">
       <div className="bn-container">
-        <p className="bn-eyebrow">Hash AI beats every benchmark*</p>
+        <p className="bn-eyebrow">Grounded in your Hashboard workspace</p>
         <h2 className="bn-h2">
-          LLMs are literally <em>average</em> without context.
+          Better answers start with <em>current work.</em>
           <br />
-          Hash AI wins, 100% guaranteed.
+          Hash AI connects assistance with action.
         </h2>
         <p className="bn-lede">
-          Hash AI is your company AI that self-improves, routes to the best models, and coworks to
-          complete your work. Multiplayer contextual AI where human intelligence and Hash AI think
-          as one.
+          Ask about the workspace information you are permitted to access, choose an available model,
+          and create or update supported work through conversation.
         </p>
 
         <dl className="bn-stats">

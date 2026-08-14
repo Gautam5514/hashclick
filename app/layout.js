@@ -26,11 +26,11 @@ const sometype = Sometype_Mono({
 
 export const metadata = {
   title: {
-    default: `${site.name} | Software to replace all software`,
+    default: `${site.name} | One workspace for your business`,
     template: `%s | ${site.name}`,
   },
   description:
-    "Tasks, Docs, Chat, Goals and AI agents on one platform. Save one day every week — free forever, no credit card required.",
+    "Manage projects, tasks, people, clients, communication, and daily operations with Hash AI assistance in one connected workspace.",
 };
 
 export default function RootLayout({ children }) {

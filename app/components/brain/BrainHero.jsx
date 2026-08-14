@@ -3,20 +3,20 @@ import Image from "next/image";
 import { ICON_APPLE, ICON_WINDOWS, ICON_ANDROID } from "../home/brain2-svgs";
 
 const checks = [
-  "Multiplayer AI with your context",
-  "Every model. One subscription.",
-  "Self-updating Company Hash AI",
+  "Answers grounded in permitted workspace data",
+  "Choose from configured AI models",
+  "Create and update work conversationally",
 ];
 
 const CHROME =
   '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M12 8.6h9M8.9 13.7 4.4 6.3M15.1 13.7l-4.5 7.4" stroke="currentColor" stroke-width="1.6"/></svg>';
 
 const downloads = [
-  { name: "iOS", icon: ICON_APPLE },
-  { name: "Android", icon: ICON_ANDROID },
-  { name: "Windows", icon: ICON_WINDOWS },
-  { name: "Mac", icon: ICON_APPLE },
-  { name: "Chrome", icon: CHROME },
+  { name: "Hashboard", icon: ICON_APPLE },
+  { name: "MCP", icon: ICON_ANDROID },
+  { name: "OpenAI", icon: ICON_WINDOWS },
+  { name: "Anthropic", icon: ICON_APPLE },
+  { name: "Google", icon: CHROME },
 ];
 
 // Three lanes of workspace events streaming into the Brain.
@@ -24,28 +24,28 @@ const inputTracks = [
   [
     ["task", "ship api v3"],
     ["comment", "lgtm"],
-    ["doc", "rfc-04"],
+    ["project", "api migration"],
     ["mention", "@jvogel"],
     ["task", "review pr-1247"],
     ["bug", "timeout 504"],
     ["chat", "standup notes"],
     ["request", "design review?"],
-    ["figma", "design handoff"],
-    ["github", "PR #1247 merged"],
-    ["slack", "#eng-team"],
+    ["priority", "high"],
+    ["status", "review complete"],
+    ["space", "engineering"],
   ],
   [
     ["chat", "ship it"],
     ["comment", "needs work"],
-    ["doc", "q4 plan"],
+    ["project", "q4 plan"],
     ["task", "deploy api"],
     ["mention", "@team-eng"],
     ["activity", "status: in-prog"],
     ["request", "feedback?"],
-    ["doc", "changelog"],
-    ["teams", "call notes"],
-    ["drive", "Q4 deck"],
-    ["gmail", "client reply"],
+    ["task", "publish changelog"],
+    ["meeting", "weekly sync"],
+    ["client", "Northwind"],
+    ["invoice", "payment received"],
   ],
   [
     ["activity", "reassigned"],
@@ -54,11 +54,11 @@ const inputTracks = [
     ["bug", "memory leak"],
     ["mention", "@design"],
     ["task", "bug fix #423"],
-    ["doc", "spec-v2"],
+    ["project", "platform v2"],
     ["chat", "thread reply"],
-    ["outlook", "mtg invite"],
-    ["salesforce", "deal won"],
-    ["figma", "frame v3 ready"],
+    ["meeting", "planning invite"],
+    ["lead", "proposal won"],
+    ["task", "design ready"],
   ],
 ];
 
@@ -80,45 +80,45 @@ const pillars = [
   {
     pos: "tl",
     num: "01",
-    name: "Multiplayer Collaboration",
+    name: "Workspace Assistance",
     items: [
-      ["AI Chats", "Threaded dialogue with shared, persistent context windows", "REAL-TIME · MULTI-PARTY"],
-      ["AI Channels", "Topic-scoped streams with retained conversational memory", "ASYNC · SUBSCRIBABLE"],
-      ["AI Tasks", "Structured work units that carry state, owners, and dependencies forward", "TYPED · STATEFUL"],
-      ["AI Projects", "Cross-list orchestration of work across timelines", "HIERARCHICAL"],
+      ["Ask Questions", "Ask naturally about accessible workspace information", "PERMISSION-AWARE"],
+      ["Task Summaries", "Review assigned, overdue, and high-priority work", "CURRENT DATA"],
+      ["Task Actions", "Create and update supported task fields conversationally", "USER-REQUESTED"],
+      ["Project Insights", "Review status, priorities, deadlines, and workload", "ROLE-BASED"],
     ],
   },
   {
     pos: "tr",
     num: "04",
-    name: "Intelligence²",
+    name: "Model Choice",
     items: [
-      ["Skills", "Composable, tool-calling capabilities invoked on demand", "MODULAR"],
-      ["Recall", "Hybrid vector + graph retrieval across full history", "LOW-LATENCY"],
-      ["Learning", "Reinforced from outcomes, corrections & user signal", "ADAPTIVE"],
-      ["Self-Improving", "Autonomous policy refinement from execution results", "RECURSIVE LOOP"],
+      ["Available Models", "Use models whose providers are configured for the workspace", "CONFIGURED"],
+      ["User Selection", "Choose the model you want to use", "USER-CONTROLLED"],
+      ["Provider Support", "Work with supported OpenAI, Anthropic, Google, and xAI models", "MULTI-PROVIDER"],
+      ["Safe Fallback", "Use the configured default if a requested model is unavailable", "RESILIENT"],
     ],
   },
   {
     pos: "bl",
     num: "02",
-    name: "Context Engine",
+    name: "Permission-Aware Context",
     items: [
-      ["Self-Organizing", "Auto-clusters entities into a semantic knowledge graph", "GRAPH · EMBEDDINGS"],
-      ["Self-Updating", "Continuous re-index from live workspace event streams", "EVENT-SOURCED"],
-      ["Context Compression", "Distills context into token-efficient retrievable vectors", "LOSSLESS RECALL"],
-      ["Cost Optimization", "High-fidelity retrieval at a fraction of the cost, even at scale", "COST-EFFICIENT"],
+      ["Role Scope", "Answers reflect the user's role and accessible records", "ROLE-BASED"],
+      ["Tenant Scope", "Workspace information stays within the authenticated company", "ISOLATED"],
+      ["Current Facts", "Responses use information computed from current Hashboard data", "GROUNDED"],
+      ["Readable Results", "Present useful names and fields without exposing internal IDs", "HUMAN-FRIENDLY"],
     ],
   },
   {
     pos: "br",
     num: "03",
-    name: "Organization Knowledge",
+    name: "Supported Workflows",
     items: [
-      ["Goals", "Cascading objectives mapped down to live execution", "OKR-LINKED"],
-      ["Decisions", "Versioned rationale with a full reversible audit trail", "TRACEABLE"],
-      ["Updates", "Event-driven status propagated across dependents", "PUSH · SUBSCRIBED"],
-      ["Feedback", "Closed-loop signal capture, scored back into context", "REINFORCING"],
+      ["Projects", "Review accessible projects and their current status", "PROJECT DATA"],
+      ["People", "Review permitted team and workload information", "ROLE-BASED"],
+      ["Operations", "Ask about attendance, leave, meetings, clients, and billing", "WORKSPACE DATA"],
+      ["MCP", "Use compatible AI clients with scoped Hashboard tools", "OAUTH-READY"],
     ],
   },
 ];
@@ -196,9 +196,9 @@ export default function BrainHero() {
           </div>
 
           <h1 className="bn-hero-title">
-            The best AI is <em>your</em> AI.
+            Your work. One intelligent assistant.
             <br />
-            Your Company&apos;s Hash AI
+            Built into Hashboard
           </h1>
 
           <ul className="bn-checks">
@@ -213,14 +213,14 @@ export default function BrainHero() {
           <div className="bn-actions">
             <div className="bn-buttons">
               <a href="/signup" className="bn-btn bn-btn-primary">
-                Try Hash AI FREE
+                Get started with Hash AI
               </a>
               <a href="/signup" className="bn-btn bn-btn-import">
                 <span className="bn-logo-stack" aria-hidden="true">
                   <Image src="/brain-2/logos/chatgpt.svg" width={20} height={20} alt="" />
                   <Image src="/brain-2/logos/claude.svg" width={20} height={20} alt="" />
                 </span>
-                <span>Import Memory</span>
+                <span>Choose an AI model</span>
               </a>
             </div>
 
@@ -330,10 +330,10 @@ export default function BrainHero() {
           </div>
 
           <div className="bn-loop-labels" aria-hidden="true">
-            <span className="bn-loop-label bn-loop-label-top">Self-improving</span>
-            <span className="bn-loop-label bn-loop-label-right">Memory</span>
-            <span className="bn-loop-label bn-loop-label-bottom">Orchestration</span>
-            <span className="bn-loop-label bn-loop-label-left">Self-organizing</span>
+            <span className="bn-loop-label bn-loop-label-top">Workspace answers</span>
+            <span className="bn-loop-label bn-loop-label-right">Current facts</span>
+            <span className="bn-loop-label bn-loop-label-bottom">Model choice</span>
+            <span className="bn-loop-label bn-loop-label-left">Task actions</span>
           </div>
 
           <div className="bn-pl">

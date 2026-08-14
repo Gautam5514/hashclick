@@ -2,8 +2,8 @@ import InvoicingPage from "../../components/invoicing/InvoicingPage";
 import "../../components/tasks/tasks.css";
 
 export const metadata = {
-  title: "Hashboard Invoicing: Get paid without leaving your workspace",
-  description: "Create branded invoices from your project data, send them in a click, and track payments as they come in—without switching to a separate billing tool.",
+  title: "Hashboard Invoicing: Create, finalize, and track invoices",
+  description: "Create invoices from client billing agreements, manage line items and tax details, finalize invoice numbers, and record payments.",
 };
 
 export default function Page() {

@@ -29,7 +29,7 @@ import { cn } from "@/lib/utils";
 export const metadata = {
   title: "Product",
   description:
-    "Projects, Chat, Docs, Calendar, Dashboards, Automations and more — every tool your team needs on one connected platform.",
+    "Manage projects, tasks, chat, people, clients, attendance, leave, meetings, billing, and AI-assisted work in one connected platform.",
 };
 
 const modules = [
@@ -38,12 +38,12 @@ const modules = [
     icon: FolderKanban,
     accent: "#7612fa",
     kicker: "Projects",
-    title: "15 views over one set of tasks",
-    body: "List for the PM, Board for the team, Gantt for the client, Workload for the manager. Change a due date anywhere and it changes everywhere, because it's the same task.",
+    title: "Organize work around teams and outcomes",
+    body: "Create projects inside accessible spaces, set status, priority, deadlines, managers, and members, then keep related tasks in the right context.",
     points: [
-      "List, Board, Gantt, Calendar, Table, Timeline, Workload, Map, Mind Map",
-      "Dependencies, milestones and critical path",
-      "Custom fields, statuses and templates per space",
+      "Projects grouped inside team spaces",
+      "Status, priority, deadline, manager, and membership",
+      "Project summaries and task progress through Hash AI",
     ],
   },
   {
@@ -52,92 +52,92 @@ const modules = [
     accent: "#0091ff",
     kicker: "Chat",
     title: "The conversation and the work, in the same place",
-    body: "Channels that sit alongside the projects they're about. Turn any message into a task and the whole thread comes along as context.",
+    body: "Use company and project channels for conversations, files, mentions, reactions, threads, pins, bookmarks, search, and notification preferences.",
     points: [
-      "Channels linked to spaces, folders and lists",
-      "Message-to-task with full thread context",
-      "AI catch-up summaries for anything you missed",
+      "Company-wide and project-specific channels",
+      "Threaded replies, files, mentions, and reactions",
+      "Message search, pins, bookmarks, and unread tracking",
     ],
   },
   {
-    id: "docs",
+    id: "tasks",
     icon: FileText,
     accent: "#4a2fff",
-    kicker: "Docs & Wikis",
-    title: "Documentation that can't go stale",
-    body: "Embed live tasks, lists and dashboards inside docs. When the work moves, the doc moves with it — no quarterly cleanup project.",
+    kicker: "Tasks",
+    title: "Clear ownership from backlog to done",
+    body: "Create shared project tasks or personal tasks with descriptions, statuses, priorities, due dates, assignees, and subtasks.",
     points: [
-      "Live embeds of tasks, views and dashboards",
-      "Nested pages, templates and page verification",
-      "Granular sharing, including public pages",
+      "Backlog, To Do, In Progress, In Review, and Done",
+      "Low, Medium, High, and Urgent priorities",
+      "Multiple assignees, deadlines, and subtasks",
     ],
   },
   {
     id: "calendar",
     icon: CalendarDays,
     accent: "#078d3b",
-    kicker: "Calendar",
-    title: "Your meetings and your tasks on one grid",
-    body: "Two-way sync with Google and Outlook, drag-and-drop time blocking, and an AI notetaker that joins the call so you don't have to write it up.",
+    kicker: "People Operations",
+    title: "Support employees from one workspace",
+    body: "Keep employee information organized and manage attendance, leave balances, requests, and permitted payroll workflows.",
     points: [
-      "Two-way Google and Outlook sync",
-      "Drag tasks onto your day to time-block",
-      "AI notetaker with action items pushed to tasks",
+      "Employee records and team information",
+      "Attendance summaries and working-day records",
+      "Leave requests, balances, and approval workflows",
     ],
   },
   {
-    id: "dashboards",
+    id: "business",
     icon: LayoutDashboard,
     accent: "#fa12e3",
-    kicker: "Dashboards",
-    title: "Reporting without a data team",
-    body: "50+ widgets over live data. Portfolio health, sprint velocity, workload, budget burn — and AI cards that write the narrative for you.",
+    kicker: "Clients & Finance",
+    title: "Keep business activity connected",
+    body: "Manage clients, leads, invoices, expenses, billing information, and related business workflows alongside delivery work.",
     points: [
-      "50+ widget types including AI summary cards",
-      "Portfolio roll-ups across spaces and teams",
-      "Read-only share links for clients and execs",
+      "Client and lead records",
+      "Invoices, payments, and billing activity",
+      "Expenses with tax and receipt information",
     ],
   },
   {
-    id: "automations",
+    id: "ai",
     icon: Workflow,
     accent: "#fc6d2d",
-    kicker: "Automations",
-    title: "Describe it in a sentence. It's built.",
-    body: "Type what should happen when something changes and AI assembles the rule. 100+ triggers and actions, plus webhooks and MCP for everything else.",
+    kicker: "Hash AI & MCP",
+    title: "Ask questions, then take supported action",
+    body: "Choose an available AI model, get permission-aware workspace answers, manage supported tasks conversationally, or connect a compatible AI client through MCP.",
     points: [
-      "Natural-language automation builder",
-      "100+ triggers, conditions and actions",
-      "Webhooks, integrations and MCP servers",
+      "User-selected models from configured providers",
+      "Role-aware answers grounded in current workspace data",
+      "Scoped task actions and MCP tools",
     ],
   },
 ];
 
 const moreTools = [
-  { icon: Timer, name: "Time Tracking", accent: "#078d3b", id: "time", body: "Native timers, billable rates, timesheets and approvals." },
-  { icon: GanttChartSquare, name: "Gantt & Timelines", accent: "#fa12e3", id: "gantt", body: "Drag to reschedule; dependencies recalculate instantly." },
-  { icon: Target, name: "Goals", accent: "#fc6d2d", id: "goals", body: "OKRs that roll up from the tasks actually being done." },
-  { icon: PenTool, name: "Whiteboards", accent: "#7612fa", id: "whiteboards", body: "Infinite canvas where any shape becomes a real task." },
-  { icon: Table2, name: "Spreadsheets", accent: "#0091ff", id: "sheets", body: "Formulas and rollups over live workspace data." },
-  { icon: Plug, name: "Integrations", accent: "#4a2fff", id: "integrations", body: "500+ apps, a full REST API, webhooks and MCP." },
+  { icon: Timer, name: "Attendance", accent: "#078d3b", id: "attendance", body: "Record working days and review permitted attendance summaries." },
+  { icon: GanttChartSquare, name: "Meetings", accent: "#fa12e3", id: "meetings", body: "Schedule, confirm, cancel, and reschedule supported bookings." },
+  { icon: Target, name: "Leads", accent: "#fc6d2d", id: "leads", body: "Track prospects through supported sales stages." },
+  { icon: PenTool, name: "People", accent: "#7612fa", id: "people", body: "Organize employee details, roles, and workspace access." },
+  { icon: Table2, name: "Payroll", accent: "#0091ff", id: "payroll", body: "Manage permitted salary and payroll workflows." },
+  { icon: Plug, name: "MCP Access", accent: "#4a2fff", id: "mcp", body: "Connect compatible AI clients to scoped Hashboard tools." },
 ];
 
 const faqs = [
   {
-    q: "Do we have to migrate everything at once?",
-    a: "No. Most teams start with one space — usually the noisiest one — and import from Jira, Asana, Monday, Trello, Notion or CSV in a few clicks. You can run side by side for as long as you need.",
+    q: "How is work organized in Hashboard?",
+    a: "Companies organize teams into spaces, projects, and tasks. Access depends on company membership, space role, project membership, and the permissions of each workflow.",
   },
   {
     q: "Will this work for non-technical teams?",
-    a: "That's most of the user base. Marketing, HR, ops and client services teams use the same platform with templates tuned to their workflow, so nobody has to learn a ticketing system.",
+    a: "Yes. Hashboard supports project delivery, team communication, people operations, clients, meetings, billing, and other everyday business workflows.",
   },
   {
-    q: "How customizable are statuses and fields?",
-    a: "Fully. Every space can define its own statuses, custom fields, views, permissions and automations, and templates let you stamp that setup onto new projects.",
+    q: "What can be configured on projects and tasks?",
+    a: "Projects support status, priority, deadlines, managers, members, and templates. Tasks support descriptions, defined statuses, priorities, due dates, multiple assignees, and subtasks.",
   },
   {
-    q: "Is there an API?",
-    a: "Yes — a documented REST API, webhooks, and MCP server support so AI agents can act on your workspace directly. The Enterprise plan adds higher rate limits.",
+    q: "Can external AI clients connect to Hashboard?",
+    a: "Yes. Hashboard provides MCP access for compatible clients using scoped authentication and supported workspace tools.",
   },
 ];
 
@@ -161,15 +161,15 @@ export default function ProductPage() {
             </span>
             <h1 className="font-display mt-6 text-[clamp(2.5rem,5.6vw,4.25rem)] leading-[1.0] font-extrabold tracking-[-0.04em] text-ink text-balance">
               One platform for{" "}
-              <span className="text-brand-gradient">every kind of work</span>
+              <span className="text-brand-gradient">your everyday operations</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-ink-secondary">
-              Tasks, docs, chat, goals, dashboards and automations that share the
-              same data model — so your context never has to be re-entered.
+              Bring projects, tasks, chat, people, clients, attendance, leave,
+              meetings, billing, and AI assistance into one workspace.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Button href="/signup" size="xl">
-                Get started. It&apos;s FREE
+                Get started
               </Button>
               <Button href="/demo" variant="outline" size="xl">
                 Get a demo
@@ -190,8 +190,8 @@ export default function ProductPage() {
         <Container size="default">
           <SectionHeading
             eyebrow="What's inside"
-            title="Six products most teams buy separately"
-            subtitle="Each one would be a decent standalone tool. Together they're a platform, because they share permissions, search and AI."
+            title="Six connected areas of work"
+            subtitle="Coordinate delivery, communication, people, business operations, and AI assistance through one workspace."
           />
         </Container>
 
@@ -242,7 +242,7 @@ export default function ProductPage() {
                     href="/signup"
                     className="mt-8 inline-flex items-center gap-1.5 text-[14px] font-bold text-accent-blue hover:underline"
                   >
-                    Try {m.kicker} free
+                    Explore {m.kicker}
                     <ArrowRight className="size-4" />
                   </Link>
                 </div>
@@ -265,8 +265,8 @@ export default function ProductPage() {
       <Section className="bg-bg-box">
         <Container size="default">
           <SectionHeading
-            eyebrow="And the rest"
-            title="Six more, included at no extra cost"
+            eyebrow="More workflows"
+            title="More of your operations, connected"
           />
           <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {moreTools.map((t) => (

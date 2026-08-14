@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Paper timesheets or spreadsheets that go stale instantly",
-    "No visibility into who’s actually clocked in right now",
-    "Payroll delayed while someone reconciles hours by hand",
-    "Late arrivals and missed shifts go unnoticed",
+    "Attendance records scattered across messages and spreadsheets",
+    "No consistent view of today’s check-in status",
+    "Manual calculations for time worked",
+    "Corrections without a clear note or audit context",
   ],
   with: [
-    "One tap clock-in and clock-out from any device",
-    "Live view of who’s working, on break, or off today",
-    "Hours flow straight into payroll—no manual entry",
-    "Automatic alerts for late arrivals and missed shifts",
+    "Face-verified check-in and check-out records",
+    "Today and monthly views for permitted team members",
+    "Worked time calculated from recorded attendance",
+    "Admin corrections with adjustment notes",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Clock In/Out",
-    title: "One tap to start or end a shift",
-    body: "Team members clock in and out from web, mobile, or a shared kiosk. Every entry is timestamped and tied to their profile automatically.",
+    eyebrow: "Daily Attendance",
+    title: "Record the beginning and end of the workday",
+    body: "Employees use their enrolled face profile to submit a check-in and check-out. Each record is tied to the employee and the company’s attendance date.",
     image: "/calendar/calendar-feature-1.png",
     alt: "Clock in and out view in Hashboard Attendance",
   },
   {
-    eyebrow: "Geofenced Check-ins",
-    title: "Confirm people are where they should be",
-    body: "Restrict clock-ins to approved locations so remote and on-site attendance stays accurate without micromanaging anyone.",
+    eyebrow: "Attendance Status",
+    title: "See today’s status without chasing updates",
+    body: "Employees can review their own status, while authorized admins can see today’s team summary and inspect individual attendance history.",
     image: "/calendar/calendar-feature-2.png",
-    alt: "Geofenced check-in in Hashboard Attendance",
+    alt: "Team attendance status in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Timesheet Reports",
-    title: "Hours that flow straight to payroll",
-    body: "Every logged hour rolls up into exportable timesheets, ready for approval and payroll without a single spreadsheet.",
+    eyebrow: "Monthly Records",
+    title: "Review attendance across the month",
+    body: "See present, incomplete, and absent days alongside recorded check-in, check-out, and worked time. Working days respect configured holidays and week-offs where applicable.",
     image: "/calendar/calendar-feature-3.png",
     alt: "Timesheet report in Hashboard Attendance",
   },
 ];
 
 const attendanceFeatures = [
-  [Fingerprint, "Clock In/Out", "Let your team check in and out in seconds from any device."],
-  [MapPin, "Geofenced Check-ins", "Restrict attendance to approved job sites or office locations."],
-  [CalendarClock, "Shift Scheduling", "Build and publish shift schedules your whole team can see."],
-  [ClipboardCheck, "Digital Timesheets", "Auto-generated timesheets ready for approval and payroll."],
-  [Clock, "Break Tracking", "Log paid and unpaid breaks automatically within each shift."],
-  [BarChart3, "Attendance Reports", "See lateness, absences, and overtime trends at a glance."],
+  [Fingerprint, "Face-verified attendance", "Use an enrolled face profile for daily attendance submissions."],
+  [MapPin, "Today’s status", "Review whether attendance is not started, checked in, or completed."],
+  [CalendarClock, "Company-aware dates", "Keep attendance aligned with the company’s configured timezone."],
+  [ClipboardCheck, "Manual corrections", "Let admins add or deduct time with a supporting note."],
+  [Clock, "Worked time", "Calculate worked minutes from recorded check-in and check-out times."],
+  [BarChart3, "Team summaries", "Review permitted daily and monthly attendance breakdowns."],
 ];
 
 const platform = [
   [Fingerprint, "Attendance", "Track time and presence"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Payroll", "Prepare payroll periods"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate team delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leave", "Request and approve time off"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer records"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function AttendanceHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD ATTENDANCE</p>
-          <h1>Track time and presence without the spreadsheets</h1>
+          <h1>Keep attendance clear from check-in to review</h1>
           <p className="task-hero-lede">
-            Clock in, clock out, and see who’s working right now. Hashboard Attendance turns shift logs and timesheets into one clean, always-current record.
+            Record face-verified check-ins and check-outs, review your history, and give authorized admins a reliable view of team attendance.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Attendance, leave, people, and payroll context in one platform</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Attendance needs, in one place</h2>
+          <h2>A dependable attendance record, in one place</h2>
           <p>
-            Hashboard Attendance keeps everything connected, so nothing falls through the cracks.
+            Employees see their own records. Authorized admins get the team visibility and correction tools their role allows.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Attendance, handled automatically.</h2>
-          <p>Join 3M+ teams who run attendance without the busywork. Start your 7-day free trial.</p>
+          <h2>Attendance records your team can rely on.</h2>
+          <p>Keep daily status, monthly history, and permitted corrections connected to the rest of your workspace.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI about attendance patterns", "Ask Brain who’s been late three times this month or which shifts are chronically understaffed—get an answer in seconds, no report-building required.", "/calendar/ai-calendar-1.png"],
-    ["Smart Alerts", "Automatic flags for missed shifts", "Hashboard Brain flags no-shows, late clock-ins, and unapproved overtime the moment they happen, so managers can act same-day.", "/calendar/ai-calendar-2.png"],
+    ["Hash AI", "Ask about permitted attendance records", "Employees can ask for their own attendance. Admins can request a team member’s daily record, including status, check-in, check-out, and worked time.", "/calendar/ai-calendar-1.png"],
+    ["Admin Actions", "Correct attendance with clear context", "Authorized admins can apply supported attendance adjustments and include a note explaining why time was added or deducted.", "/calendar/ai-calendar-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Attendance</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">AI-assisted attendance</p>
+          <h2>Ask clearly.<br />Act within permissions.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Attendance is just the beginning</h2>
-            <p>Attendance connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Attendance connects to everyday operations</h2>
+            <p>Keep attendance alongside people, leave, payroll, projects, tasks, chat, clients, meetings, invoices, and expenses in one platform.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function AttendanceFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "People", text: "People" },
+    { name: "Leave", text: "Leave" },
+    { name: "Payroll", text: "Payroll" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "Clients", text: "Clients" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Expenses", text: "Expenses" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function AttendanceFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

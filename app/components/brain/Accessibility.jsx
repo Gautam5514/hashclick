@@ -1,8 +1,8 @@
 const platforms = [
-  { mark: "●", label: "macOS" },
-  { mark: "●", label: "iOS" },
-  { mark: "⊞", label: "Windows" },
-  { mark: "▷", label: "Android" },
+  { mark: "●", label: "Hashboard web" },
+  { mark: "●", label: "Hash AI" },
+  { mark: "⊞", label: "MCP clients" },
+  { mark: "▷", label: "Configured models" },
 ];
 
 export default function Accessibility() {
@@ -12,26 +12,26 @@ export default function Accessibility() {
         <header className="bn-access-heading">
           <div className="bn-access-kicker">
             <p className="bn-eyebrow bn-eyebrow-purple">
-              Fully native desktop &amp; mobile
+              Available in your Hashboard workspace
             </p>
           </div>
-          <h2 className="bn-access-title">One Hash AI, every device</h2>
+          <h2 className="bn-access-title">One Hash AI, connected to your work</h2>
         </header>
 
         <div className="bn-access-hero">
           <div className="bn-access-copy">
             <h3>
-              Voice-first.<br />
-              Context-aware.<br />
-              Full agent management<br />
-              on the go.
+              Ask naturally.<br />
+              Choose your model.<br />
+              Review current work.<br />
+              Take permitted action.
             </h3>
             <a href="/signup" className="bn-btn bn-btn-light">
               Get started
             </a>
 
             <div className="bn-access-anywhere">
-              <p>Use anywhere</p>
+              <p>Supported access</p>
               <ul>
                 {platforms.map((platform) => (
                   <li key={platform.label}>
@@ -69,8 +69,8 @@ export default function Accessibility() {
               </div>
             </div>
             <div className="bn-access-cap-copy">
-              <h3>Coworker</h3>
-              <p>Anticipates and executes work alongside your team</p>
+              <h3>Workspace assistant</h3>
+              <p>Answers questions using current, permission-aware workspace information</p>
             </div>
           </article>
 
@@ -82,8 +82,8 @@ export default function Accessibility() {
               </div>
             </div>
             <div className="bn-access-cap-copy">
-              <h3>Mention Anywhere</h3>
-              <p>Instant context and answers wherever you @HashAI</p>
+              <h3>Conversational actions</h3>
+              <p>Create or update supported work from the Hash AI experience</p>
             </div>
           </article>
 
@@ -102,8 +102,8 @@ export default function Accessibility() {
               <p>Stop&nbsp;&nbsp; ⌥⌘ &nbsp; | &nbsp; Close&nbsp; Esc&nbsp;&nbsp; ⛶</p>
             </div>
             <div className="bn-access-cap-copy">
-              <h3>Talk to Text</h3>
-              <p>Never use your keyboard again</p>
+              <h3>MCP access</h3>
+              <p>Connect compatible AI clients to scoped Hashboard tools</p>
             </div>
           </article>
         </div>

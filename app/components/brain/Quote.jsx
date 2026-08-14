@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 const words =
-  "Hashboard's AI levels the playing field — three-month-old project manager or a seasoned veteran, you tap into the same intelligence. Every project we run is backed by 150 years of our team's collective expertise, not just one person's memory.".split(
+  "Hash AI brings workspace answers and supported actions into one conversation, helping teams understand priorities and keep everyday work moving.".split(
     " ",
   );
 
@@ -59,7 +59,7 @@ export default function Quote() {
   }, []);
 
   return (
-    <section className="bn-quote" aria-label="Customer quote" ref={sectionRef}>
+    <section className="bn-quote" aria-label="Hash AI product statement" ref={sectionRef}>
       <div className="bn-quote-sticky">
         <div className="bn-container bn-quote-inner">
           <blockquote className="bn-quote-body">
@@ -76,11 +76,11 @@ export default function Quote() {
             <span className="bn-quote-mark" aria-hidden="true">&rdquo;</span>
           </blockquote>
           <footer className="bn-quote-cite" ref={citeRef}>
-            <strong className="bn-quote-logo">SIEMENS</strong>
+            <strong className="bn-quote-logo">HASH AI</strong>
             <span className="bn-quote-divider" aria-hidden="true" />
             <span className="bn-quote-person">
-              <strong>Aasim Arafath</strong>
-              <span>Project Services, Siemens</span>
+              <strong>Workspace assistance</strong>
+              <span>Grounded in Hashboard</span>
             </span>
           </footer>
         </div>

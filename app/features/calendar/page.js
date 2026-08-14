@@ -2,8 +2,8 @@ import CalendarPage from "../../components/calendar/CalendarPage";
 import "../../components/tasks/tasks.css";
 
 export const metadata = {
-  title: "Hashboard Calendar: Schedule your meetings and your work—automatically",
-  description: "Plan, schedule, and manage tasks seamlessly with Hashboard Calendar. Sync with Google Calendar, customize views, and stay on top of deadlines—all in one place.",
+  title: "Hashboard Calendar: Google Calendar and Hashboard bookings",
+  description: "Connect Google Calendar, view external events with Hashboard bookings, check busy time, and keep supported meeting updates synchronized.",
 };
 
 export default function Page() {

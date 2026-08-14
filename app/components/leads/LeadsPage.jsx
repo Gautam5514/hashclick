@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Leads scattered across inboxes and spreadsheets",
-    "No clear view of what stage each deal is actually in",
-    "Follow-ups forgotten until the lead has gone cold",
-    "No record of what worked to close a deal last time",
+    "Prospect details scattered across separate records",
+    "Pipeline stage and ownership are difficult to confirm",
+    "Calls, emails, meetings, and follow-ups lack a timeline",
+    "Won opportunities require duplicate client entry",
   ],
   with: [
-    "Every lead captured in one pipeline, automatically",
-    "A visual board shows exactly where each deal stands",
-    "Follow-up reminders fire before a lead goes cold",
-    "Full history of every touchpoint on every deal",
+    "Manual, CSV, webhook, referral, and other lead sources",
+    "Defined stages from New through Won or Lost",
+    "Assignment, priority, value, probability, and close date",
+    "Activity history and supported conversion to a client",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Pipeline Board",
-    title: "See every deal’s stage at a glance",
-    body: "Drag leads through a visual pipeline from new to won, so the whole team knows exactly where things stand.",
+    eyebrow: "Pipeline Stages",
+    title: "Keep every opportunity in a defined stage",
+    body: "Move leads through New, Contacted, Qualified, Proposal, Negotiation, Won, or Lost while retaining their current owner and priority.",
     image: "/tasks/feature-included.png",
     alt: "Lead pipeline board in Hashboard",
   },
   {
-    eyebrow: "Lead Capture",
-    title: "Every inbound lead, logged automatically",
-    body: "Web forms, email, and chat inquiries all flow into one pipeline the moment they come in—nothing falls through the cracks.",
+    eyebrow: "Lead Details",
+    title: "Capture the prospect and opportunity context",
+    body: "Store contact and company information, source, tags, notes, estimated value, currency, probability, and expected close date.",
     image: "/tasks/feature-connected.png",
     alt: "Lead capture in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Follow-up Automations",
-    title: "Never let a lead go cold",
-    body: "Set follow-up reminders and automated nudges so every lead gets a timely response, even during a busy week.",
+    eyebrow: "Activities and Conversion",
+    title: "Record progress and convert when won",
+    body: "Add notes, calls, emails, meetings, follow-ups, status changes, and assignments, then convert an eligible lead into a connected client record.",
     image: "/tasks/feature-scale.png",
     alt: "Follow-up automations in Hashboard",
   },
 ];
 
 const leadsFeatures = [
-  [Columns3, "Pipeline Board", "Drag leads through fully customizable pipeline stages."],
-  [TrendingUp, "Lead Scoring", "Automatically rank leads by engagement and fit."],
-  [UserPlus, "Contact Capture", "Pull in leads from forms, email, and chat automatically."],
-  [Zap, "Follow-up Automations", "Trigger reminders and nudges so no lead goes cold."],
-  [Target, "Source Tracking", "See which channels actually bring in your best leads."],
-  [PieChart, "Conversion Reports", "Track win rate and pipeline value by stage or owner."],
+  [Columns3, "Defined pipeline", "Use seven supported lead stages from New to Won or Lost."],
+  [TrendingUp, "Opportunity details", "Record estimated value, currency, probability, and expected close date."],
+  [UserPlus, "Ownership", "Claim, release, or assign leads according to supported permissions."],
+  [Zap, "Scheduled follow-ups", "Add follow-up activities with scheduled and completion timestamps."],
+  [Target, "Source tracking", "Record manual, CSV, webhook, referral, website, social, call, or other sources."],
+  [PieChart, "Client conversion", "Convert a qualified outcome into a linked client without losing lead history."],
 ];
 
 const platform = [
   [TrendingUp, "Leads", "Track and convert leads"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Clients", "Manage converted accounts"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage prospect bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Invoices", "Manage customer billing"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Forms", "Capture structured inquiries"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Payroll", "Prepare payroll periods"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function LeadsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD LEADS</p>
-          <h1>Turn conversations into a pipeline that moves</h1>
+          <h1>Track prospects from first record to client conversion</h1>
           <p className="task-hero-lede">
-            Capture leads the moment they come in, track them through a visual pipeline, and never let a follow-up slip through the cracks again.
+            Keep lead identity, opportunity value, stage, owner, source, activities, bookings, and conversion history in one workflow.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Prospect, pipeline, activity, booking, and client context connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Leads needs, in one place</h2>
+          <h2>A complete operational record for every lead</h2>
           <p>
-            Hashboard Leads keeps everything connected, so nothing falls through the cracks.
+            Manage the opportunity from capture and assignment through activities, scheduling, outcome, and client conversion.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Leads, handled automatically.</h2>
-          <p>Join 3M+ teams who run leads without the busywork. Start your 7-day free trial.</p>
+          <h2>A pipeline your team can keep current.</h2>
+          <p>Use structured stages, ownership, values, activities, sources, and conversion instead of unsupported scoring promises.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI which leads need attention", "Ask Brain which deals have gone quiet or which leads are most likely to close, and get a prioritized answer instantly.", "/tasks/super-agents.png"],
-    ["Lead Scoring", "Automatic scoring based on engagement", "Hashboard Brain scores leads by activity and fit, so your team spends time on the deals most likely to close.", "/tasks/clickup-brain.png"],
+    ["Lead Context", "Use current pipeline information", "Keep stage, priority, owner, estimated value, probability, close date, source, tags, and activity history available as structured context.", "/tasks/super-agents.png"],
+    ["Supported Actions", "Move the opportunity forward deliberately", "Update details, assign ownership, record an activity, complete a follow-up, or convert the lead when the user has permission.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Pipeline</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected pipeline context</p>
+          <h2>See the record.<br />Choose the next action.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Leads is just the beginning</h2>
-            <p>Leads connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Leads connect to customer operations</h2>
+            <p>Keep prospects alongside booking forms, meetings, clients, projects, tasks, chat, agreements, and invoices.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function LeadsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Leads", text: "Leads" },
+    { name: "Activities", text: "Activities" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Forms", text: "Forms" },
+    { name: "Clients", text: "Clients" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "Agreements", text: "Agreements" },
+    { name: "Invoices", text: "Invoices" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function LeadsFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

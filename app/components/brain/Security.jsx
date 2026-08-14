@@ -108,18 +108,18 @@ function LoopVisual() {
 
 const pillars = [
   {
-    title: "No third-party data training",
-    desc: "We forbid third-party AI providers from training on your data.",
+    title: "Company-scoped workspace data",
+    desc: "Workspace facts are scoped to the authenticated company.",
     visual: <AuditVisual />,
   },
   {
-    title: "Zero third-party data retention",
-    desc: "We don't allow third-party AI providers to store any of your data.",
+    title: "Role and membership checks",
+    desc: "Answers and actions follow role, workspace, project, and membership validation.",
     visual: <CipherVisual />,
   },
   {
-    title: "Multi-model unified security",
-    desc: "All models operate under the same permissions, privacy, and security controls.",
+    title: "Controlled workspace actions",
+    desc: "Supported mutations enforce server-side validation before changing workspace data.",
     visual: <LoopVisual />,
   },
 ];
@@ -129,12 +129,12 @@ export default function Security() {
     <section className="bn-security" aria-label="Hash AI security">
       <div className="bn-security-inner">
         <header className="bn-security-header">
-          <p className="bn-eyebrow bn-eyebrow-purple">Secure</p>
+          <p className="bn-eyebrow bn-eyebrow-purple">Permission-aware</p>
           <div className="bn-cards-rule" aria-hidden="true" />
           <h2 className="bn-h2 bn-security-h2">
-            Your data <em>never</em> trains
+            Answers and actions respect
             <br />
-            <span> third-party models</span>
+            <span> workspace access</span>
           </h2>
         </header>
       </div>

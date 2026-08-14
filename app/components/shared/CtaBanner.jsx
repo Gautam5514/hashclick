@@ -9,9 +9,9 @@ function HashboardLogoMark({ className = "size-8" }) {
 }
 
 export default function CtaBanner({
-  title = "All your work, all your people, all powered by AI",
+  title = "Bring your work, people, and operations together",
   subtitle,
-  primary = { label: "Get started FREE", href: "/signup" },
+  primary = { label: "Get started", href: "/signup" },
   showMockup = true,
 }) {
   return (

@@ -150,9 +150,9 @@ export default function DotGrid() {
       </div>
       <figcaption id="ach-dotgrid-caption" className="ach-caption">
         <span>
-          Fortune 500 companies
+          Projects, people, and operations
           <br />
-          that use Hashboard
+          connected in Hashboard
         </span>
       </figcaption>
     </figure>

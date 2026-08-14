@@ -3,7 +3,7 @@ import "../../components/chat/chat.css";
 
 export const metadata = {
   title: "Hashboard Chat | Team Messaging Built Into Your Work",
-  description: "All your work in one place. Connect messaging, tasks, docs, and AI agents into a single connected workspace.",
+  description: "Organize company and project conversations with threads, files, mentions, reactions, search, pins, bookmarks, and notification controls.",
 };
 
 export default function Page() {
