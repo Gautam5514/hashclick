@@ -1,45 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Check, ChevronRight, ArrowRight } from "lucide-react";
 import Button from "../ui/Button";
 import AppMockup from "../shared/AppMockup";
 import { cn } from "@/lib/utils";
-
-function ClickUpFlowerIcon({ className = "size-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      {/* Top Right Petal - Blue */}
-      <circle cx="14.8" cy="9.2" r="4.2" fill="url(#petal_blue)" />
-      {/* Bottom Right Petal - Pink */}
-      <circle cx="14.8" cy="14.8" r="4.2" fill="url(#petal_pink)" />
-      {/* Bottom Left Petal - Purple */}
-      <circle cx="9.2" cy="14.8" r="4.2" fill="url(#petal_purple)" />
-      {/* Top Left Petal - Orange */}
-      <circle cx="9.2" cy="9.2" r="4.2" fill="url(#petal_orange)" />
-      {/* Center White Diamond Spark */}
-      <path d="M12 9.8L12.6 11.4L14.2 12L12.6 12.6L12 14.2L11.4 11.4L12 9.8Z" fill="white" />
-      <defs>
-        <linearGradient id="petal_blue" x1="11" y1="5" x2="19" y2="13" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#40ddff" />
-          <stop offset="1" stopColor="#0091ff" />
-        </linearGradient>
-        <linearGradient id="petal_pink" x1="11" y1="11" x2="19" y2="19" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#ff02f0" />
-          <stop offset="1" stopColor="#fa12e3" />
-        </linearGradient>
-        <linearGradient id="petal_purple" x1="5" y1="11" x2="13" y2="19" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#b38cff" />
-          <stop offset="1" stopColor="#7612fa" />
-        </linearGradient>
-        <linearGradient id="petal_orange" x1="5" y1="5" x2="13" y2="13" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#ff7e40" />
-          <stop offset="1" stopColor="#fc6d2d" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
 
 const valueProps = [
   {
@@ -117,7 +83,13 @@ export default function Hero() {
             >
               <div className="rainbow-pill-inner">
                 <span>Powered By</span>
-                <ClickUpFlowerIcon className="size-4 shrink-0" />
+                <Image
+                  src="/hashai.svg"
+                  alt="Hash AI"
+                  width={16}
+                  height={16}
+                  className="size-4 shrink-0"
+                />
                 <span className="font-extrabold text-[#202020]">
                   Hash AI
                 </span>

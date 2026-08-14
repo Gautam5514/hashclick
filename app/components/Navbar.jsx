@@ -182,6 +182,10 @@ export default function Navbar() {
         </div>
 
          <div className="cu-links">
+            <Link href="/brain" className="cu-link" onMouseEnter={hide}>
+              Hash AI
+            </Link>
+
             {navMenus.map((menu) => (
               <button
                 key={menu.id}
@@ -261,16 +265,16 @@ export default function Navbar() {
           /* MAIN LEVEL MENU */
           <>
             <div className="cu-mobile-list">
-              <button
-                type="button"
+              <Link
+                href="/brain"
                 className="cu-mobile-item"
-                onClick={() => setMobileSubmenu("brain-ai")}
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
               >
                 <span>Hash AI</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+              </Link>
 
               <button
                 type="button"

@@ -8,39 +8,6 @@
 
 export const navMenus = [
   {
-    id: "brain-ai",
-    label: "Hash AI",
-    columns: [
-      {
-        title: "AI Platform",
-        kind: "platform",
-        items: [
-          { label: "Platform Overview", desc: "The converged AI workspace", href: "/brain", icon: "brain-platform", w: 40 },
-          { label: "Super Agents", desc: "Delegate your work entirely", href: "/ai", icon: "super-agents", w: 46, badge: "new" },
-          { label: "Brain MAX", desc: "One AI app to rule them all", href: "/ai", icon: "brain-max-desktop", w: 49 },
-          { label: "Brain MAX extension", desc: "Your AI assistant, in every tab", href: "/download", icon: "brain-max-chrome", w: 49 },
-        ],
-      },
-      {
-        title: "AI Features",
-        kind: "platform",
-        items: [
-          { label: "Talk to Text", desc: "Write 4x faster than you type", href: "/ai", icon: "talk-to-text", w: 40 },
-          { label: "Notetaker", desc: "Intelligent meeting notes and summaries", href: "/ai", icon: "notetaker", w: 40 },
-          { label: "Enterprise Search", desc: "Find anything across your workspace", href: "/ai", icon: "enterprise-search", w: 40 },
-        ],
-      },
-      {
-        title: "AI Resources",
-        kind: "simple",
-        items: [
-          { label: "Pricing", href: "/pricing" },
-          { label: "State of AI", href: "/learn" },
-        ],
-      },
-    ],
-  },
-  {
     id: "product",
     label: "Product",
     columns: [
