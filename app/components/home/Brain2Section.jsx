@@ -29,23 +29,23 @@ function HashAiLockup({ className }) {
 }
 
 const models = [
-  { name: "Brain", icon: "/brain-2/brain.svg" },
+  { name: "Hash AI", icon: "/brain-2/brain.svg" },
   { name: "GPT", icon: "/brain-2/logos/chatgpt.svg" },
   { name: "Claude Opus", icon: "/brain-2/logos/claude.svg" },
   { name: "Gemini", icon: "/brain-2/logos/gemini.svg" },
 ];
 
 const personality = [
-  ["tone", '"direct, no fluff, like a sharp coworker"'],
-  ["sprint_methods", '"story points, fibonacci"'],
-  ["reports_to", '"VP Engineering, weekly on Mondays"'],
-  ["prefers", '"tables over bullet points"'],
-  ["projects", '"Brain 2.0, Platform Migration, Q2"'],
-  ["timezone", '"PST, don\'t schedule before 10am"'],
-  ["tools", '"GitHub, Figma, Linear, Notion"'],
+  ["workspace", '"Demo Workspace"'],
+  ["role", '"Admin"'],
+  ["access", '"role-based permissions"'],
+  ["context", '"current workspace data"'],
+  ["projects", '"permitted projects only"'],
+  ["actions", '"supported Hashboard tools"'],
+  ["control", '"user-selected AI model"'],
 ];
 
-const memoryValues = ["Values clarity", "Ships on Fridays", "Writes in tables"];
+const memoryValues = ["Current priorities", "Assigned work", "Upcoming deadlines"];
 
 /* The closing band's texture: three tapering rows of ASCII, densest where the
    glow is brightest. Every cell holds a few neighbouring glyphs off the ramp
@@ -102,9 +102,9 @@ function buildAsciiRows() {
 const ASCII_ROWS = buildAsciiRows();
 
 const agents = [
-  { name: "Strategist", avatar: "/brain-2/super-agents/blue-agent-card.png" },
-  { name: "Developer", avatar: "/brain-2/super-agents/orange-agent-card.png" },
-  { name: "Visual Designer", avatar: "/brain-2/super-agents/purple-agent-card.png" },
+  { name: "Project Progress", avatar: "/brain-2/super-agents/blue-agent-card.png" },
+  { name: "Team Workload", avatar: "/brain-2/super-agents/orange-agent-card.png" },
+  { name: "Overdue Tasks", avatar: "/brain-2/super-agents/purple-agent-card.png" },
 ];
 
 /* ---------------- Card visuals ---------------- */
@@ -203,7 +203,7 @@ function MemoryVisual() {
           <div className="b2-mem-values">
             {memoryValues.map((v) => (
               <div key={v} className="b2-mem-value">
-                <span className="b2-mem-vlabel">User Preference:</span>
+                <span className="b2-mem-vlabel">Included:</span>
                 <span className="b2-mem-vtext">{v}</span>
               </div>
             ))}

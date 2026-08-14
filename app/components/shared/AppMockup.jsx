@@ -148,7 +148,7 @@ export default function AppMockup({ className, activePill = "Projects" }) {
                 <span className="flex size-3.5 items-center justify-center rounded-full bg-[#fc6d2d] text-white text-[8px]">
                   ✳
                 </span>
-                <span>Hashboard Inc.</span>
+                <span>Demo Workspace</span>
                 <ChevronDown className="size-3 text-[#7b7b7b]" />
               </button>
             </div>
@@ -211,14 +211,14 @@ export default function AppMockup({ className, activePill = "Projects" }) {
               </ul>
 
               <div className="mt-3 mb-1 px-1 text-[9px] font-bold tracking-wider text-[#a0a0b9] uppercase">
-                Creative Team
+                Marketing Space
               </div>
               <ul className="space-y-0.5 text-[10.5px]">
                 <li className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-[#646464] hover:bg-[#f0f0f0]">
-                  <Hash className="size-3 text-[#a0a0b9]" /> Product Backlog
+                  <Hash className="size-3 text-[#a0a0b9]" /> Campaign Planning
                 </li>
                 <li className="flex items-center gap-1.5 rounded-lg px-2 py-1 text-[#646464] hover:bg-[#f0f0f0]">
-                  <Hash className="size-3 text-[#a0a0b9]" /> Creative
+                  <Hash className="size-3 text-[#a0a0b9]" /> Brand Launch
                 </li>
                 <li className="flex items-center justify-between rounded-lg px-2 py-1 text-[#646464] hover:bg-[#f0f0f0]">
                   <span className="flex items-center gap-1.5">
@@ -230,7 +230,7 @@ export default function AppMockup({ className, activePill = "Projects" }) {
                 <li className="flex items-center justify-between rounded-lg px-2 py-1 text-[#646464] hover:bg-[#f0f0f0]">
                   <span className="flex items-center gap-1.5">
                     <Bot className="size-3 text-[#fa12e3]" />
-                    Campaign Agent
+                    Hash AI
                   </span>
                   <span className="flex size-3.5 items-center justify-center rounded-full bg-[#f0382d] text-[7.5px] font-bold text-white">3</span>
                 </li>
@@ -260,7 +260,7 @@ export default function AppMockup({ className, activePill = "Projects" }) {
 
                 <div className="flex items-center gap-1.5 text-[10.5px] text-[#7b7b7b]">
                   <span className="rounded bg-[#f4f4f5] px-2 py-0.5 font-semibold text-[#202020]">
-                    View: {activePill}
+                    Workflow: {activePill}
                   </span>
                 </div>
               </div>

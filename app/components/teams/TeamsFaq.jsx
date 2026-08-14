@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Teams free to use?",
-    "Yes! Hashboard Teams is available on the Free Forever plan with unlimited team members and directory entries."
+    "Which internal user roles are available?",
+    "Hashboard supports Admin, Manager, and Employee global roles for internal company users. Space and project access add more specific membership rules."
   ],
   [
     "How does Hashboard Teams work?",
-    "Every team, member, and role lives in one searchable directory with permissions applied consistently."
+    "Company users are tenant-scoped accounts. Their global role, employee profile, and memberships determine the records and actions they can access."
   ],
   [
     "Does Teams connect to the rest of Hashboard?",
-    "Yes! Teams stays linked to Attendance and Payroll, so your data never lives in a separate tool."
+    "The same internal user can be associated with spaces, projects, tasks, chat, meetings, attendance, leave, salary history, payroll, and employee documents."
   ],
   [
-    "Can I customize Teams for my team?",
-    "Yes, assign roles and onboarding checklists per team."
+    "What does an employee profile contain?",
+    "Profiles can store employee ID, names, personal and work contact details, birth date, gender, blood group, marital status, address, emergency contact, and onboarding status."
   ],
   [
-    "Does Hashboard Brain help with Teams?",
-    "Yes! Hashboard Brain can flag who’s overloaded this week so managers can rebalance work before burnout."
+    "Can employee salary and documents be stored?",
+    "Yes. Hashboard supports tenant-scoped employee documents and effective-dated salary records for authorized people and payroll workflows."
   ],
 ];
 

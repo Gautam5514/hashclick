@@ -10,74 +10,74 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "No single directory of who’s on which team",
-    "Permissions handed out ad hoc, hard to audit",
-    "Workload is invisible until someone burns out",
-    "New hires piece together their onboarding themselves",
+    "Employee identity and contact details stored separately",
+    "Company roles disconnected from workspace access",
+    "Space and project membership difficult to trace",
+    "Documents and salary history kept outside the employee record",
   ],
   with: [
-    "One directory shows every team and its members",
-    "Roles and permissions managed consistently, org-wide",
-    "Workload visible per person before it becomes a problem",
-    "New hires get a guided onboarding checklist on day one",
+    "Company user list with role and profile context",
+    "Admin, Manager, and Employee internal roles",
+    "Space and project memberships tied to each user",
+    "Employee profile, documents, and salary history connected",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Team Directory",
-    title: "Everyone, organized by team",
-    body: "See every team, its members, and their roles in one directory, so no one has to ask who’s who in a growing company.",
+    eyebrow: "Company Users",
+    title: "Keep the internal team in one company directory",
+    body: "List tenant-scoped users with their name, email, avatar, global role, employee profile, and permitted workspace relationships.",
     image: "/kanban/kanban-feature-1.png",
     alt: "Team directory in Hashboard",
   },
   {
     eyebrow: "Roles & Permissions",
-    title: "Consistent access, managed centrally",
-    body: "Assign roles once and permissions apply consistently across every Space, task, and doc that team touches.",
+    title: "Use roles and membership together",
+    body: "Global Admin, Manager, and Employee roles combine with space roles, project membership, and workflow-specific permissions.",
     image: "/kanban/kanban-feature-2.png",
     alt: "Roles and permissions in Hashboard",
     reverse: true,
   },
   {
-    eyebrow: "Workload Balancing",
-    title: "Spot overload before it happens",
-    body: "See task load per person across every project, so managers can rebalance work before someone burns out.",
+    eyebrow: "Employee Records",
+    title: "Keep people information connected",
+    body: "Maintain personal and work contact details, onboarding status, emergency information, employee documents, and effective-dated salary records.",
     image: "/kanban/kanban-feature-3.png",
-    alt: "Workload balancing in Hashboard",
+    alt: "Employee records and workspace membership in Hashboard",
   },
 ];
 
 const teamsFeatures = [
-  [Users2, "Org Directory", "See every team, member, and role in one searchable view."],
-  [ShieldCheck, "Roles & Permissions", "Assign access consistently across the entire workspace."],
-  [BarChart3, "Workload Balancing", "Track task load per person to catch overload early."],
-  [UsersRound, "Team Pages", "Give every team a home with its own goals and updates."],
-  [ClipboardCheck, "Onboarding Checklists", "Get new hires productive with a guided first-week plan."],
-  [Target, "Team Goals", "Set and track goals for every team, visible company-wide."],
+  [Users2, "Company users", "Create, view, update, and manage tenant-scoped internal users."],
+  [ShieldCheck, "Global roles", "Use Admin, Manager, and Employee roles for company-level access."],
+  [BarChart3, "Workspace membership", "Connect people to the spaces and projects where they work."],
+  [UsersRound, "Employee profiles", "Store identity, contact, address, and emergency information."],
+  [ClipboardCheck, "Documents and onboarding status", "Keep employee files and Draft, Submitted, or Completed status."],
+  [Target, "Salary history", "Maintain effective-dated compensation records for permitted payroll use."],
 ];
 
 const platform = [
   [Users2, "Teams", "Manage your organization"],
-  [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"],
+  [BarChart3, "Payroll", "Prepare payroll periods"],
+  [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"],
   [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"],
-  [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"],
-  [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"],
-  [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"],
-  [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"],
+  [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Notifications", "Keep up with activity"],
+  [FileText, "Documents", "Manage employee files"],
+  [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"],
+  [ClipboardList, "Leave", "Manage approved time off"],
+  [CalendarDays, "Calendar", "See scheduled work"],
+  [CalendarClock, "Attendance", "Record working days"],
+  [Zap, "Hash AI", "Ask permission-aware questions"],
+  [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer context"],
   [Grid2X2, "All features", "Explore everything"],
 ];
 
-function CTAButton({ secondary = false, children = "Get started. Now!" }) {
+function CTAButton({ secondary = false, children = "Get started" }) {
   return (
     <Link href="/signup" className={`task-btn${secondary ? " task-btn-secondary" : ""}`}>
       {children}
@@ -92,20 +92,16 @@ function TeamsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD TEAMS</p>
-          <h1>See your whole organization in one place</h1>
+          <h1>Manage company users, roles, and employee records</h1>
           <p className="task-hero-lede">
-            Directory, roles, workload, and onboarding for every team—so growing your headcount doesn’t mean losing track of who does what.
+            Keep internal users, global roles, employee profiles, documents, salary history, and workspace membership in one system.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Set up your<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>People, roles, spaces, projects, attendance, leave, and payroll connected</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -154,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Everything Teams needs, in one place</h2>
+          <h2>A connected operational record for your team</h2>
           <p>
-            Hashboard Teams keeps everything connected, so nothing falls through the cracks.
+            Manage the user account and its employee, membership, people-operations, and payroll context together.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -192,8 +188,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Teams, handled automatically.</h2>
-          <p>Join 3M+ teams who run teams without the busywork. Start your 7-day free trial.</p>
+          <h2>Team records with clear access boundaries.</h2>
+          <p>Use company roles and workspace membership to give each person the access their responsibilities require.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -206,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Ask AI who’s overloaded this week", "Ask Brain which team members are carrying the most tasks or working the most overtime, and rebalance before it’s a problem.", "/tasks/super-agents.png"],
-    ["Onboarding Assist", "Guided checklists for every new hire", "Hashboard Brain walks new hires through a personalized onboarding checklist based on their team and role.", "/tasks/clickup-brain.png"],
+    ["Hash AI", "List permitted team and workload context", "Authorized admins and managers can request supported employee and open-task information while respecting tenant and role boundaries.", "/tasks/super-agents.png"],
+    ["People Operations", "Connect the employee record to daily workflows", "Use the same company user across employee details, attendance, leave, salary, payroll, spaces, projects, tasks, chat, and meetings.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Team Management</p>
-          <h2>Work smarter,<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">Connected team context</p>
+          <h2>Know the person.<br />Respect the permission.</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -263,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Teams is just the beginning</h2>
-            <p>Teams connects to the rest of your workspace. Combine it with Tasks, Docs, and Dashboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Teams connect every internal workflow</h2>
+            <p>Keep people records alongside spaces, projects, tasks, chat, attendance, leave, payroll, meetings, and company operations.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -285,16 +281,16 @@ function FeaturesAndPlatform() {
 
 function TeamsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "People", text: "People" },
+    { name: "Roles", text: "Roles" },
+    { name: "Spaces", text: "Spaces" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "Attendance", text: "Attendance" },
+    { name: "Leave", text: "Leave" },
+    { name: "Payroll", text: "Payroll" },
+    { name: "Meetings", text: "Meetings" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -316,11 +312,11 @@ function TeamsFinal() {
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all w-full sm:w-auto text-center"
               >
-                <span>Get started. Now!</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Set up your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>

@@ -177,7 +177,7 @@ function ClientChat({ label }) {
   return (
     <>
       <Label icon={Building2}>{label}</Label>
-      <Row><Avatar sm /><Bar w="30%" sm /><span className="cf-pill">External</span></Row>
+      <Row><Avatar sm /><Bar w="30%" sm /><span className="cf-pill">Member</span></Row>
       <Row><Avatar /><Bar w="42%" /></Row>
     </>
   );
