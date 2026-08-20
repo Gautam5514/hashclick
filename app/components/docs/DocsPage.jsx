@@ -15,51 +15,51 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Docs live in separate drives and get lost or forgotten",
-    "Requirements change in tasks, but docs stay outdated",
-    "No direct link between project specs and real work",
-    "Manual quarterly cleanups to archive old documentation",
+    "Important details scattered across messages and files",
+    "Project context separated from assigned work",
+    "No consistent place for structured business records",
+    "Teams rely on unsupported documentation promises",
   ],
   with: [
-    "Docs live directly alongside tasks, views, and projects",
-    "Embed live tasks inside docs so status updates automatically",
-    "Hashboard Hash AI answers questions across all company docs",
-    "Nested pages, wikis, and granular permission controls",
+    "Keep task descriptions and project details close to execution",
+    "Attach supported files where the workflow allows it",
+    "Use Chat for decisions and ongoing project discussion",
+    "Ask Hash AI about permitted structured workspace data",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Connected knowledge",
-    title: "Docs that live next to the work",
-    body: "Link docs directly to tasks, projects, and sprints. When work moves, docs update automatically—no separate browser tabs or drive searches needed.",
+    eyebrow: "Project context",
+    title: "Keep essential details close to the work",
+    body: "Use project and task descriptions, attachments, and connected conversations to preserve the context required for execution.",
     image: "/docs/docs-feature-1.png",
     alt: "Hashboard Docs linked directly to tasks and workflows",
   },
   {
-    eyebrow: "Real-time collaboration",
-    title: "Write together, decide faster",
-    body: "Collaborate in real time with multiplayer editing, rich text formatting, nested subpages, banners, and interactive widgets.",
+    eyebrow: "Team discussion",
+    title: "Discuss decisions where projects happen",
+    body: "Use company and project channels, threaded replies, mentions, files, pins, and search to keep important communication accessible.",
     image: "/docs/docs-feature-2.png",
     alt: "Hashboard Docs real-time multiplayer editing",
     reverse: true,
   },
   {
-    eyebrow: "Scalable Wikis",
-    title: "Knowledge that grows with your team",
-    body: "Organize company wikis, onboarding guides, and standard operating procedures into beautiful, searchable knowledge bases.",
+    eyebrow: "Structured records",
+    title: "Store operational details consistently",
+    body: "Keep supported records for people, clients, leads, meetings, invoices, expenses, and projects in their purpose-built workflows.",
     image: "/docs/docs-feature-3.png",
     alt: "Hashboard Docs organized company wikis",
   },
 ];
 
 const docsFeatures = [
-  [BookOpen, "Nested pages", "Organize complex docs into structured subpages effortlessly."],
-  [History, "Version history", "Track every change and roll back to any previous state."],
-  [Layers, "Docs hub", "Search, sort, and filter all workspace docs from one place."],
-  [FileText, "Rich media", "Embed images, videos, code blocks, and presentations inline."],
-  [ShieldCheck, "Permissions", "Control exactly who can view, comment, or edit each doc."],
-  [LayoutGrid, "Templates", "Start from proven templates to get to good faster."],
+  [BookOpen, "Task descriptions", "Keep requirements and instructions attached to assigned work."],
+  [History, "Activity context", "Review supported task and workflow activity where available."],
+  [Layers, "Project organization", "Group related tasks, ownership, dates, and project information."],
+  [FileText, "File attachments", "Share supported files in the workflows that accept them."],
+  [ShieldCheck, "Role permissions", "Limit workspace records and actions by company and role."],
+  [LayoutGrid, "Structured workflows", "Use purpose-built records instead of disconnected documents."],
 ];
 
 const platform = [
@@ -87,14 +87,14 @@ function DocsHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">DOCS IN HASHBOARD</p>
-          <h1>Where knowledge meets action</h1>
+          <p className="task-eyebrow">WORKSPACE CONTEXT IN HASHBOARD</p>
+          <h1>Keep essential information close to the work</h1>
           <p className="task-hero-lede">
-            Create specs, wikis, and SOPs directly connected to your tasks and workflows. Stop searching through disconnected folders and stale Google Docs.
+            Organize task details, project context, files, and conversations inside the workflows Hashboard currently supports.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 days<br />Free Trial.</span>
+            <span>Explore the<br />workspace.</span>
           </div>
           <div className="task-reviews">
             <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
@@ -111,7 +111,7 @@ function DocsHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Docs workspace view"
+            alt="Hashboard workspace context preview"
           />
         </div>
       </div>
@@ -124,7 +124,7 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to document</h2>
+        <h2 className="task-gradient-title">A clearer way to preserve work context</h2>
         <div className="task-compare-grid">
           {[["Without Hashboard Docs", comparison.without, false], ["With Hashboard Docs", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
@@ -150,9 +150,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Connected documentation for every team</h2>
+          <h2>Connected workspace context for every team</h2>
           <p>
-            Docs power complete clarity across your workspace, keeping strategy, specs,<br className="task-desktop-break" /> and execution connected in one place.
+            Keep project details, tasks, files, conversations, and structured records<br className="task-desktop-break" /> closer to the people doing the work.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -188,12 +188,12 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Your team&apos;s knowledge is always connected. Never lose context again.</h2>
-          <p>Join 3M+ teams who document and execute from the same place. Start your 7-day free trial.</p>
+          <h2>Keep the context needed for execution inside the workspace.</h2>
+          <p>Start with projects, tasks, Chat, files, and the operational records Hashboard supports today.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Docs workspace" />
+          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard workspace context" />
         </div>
       </div>
     </section>
@@ -202,15 +202,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "AI that searches every doc to answer your questions", "Brain searches across all company docs, wikis, and tasks to give instant, accurate answers with citations to the exact source file.", "/docs/ai-feature-1.png"],
-    ["Super Agents", "Your docs, updated without manual effort", "Super Agents auto-generate meeting notes, update project specs when requirements change, and draft SOPs in seconds.", "/docs/ai-feature-2.png"],
+    ["Hash AI", "Ask about permitted workspace records", "Use current tasks, projects, people, clients, meetings, and other supported data as context for workspace questions.", "/docs/ai-feature-1.png"],
+    ["Supported Actions", "Turn a request into structured work", "Ask Hash AI to create or update supported tasks and records when your role has permission to perform the action.", "/docs/ai-feature-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI powered documentation</p>
-          <h2>Instant answers and automatic writing<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">WORKSPACE-AWARE ASSISTANCE</p>
+          <h2>Questions and supported actions<br />with Hash AI</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -259,8 +259,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Docs are just the beginning</h2>
-            <p>Docs connect strategy to execution. Combine Docs with Tasks, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Context is useful when it stays with the work</h2>
+            <p>Combine projects, tasks, Chat, meetings, clients, invoices, and other supported workflows in one company workspace.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -316,7 +316,7 @@ function DocsFinal() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Create your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>
@@ -354,7 +354,7 @@ function DocsFinal() {
               src="/docs/docs-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Docs footer workspace"
+              alt="Hashboard workspace context preview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

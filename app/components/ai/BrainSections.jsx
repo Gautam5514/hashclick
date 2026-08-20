@@ -30,26 +30,26 @@ const pillars = [
   {
     icon: Users,
     accent: "#7612fa",
-    title: "Multiplayer collaboration",
-    body: "AI chats, channels, tasks and projects that share one context. When a teammate teaches Brain² something, everyone gets smarter.",
+    title: "Workspace context",
+    body: "Ask about current tasks, projects, people, and other supported records that your role is permitted to access.",
   },
   {
     icon: Network,
     accent: "#0091ff",
-    title: "Context engine",
-    body: "A self-organizing knowledge graph over your workspace, updated continuously and retrieved token-efficiently.",
+    title: "Permission-aware access",
+    body: "Company and role boundaries remain part of each request, keeping assistance scoped to the signed-in user.",
   },
   {
     icon: Library,
     accent: "#fc6d2d",
-    title: "Organization knowledge",
-    body: "Goals, decisions, updates and feedback captured as they happen — not written up weeks later by someone who was there.",
+    title: "Supported actions",
+    body: "Create or update supported Hashboard records through conversation when the request and permissions allow it.",
   },
   {
     icon: Blocks,
     accent: "#fa12e3",
-    title: "Intelligence²",
-    body: "Composable skills, hybrid recall and adaptive learning that keeps improving without a prompt-engineering project.",
+    title: "Model choice",
+    body: "Select from the AI models configured for your workspace instead of relying on hidden automatic routing.",
   },
 ];
 
@@ -59,8 +59,8 @@ export function BrainPillars() {
       <Container size="default">
         <SectionHeading
           eyebrow="How it works"
-          title="Four things generic AI can't do"
-          subtitle="A chatbot with no memory of your company is a very expensive search box. Brain² is built the other way around."
+          title="AI connected to the work already in Hashboard"
+          subtitle="Useful assistance comes from current workspace context, clear permissions, supported tools, and your chosen model."
         />
         <div className="mt-14 grid gap-5 md:grid-cols-2">
           {pillars.map((p) => (
@@ -91,10 +91,10 @@ export function BrainPillars() {
 /* --------------------------------------------------------------- benchmarks */
 
 const benchmarks = [
-  { icon: Trophy, value: "#1", label: "Quality", sub: "vs. leading assistants" },
-  { icon: Coins, value: "85%", label: "Cheaper", sub: "than separate AI seats" },
-  { icon: Gauge, value: "92%+", label: "Context engine", sub: "retrieval effectiveness" },
-  { icon: Target, value: "100%+", label: "Win rate", sub: "on workplace tasks" },
+  { icon: Trophy, value: "1", label: "Workspace", sub: "for assistance and action" },
+  { icon: Coins, value: "You", label: "Choose", sub: "the available AI model" },
+  { icon: Gauge, value: "Live", label: "Context", sub: "from current workspace data" },
+  { icon: Target, value: "Role", label: "Aware", sub: "within permitted access" },
 ];
 
 export function Benchmarks() {
@@ -102,7 +102,7 @@ export function Benchmarks() {
     <section data-theme="dark" className="bg-bg-main py-20 md:py-24">
       <Container size="default">
         <h2 className="font-display text-center text-[clamp(1.9rem,3.8vw,2.75rem)] leading-[1.06] font-extrabold tracking-[-0.03em] text-ink text-balance">
-          Brain² beats every benchmark that matters at work
+          Clear controls instead of invented AI benchmarks
         </h2>
         <dl className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {benchmarks.map((b) => (
@@ -135,32 +135,32 @@ export function Benchmarks() {
 const roles = [
   {
     title: "Project Manager",
-    line: "Plans the quarter, then rebalances it when reality happens.",
+    line: "Reviews projects, open tasks, ownership, deadlines, and current progress.",
     accent: "#7612fa",
   },
   {
     title: "Engineering Lead",
-    line: "Triages the backlog, writes release notes, chases stale PRs.",
+    line: "Checks assigned work, priorities, project status, and overdue tasks.",
     accent: "#0091ff",
   },
   {
     title: "Agency Owner",
-    line: "Keeps ten client accounts straight and flags scope creep early.",
+    line: "Reviews permitted clients, projects, meetings, invoices, and agreements.",
     accent: "#fa12e3",
   },
   {
     title: "Head of Ops",
-    line: "Syncs teams, kills duplicate work, answers the status questions.",
+    line: "Checks team workload, attendance, leave, scheduling, and operational records.",
     accent: "#fc6d2d",
   },
   {
     title: "Marketing Manager",
-    line: "Ships campaigns end to end, from brief to post-mortem.",
+    line: "Organizes campaign projects, tasks, owners, deadlines, and team discussion.",
     accent: "#4a2fff",
   },
   {
     title: "Founder / CEO",
-    line: "Acts as chief of staff — briefs, risks and the one number that moved.",
+    line: "Requests permitted summaries across projects, people, clients, and financial records.",
     accent: "#078d3b",
   },
 ];
@@ -171,8 +171,8 @@ export function RolesGrid() {
       <Container size="default">
         <SectionHeading
           eyebrow="For every role"
-          title="Six jobs it already does well"
-          subtitle="Brain² adapts to the shape of your work, not the other way around."
+          title="Useful context for different responsibilities"
+          subtitle="Hash AI uses the supported workspace information available to each role."
         />
         <ul className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {roles.map((r) => (
@@ -204,38 +204,38 @@ const whatsNew = [
   {
     icon: Brain,
     accent: "#7612fa",
-    title: "Memory & preferences",
-    body: "Remembers your tone, your tools, your timezone and how your team likes reports formatted — and shows you exactly what it stored.",
+    title: "Current workspace context",
+    body: "Use permitted tasks, projects, people, deadlines, and business records as context for a request.",
   },
   {
     icon: Blocks,
     accent: "#fa12e3",
-    title: "Every AI, unlimited",
-    body: "GPT, Claude, Gemini and more under one subscription, with automatic model routing per task.",
+    title: "User-selected models",
+    body: "Choose from the models configured for your workspace and stay in control of the selection.",
   },
   {
     icon: Users,
     accent: "#0091ff",
-    title: "Multiplayer AI",
-    body: "Strategist, developer and designer perspectives in the same thread, all reading the same workspace.",
+    title: "Team and workload insights",
+    body: "Ask supported questions about ownership, progress, workload, and overdue work within your permissions.",
   },
   {
     icon: Plug,
     accent: "#fc6d2d",
-    title: "Connected apps & MCP",
-    body: "Google Drive, GitHub, Salesforce and any MCP server — read and write, not just read.",
+    title: "MCP connectivity",
+    body: "Connect compatible AI clients to supported Hashboard tools through the available MCP interface.",
   },
   {
     icon: Radio,
     accent: "#4a2fff",
-    title: "Ambient intelligence",
-    body: "Surfaces the context, task or decision you're about to need before you go looking for it.",
+    title: "Requested recommendations",
+    body: "Ask for practical next steps based on current project, task, deadline, and workload information.",
   },
   {
     icon: Search,
     accent: "#078d3b",
-    title: "Deep search",
-    body: "Queries your workspace, your connected apps and the web, then reconciles the answer with citations.",
+    title: "Workspace questions",
+    body: "Ask naturally about supported records such as projects, tasks, people, clients, meetings, invoices, and leave.",
   },
 ];
 
@@ -245,8 +245,8 @@ export function WhatsNew() {
       <Container size="default">
         <SectionHeading
           eyebrow="Capabilities"
-          title="Nothing else comes close"
-          subtitle="Six things that only work when the AI lives where the work lives."
+          title="Assistance built around real Hashboard workflows"
+          subtitle="No invented agents or hidden learning—just selected models, permitted context, and supported actions."
         />
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {whatsNew.map((f) => (
@@ -285,33 +285,33 @@ const outputs = [
   {
     icon: Presentation,
     accent: "#7612fa",
-    title: "Presentation-ready slides",
-    body: "Real typography and a curated palette, sourced from your actual numbers — for all-hands, reviews or pitches.",
+    title: "Task and project actions",
+    body: "Create, update, assign, and review supported work records through explicit requests.",
   },
   {
     icon: LayoutDashboard,
     accent: "#fa12e3",
-    title: "Dashboards & prototypes",
-    body: "Finished, shareable deliverables — working pages and code, not a description of what you could build.",
+    title: "Operational lookups",
+    body: "Request permitted information across attendance, leave, people, clients, leads, meetings, and financial workflows.",
   },
   {
     icon: BarChart3,
     accent: "#0091ff",
-    title: "Data analysis",
-    body: "Parses CSVs, cross-references your workspace, renders the chart and hands back the spreadsheet.",
+    title: "Clear workspace summaries",
+    body: "Turn current supported records into concise answers about status, ownership, priorities, and deadlines.",
   },
 ];
 
 const completed = [
-  "Sales kickoff deck",
-  "Q3 pricing page redesign",
-  "Launch PRD draft",
-  "Revenue forecast model",
-  "Onboarding flow designs",
-  "SOC 2 evidence checklist",
-  "Customer interview summaries",
-  "GA launch project plan",
-  "Hiring roadmap",
+  "Reviewed overdue project tasks",
+  "Created requested follow-up tasks",
+  "Checked today's attendance status",
+  "Listed pending leave requests",
+  "Summarized current lead activity",
+  "Found upcoming client meetings",
+  "Reviewed outstanding invoices",
+  "Checked recent expense records",
+  "Summarized team workload",
 ];
 
 export function Outputs() {
@@ -320,8 +320,8 @@ export function Outputs() {
       <Container size="default">
         <SectionHeading
           eyebrow="Deliverables"
-          title="It doesn't just answer. It finishes the work."
-          subtitle="Everything below started as one sentence in a chat."
+          title="Ask a question or request a supported action"
+          subtitle="Hash AI works within the tools, data, and permissions available in your workspace."
         />
 
         <div className="mt-14 grid gap-4 md:grid-cols-3">
@@ -348,7 +348,7 @@ export function Outputs() {
 
         <div className="mt-8 rounded-panel border border-line bg-bg-main p-7">
           <p className="text-[12px] font-bold tracking-[0.08em] text-ink-tertiary uppercase">
-            Completed by Brain² this week
+            Example supported requests
           </p>
           <ul className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
             {completed.map((c, i) => (
@@ -359,7 +359,7 @@ export function Outputs() {
                 <CheckCircle2 className="size-4 shrink-0 text-accent-green" />
                 <span className="flex-1">{c}</span>
                 <span className="text-[11px] text-ink-tertiary">
-                  {["2m", "14m", "1h", "3h", "5h", "8h", "1d", "1d", "2d"][i]}
+                  {i < 3 ? "Projects" : i < 6 ? "People" : "Business"}
                 </span>
               </li>
             ))}
@@ -375,23 +375,23 @@ export function Outputs() {
 const security = [
   {
     icon: Lock,
-    title: "No third-party training",
-    body: "Your data is never used to train anyone's foundation model. Ever.",
+    title: "Tenant boundaries",
+    body: "Workspace requests remain associated with the active company context.",
   },
   {
     icon: ServerCog,
-    title: "Zero retention",
-    body: "Zero-retention agreements with every model provider we route to.",
+    title: "Role-aware access",
+    body: "Available context and actions follow the permissions of the signed-in user.",
   },
   {
     icon: EyeOff,
-    title: "Private by default",
-    body: "Admins can't read your private Brain² conversations. Memory is yours to view, edit and delete.",
+    title: "Explicit requests",
+    body: "Hash AI acts in response to a user request instead of claiming autonomous background operation.",
   },
   {
     icon: ShieldCheck,
-    title: "Enterprise controls",
-    body: "SOC 2 Type II, ISO 27001, GDPR and HIPAA, with unified controls across every model.",
+    title: "Supported-tool limits",
+    body: "Actions are constrained to the Hashboard tools and operations exposed to the assistant.",
   },
 ];
 
@@ -402,14 +402,14 @@ export function BrainSecurity() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <h2 className="font-display text-[clamp(1.9rem,3.8vw,2.75rem)] leading-[1.06] font-extrabold tracking-[-0.03em] text-ink text-balance">
-              Powerful AI, without handing over your company
+              AI assistance with visible boundaries
             </h2>
             <p className="mt-5 text-[16.5px] leading-relaxed text-ink-secondary">
-              The reason AI stalls in most organizations isn&apos;t capability —
-              it&apos;s the security review. We wrote the answers down first.
+              Hash AI is designed around workspace scope, user permissions,
+              explicit requests, and supported actions.
             </p>
             <Button href="/enterprise#security" variant="outline" size="lg" className="mt-8">
-              Read the security brief
+              Explore enterprise controls
             </Button>
           </div>
 

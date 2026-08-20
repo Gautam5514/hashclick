@@ -13,9 +13,9 @@ import { Container } from "../ui/Container";
 import Button from "../ui/Button";
 
 const highlights = [
-  "Multiplayer AI, with your context",
-  "Every model. One subscription.",
-  "A self-updating company brain",
+  "Workspace-aware assistance",
+  "Your model. Your choice.",
+  "Supported actions with role-aware context",
 ];
 
 const platforms = [
@@ -33,20 +33,20 @@ const conversation = [
   },
   {
     role: "brain",
-    text: "Three things. The billing migration is 2 days behind (Marcus, PR open since Tuesday), legal hasn't signed the DPA, and the pricing page copy is still in review with Priya.",
+    text: "Three launch tasks are overdue. Billing migration is assigned to Marcus, the agreement review is pending, and the pricing copy remains in review.",
     sources: [
       { icon: CheckSquare, label: "12 tasks" },
-      { icon: FileText, label: "4 docs" },
-      { icon: BarChart3, label: "Sprint 24 report" },
+      { icon: FileText, label: "3 projects" },
+      { icon: BarChart3, label: "Current workload" },
     ],
   },
   {
     role: "user",
-    text: "Draft the escalation note and put it in the launch channel.",
+    text: "Create three follow-up tasks with owners and due dates.",
   },
   {
     role: "brain",
-    text: "Posted. I also created 3 follow-up tasks with owners and due dates, and scheduled a 15-minute sync tomorrow at 10:00.",
+    text: "The three requested follow-up tasks were created. Review their owners and due dates in the launch project.",
     done: true,
   },
 ];
@@ -71,14 +71,14 @@ export default function BrainHero() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[12px] font-bold tracking-[0.06em] text-white uppercase backdrop-blur">
               <Sparkles className="size-3.5 text-accent-blue" />
-              Brain² is here
+              Hash AI is here
             </span>
 
             <h1 className="font-display mt-6 text-[clamp(2.5rem,5.4vw,4.25rem)] leading-[0.99] font-extrabold tracking-[-0.04em] text-ink text-balance">
-              The best AI is{" "}
-              <em className="text-gradient-cool not-italic">your</em> AI.
+              AI assistance, grounded in{" "}
+              <em className="text-gradient-cool not-italic">your work</em>.
               <br />
-              Your company&apos;s Brain².
+              Ask questions and take supported action inside Hashboard.
             </h1>
 
             <ul className="mt-8 space-y-3">
@@ -95,7 +95,7 @@ export default function BrainHero() {
 
             <div className="mt-9 flex flex-wrap gap-3">
               <Button href="/signup" size="xl">
-                Try Brain² FREE
+                Try Hash AI
               </Button>
               <Button href="/demo" variant="outline" size="xl">
                 Watch the demo
@@ -122,9 +122,9 @@ export default function BrainHero() {
                 <Sparkles className="size-4 text-white" />
               </span>
               <div>
-                <div className="text-[13.5px] font-bold text-ink">Brain²</div>
+                <div className="text-[13.5px] font-bold text-ink">Hash AI</div>
                 <div className="text-[11px] text-ink-tertiary">
-                  Connected to 14 apps · Acme Inc.
+                  Demo Workspace · role-aware access
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function BrainHero() {
                     {msg.done ? (
                       <span className="mt-2.5 flex items-center gap-1.5 text-[11px] font-bold text-accent-green">
                         <CheckSquare className="size-3" />
-                        3 tasks created · 1 message posted · 1 event scheduled
+                        3 requested tasks created · ready for review
                       </span>
                     ) : null}
                   </div>

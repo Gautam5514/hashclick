@@ -5,20 +5,20 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Are Hashboard Docs free?",
-    "Yes! Hashboard Docs are available on the Free Forever plan with unlimited creation, rich text formatting, and real-time collaboration."
+    "Does Hashboard currently include a full Docs or Wiki editor?",
+    "No. Hashboard does not currently claim a dedicated rich-text Docs or Wiki product. Use supported project details, task descriptions, files, Chat, and structured workflows for workspace context."
   ],
   [
     "Can I import Google Docs, Notion, or Confluence pages?",
-    "Yes! Hashboard provides 1-click importers to migrate your existing Google Docs, Notion pages, and Confluence spaces seamlessly with zero data loss."
+    "A one-click document migration tool is not currently advertised as a supported Hashboard capability."
   ],
   [
-    "Can I share Hashboard Docs with external clients or guests?",
-    "Absolutely. You can share docs privately with specific team members, grant view-only access to guests, or publish public read-only pages with custom web links."
+    "How can I share information with teammates?",
+    "Use permitted company or project Chat channels, supported file attachments, project details, and task descriptions."
   ],
   [
-    "How does Hashboard Hash AI work with Docs?",
-    "Hashboard Brain acts as your company assistant. You can ask Brain to write content, translate text, summarize meeting notes, or answer questions based on all documents in your workspace."
+    "What context can Hash AI use?",
+    "Hash AI can use supported, permitted workspace records exposed to it. It does not claim to search a nonexistent company-wide Docs repository."
   ],
   [
     "Can I embed live tasks and views inside a Doc?",
