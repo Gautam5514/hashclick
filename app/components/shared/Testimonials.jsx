@@ -53,13 +53,9 @@ export default function Testimonials({ showHeadline = true }) {
             <h2>Built around the way modern teams work</h2>
           </div>
           <div className="tm-award">
-            <img
-              src="/testimonials/awards.svg"
-              width="346"
-              height="89"
-              alt="Hashboard awards"
-              loading="lazy"
-            />
+            <span className="inline-flex rounded-full border border-[#e5e7eb] bg-[#fafafa] px-4 py-2 text-[12px] font-bold text-[#4b5563]">
+              Projects · People · Clients · Operations · Hash AI
+            </span>
           </div>
         </div>
       )}

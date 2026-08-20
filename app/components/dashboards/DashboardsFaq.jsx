@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Are Hashboard Dashboards free?",
-    "Yes! Hashboard Dashboards are available on the Free Forever plan with standard widgets. Advanced reporting and unlimited widgets are available on Unlimited and Business plans."
+    "How can teams review progress in Hashboard?",
+    "Use project and task views for delivery progress, dedicated operational views for business records, and Hash AI for supported workspace questions."
   ],
   [
-    "What kinds of charts and widgets can I build?",
-    "You can build line charts, bar graphs, pie charts, sprint burn-down/burn-up charts, time tracking summaries, calculation cards, custom field rollups, and even embed live docs or web pages."
+    "What information can I review?",
+    "Supported views cover projects, tasks, people, attendance, leave, clients, leads, meetings, invoices, expenses, payroll, and related workflows."
   ],
   [
-    "Can I share Dashboards with external clients or guests?",
-    "Absolutely. You can share dashboards privately with team members, grant view-only access to external clients, or publish public read-only dashboards via secure links."
+    "How can I share current information with my team?",
+    "Use company and project Chat, supported records, and the relevant workspace views so authorized team members can review the same current context."
   ],
   [
-    "How often do Dashboards update?",
-    "Dashboards update in real time! As soon as a team member completes a task, logs time, or updates a status, your dashboard widgets immediately reflect the change."
+    "How current is the information?",
+    "Supported workflows read their current stored records. Availability and refresh behavior depend on the specific Hashboard workflow."
   ],
   [
-    "Can I edit tasks directly from a Dashboard widget?",
-    "Yes! Hashboard Dashboards are fully interactive. Clicking on any chart segment or widget list item opens the task card directly so you can edit assignees, due dates, and statuses without leaving the dashboard."
+    "How do I update the underlying work?",
+    "Open the relevant project, task, or operational workflow, or request a supported Hash AI action if your role has permission."
   ]
 ];
 

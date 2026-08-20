@@ -10,7 +10,7 @@ const items = [
   ],
   [
     "How does Hashboard Teams work?",
-    "Company users are tenant-scoped accounts. Their global role, employee profile, and memberships determine the records and actions they can access."
+    "Each person belongs to your company workspace. Their role, employee profile, and team memberships shape what they can see and do."
   ],
   [
     "Does Teams connect to the rest of Hashboard?",
@@ -22,7 +22,7 @@ const items = [
   ],
   [
     "Can employee salary and documents be stored?",
-    "Yes. Hashboard supports tenant-scoped employee documents and effective-dated salary records for authorized people and payroll workflows."
+    "Yes. Hashboard keeps employee documents and salary history connected for the people and payroll workflows that need them."
   ],
 ];
 

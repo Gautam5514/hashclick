@@ -18,13 +18,13 @@ export const solutions = [
     icon: Rocket,
     accent: "#7612fa",
     blurb:
-      "Run complex, multi-team programs without a spreadsheet on the side.",
-    replaces: ["Asana", "Monday", "Smartsheet", "MS Project"],
-    agents: ["Intake Agent", "Assign Agent", "PM Agent", "Live Answers Agent"],
+      "Organize projects, assigned tasks, deadlines, priorities, and project communication.",
+    replaces: ["Projects", "Tasks", "Chat", "Calendar"],
+    agents: ["Create structured projects", "Assign and update tasks", "Review progress and workload", "Discuss work in project channels"],
     outcomes: [
-      "Complex project management",
-      "Strategic initiative tracking",
-      "Risk mitigation and escalation",
+      "Project and task ownership",
+      "Deadlines and current status",
+      "Permission-aware workspace questions",
     ],
   },
   {
@@ -32,18 +32,18 @@ export const solutions = [
     name: "Marketing",
     icon: Megaphone,
     accent: "#fa12e3",
-    blurb: "Campaigns from brief to launch, with creative review built in.",
-    replaces: ["Asana", "Airtable", "Miro", "Wrike"],
+    blurb: "Coordinate campaign projects, task ownership, due dates, leads, and team discussion.",
+    replaces: ["Projects", "Tasks", "Leads", "Chat"],
     agents: [
-      "Brief Agent",
-      "Creative Review Agent",
-      "Campaign Agent",
-      "Recap Agent",
+      "Plan campaign projects",
+      "Assign content tasks",
+      "Track leads and activities",
+      "Keep decisions in Chat",
     ],
     outcomes: [
-      "Campaign planning and calendars",
-      "Proofing and approvals",
-      "Performance roll-ups by channel",
+      "Campaign project planning",
+      "Clear owners and deadlines",
+      "Lead and client context",
     ],
   },
   {
@@ -51,13 +51,13 @@ export const solutions = [
     name: "Product & Engineering",
     icon: Code2,
     accent: "#0091ff",
-    blurb: "Sprints, bugs, releases and specs on one connected backlog.",
-    replaces: ["Jira", "Confluence", "Linear", "Shortcut"],
-    agents: ["Triage Agent", "Sprint Agent", "Release Agent", "Standup Agent"],
+    blurb: "Keep product projects, engineering tasks, priorities, owners, and discussions together.",
+    replaces: ["Projects", "Tasks", "Priorities", "Chat"],
+    agents: ["Organize delivery projects", "Assign engineering tasks", "Review overdue work", "Ask about project status"],
     outcomes: [
-      "Sprint planning and velocity",
-      "Bug triage with auto-routing",
-      "Release notes written for you",
+      "Product and engineering ownership",
+      "Priority and deadline tracking",
+      "Current project context",
     ],
   },
   {
@@ -65,13 +65,13 @@ export const solutions = [
     name: "IT & Operations",
     icon: Server,
     accent: "#4a2fff",
-    blurb: "Service requests, assets and change management in one queue.",
-    replaces: ["ServiceNow", "Jira SM", "Zendesk", "Freshservice"],
-    agents: ["Helpdesk Agent", "Asset Agent", "Change Agent", "SLA Agent"],
+    blurb: "Coordinate internal projects, operational tasks, people, schedules, and company communication.",
+    replaces: ["Projects", "Tasks", "People", "Chat"],
+    agents: ["Track operational projects", "Assign internal tasks", "Manage workspace members", "Review schedules and meetings"],
     outcomes: [
-      "Ticket intake and SLA tracking",
-      "Asset and vendor registers",
-      "Audit-ready change logs",
+      "Operational task ownership",
+      "Employee and workspace records",
+      "Scheduled work and communication",
     ],
   },
   {
@@ -79,18 +79,18 @@ export const solutions = [
     name: "HR & Recruiting",
     icon: Users,
     accent: "#fc6d2d",
-    blurb: "Hiring pipelines and onboarding that don't live in someone's inbox.",
-    replaces: ["Greenhouse", "BambooHR", "Notion", "Google Sheets"],
+    blurb: "Manage employee profiles, attendance, leave, payroll inputs, and onboarding status.",
+    replaces: ["People", "Attendance", "Leave", "Payroll"],
     agents: [
-      "Candidate Agent",
-      "Onboarding Agent",
-      "Policy Agent",
-      "Survey Agent",
+      "Maintain employee profiles",
+      "Track attendance",
+      "Manage leave requests",
+      "Prepare payroll records",
     ],
     outcomes: [
-      "Applicant pipelines and scorecards",
-      "Day-one onboarding checklists",
-      "Policy answers with citations",
+      "Employee record management",
+      "Attendance and leave workflows",
+      "Salary and payroll context",
     ],
   },
   {
@@ -98,13 +98,13 @@ export const solutions = [
     name: "Leadership",
     icon: Crown,
     accent: "#078d3b",
-    blurb: "One live view of the business, without asking anyone for a status.",
-    replaces: ["Tableau", "PowerPoint", "Sheets", "Status meetings"],
-    agents: ["Exec Brief Agent", "OKR Agent", "Risk Agent", "Forecast Agent"],
+    blurb: "Review permitted context across projects, people, clients, leads, meetings, and financial workflows.",
+    replaces: ["Projects", "People", "Clients", "Finance"],
+    agents: ["Review project progress", "Check team workload", "Inspect client and lead context", "Review invoices and expenses"],
     outcomes: [
-      "Portfolio health at a glance",
-      "OKR progress tied to real work",
-      "Automated weekly exec briefs",
+      "Current operational context",
+      "Role-aware business questions",
+      "Supported records in one workspace",
     ],
   },
 ];
@@ -112,7 +112,7 @@ export const solutions = [
 export default function SolutionCards({
   eyebrow = "Solutions",
   title = "Built for the way each team actually works",
-  subtitle = "Same platform, different starting point. Every solution ships with agents tuned to that team's workflow.",
+  subtitle = "The same supported Hashboard workflows, organized around each team's responsibilities.",
   headed = true,
 }) {
   return (
@@ -149,13 +149,13 @@ export default function SolutionCards({
 
               <div className="mt-6">
                 <p className="text-[10.5px] font-bold tracking-[0.1em] text-ink-tertiary uppercase">
-                  Replaces
+                  WORKFLOWS
                 </p>
                 <ul className="mt-2.5 flex flex-wrap gap-1.5">
                   {s.replaces.map((r) => (
                     <li
                       key={r}
-                      className="rounded-md bg-bg-box px-2 py-1 text-[11.5px] font-medium text-ink-secondary line-through decoration-ink-disabled"
+                      className="rounded-md bg-bg-box px-2 py-1 text-[11.5px] font-medium text-ink-secondary"
                     >
                       {r}
                     </li>
@@ -165,7 +165,7 @@ export default function SolutionCards({
 
               <div className="mt-6">
                 <p className="text-[10.5px] font-bold tracking-[0.1em] text-ink-tertiary uppercase">
-                  Agents included
+                  SUPPORTED USES
                 </p>
                 <ul className="mt-2.5 space-y-1.5">
                   {s.agents.map((a) => (

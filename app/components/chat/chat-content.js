@@ -9,7 +9,7 @@
 
 export const hero = {
   eyebrow: { symbol: "#", label: "Hashboard Chat", tag: "" },
-  title: "Conversations connected to the work",
+  title: "Where conversations turn into action",
   subtitle:
     "Bring team and project discussions into Hashboard, where messages, files, members, and project activity remain in one accessible workspace.",
   cta: { label: "Get started with Hashboard Chat", href: "/signup" },
@@ -238,7 +238,7 @@ export const aiSection = {
     {
       title: "Permission-aware answers.",
       description:
-        "Get answers from workspace information you are authorized to access without claiming that AI reads every conversation.",
+        "Get answers from permitted workspace information while keeping access aligned with your role.",
       image: { src: "/chat/ai-1.svg", alt: "Catch me up", width: 340, height: 238 },
     },
   ],

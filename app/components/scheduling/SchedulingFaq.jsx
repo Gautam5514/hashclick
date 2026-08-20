@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const items = [
   [
     "Who can configure booking pages?",
-    "Company admins can create, update, activate, deactivate, and delete tenant-scoped booking page configurations."
+    "Company admins can create, update, publish, pause, and remove booking pages for their workspace."
   ],
   [
     "How does Hashboard Scheduling work?",
@@ -18,7 +18,7 @@ const items = [
   ],
   [
     "What can be customized on a booking page?",
-    "The configuration supports tenant branding, sidebar content, discussion points, form fields, an internal host, meeting provider, active state, and optional webhook settings."
+    "Each page can include company branding, helpful content, discussion points, form fields, a meeting host, video options, and optional workflow connections."
   ],
   [
     "Which meeting providers are available?",

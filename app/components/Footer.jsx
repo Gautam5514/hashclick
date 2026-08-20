@@ -50,7 +50,7 @@ const aiLinks = [
   "MCP Access",
 ];
 
-const downloadLinks = ["iOS & Android", "Mac & Windows", "Brain MAX"];
+const downloadLinks = ["Web workspace", "Responsive access", "MCP connectivity"];
 
 const productLinks = [
   "Chat",
@@ -98,11 +98,10 @@ const helpLinks = [
   "Support",
   "Contact Us",
   "Get a Demo",
-  "Import",
-  "Templates",
-  "Community",
-  "ClickUp University",
-  "Webinars",
+  "Getting Started",
+  "Workflow Guides",
+  "Product Overview",
+  "Hash AI Guide",
   "Blog",
   "Research",
 ];
@@ -271,33 +270,9 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Security Compliance Badges */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <div className="flex items-center gap-1">
-              <Image src="/footer/cert-soc2.svg" alt="SOC 2" width={14} height={14} className="shrink-0" />
-              <span className="text-[9px] leading-[1.2] text-[#52525b]">
-                SOC 2
-                <br />
-                CERTIFIED
-              </span>
-            </div>
-            <Image src="/footer/cert-iso.png" alt="ISO 27001 Certified by Schellman" width={95} height={32} className="h-[20px] w-auto shrink-0" />
-            <div className="flex items-center gap-1">
-              <Image src="/footer/cert-gdpr.svg" alt="GDPR" width={14} height={13} className="shrink-0" />
-              <span className="text-[9px] leading-[1.2] text-[#52525b]">
-                GDPR
-                <br />
-                COMPLIANT
-              </span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Image src="/footer/cert-hipaa.svg" alt="HIPAA" width={13} height={12} className="shrink-0" />
-              <span className="text-[9px] leading-[1.2] text-[#52525b]">
-                HIPAA
-                <br />
-                COMPLIANT
-              </span>
-            </div>
+          <div className="text-right text-[11px] leading-relaxed text-[#71717a]">
+            Built for role-aware access<br />
+            across connected workflows.
           </div>
         </div>
 

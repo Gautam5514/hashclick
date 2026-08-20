@@ -92,9 +92,9 @@ function AttendanceHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD ATTENDANCE</p>
-          <h1>Keep attendance clear from check-in to review</h1>
+          <h1>See who’s working without chasing updates</h1>
           <p className="task-hero-lede">
-            Record face-verified check-ins and check-outs, review your history, and give authorized admins a reliable view of team attendance.
+            Make daily check-ins simple and give teams a clear, reliable view of attendance and working-day history.
           </p>
           <div className="task-hero-action">
             <CTAButton />

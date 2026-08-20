@@ -52,7 +52,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Shared LogoCloud Component from Home Page (Trusted by the best) */}
+        {/* Shared customer-workflow logo strip. */}
         <div className="mt-1 sm:mt-2">
           <LogoCloud className="mt-0 py-2 border-none" />
         </div>
@@ -73,34 +73,20 @@ export default function AboutPage() {
       {/* 2e. Life at ClickUp — scattered polaroid gallery */}
       <LifeAtClickUpSection />
 
-      {/* 4. Industry Recognition & G2 Badges Section */}
+      {/* Product principles */}
       <section className="max-w-6xl mx-auto px-6 py-16 text-center">
 
         <div className="flex flex-col items-center justify-center max-w-4xl mx-auto md:flex-row">
           <div className="flex flex-col items-center justify-center p-8">
-            <Image
-              src="/about/leader-g2.svg"
-              alt="Leader on G2"
-              width={260}
-              height={140}
-              className="h-28 w-auto object-contain mb-4"
-            />
-            <h3 className="font-bold text-[#111827] text-lg">Leader on G2</h3>
-            <p className="text-xs text-gray-500 mt-1">Rated #1 in Project Management, Collaboration, and Docs.</p>
+            <h3 className="font-bold text-[#111827] text-lg">Connected by design</h3>
+            <p className="max-w-xs text-sm leading-relaxed text-gray-500 mt-2">Projects, people, communication, clients, scheduling, and business operations share one company workspace.</p>
           </div>
 
           <div className="w-12 h-px bg-[#e5e7eb] md:w-px md:h-12" />
 
           <div className="flex flex-col items-center justify-center p-8">
-            <Image
-              src="/about/recognized-industry.svg"
-              alt="Recognized in Industry"
-              width={260}
-              height={140}
-              className="h-28 w-auto object-contain mb-4"
-            />
-            <h3 className="font-bold text-[#111827] text-lg">Recognized Industry-Wide</h3>
-            <p className="text-xs text-gray-500 mt-1">Forbes Cloud 100, Deloitte Technology Fast 500.</p>
+            <h3 className="font-bold text-[#111827] text-lg">People stay in control</h3>
+            <p className="max-w-xs text-sm leading-relaxed text-gray-500 mt-2">Hash AI uses the model you choose, permitted workspace context, and supported actions requested by your team.</p>
           </div>
         </div>
       </section>

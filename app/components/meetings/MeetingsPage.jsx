@@ -92,9 +92,9 @@ function MeetingsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD MEETINGS</p>
-          <h1>Schedule and manage meetings with the right context</h1>
+          <h1>Make every meeting easier to schedule and manage</h1>
           <p className="task-hero-lede">
-            Create internal meetings, use a connected provider, manage attendees and hosts, and keep scheduling changes in one workspace.
+            Bring hosts, attendees, timing, meeting links, and schedule changes together in one connected workspace.
           </p>
           <div className="task-hero-action">
             <CTAButton />

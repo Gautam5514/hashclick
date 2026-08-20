@@ -92,9 +92,9 @@ function LeadsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD LEADS</p>
-          <h1>Track prospects from first record to client conversion</h1>
+          <h1>Turn more opportunities into clients</h1>
           <p className="task-hero-lede">
-            Keep lead identity, opportunity value, stage, owner, source, activities, bookings, and conversion history in one workflow.
+            Keep every opportunity, conversation, owner, next step, and deal stage visible from first contact to conversion.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -189,7 +189,7 @@ function MotionBanner() {
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
           <h2>A pipeline your team can keep current.</h2>
-          <p>Use structured stages, ownership, values, activities, sources, and conversion instead of unsupported scoring promises.</p>
+          <p>Use structured stages, ownership, values, activities, sources, and conversion to keep the pipeline clear.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />

@@ -7,7 +7,7 @@ import Button from "../components/ui/Button";
 export const metadata = {
   title: "Teams & Solutions",
   description:
-    "AI solutions for every team — Projects, Marketing, Product & Engineering, IT, HR, and Leadership.",
+    "Supported Hashboard workflows for Projects, Marketing, Product & Engineering, IT, HR, and Leadership.",
 };
 
 export default function TeamsPage() {
@@ -20,11 +20,11 @@ export default function TeamsPage() {
             Workflows by Team
           </span>
           <h1 className="font-display mt-6 text-[clamp(2.5rem,5.6vw,4.25rem)] leading-[1.03] font-extrabold tracking-[-0.04em] text-[#111827]">
-            AI solutions for every{" "}
+            Hashboard workflows for every{" "}
             <span className="text-[#838383]">team in your company</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-[18px] leading-relaxed text-[#6b7280]">
-            Purpose-built workflows powered by AI Agents. Get projects, marketing, engineering, IT, HR, and executive leadership running seamlessly.
+            Bring supported projects, tasks, Chat, people, clients, scheduling, financial workflows, and Hash AI assistance into one company workspace.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Button href="/signup" size="xl">
@@ -40,7 +40,7 @@ export default function TeamsPage() {
       {/* Main Interactive Feature Tabs Section */}
       <FeatureTabs />
 
-      <LogoCloud headline="Trusted by teams worldwide" />
+      <LogoCloud headline="One workspace across teams" />
       <Testimonials />
       <CtaBanner />
     </main>

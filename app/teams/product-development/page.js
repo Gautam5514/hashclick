@@ -3,7 +3,7 @@ import "../../components/product-development/product-development.css";
 
 export const metadata = {
   title: "Product Development",
-  description: "AI-powered project management for product development teams.",
+  description: "Coordinate supported product projects, engineering tasks, owners, deadlines, meetings, and communication.",
 };
 
 export default function Page() { return <ProductDevelopmentPage />; }

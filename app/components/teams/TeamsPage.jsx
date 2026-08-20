@@ -27,7 +27,7 @@ const workflow = [
   {
     eyebrow: "Company Users",
     title: "Keep the internal team in one company directory",
-    body: "List tenant-scoped users with their name, email, avatar, global role, employee profile, and permitted workspace relationships.",
+    body: "Keep names, contact details, roles, employee profiles, and team relationships together in the company directory.",
     image: "/kanban/kanban-feature-1.png",
     alt: "Team directory in Hashboard",
   },
@@ -49,7 +49,7 @@ const workflow = [
 ];
 
 const teamsFeatures = [
-  [Users2, "Company users", "Create, view, update, and manage tenant-scoped internal users."],
+  [Users2, "Company users", "Create, view, update, and manage the people in your company workspace."],
   [ShieldCheck, "Global roles", "Use Admin, Manager, and Employee roles for company-level access."],
   [BarChart3, "Workspace membership", "Connect people to the spaces and projects where they work."],
   [UsersRound, "Employee profiles", "Store identity, contact, address, and emergency information."],
@@ -92,9 +92,9 @@ function TeamsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD TEAMS</p>
-          <h1>Manage company users, roles, and employee records</h1>
+          <h1>Bring your people and their work together</h1>
           <p className="task-hero-lede">
-            Keep internal users, global roles, employee profiles, documents, salary history, and workspace membership in one system.
+            Keep your company directory, employee details, roles, documents, and team responsibilities connected in one place.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -202,7 +202,7 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "List permitted team and workload context", "Authorized admins and managers can request supported employee and open-task information while respecting tenant and role boundaries.", "/tasks/super-agents.png"],
+    ["Hash AI", "Understand team workload", "Managers can ask about employee and open-task information available to their role.", "/tasks/super-agents.png"],
     ["People Operations", "Connect the employee record to daily workflows", "Use the same company user across employee details, attendance, leave, salary, payroll, spaces, projects, tasks, chat, and meetings.", "/tasks/clickup-brain.png"],
   ];
   return (

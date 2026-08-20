@@ -1,45 +1,56 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquareText, ShieldCheck } from "lucide-react";
 
-const plans = [
-  { name: "Free Forever", monthly: 0, yearly: 0, features: ["60MB Storage", "Unlimited Tasks", "Unlimited Free Plan Members", "Two-Factor Authentication", "Collaborative Docs", "Kanban Boards", "Sprint Management", "Calendar View", "Basic Custom Field Manager", "In-App Video Recording", "24/7 Support", "1 Form"] },
-  { name: "Unlimited", monthly: 10, yearly: 7, features: ["Unlimited Spaces, Folders, and Forms", "Unlimited Gantt Charts", "Unlimited Integrations", "Unlimited Storage", "Unlimited Custom Fields", "Native Time Tracking", "Goals & Portfolio Management", "Guests With Permission Control", "Resource Management", "Hashboard Chat", "Email in Hashboard", "Integrations like Slack, Hubspot, Google Drive, and more"] },
-  { name: "Business", monthly: 19, yearly: 12, popular: true, features: ["Unlimited Dashboards with Advanced Cards", "Unlimited Message History", "Unlimited Activity Views", "Unlimited Timeline Views", "Webhooks & Automation Integrations", "5K Automations Per Month", "Mind Mapping", "Private Whiteboards", "Custom Exporting", "Sprint Points & Reporting", "Portfolio Workload Management", "Google SSO", "SMS 2-Factor Authentication", "Unlimited Proofing"] },
-  { name: "Enterprise", custom: true, features: ["Enterprise Permissions and Governance", "Unlimited Custom Roles", "SAML SSO & SCIM Provisioning", "Audit Log", "Session Management", "Enterprise API", "250K Automations Per Month", "Custom Branding", "Default Personal Views", "MSA & HIPAA Available", "Data Residency", "Enterprise-Scale Automations & Integrations", "Enterprise-Scale API Usage", "Live Onboarding Training", "Customer Success Manager", "Access to Managed Services"] },
+const included = [
+  "A company-scoped Hashboard workspace",
+  "Access to the workflows enabled for your organization",
+  "Role-aware permissions for supported records and actions",
+  "Hash AI model options configured for your workspace",
+  "Current usage limits and support terms confirmed before purchase",
 ];
-
-const aiPlans = [
-  { name: "Free Forever", price: 0, label: "Start using AI", features: ["Try AI across chat, tasks and docs", "Trial access to advanced AI features", "Upgrade at any time"] },
-  { name: "Hash AI", price: 9, label: "Highlights", features: ["Unlimited Brain Assistant", "Unlimited @Brain Agent", "Unlimited AI chat — Claude, ChatGPT, Gemini", "Expanded use of Premium AI Models", "Unlimited AI writing", "Enterprise Search — Workspace"], credits: "+1,500 AI Super Credits" },
-  { name: "Everything AI", price: 28, label: "Best for full agentic suite", recommended: true, features: ["Unlimited Ambient Answers", "Unlimited AI Notetaker", "Unlimited Image Generation *", "Unlimited AI Fields", "Unlimited AI Automations & Dashboards", "Unlimited AI Assign & Prioritize", "3X more usage of Super Agents", "Enterprise Search — Private & Workspace"], credits: "+5,000 AI Super Credits" },
-];
-
-function BillingToggle({ yearly, onChange, saving = "30%" }) {
-  return <div className="price-toggle-wrap"><span>Save up to {saving} with yearly</span><div className="price-toggle"><button type="button" className={!yearly ? "active" : ""} onClick={() => onChange(false)}>Monthly</button><button type="button" className={yearly ? "active" : ""} onClick={() => onChange(true)}>Yearly</button></div></div>;
-}
-
-function PlanCard({ plan, yearly }) {
-  const price = yearly ? plan.yearly : plan.monthly;
-  const prior = plan.name === "Unlimited" ? "Free Forever" : plan.name === "Business" ? "Unlimited" : "Business";
-  return <article className={`price-card ${plan.popular ? "popular" : ""}`}>
-    <div className="price-summary">
-      <div className="price-card-head"><h3>{plan.name}</h3>{plan.popular && <span>Popular</span>}</div>
-      <div className="price-amount">{plan.custom ? <strong className="custom-demo">Get a custom demo</strong> : price === 0 ? null : <><strong>${price}</strong><span>Per user/month, billed {yearly ? "yearly" : "monthly"}</span></>}</div>
-      <Link href={plan.custom ? "/demo" : "/signup"} className="price-cta">{plan.custom ? "Contact sales" : plan.name === "Free Forever" ? "Get Started" : "Get started"}</Link>
-    </div>
-    <div className="price-features"><div className="price-includes">{plan.name === "Free Forever" ? "Key features:" : `Everything in ${prior}, plus:`}</div><ul>{plan.features.map(feature => <li key={feature}><Check size={15}/><span>{feature}</span></li>)}</ul>{plan.name !== "Free Forever" && <em>and much more...</em>}</div>
-  </article>;
-}
 
 export default function PricingPlans() {
-  const [yearly, setYearly] = useState(true);
-  const [aiYearly, setAiYearly] = useState(true);
-  return <>
-    <section className="pricing-hero"><div className="pricing-container"><h1>The best work solution,<br/><span>for the best price.</span></h1><div className="price-controls"><div className="price-guarantee"><Check size={17}/>100% Money-back Guarantee</div><BillingToggle yearly={yearly} onChange={setYearly}/></div><div className="price-grid" id="compare">{plans.map(plan => <PlanCard key={plan.name} plan={plan} yearly={yearly}/>)}</div></div></section>
-    <section className="pricing-trusted"><div className="pricing-container"><span>TRUSTED BY THE BEST</span><div><b>Kraft Heinz</b><b>Deloitte.</b><b>Pfizer</b><b>Adobe</b><b>American</b><b>NBCUniversal</b></div><a href="#compare">Complete feature list⌄</a></div></section>
-    <section className="ai-pricing" id="ai-pricing"><div className="pricing-container"><div className="ai-heading"><div className="ai-chip">[ AI PRICING ]</div><h2>The world&apos;s most<br/>advanced AI for work</h2><BillingToggle yearly={aiYearly} onChange={setAiYearly} saving="20%"/></div><div className="ai-table"><div className="ai-price-grid">{aiPlans.map(plan => <article className="ai-price-card" key={plan.name}><div className="ai-summary"><div className="ai-title-row"><h3>{plan.name}</h3>{plan.recommended && <span className="ai-recommended">Recommended</span>}</div><div className="ai-amount">{plan.price !== 0 && <><strong>${aiYearly ? plan.price : Math.ceil(plan.price * 1.2)}</strong><span>Per user/month</span></>}</div><Link href="/signup">Get started</Link></div><div className="ai-features"><h4>{plan.label}</h4><ul>{plan.features.map(item => <li key={item}><Check size={16}/>{item}</li>)}</ul>{plan.credits && <div className="ai-credits">{plan.credits}<small>user / mo for {plan.name === "Hash AI" ? "Agents, Automations, & more" : "Super Agents"}</small></div>}</div></article>)}</div><div className="ai-bottom-grid"><article><div className="ai-bottom-title"><h3>AI Super Credits</h3><strong>$0.001<small>$10 per 10,000 credits</small></strong></div><p>Every AI plan includes a monthly credit allowance shared across your Workspace. Credits fuel Super Agents, AI Fields, Automations, Image Generation, and more.</p><Link href="/signup">Get AI Super Credits <ArrowRight size={15}/></Link></article><article><h3>Hashboard Certified Agents</h3><p>Built, tested, and verified by Hashboard&apos;s AI experts. The only agents that power complex workflows, with complete context across your tools and teams.</p><Link href="/demo">Book a demo <ArrowRight size={15}/></Link></article></div></div><p className="ai-policy-note">* Usage subject to our fair use policy</p></div></section>
-  </>;
+  return (
+    <main className="bg-white text-[#111827]">
+      <section className="mx-auto max-w-6xl px-6 py-20 text-center md:py-28">
+        <p className="text-xs font-bold tracking-[0.18em] text-[#7612fa] uppercase">Pricing</p>
+        <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-extrabold tracking-[-0.045em] md:text-7xl">
+          Get current pricing for the workflows your team needs
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#6b7280]">
+          Choose the workflows your team needs and get a plan shaped around your
+          workspace, people, and use of Hash AI. Contact us for current options and pricing.
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <Link href="/demo" className="inline-flex items-center gap-2 rounded-xl bg-[#111827] px-6 py-3 font-bold text-white">
+            Request pricing <ArrowRight className="size-4" />
+          </Link>
+          <Link href="/product" className="rounded-xl border border-[#d1d5db] px-6 py-3 font-bold">Explore product</Link>
+        </div>
+      </section>
+
+      <section className="bg-[#f8f8fa] py-20">
+        <div className="mx-auto grid max-w-6xl gap-6 px-6 lg:grid-cols-2">
+          <article className="rounded-3xl border border-[#e5e7eb] bg-white p-8">
+            <span className="flex size-11 items-center justify-center rounded-2xl bg-[#efedfd] text-[#7612fa]"><CheckCircle2 className="size-5" /></span>
+            <h2 className="mt-5 text-2xl font-bold">Confirm what is included</h2>
+            <ul className="mt-6 space-y-3">
+              {included.map((item) => <li key={item} className="flex gap-3 text-sm leading-relaxed text-[#4b5563]"><CheckCircle2 className="mt-0.5 size-4 shrink-0 text-[#078d3b]" />{item}</li>)}
+            </ul>
+          </article>
+          <article className="rounded-3xl bg-[#111827] p-8 text-white">
+            <span className="flex size-11 items-center justify-center rounded-2xl bg-white/10"><ShieldCheck className="size-5" /></span>
+            <h2 className="mt-5 text-2xl font-bold">Build the right plan with our team</h2>
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
+              We&apos;ll help you understand billing, included workflows, Hash AI usage,
+              model availability, support, and the options that fit your organization.
+            </p>
+            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#111827]">
+              <MessageSquareText className="size-4" /> Contact the team
+            </Link>
+          </article>
+        </div>
+      </section>
+    </main>
+  );
 }

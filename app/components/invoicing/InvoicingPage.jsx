@@ -92,9 +92,9 @@ function InvoicingHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD INVOICING</p>
-          <h1>Create, finalize, and track invoices in Hashboard</h1>
+          <h1>Create invoices faster. Track every payment.</h1>
           <p className="task-hero-lede">
-            Turn client billing agreements into controlled invoices with editable line items, tax calculations, invoice numbering, and recorded payments.
+            Turn agreed billing terms into clear invoices, send work forward, and keep payment progress connected to every client.
           </p>
           <div className="task-hero-action">
             <CTAButton />

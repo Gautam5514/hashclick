@@ -335,6 +335,56 @@
   padding-inline: 20px;
 }
 
+.cu-panel-solutions .cu-dropdown {
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 18px;
+}
+
+.cu-panel-solutions .cu-column {
+  align-items: center;
+  width: 100%;
+}
+
+.cu-panel-solutions .cu-list {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cu-panel-solutions .cu-product {
+  justify-content: center;
+  width: auto;
+  height: 38px;
+  padding: 8px 18px;
+}
+
+.cu-panel-learn .cu-dropdown {
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 18px;
+}
+
+.cu-panel-learn .cu-column {
+  align-items: center;
+  width: 100%;
+}
+
+.cu-panel-learn .cu-list {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cu-panel-learn .cu-product {
+  justify-content: center;
+  width: auto;
+  height: 38px;
+  padding: 8px 18px;
+}
+
 .cu-column {
   display: flex;
   flex-direction: column;

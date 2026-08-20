@@ -137,7 +137,7 @@ export default function Cards() {
             </div>
           </li>
 
-          {/* Full-width ledger of what the agents shipped this morning. */}
+          {/* Full-width ledger of recent Hash AI activity. */}
           <li className="bn-card bn-card-wide">
             <div className="bn-done">
               <div className="bn-done-head">
@@ -148,7 +148,7 @@ export default function Cards() {
                 <span className="bn-done-count">9 examples</span>
               </div>
               <ul className="bn-done-list">
-                {completed.map(([task, agent, at], index) => (
+                {completed.map(([task, source, at], index) => (
                   <li className="bn-done-row" style={{ "--row": index }} key={task}>
                     <span className="bn-done-check" aria-hidden="true">
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
@@ -163,7 +163,7 @@ export default function Cards() {
                     </span>
                     <span className="bn-done-task">{task}</span>
                     <span className="bn-done-meta">
-                      {agent} · {at}
+                      {source} · {at}
                     </span>
                   </li>
                 ))}

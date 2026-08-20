@@ -7,8 +7,8 @@ export default function DemoPage() {
     <ComingSoon
       eyebrow="Get a demo"
       title="See it running on your workflow"
-      body="A solutions engineer will map your current stack, show the consolidation, and answer the security questions in one 30-minute call."
-      links={["Live product walkthrough", "Migration plan for your tools", "Security & compliance Q&A", "Pricing built for your seat count"]}
+      body="Walk through the Hashboard workflows most relevant to your team and discuss how projects, people, clients, operations, and Hash AI can fit together."
+      links={["Live product walkthrough", "Workflow planning", "Hash AI capabilities", "Plan and pricing options"]}
     />
   );
 }

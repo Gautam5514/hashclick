@@ -83,15 +83,11 @@ function TasksHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">Hashboard Tasks</p>
-          <h1>Keep every piece of work accounted for</h1>
-          <p className="task-hero-lede">Create tasks, set priorities and deadlines, assign the right people, and follow progress from backlog to completion.</p>
+          <h1>Turn every priority into progress</h1>
+          <p className="task-hero-lede">Create tasks, set clear owners and deadlines, and keep work moving from the first idea to done.</p>
           <div className="task-hero-action"><CTAButton>Get started</CTAButton><span>Create your workspace<br />and organize work.</span></div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="" />
-            <span>Projects · Team tasks · Personal tasks</span>
-            <span className="task-review-sources" aria-label="Task statuses and priorities">
-              <i className="review-g2">To Do</i><i className="review-capterra">In Progress</i><i className="review-getapp">Review</i><i className="review-trustradius">Done</i><i className="review-ph">Urgent</i>
-            </span>
+            <span>Projects · Team tasks · Personal tasks · Clear ownership</span>
           </div>
         </div>
         <div className="task-hero-visual">

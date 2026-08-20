@@ -92,9 +92,9 @@ function SpacesHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD SPACES</p>
-          <h1>Organize teams, access, and projects in Spaces</h1>
+          <h1>Give every team a space to do their best work</h1>
           <p className="task-hero-lede">
-            Give each team or function a dedicated space, add the right members, assign clear roles, and keep related projects together.
+            Bring each team’s projects, members, responsibilities, and shared work together in one focused place.
           </p>
           <div className="task-hero-action">
             <CTAButton />

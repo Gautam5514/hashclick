@@ -5,24 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Is Hashboard Kanban Board free to use?",
-    "Yes! Hashboard's Board view is available on the Free Forever plan with unlimited drag-and-drop cards, custom statuses, and group-by options."
+    "How does Hashboard help teams organize task status?",
+    "Use structured projects and tasks to keep ownership, priority, dates, descriptions, completion, and current state connected."
   ],
   [
-    "Can I set Work-In-Progress (WIP) limits on Kanban columns?",
-    "Yes! You can easily set WIP limits for any column to prevent team overload and identify workflow bottlenecks before they delay projects."
+    "How can I identify overloaded team members?",
+    "Review permitted employee and open-task context by owner, then adjust supported assignments and deadlines as needed."
   ],
   [
-    "Can I group my Kanban board by Assignee or Priority?",
-    "Abolutely. With one click, you can regroup your entire board by Assignee, Priority, Due Date, Tags, or any Custom Field."
+    "What task details can I manage?",
+    "Use the task fields supported by Hashboard, including its project relationship, assignee, priority, dates, description, and current state where available."
   ],
   [
-    "How does Hashboard Hash AI work with Kanban Boards?",
-    "Hashboard Hash AI can summarize column status across your entire workspace, draft subtasks for board cards, and alert team leads about stuck or overdue tasks."
+    "How does Hash AI work with tasks?",
+    "Hash AI can answer supported questions about permitted task and project context and can perform available task actions by request."
   ],
   [
-    "Can I automate card movements between columns?",
-    "Yes! Hashboard Automations can automatically reassign cards, add tags, update due dates, or post chat notifications whenever a card enters a specific column."
+    "Can Hash AI update task records?",
+    "Hash AI can perform available task actions when you request them and your role has permission."
   ]
 ];
 

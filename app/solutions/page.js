@@ -21,10 +21,10 @@ const bySize = [
     icon: Rocket,
     accent: "#7612fa",
     name: "Startups",
-    body: "One platform from day one, so you're not migrating off four tools at Series B. Free forever for unlimited members.",
+    body: "Start with projects, tasks, team communication, clients, meetings, and the operational workflows your company needs.",
     stats: [
-      ["$0", "to start"],
-      ["10 min", "to first project"],
+      ["One", "company workspace"],
+      ["Clear", "project ownership"],
     ],
   },
   {
@@ -32,10 +32,10 @@ const bySize = [
     icon: Palette,
     accent: "#fa12e3",
     name: "Agencies",
-    body: "Client-facing views, guest access, billable time and profitability reporting — without buying a separate PSA tool.",
+    body: "Keep clients connected to supported projects, meetings, agreements, invoices, leads, and internal delivery work.",
     stats: [
-      ["Free", "client guests"],
-      ["2x", "client capacity"],
+      ["Linked", "client records"],
+      ["Current", "delivery context"],
     ],
   },
   {
@@ -43,10 +43,10 @@ const bySize = [
     icon: Building2,
     accent: "#0091ff",
     name: "Enterprise",
-    body: "SAML SSO, SCIM, audit logs, data residency and a named success team for 100,000-seat deployments.",
+    body: "Use company-scoped records, role-based permissions, employee management, and connected operational workflows.",
     stats: [
-      ["85%", "of the Fortune 500"],
-      ["99.9%", "uptime SLA"],
+      ["Role", "aware access"],
+      ["Company", "scoped data"],
     ],
   },
 ];
@@ -54,19 +54,19 @@ const bySize = [
 const faqs = [
   {
     q: "Do different teams have to work the same way?",
-    a: "No — that's the point. Each space defines its own statuses, fields, views and automations, while leadership still gets one roll-up across all of them.",
+    a: "Teams can use the supported projects, tasks, Chat, people, clients, meetings, and operational workflows relevant to their responsibilities.",
   },
   {
     q: "Can we start with one team and expand later?",
-    a: "Yes, and most customers do. Start with the team that hurts most, prove it, then add spaces. Nothing needs to be rebuilt when you expand.",
+    a: "Yes. A company can begin with a focused set of supported workflows and add more teams and records as its use grows.",
   },
   {
-    q: "Are the agents specific to each solution?",
-    a: "Each solution ships with agents tuned to that workflow — intake and triage for IT, brief and creative review for marketing, sprint and release for engineering. You can edit them or write your own in plain English.",
+    q: "How does Hash AI support these solutions?",
+    a: "Hash AI answers questions from available workspace context and helps people take supported actions across their everyday workflows.",
   },
   {
-    q: "What does it replace?",
-    a: "Typically a project tool, a docs tool, a whiteboard tool, a chat tool and a reporting tool — plus whichever spreadsheet has become load-bearing.",
+    q: "What can teams bring together in Hashboard?",
+    a: "Hashboard connects project, communication, people, client, scheduling, and business workflows in one shared workspace.",
   },
 ];
 
@@ -92,8 +92,8 @@ export default function SolutionsPage() {
             <span className="text-brand-gradient">not for &ldquo;users&rdquo;</span>
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-ink-secondary">
-            The same platform, pre-configured for the way each function actually
-            works — with the agents, views and templates already in place.
+            Use the same Hashboard workspace across teams, with supported
+            workflows matched to each function&apos;s responsibilities.
           </p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button href="/signup" size="xl">
@@ -109,7 +109,7 @@ export default function SolutionsPage() {
       <SolutionCards
         eyebrow="By team"
         title="Pick the starting point closest to your work"
-        subtitle="Every solution is a full workspace setup — hierarchy, views, custom fields, automations and agents — not a marketing page."
+        subtitle="Each solution highlights the Hashboard workflows that are genuinely relevant to that team."
       />
 
       {/* By size */}
@@ -117,7 +117,7 @@ export default function SolutionsPage() {
         <Container size="default">
           <SectionHeading
             eyebrow="By company size"
-            title="From two people to two hundred thousand"
+            title="A shared workspace for growing organizations"
           />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {bySize.map((s) => (

@@ -22,7 +22,7 @@ const items = [
   ],
   [
     "Who can see a meeting?",
-    "Employees are limited to meetings they host or attend. Admins and managers receive broader tenant-scoped visibility according to the booking rules."
+    "Employees see meetings they host or attend, while admins and managers can review the wider company schedule when their role allows it."
   ]
 ];
 

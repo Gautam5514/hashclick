@@ -248,7 +248,7 @@ export default function Navbar() {
             ref={(el) => {
               panelRefs.current[menu.id] = el;
             }}
-            className={`cu-panel${open === menu.id ? " cu-panel-active" : ""}`}
+            className={`cu-panel cu-panel-${menu.id}${open === menu.id ? " cu-panel-active" : ""}`}
           >
             <div className="cu-dropdown">
               {menu.columns.map((column) => (

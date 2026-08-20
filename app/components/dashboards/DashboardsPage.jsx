@@ -15,65 +15,65 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Data scattered across spreadsheets, slides, and separate tools",
-    "Manual weekly status reports take hours to compile",
-    "Metrics are outdated the minute you present them",
-    "Static charts that don't let you drill down into real work",
+    "Project and workload questions answered from stale updates",
+    "Status information spread across separate conversations",
+    "Operational records reviewed one workflow at a time",
+    "Teams need a clearer path from information to action",
   ],
   with: [
-    "Live, real-time metrics connected directly to active work",
-    "Automated executive reporting compiled in a single click",
-    "50+ customizable widgets for time, velocity, and sprints",
-    "Click any chart item to view and update the underlying task",
+    "Review supported project, task, and workload information",
+    "Use purpose-built views for attendance, leave, and finance",
+    "Ask Hash AI permitted questions about current workspace data",
+    "Open the underlying workflow to review or update its records",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Real-time analytics",
-    title: "Track progress and performance in real time",
-    body: "Monitor sprint velocity, team workload, project status, and KPIs dynamically as work gets completed across your Workspace.",
+    eyebrow: "Project visibility",
+    title: "Review progress from current work records",
+    body: "Use projects and tasks to check status, ownership, priorities, due dates, and overdue work across the workspace.",
     image: "/dashboards/dashboard-feature-1.png",
-    alt: "Hashboard Dashboard progress and performance widgets",
+    alt: "Hashboard project and task visibility",
   },
   {
-    eyebrow: "50+ Customizable Widgets",
-    title: "Custom reporting tailored to every team",
-    body: "Mix and match charts, time tracking summaries, custom fields, calculations, and embedded docs to build your dream dashboard.",
+    eyebrow: "Operational views",
+    title: "Use focused views for each workflow",
+    body: "Review the supported screens for attendance, leave, payroll, invoices, expenses, leads, clients, and meetings.",
     image: "/dashboards/dashboard-feature-2.png",
-    alt: "Hashboard Dashboard 50+ widget gallery",
+    alt: "Hashboard operational workflow views",
     reverse: true,
   },
   {
-    eyebrow: "Actionable visibility",
-    title: "From high-level metrics to granular tasks",
-    body: "Don't just look at numbers. Click into any bar, pie, or line chart segment to view task details, assign owners, and update status instantly.",
+    eyebrow: "Workspace assistance",
+    title: "Ask about the records you can access",
+    body: "Use Hash AI for supported questions about progress, workload, deadlines, and operational records within your role permissions.",
     image: "/dashboards/dashboard-feature-3.png",
     alt: "Hashboard Dashboard interactive drill-down view",
   },
 ];
 
 const dashboardFeatures = [
-  [PieChart, "50+ Widget types", "Line graphs, pie charts, calculation cards, sprint charts, and custom field summaries."],
-  [Activity, "Real-time sync", "Widgets update instantly as soon as team members log time or update task status."],
-  [Timer, "Time & Cost Tracking", "Track billable hours, team estimates, and budget vs actual spent across projects."],
-  [TrendingUp, "Sprint & Velocity", "Burn-down, burn-up, cumulative flow, and velocity charts for Agile teams."],
-  [Users, "Workload & Capacity", "Visualize team capacity and prevent burnout with workload allocation charts."],
-  [SlidersHorizontal, "Custom Field Rollups", "Aggregate custom numbers, currencies, ratings, and dropdown fields across workspaces."],
-  [Share2, "Share & Export", "Share dashboards privately with clients, export PDFs, or publish public read-only links."],
-  [ShieldCheck, "Permission Controls", "Control exactly who can view, edit, or manage dashboard widgets."],
-  [FileText, "Embedded Docs & Apps", "Embed Google Sheets, Figma designs, YouTube videos, and Hashboard Docs directly into dashboards."],
+  [PieChart, "Project status", "Review current project state, ownership, dates, and related tasks."],
+  [Activity, "Task progress", "Check open, completed, assigned, and overdue work from supported task data."],
+  [Timer, "Attendance records", "Review permitted check-in, check-out, status, and worked-time information."],
+  [TrendingUp, "Lead pipeline", "Inspect supported lead stages, ownership, probability, value, and activity."],
+  [Users, "Team workload", "Review permitted employee and open-task context by owner."],
+  [SlidersHorizontal, "Financial workflows", "Use dedicated invoice, payment, expense, and payroll records."],
+  [Share2, "Client context", "Keep clients connected to supported projects, meetings, agreements, and invoices."],
+  [ShieldCheck, "Permission controls", "Limit data and actions using company and role boundaries."],
+  [FileText, "Hash AI questions", "Ask about permitted project, people, client, meeting, and operational records."],
 ];
 
 const platform = [
-  [BarChart3, "Dashboards", "Visualize your data"], [Columns3, "Board view", "Kanban-style workflow"],
-  [GanttChart, "Gantt", "Timeline and dependencies"], [MessageCircle, "Chat", "Real-time team messaging"],
-  [Video, "SyncUp", "Video meetings & huddles"], [Inbox, "Inbox", "Centralize notifications"],
-  [FileText, "Docs", "Collaborative documentation"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"], [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"], [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"], [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
+  [BarChart3, "Payroll", "Prepare payroll periods"], [Columns3, "Tasks", "Assign and track work"],
+  [GanttChart, "Projects", "Coordinate delivery"], [MessageCircle, "Chat", "Real-time team messaging"],
+  [Video, "Meetings", "Manage bookings"], [Inbox, "Leads", "Track sales opportunities"],
+  [FileText, "Invoices", "Manage customer billing"], [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"], [ClipboardList, "Leave", "Manage time off"],
+  [CalendarDays, "Calendar", "See scheduled work"], [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"], [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer records"], [Grid2X2, "All features", "Explore everything"],
 ];
 
 function CTAButton({ secondary = false, children = "Get started. Now!" }) {
@@ -90,21 +90,17 @@ function DashboardsHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">DASHBOARDS IN HASHBOARD</p>
-          <h1>Build custom reports you can actually work from</h1>
+          <p className="task-eyebrow">HASHBOARD DASHBOARD</p>
+          <h1>See what’s moving—and what needs attention</h1>
           <p className="task-hero-lede">
-            See everything at a glance: campaign performance, team productivity, billable hours. Then update work directly from the dashboard without switching tools.
+            Bring important work, people, clients, meetings, and business activity into a clearer view of what matters now.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>Start 7 Days<br />Free Trial.</span>
+            <span>Explore the<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Projects · People · Clients · Operations · Hash AI</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -127,7 +123,7 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to report</h2>
+        <h2 className="task-gradient-title">A more honest way to understand work</h2>
         <div className="task-compare-grid">
           {[["Without Hashboard Dashboards", comparison.without, false], ["With Hashboard Dashboards", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
@@ -153,9 +149,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>The foundation for data-driven decisions</h2>
+          <h2>Current records for informed decisions</h2>
           <p>
-            Dashboards power complete visibility across your workspace, so leadership,<br className="task-desktop-break" /> managers, and teams stay aligned.
+            Hashboard keeps supported work and operational records in purpose-built views,<br className="task-desktop-break" /> with role-aware access for each team.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -191,8 +187,8 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Your team&apos;s performance is always in view. Make smarter decisions.</h2>
-          <p>Join 3M+ teams who report and act from the same place. Start your 7-day free trial.</p>
+          <h2>Use current workspace records instead of invented analytics.</h2>
+          <p>Review the workflow you need or ask Hash AI a supported, permission-aware question.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
@@ -205,15 +201,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Super Agents", "Automated executive summaries & reports", "Super Agents aggregate task progress, analyze workload bottlenecks, and write weekly status summaries straight to your Dashboard.", "/tasks/super-agents.png"],
-    ["Hashboard Brain", "Ask questions about any metric or chart", "Ask Brain why sprint velocity dropped or which team has open blockers. Brain instantly pulls answers from your Workspace data.", "/tasks/clickup-brain.png"],
+    ["Hash AI", "Ask about current project and task status", "Request permitted information about owners, deadlines, priorities, progress, workload, and overdue tasks.", "/tasks/super-agents.png"],
+    ["Supported Workflows", "Review the underlying operational records", "Open the relevant Hashboard workflow for attendance, leave, leads, clients, invoices, expenses, payroll, or meetings.", "/tasks/clickup-brain.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI powered reporting</p>
-          <h2>Instant insights and updates<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">WORKSPACE-AWARE ASSISTANCE</p>
+          <h2>Supported questions and clear source records<br />inside Hashboard</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -262,8 +258,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Dashboards are just the beginning</h2>
-            <p>Dashboards connect live metrics to the rest of Hashboard. Tasks, Docs, Chat, Whiteboards, and Automations in a single converged app. Explore everything you unlock in one place.</p>
+            <h2>Visibility starts with reliable records</h2>
+            <p>Use Tasks, Projects, Chat, Attendance, Leave, Clients, Leads, Meetings, Invoices, Expenses, and Payroll in one workspace.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -284,16 +280,16 @@ function FeaturesAndPlatform() {
 
 function DashboardsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "People", text: "People" },
+    { name: "Clients", text: "Clients" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Expenses", text: "Expenses" },
+    { name: "Leave", text: "Leave" },
+    { name: "Payroll", text: "Payroll" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -308,7 +304,7 @@ function DashboardsFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Build your first custom dashboard in minutes.
+              Bring your team&apos;s operational work into one workspace.
             </h2>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
               <Link
@@ -319,7 +315,7 @@ function DashboardsFinal() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br className="hidden sm:inline" /> Free Trial.
+                Create your <br className="hidden sm:inline" /> workspace.
               </div>
             </div>
           </div>
@@ -357,7 +353,7 @@ function DashboardsFinal() {
               src="/dashboards/dashboard-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Dashboards footer workspace"
+              alt="Hashboard workspace visibility preview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

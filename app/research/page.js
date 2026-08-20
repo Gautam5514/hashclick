@@ -1,8 +1,8 @@
 import ResearchPage from "../components/research/ResearchPage";
 
 export const metadata = {
-  title: "Original Research and Data Studies by Hashboard | Workplace Productivity",
-  description: "A centralized library of original workplace research on how modern teams use AI, run meetings, manage communication, juggle apps, and stay productive.",
+  title: "Hashboard Product Reference",
+  description: "Practical references to Hashboard projects, communication, people operations, scheduling, business records, and Hash AI.",
 };
 
 export default function Page() {

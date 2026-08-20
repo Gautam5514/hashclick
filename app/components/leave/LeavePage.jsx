@@ -92,9 +92,9 @@ function LeaveHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD LEAVE</p>
-          <h1>Manage leave requests, decisions, and balances</h1>
+          <h1>Make time-off planning effortless</h1>
           <p className="task-hero-lede">
-            Configure leave types, submit full- or half-day requests, review balances, and manage approval and cancellation states from one workspace.
+            Give employees a simple way to request leave while managers keep approvals, balances, and team availability clear.
           </p>
           <div className="task-hero-action">
             <CTAButton />

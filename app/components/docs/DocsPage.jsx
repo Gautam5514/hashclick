@@ -18,7 +18,7 @@ const comparison = {
     "Important details scattered across messages and files",
     "Project context separated from assigned work",
     "No consistent place for structured business records",
-    "Teams rely on unsupported documentation promises",
+    "Essential context gets separated from daily work",
   ],
   with: [
     "Keep task descriptions and project details close to execution",
@@ -63,14 +63,14 @@ const docsFeatures = [
 ];
 
 const platform = [
-  [FileText, "Docs", "Connected documentation"], [BarChart3, "Dashboards", "Visualize your data"],
-  [Columns3, "Board view", "Kanban-style workflow"], [GanttChart, "Gantt", "Timeline and dependencies"],
-  [MessageCircle, "Chat", "Real-time team messaging"], [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"], [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"], [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"], [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
+  [FileText, "Invoices", "Manage customer billing"], [BarChart3, "Payroll", "Prepare payroll periods"],
+  [Columns3, "Tasks", "Assign and track work"], [GanttChart, "Projects", "Coordinate delivery"],
+  [MessageCircle, "Chat", "Real-time team messaging"], [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Leads", "Track sales opportunities"], [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"], [ClipboardList, "Leave", "Manage time off"],
+  [CalendarDays, "Calendar", "See scheduled work"], [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"], [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer records"], [Grid2X2, "All features", "Explore everything"],
 ];
 
 function CTAButton({ secondary = false, children = "Get started. Now!" }) {
@@ -87,21 +87,17 @@ function DocsHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">WORKSPACE CONTEXT IN HASHBOARD</p>
-          <h1>Keep essential information close to the work</h1>
+          <p className="task-eyebrow">HASHBOARD COMPANY DOCS</p>
+          <h1>Keep company knowledge clear and accessible</h1>
           <p className="task-hero-lede">
-            Organize task details, project context, files, and conversations inside the workflows Hashboard currently supports.
+            Keep policies, guides, project context, files, and important company information organized alongside the work.
           </p>
           <div className="task-hero-action">
             <CTAButton />
             <span>Explore the<br />workspace.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Projects · Tasks · Chat · Files · Structured records</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -281,16 +277,16 @@ function FeaturesAndPlatform() {
 
 function DocsFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "People", text: "People" },
+    { name: "Clients", text: "Clients" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Expenses", text: "Expenses" },
+    { name: "Leave", text: "Leave" },
+    { name: "Payroll", text: "Payroll" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];

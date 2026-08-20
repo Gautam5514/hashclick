@@ -89,9 +89,9 @@ function CalendarHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD CALENDAR</p>
-          <h1>See Google Calendar events and Hashboard bookings together</h1>
+          <h1>One clear view of every important commitment</h1>
           <p className="task-hero-lede">
-            Connect Google Calendar, review external events with Hashboard meetings, check busy time, and keep supported booking changes synchronized.
+            See meetings, bookings, and connected calendar events together so your team always knows what’s next.
           </p>
           <div className="task-hero-action">
             <CTAButton />

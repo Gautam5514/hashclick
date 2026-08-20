@@ -1,23 +1,23 @@
 export const ABOUT_STATS = [
   {
-    value: "1 Day",
-    unit: "Saved",
-    label: "Per employee, every week",
-    description: "Our core metric that drives every product decision we make.",
+    value: "One",
+    unit: "Workspace",
+    label: "For connected business workflows",
+    description: "Bring supported work and operational records into a shared company context.",
     color: "#7612fa"
   },
   {
-    value: "10M+",
-    unit: "Users",
-    label: "Across 180+ countries",
-    description: "Millions of knowledge workers trust Hashboard daily.",
+    value: "10+",
+    unit: "Workflows",
+    label: "Across work and operations",
+    description: "Projects, people, clients, scheduling, communication, and financial records.",
     color: "#fa12e3"
   },
   {
-    value: "300K+",
-    unit: "Teams",
-    label: "Startups to Fortune 500",
-    description: "Powering work from small teams to world-class enterprises.",
+    value: "Role",
+    unit: "Aware",
+    label: "Company-scoped access",
+    description: "Workspace information and actions follow the signed-in user's permitted role.",
     color: "#fc6d2d"
   }
 ];
@@ -37,7 +37,7 @@ export const CORE_VALUES = [
     tag: "VALUE 02",
     title: "Embrace hard work, do hard things",
     subtitle: "Tackle complex problems head-on",
-    description: "Building a converged platform that replaces dozens of apps is difficult. We run toward hard challenges with resilience, high craftsmanship, and unwavering conviction.",
+    description: "Building reliable connected workflows is difficult. We approach those challenges with resilience, care, and a commitment to honest product claims.",
     iconColor: "#fa12e3",
     bgGradient: "from-[#fa12e3]/10 to-transparent"
   },

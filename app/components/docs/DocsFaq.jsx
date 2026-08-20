@@ -5,12 +5,12 @@ import { ChevronDown } from "lucide-react";
 
 const items = [
   [
-    "Does Hashboard currently include a full Docs or Wiki editor?",
-    "No. Hashboard does not currently claim a dedicated rich-text Docs or Wiki product. Use supported project details, task descriptions, files, Chat, and structured workflows for workspace context."
+    "How can teams keep project context in Hashboard?",
+    "Use project details, task descriptions, supported file attachments, Chat, and structured workflows to keep essential information close to execution."
   ],
   [
-    "Can I import Google Docs, Notion, or Confluence pages?",
-    "A one-click document migration tool is not currently advertised as a supported Hashboard capability."
+    "Can we connect existing information to the work?",
+    "Teams can bring relevant details into project and task descriptions, share supported files, and use Chat for ongoing decisions and updates."
   ],
   [
     "How can I share information with teammates?",
@@ -18,11 +18,11 @@ const items = [
   ],
   [
     "What context can Hash AI use?",
-    "Hash AI can use supported, permitted workspace records exposed to it. It does not claim to search a nonexistent company-wide Docs repository."
+    "Hash AI can use supported, permitted workspace records such as projects, tasks, people, clients, meetings, and operational data."
   ],
   [
-    "Can I embed live tasks and views inside a Doc?",
-    "Yes! You can embed live tasks, lists, boards, and widgets directly inside any document. When a task status changes, the doc embed updates in real time."
+    "Where should teams review live work?",
+    "Open the relevant project, task, people, scheduling, or business workflow to review its current records directly."
   ]
 ];
 

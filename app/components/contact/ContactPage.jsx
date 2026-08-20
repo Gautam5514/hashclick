@@ -27,7 +27,7 @@ const CONTACT_CARDS = [
     icon: CalendarDays,
     tone: "pink",
     title: "Book a Demo",
-    body: "See workspaces, Vault, and payroll automation walked through live, on your use case.",
+    body: "See projects, people, clients, scheduling, business workflows, and Hash AI using a scenario relevant to your team.",
     cta: "Get a demo",
     href: "/demo",
   },

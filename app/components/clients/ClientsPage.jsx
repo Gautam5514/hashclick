@@ -92,9 +92,9 @@ function ClientsHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD CLIENTS</p>
-          <h1>Keep client delivery and billing connected</h1>
+          <h1>Keep every client relationship connected</h1>
           <p className="task-hero-lede">
-            Manage client details, portal access, projects, bookings, billing agreements, and invoices around one account record.
+            Bring client details, projects, meetings, agreements, invoices, and delivery progress together around every relationship.
           </p>
           <div className="task-hero-action">
             <CTAButton />

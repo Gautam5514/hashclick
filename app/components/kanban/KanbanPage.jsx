@@ -17,62 +17,62 @@ import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
-    "Physical whiteboards or isolated board tools with no context",
-    "Tasks move, but connected docs and chats stay out of sync",
-    "No visibility into work-in-progress bottlenecks",
-    "Manual status updates to update project stakeholders",
+    "Task status tracked through scattered messages",
+    "Ownership and due dates separated from project context",
+    "No consistent record of priorities and completion",
+    "Teams expect board features that are not supported",
   ],
   with: [
-    "Flexible boards connected to Docs, Chat, and Automations",
-    "Custom status columns and WIP limits to prevent overload",
-    "Group by Assignee, Priority, Due Date, or Custom Fields",
-    "Hashboard Hash AI surfaces stuck tasks and summarizes status",
+    "Structured tasks connected to projects and assignees",
+    "Track supported status, priority, dates, and completion",
+    "Review work by project, owner, or current task state",
+    "Ask Hash AI about permitted task and workload context",
   ],
 };
 
 const workflow = [
   {
-    eyebrow: "Custom Workflows",
-    title: "Build boards tailored to your workflow",
-    body: "Create custom status columns, swimlanes, and color codes for any process—from Agile software sprints to content pipelines.",
+    eyebrow: "Structured Tasks",
+    title: "Keep each piece of work clearly defined",
+    body: "Create tasks with supported details such as project, assignee, priority, dates, description, and current status.",
     image: "/kanban/kanban-feature-1.png",
-    alt: "Hashboard Kanban Board custom workflows",
+    alt: "Hashboard project task details",
   },
   {
-    eyebrow: "WIP Limits & Grouping",
-    title: "Spot bottlenecks before they stall work",
-    body: "Set Work-in-Progress (WIP) limits on columns and regroup boards by Assignee, Priority, or Tag to optimize team velocity.",
+    eyebrow: "Ownership & Deadlines",
+    title: "See who owns work and when it is due",
+    body: "Review assigned and overdue tasks using the project and workload information available to your role.",
     image: "/kanban/kanban-feature-2.png",
-    alt: "Hashboard Kanban WIP limits and grouping",
+    alt: "Hashboard task ownership and deadlines",
     reverse: true,
   },
   {
-    eyebrow: "Automated Actions",
-    title: "Automate repetitive board movements",
-    body: "Trigger automatic status changes, assignee reassignments, and notifications whenever a card moves to a new column.",
+    eyebrow: "Explicit Updates",
+    title: "Update work through supported actions",
+    body: "Change supported task details directly or ask Hash AI to perform an available action when you have permission.",
     image: "/kanban/kanban-feature-3.png",
-    alt: "Hashboard Kanban board automations",
+    alt: "Supported Hashboard task updates",
   },
 ];
 
 const kanbanFeatures = [
-  [Move, "Drag-and-Drop Cards", "Move tasks between columns effortlessly with smooth drag-and-drop."],
-  [AlertCircle, "Work-in-Progress Limits", "Set WIP limits on board columns to prevent team overload."],
-  [Filter, "Multi-Field Grouping", "Group board cards by Assignee, Priority, Due Date, or Custom Fields."],
-  [CheckSquare, "Subtask Card Display", "Toggle subtasks as separate cards or inline checklists on your board."],
-  [Zap, "Automated Board Rules", "Trigger automations when cards change status, assignee, or priority."],
-  [LayoutGrid, "Board Templates", "Start instantly with pre-built Kanban templates for software, marketing, and HR."],
+  [Move, "Task status", "Keep the current supported state of each task visible."],
+  [AlertCircle, "Priority", "Mark task importance so teams can review urgent work first."],
+  [Filter, "Ownership", "Connect tasks to their project and assigned team member."],
+  [CheckSquare, "Completion", "Record completed work and review what remains open."],
+  [Zap, "Hash AI actions", "Request supported task creation or updates through conversation."],
+  [LayoutGrid, "Project context", "Keep related tasks organized within the project they support."],
 ];
 
 const platform = [
-  [Columns3, "Board view", "Kanban-style workflow"], [FileText, "Docs", "Connected documentation"],
-  [BarChart3, "Dashboards", "Visualize your data"], [GanttChart, "Gantt", "Timeline and dependencies"],
-  [MessageCircle, "Chat", "Real-time team messaging"], [Video, "SyncUp", "Video meetings & huddles"],
-  [Inbox, "Inbox", "Centralize notifications"], [PanelsTopLeft, "Whiteboards", "Visual collaboration"],
-  [BookOpen, "Wiki", "Knowledge base"], [ClipboardList, "Forms", "Collect information"],
-  [CalendarDays, "Calendar", "Schedule and manage time"], [CalendarClock, "Scheduling", "Automate calendar booking"],
-  [Zap, "Automations", "Workflow automation"], [Clock3, "Time tracking", "Monitor time spent"],
-  [Clapperboard, "Clips", "Screen recordings"], [Grid2X2, "All features", "Explore everything"],
+  [Columns3, "Tasks", "Assign and track work"], [FileText, "Invoices", "Manage customer billing"],
+  [BarChart3, "Payroll", "Prepare payroll periods"], [GanttChart, "Projects", "Coordinate delivery"],
+  [MessageCircle, "Chat", "Real-time team messaging"], [Video, "Meetings", "Manage bookings"],
+  [Inbox, "Leads", "Track sales opportunities"], [PanelsTopLeft, "Spaces", "Organize teams and access"],
+  [BookOpen, "People", "Manage employee records"], [ClipboardList, "Leave", "Manage time off"],
+  [CalendarDays, "Calendar", "See scheduled work"], [CalendarClock, "Scheduling", "Share booking availability"],
+  [Zap, "Hash AI", "Ask permission-aware questions"], [Clock3, "Expenses", "Record business expenses"],
+  [Clapperboard, "Clients", "Keep customer records"], [Grid2X2, "All features", "Explore everything"],
 ];
 
 function CTAButton({ secondary = false, children = "Get started. It's FREE" }) {
@@ -89,21 +89,17 @@ function KanbanHero() {
     <section className="task-hero">
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
-          <p className="task-eyebrow">KANBAN BOARD IN HASHBOARD</p>
-          <h1>Visualize work and move projects forward</h1>
+          <p className="task-eyebrow">TASK STATUS IN HASHBOARD</p>
+          <h1>Organize work and keep projects moving</h1>
           <p className="task-hero-lede">
-            Drag and drop tasks, set WIP limits, customize status workflows, and track project progress across your entire team in real time.
+            Create structured tasks, assign ownership, set priorities and dates, and review current project work in one workspace.
           </p>
           <div className="task-hero-action">
             <CTAButton />
-            <span>No credit card.<br />Setup in 2 min.</span>
+            <span>Start with a<br />real project.</span>
           </div>
           <div className="task-reviews">
-            <Image src="/tasks/stars.png" width={97} height={20} alt="4.6 out of 5 stars" />
-            <span>25,000+ reviews from</span>
-            <span className="task-review-sources" aria-label="G2, Capterra, GetApp, TrustRadius, and Product Hunt">
-              <i className="review-g2">G2</i><i className="review-capterra">◈</i><i className="review-getapp">➤</i><i className="review-trustradius">▰</i><i className="review-ph">P</i>
-            </span>
+            <span>Project tasks · Ownership · Priorities · Deadlines · Status</span>
           </div>
         </div>
         <div className="task-hero-visual">
@@ -113,7 +109,7 @@ function KanbanHero() {
             height={543}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Kanban Board view"
+            alt="Hashboard project task workspace"
           />
         </div>
       </div>
@@ -126,7 +122,7 @@ function Comparison() {
   return (
     <section className="task-section task-comparison">
       <div className="task-shell">
-        <h2 className="task-gradient-title">A better way to run Kanban</h2>
+        <h2 className="task-gradient-title">A clearer way to manage task status</h2>
         <div className="task-compare-grid">
           {[["Without Hashboard Kanban", comparison.without, false], ["With Hashboard Kanban", comparison.with, true]].map(([title, items, good]) => (
             <article className={good ? "is-with" : "is-without"} key={title}>
@@ -152,9 +148,9 @@ function WorkflowGrid() {
     <section className="task-section task-foundation">
       <div className="task-shell">
         <header className="task-heading task-foundation-heading">
-          <h2>Visual workflow management for every team</h2>
+          <h2>Structured task management for every team</h2>
           <p>
-            Kanban boards bring complete transparency to your sprints, pipelines,<br className="task-desktop-break" /> and daily tasks in one place.
+            Projects and tasks keep ownership, priorities, dates, status,<br className="task-desktop-break" /> and daily execution connected in one place.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -190,12 +186,12 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Your team&apos;s visual workflow, always in sync.</h2>
-          <p>Join 3M+ teams who plan and track work on Hashboard Kanban boards. Start your 7-day free trial.</p>
+          <h2>Your team&apos;s project work, clearly organized.</h2>
+          <p>Create tasks, assign owners, review current status, and keep project communication close to execution.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Kanban Board workspace" />
+          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard project task workspace" />
         </div>
       </div>
     </section>
@@ -204,15 +200,15 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hashboard Brain", "Auto-summarize board status and surface stuck cards", "Hashboard Brain analyzes board columns to give instant progress summaries and alert leads about blocked tasks.", "/kanban/ai-kanban-1.png"],
-    ["Smart Cards", "AI auto-populates subtasks and field details", "Card details, subtask checklists, and priority scores are generated automatically as work progresses.", "/kanban/ai-kanban-2.png"],
+    ["Hash AI", "Ask about permitted project and task status", "Request current information about owners, priorities, deadlines, open work, and overdue tasks.", "/kanban/ai-kanban-1.png"],
+    ["Supported Actions", "Create and update tasks by request", "Use Hash AI to perform available task actions when the signed-in user has the required permission.", "/kanban/ai-kanban-2.png"],
   ];
   return (
     <section className="task-section task-ai">
       <div className="task-shell">
         <header className="task-heading">
-          <p className="task-eyebrow">AI Powered Board Intelligence</p>
-          <h2>Instant status updates and bottleneck detection<br />powered by Hashboard Brain</h2>
+          <p className="task-eyebrow">WORKSPACE-AWARE ASSISTANCE</p>
+          <h2>Task questions and supported actions<br />with Hash AI</h2>
         </header>
         <div className="task-ai-grid">
           {cards.map(([eye, title, body, image]) => (
@@ -261,8 +257,8 @@ function FeaturesAndPlatform() {
         <div className="task-shell task-platform-shell">
           <header className="task-heading task-platform-heading">
             <p className="task-eyebrow">The Hashboard platform</p>
-            <h2>Kanban Board is just the beginning</h2>
-            <p>Board view connects strategy to execution. Combine Kanban Board with Tasks, Docs, Dashboards, Chat, and Whiteboards in a single converged app. Explore everything you unlock when your work lives in one place.</p>
+            <h2>Tasks connect planning to execution</h2>
+            <p>Combine Projects, Tasks, Chat, Calendar, Meetings, Clients, and other supported workflows in one workspace.</p>
           </header>
           <div className="task-platform-grid">
             {platform.map(([Icon, title, body]) => (
@@ -283,16 +279,16 @@ function FeaturesAndPlatform() {
 
 function KanbanFinal() {
   const logoItems = [
-    { name: "Adobe", text: "Adobe" },
-    { name: "American", text: "American" },
-    { name: "NBCUniversal", text: "NBCUniversal" },
-    { name: "amazon", text: "amazon" },
-    { name: "NVIDIA", text: "NVIDIA" },
-    { name: "wayfair", text: "wayfair" },
-    { name: "verizon", text: "verizon" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Deloitte.", text: "Deloitte." },
-    { name: "Pfizer", text: "Pfizer" },
+    { name: "Projects", text: "Projects" },
+    { name: "Tasks", text: "Tasks" },
+    { name: "Chat", text: "Chat" },
+    { name: "People", text: "People" },
+    { name: "Clients", text: "Clients" },
+    { name: "Meetings", text: "Meetings" },
+    { name: "Invoices", text: "Invoices" },
+    { name: "Expenses", text: "Expenses" },
+    { name: "Leave", text: "Leave" },
+    { name: "Payroll", text: "Payroll" },
   ];
 
   const marqueeList = [...logoItems, ...logoItems, ...logoItems];
@@ -307,18 +303,18 @@ function KanbanFinal() {
           {/* Upper Header & CTA */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
             <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.1]">
-              Build your first Kanban board in seconds.
+              Create your first project and organize its tasks.
             </h2>
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 shrink-0">
               <Link
                 href="/signup"
                 className="inline-flex items-center justify-center gap-2 bg-white text-neutral-950 hover:bg-neutral-100 px-7 py-3 rounded-2xl font-bold text-base whitespace-nowrap shadow-md hover:shadow-lg transition-all"
               >
-                <span>Get started. It&apos;s FREE</span>
+                <span>Get started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <div className="text-xs md:text-sm font-medium text-white/90 leading-tight whitespace-nowrap">
-                Start 7 Days <br /> Free Trial.
+                Create your <br /> workspace.
               </div>
             </div>
           </div>
@@ -356,7 +352,7 @@ function KanbanFinal() {
               src="/kanban/kanban-footer.png"
               width={1240}
               height={460}
-              alt="Hashboard Kanban Board footer workspace"
+              alt="Hashboard project task workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

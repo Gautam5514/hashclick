@@ -2,8 +2,8 @@ import BlogIndexPage from "../components/blog/BlogIndexPage";
 import "../components/blog/blog.css";
 
 export const metadata = {
-  title: "The Hashboard Blog | Productivity, AI & Workflow Automation",
-  description: "Original content, productivity strategies, and AI workflows straight from the creators of Hashboard.",
+  title: "Hashboard Product Guides",
+  description: "Practical guides to supported Hashboard projects, Chat, people operations, meetings, business records, and Hash AI.",
 };
 
 export default function Page() {

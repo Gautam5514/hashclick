@@ -22,7 +22,7 @@ const roles = [
     accent: "#7357ff",
     messages: [
       ["Lena", "my PR’s still waiting for review 💀", "2:14 pm", "L"],
-      ["Sam", "we’re gonna miss the sprint", "2:14 pm", "S"],
+      ["Sam", "we’re going to miss the deadline", "2:14 pm", "S"],
       ["Priya", "Marcus had to hop on the incident", "2:15 pm", "P"],
     ],
     action: "Hash AI showed the overdue review and current assignee workload",

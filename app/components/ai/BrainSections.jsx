@@ -246,7 +246,7 @@ export function WhatsNew() {
         <SectionHeading
           eyebrow="Capabilities"
           title="Assistance built around real Hashboard workflows"
-          subtitle="No invented agents or hidden learning—just selected models, permitted context, and supported actions."
+          subtitle="Choose a model, bring in permitted workspace context, and take supported actions from one conversation."
         />
         <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {whatsNew.map((f) => (
@@ -316,7 +316,7 @@ const completed = [
 
 export function Outputs() {
   return (
-    <Section id="notetaker" className="bg-bg-box">
+    <Section id="meeting-actions" className="bg-bg-box">
       <Container size="default">
         <SectionHeading
           eyebrow="Deliverables"

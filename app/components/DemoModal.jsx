@@ -2,55 +2,11 @@
 
 import { useEffect } from "react";
 import { X, Check } from "lucide-react";
-import {
-  SpotifyLogo,
-  NBCUniversalLogo,
-  AmericanAirlinesLogo,
-} from "./shared/LogoCloud";
-
-function AmazonLogo() {
-  return (
-    <div className="flex flex-col items-start font-sans text-[17px] font-bold tracking-tight text-[#131921] select-none shrink-0">
-      <span>amazon</span>
-      <svg viewBox="0 0 40 12" className="w-[38px] h-auto -mt-1" fill="none" aria-hidden="true">
-        <path d="M2 2c8 7 26 7 36 0" stroke="#ff9900" strokeWidth="2" strokeLinecap="round" />
-        <path d="M33 1.5l4.5 1-2 4.2" stroke="#ff9900" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </div>
-  );
-}
-
-function WayfairLogo() {
-  return (
-    <div className="flex items-center gap-1 font-sans text-[17px] font-extrabold tracking-tight text-[#7f187f] select-none shrink-0">
-      <svg viewBox="0 0 24 24" fill="currentColor" className="size-4.5 text-[#7f187f]" aria-hidden="true">
-        <path d="M12 2l2.5 7.5H22l-6 4.5 2.5 7.5L12 17l-6.5 4.5L8 14 2 9.5h7.5z" />
-      </svg>
-      <span>Wayfair</span>
-    </div>
-  );
-}
-
-function StanfordLogo() {
-  return (
-    <div className="font-serif text-[18px] font-bold tracking-tight text-[#8c1515] select-none shrink-0">
-      Stanford
-    </div>
-  );
-}
-
-const trustedLogos = [
-  AmazonLogo,
-  WayfairLogo,
-  StanfordLogo,
-  SpotifyLogo,
-  NBCUniversalLogo,
-  AmericanAirlinesLogo,
-];
+const demoWorkflows = ["Projects", "Tasks", "Chat", "People", "Clients", "Hash AI"];
 
 const benefits = [
-  "Zero-pressure demo showcasing 20+ work apps – docs, projects, chat – in one place.",
-  "Explore AI Agents and workflow solutions for your team.",
+  "See the Hashboard workflows most relevant to your team.",
+  "Explore projects, people, clients, operations, and Hash AI.",
   "Discuss your goals and uncover how Hashboard can help.",
 ];
 
@@ -152,7 +108,7 @@ export default function DemoModal({ open, onClose }) {
               Get a tailored demo
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-[#4b5563]">
-              See how 4M teams create productivity and get more done in the converged AI Workspace.
+              See how Hashboard can connect your team&apos;s work and everyday business operations.
             </p>
 
             <ul className="mt-6 space-y-3">
@@ -167,12 +123,12 @@ export default function DemoModal({ open, onClose }) {
             </ul>
 
             <div className="mt-9 text-[11px] font-mono font-bold tracking-[0.2em] text-[#8e8e8e] uppercase">
-              Trusted by the best
+              Explore connected workflows
             </div>
             <div className="mt-4 flex flex-wrap items-center gap-x-7 gap-y-4">
-              {trustedLogos.map((Logo, i) => (
-                <div key={i} className="opacity-80 grayscale">
-                  <Logo />
+              {demoWorkflows.map((workflow) => (
+                <div key={workflow} className="rounded-full border border-[#e5e7eb] bg-[#fafafa] px-3 py-1.5 text-[12px] font-bold text-[#4b5563]">
+                  {workflow}
                 </div>
               ))}
             </div>

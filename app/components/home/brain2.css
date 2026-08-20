@@ -108,7 +108,7 @@
 .b2-brain-logo {
   position: relative;
   z-index: 1;
-  height: 84px;
+  height: 72px;
   width: auto;
   filter: brightness(1.08) saturate(1.12) drop-shadow(0 0 28px rgba(0, 145, 255, 0.22))
     drop-shadow(0 0 18px rgba(255, 2, 240, 0.12));
@@ -1579,7 +1579,7 @@
 }
 
 .b2-em-lockup {
-  height: 26px;
+  height: 16px;
   width: auto;
 }
 

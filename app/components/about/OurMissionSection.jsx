@@ -36,16 +36,16 @@ export default function OurMissionSection() {
 
           <div className="mt-6 space-y-[30px] text-justify text-lg text-[#646464] leading-relaxed font-normal">
             <p>
-              We started Hashboard because the way the world works is broken. Teams juggle dozens of disconnected tools - tasks in one place, conversations in another, documents somewhere else - and critical context gets lost in between. We always knew there had to be a better way. So we built one platform to replace them all. While others scramble to bundle fragmented tools or bolt on AI as an afterthought, we&apos;ve been building toward convergence from the start.
+              We started Hashboard to bring the work of running a company closer together. Projects, conversations, people, clients, meetings, attendance, leave, billing, and everyday operations should share useful context instead of becoming separate islands.
             </p>
             <p>
-              Today, we&apos;re at the most exciting inflection point in the history of software: the convergence of software, AI, and humans. For the first time, technology doesn&apos;t just organize your work - it understands it, anticipates it, and acts on it. Hashboard is where this convergence lives. Where humans and AI work side by side, in one place, with full context - and where every team can finally focus on the work that actually matters.
+              Hashboard connects structured workflows with Hash AI assistance. Teams can choose an available model, ask about permitted workspace information, and request supported actions while keeping people in control of the work.
             </p>
             <p>
-              Millions of teams around the world already rely on Hashboard to power all of their work. We&apos;re laser-focused on removing the busywork from work - the constant toggling, the misalignment, the lost context that drains productivity every single day. We envision a world where work feels effortlessly organized, contagiously creative, and endlessly efficient.
+              We&apos;re focused on making daily work clearer: who owns the task, what is due, which client it supports, when the meeting happens, and what needs attention next. That clarity helps teams spend less time chasing updates and more time moving work forward.
             </p>
             <p>
-              Our mission is clear: maximize human productivity. Not by making people work harder, but by fundamentally reinventing how work gets done - through the convergence of everything.
+              Our mission is simple: help teams operate with clearer context, stronger ownership, and fewer disconnected handoffs.
             </p>
           </div>
         </div>

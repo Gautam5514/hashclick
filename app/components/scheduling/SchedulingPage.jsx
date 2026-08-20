@@ -26,8 +26,8 @@ const comparison = {
 const workflow = [
   {
     eyebrow: "Booking Pages",
-    title: "Publish a tenant-specific booking experience",
-    body: "Admins create an active page with a unique slug, page name, tenant branding, sidebar content, and configurable form fields.",
+    title: "Create a booking experience that feels like your business",
+    body: "Create a branded booking page with a custom link, helpful content, and the form fields your business needs.",
     image: "/calendar/calendar-feature-1.png",
     alt: "Hashboard Scheduling booking page",
   },
@@ -41,7 +41,7 @@ const workflow = [
   },
   {
     eyebrow: "Host and Provider",
-    title: "Send the booking to a configured internal host",
+    title: "Connect every booking with the right host",
     body: "Choose an eligible company user as host and use Google Meet, Zoom, or no video provider. Provider connections are validated where required.",
     image: "/calendar/calendar-feature-3.png",
     alt: "Configured booking host and provider in Hashboard",
@@ -92,9 +92,9 @@ function SchedulingHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD SCHEDULING</p>
-          <h1>Create public booking pages around real availability</h1>
+          <h1>Let people book time without the back-and-forth</h1>
           <p className="task-hero-lede">
-            Configure page content and form fields, assign a host and provider, check Google Calendar busy time, and create a connected booking.
+            Share a polished booking page, collect the details you need, and offer times that work for your team.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -152,7 +152,7 @@ function WorkflowGrid() {
         <header className="task-heading task-foundation-heading">
           <h2>A configurable path from page to booking</h2>
           <p>
-            Keep public form content, tenant branding, host configuration, availability, and booking creation in one workflow.
+            Keep page content, branding, hosts, availability, and new bookings together in one simple workflow.
           </p>
         </header>
         <div className="task-workflow-grid">

@@ -14,7 +14,6 @@ import {
   FolderKanban,
   FileText,
   MessageSquare,
-  GanttChart,
   Users,
   ChevronDown,
   Hash,
@@ -28,15 +27,7 @@ import { cn } from "@/lib/utils";
 const heroImageMap = {
   Projects: "/hero_projects_real.png",
   Chat: "https://clickup.com/assets/home_2026/hero_chat.avif",
-  "Brain MAX": "https://clickup.com/assets/home_2026/hero_brain.avif",
-  "AI Agents": "https://clickup.com/assets/home_2026/hero_agents.avif",
-  Sprints: "https://clickup.com/assets/home_2026/hero_sprints.avif",
-  "Time Tracking": "https://clickup.com/assets/home_2026/hero_timetracking.avif",
   Calendar: "https://clickup.com/assets/home_2026/hero_calendar.avif",
-  Docs: "https://clickup.com/assets/home_2026/hero_docs.avif",
-  Whiteboards: "https://clickup.com/assets/home_2026/hero_whiteboards.avif",
-  Automations: "https://clickup.com/assets/home_2026/hero_automations.avif",
-  Dashboards: "https://clickup.com/assets/home_2026/hero_dashboards.avif",
   Scheduling: "https://clickup.com/assets/home_2026/hero_scheduling.avif",
 };
 

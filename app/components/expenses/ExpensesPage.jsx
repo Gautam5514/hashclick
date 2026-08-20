@@ -92,9 +92,9 @@ function ExpensesHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD EXPENSES</p>
-          <h1>Keep company expenses structured and searchable</h1>
+          <h1>Track every expense without the spreadsheet chase</h1>
           <p className="task-hero-lede">
-            Record goods and service expenses with the invoice, receipt, category, amount, supply, and tax details required for a usable history.
+            Capture receipts, categories, amounts, and tax details in one searchable history that is ready when finance needs it.
           </p>
           <div className="task-hero-action">
             <CTAButton />
@@ -152,7 +152,7 @@ function WorkflowGrid() {
         <header className="task-heading task-foundation-heading">
           <h2>A consistent record for company spending</h2>
           <p>
-            Create, review, update, filter, and delete tenant-scoped expense records with clear creator context.
+            Create, review, update, filter, and organize company expenses with a clear record of who added each item.
           </p>
         </header>
         <div className="task-workflow-grid">
@@ -188,7 +188,7 @@ function MotionBanner() {
       <div className="task-motion-banner">
         <div className="task-motion-copy">
           <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
-          <h2>Expense details without invented automation.</h2>
+          <h2>Expense details your team can understand.</h2>
           <p>Capture the required information accurately, then retrieve it through practical filters and search.</p>
         </div>
         <div className="task-motion-visual">

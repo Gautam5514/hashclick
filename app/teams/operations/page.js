@@ -3,7 +3,7 @@ import "../../components/operations/operations.css";
 
 export const metadata = {
   title: "Operations",
-  description: "AI-powered project management for operations teams.",
+  description: "Connect supported projects, people, scheduling, clients, financial records, and operational communication.",
 };
 
 export default function Page() {

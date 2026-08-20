@@ -8,7 +8,7 @@ const events = [
   ["Generate analytics report", "8:04:15 PM", "Weekly Stats", "ok"],
   ["Post comment to channel", "8:12:45 PM", "New task", "fail"],
   ["Summarize weekly report", "8:11:32 PM", "Marketing Backlog", "ok"],
-  ["Create task", "8:10:18 PM", "Sprint Planning", "ok"],
+  ["Create task", "8:10:18 PM", "Project Planning", "ok"],
   ["Comment on task", "8:09:05 PM", "Project In Progress", "warn"],
   ["Assign task to teammate", "8:07:52 PM", "Team Updates", "ok"],
 ];

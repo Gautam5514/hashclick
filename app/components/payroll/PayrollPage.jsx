@@ -92,9 +92,9 @@ function PayrollHero() {
       <div className="task-shell task-hero-grid">
         <div className="task-hero-copy">
           <p className="task-eyebrow">HASHBOARD PAYROLL</p>
-          <h1>Generate and review payroll from connected records</h1>
+          <h1>Run payroll with every input connected</h1>
           <p className="task-hero-lede">
-            Calculate monthly entries from salary, attendance, approved leave, holidays, week-offs, deductions, and reviewed manual adjustments.
+            Bring salary, attendance, leave, holidays, and deductions together for a clearer monthly payroll process.
           </p>
           <div className="task-hero-action">
             <CTAButton />

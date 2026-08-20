@@ -67,7 +67,7 @@ const outputs = [
   "[ DECISION ] standardize on Postgres",
   "[ APPROVAL ] budget signed off",
   "[ NEW FACT ] api v3 live in prod",
-  "[ UPDATE ] sprint-23 on track",
+  "[ UPDATE ] launch project on track",
 ];
 
 const models = [
@@ -105,7 +105,7 @@ const pillars = [
     name: "Permission-Aware Context",
     items: [
       ["Role Scope", "Answers reflect the user's role and accessible records", "ROLE-BASED"],
-      ["Tenant Scope", "Workspace information stays within the authenticated company", "ISOLATED"],
+      ["Company Context", "Answers stay connected to the active company workspace", "WORKSPACE-AWARE"],
       ["Current Facts", "Responses use information computed from current Hashboard data", "GROUNDED"],
       ["Readable Results", "Present useful names and fields without exposing internal IDs", "HUMAN-FRIENDLY"],
     ],
@@ -187,16 +187,16 @@ export default function BrainHero() {
             <span className="bn-pill">
               <span className="bn-pill-inner">
                 All new
-                <Image src="/hashai.svg" width={18} height={18} alt="" />
-                <strong>
+                <Image src="/full_hashai.svg" width={55} height={18} alt="" />
+                {/* <strong>
                   Hash AI
-                </strong>
+                </strong> */}
               </span>
             </span>
           </div>
 
           <h1 className="bn-hero-title">
-            Your work. One intelligent assistant.
+            Ask about your work. Act on it instantly.
             <br />
             Built into Hashboard
           </h1>

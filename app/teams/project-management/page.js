@@ -3,7 +3,7 @@ import "../../components/project-management/project-management.css";
 
 export const metadata = {
   title: "Project Management Software",
-  description: "Manage projects, docs, chat, resources, and reporting in one flexible AI-powered workspace.",
+  description: "Coordinate supported projects, tasks, deadlines, people, and project conversations in Hashboard.",
 };
 
 export default function Page() {
