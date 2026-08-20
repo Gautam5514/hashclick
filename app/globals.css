@@ -318,6 +318,19 @@ body {
   animation: float-y 6s ease-in-out infinite;
 }
 
+@keyframes globe-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility animate-globe-spin {
+  animation: globe-spin 26s linear infinite;
+}
+
 @utility shimmer-text {
   background: linear-gradient(
     90deg,
