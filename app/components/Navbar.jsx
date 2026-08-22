@@ -25,10 +25,8 @@ function SpriteIcon({ id }) {
 function PlatformItem({ item }) {
   return (
     <Link href={item.href} className="cu-item">
-      <span className={`cu-item-icon${item.Icon ? " cu-item-icon-lucide" : ""}`}>
-        {item.Icon ? (
-          <item.Icon size={20} strokeWidth={1.75} />
-        ) : item.art ? (
+      <span className="cu-item-icon">
+        {item.art ? (
           <Raw markup={ART[item.art]} />
         ) : (
           <>
@@ -80,13 +78,7 @@ function Column({ column }) {
             ) : column.kind === "product" ? (
               <Link key={item.label} href={item.href} className="cu-product">
                 <span className="cu-product-icon">
-                  {item.Icon ? (
-                    <span className="cu-product-icon-badge" style={{ background: item.color }}>
-                      <item.Icon size={14} color="#fff" strokeWidth={2.25} />
-                    </span>
-                  ) : (
-                    <SpriteIcon id={item.icon} />
-                  )}
+                  <SpriteIcon id={item.icon} />
                 </span>
                 <span className="cu-product-title">{item.label}</span>
               </Link>
@@ -295,16 +287,16 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              <button
-                type="button"
+              <Link
+                href="/blog"
                 className="cu-mobile-item"
-                onClick={() => setMobileSubmenu("solutions")}
+                onClick={() => {
+                  setMobileNav(false);
+                  setMobileSubmenu(null);
+                }}
               >
-                <span>Solutions</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="cu-mobile-chev">
-                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+                <span>Blog</span>
+              </Link>
 
               <Link
                 href="/pricing"
@@ -390,10 +382,8 @@ export default function Navbar() {
                                 setMobileSubmenu(null);
                               }}
                             >
-                              <span className={`cu-mobile-item-icon${item.Icon ? " cu-item-icon-lucide" : ""}`}>
-                                {item.Icon ? (
-                                  <item.Icon size={18} strokeWidth={1.75} />
-                                ) : item.art ? (
+                              <span className="cu-mobile-item-icon">
+                                {item.art ? (
                                   <Raw markup={ART[item.art]} />
                                 ) : (
                                   <img
@@ -427,13 +417,7 @@ export default function Navbar() {
                               }}
                             >
                               <span className="cu-mobile-product-icon">
-                                {item.Icon ? (
-                                  <span className="cu-product-icon-badge" style={{ background: item.color }}>
-                                    <item.Icon size={14} color="#fff" strokeWidth={2.25} />
-                                  </span>
-                                ) : (
-                                  <SpriteIcon id={item.icon} />
-                                )}
+                                <SpriteIcon id={item.icon} />
                               </span>
                               <span className="cu-mobile-product-title">{item.label}</span>
                             </Link>

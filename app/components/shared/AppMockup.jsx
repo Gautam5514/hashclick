@@ -21,6 +21,7 @@ import {
   Bot,
   Settings,
   Grid,
+  Send,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -100,6 +101,89 @@ const inProgressTasks = [
   },
 ];
 
+const aiConversation = [
+  { role: "user", text: "Summarize my open tasks" },
+  {
+    role: "ai",
+    text: "You have 6 open tasks. “Website assets” and “Q3 budget review” are due this week, and “Brand Positioning Strategy” is 2 days overdue.",
+  },
+  { role: "user", text: "Create a task: review Q3 report, due Friday" },
+  {
+    role: "ai",
+    text: "Created “Review Q3 report” in Marketing, due Friday, assigned to you.",
+  },
+  { role: "user", text: "Who checked in after 10am this week?" },
+  {
+    role: "ai",
+    text: "3 people checked in after 10am this week — Sarah M. (10:14 avg), Dean P. (10:22 avg), and Zeb E. (10:41 avg).",
+  },
+  { role: "user", text: "Whose average check-in time is best?" },
+  {
+    role: "ai",
+    text: "Alex K. has the best average check-in time this week at 9:02 am, followed by Priya N. at 9:11 am.",
+  },
+];
+
+function HashAIChatMockup() {
+  return (
+    <div className="relative flex h-full min-h-[480px] flex-col bg-[#0b0b0e] text-white">
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3.5 sm:px-5">
+        <div className="flex items-center gap-2">
+          <span className="flex size-6.5 items-center justify-center rounded-lg bg-gradient-to-br from-[#7612fa] to-[#c026d3]">
+            <Sparkles className="size-3.5 text-white" />
+          </span>
+          <span className="text-[13.5px] font-bold">Hash AI</span>
+        </div>
+        <span className="text-[11px] font-medium text-white/40">Operations workspace</span>
+      </div>
+
+      {/* Transcript */}
+      <div className="relative min-h-0 flex-1 overflow-hidden">
+        <div className="flex flex-col gap-4 px-4 py-5 sm:px-5">
+          {aiConversation.map((message, i) =>
+            message.role === "user" ? (
+              <div key={i} className="flex justify-end">
+                <div className="max-w-[80%] rounded-2xl rounded-tr-sm bg-[#7612fa] px-3.5 py-2 text-[12.5px] leading-relaxed text-white shadow-[0_4px_16px_-4px_rgba(118,18,250,0.5)]">
+                  {message.text}
+                </div>
+              </div>
+            ) : (
+              <div key={i} className="flex justify-start">
+                <div className="flex max-w-[88%] items-start gap-2">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-md bg-white/10">
+                    <Sparkles className="size-2.5 text-[#c084fc]" />
+                  </span>
+                  <p className="text-[12.5px] leading-relaxed text-white/80">{message.text}</p>
+                </div>
+              </div>
+            )
+          )}
+        </div>
+        {/* Fade top & bottom edges so the transcript reads as scrollable */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-[#0b0b0e] to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#0b0b0e] to-transparent" />
+      </div>
+
+      {/* Composer */}
+      <div className="border-t border-white/10 px-4 py-3.5 sm:px-5">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
+          <p className="truncate text-[13px] text-white/35">Write to Hash AI</p>
+          <div className="mt-3 flex items-center justify-between">
+            <div className="flex items-center gap-3 text-white/45">
+              <span className="flex size-6 items-center justify-center rounded-full bg-white/10 text-white/70">
+                <Plus className="size-3.5" />
+              </span>
+              <img src="/brain-2/logos/chatgpt.svg" width={16} height={16} alt="" className="opacity-70" />
+            </div>
+            <Send className="size-4 text-white/30" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AppMockup({ className, activePill = "Projects" }) {
   const [activeTab, setActiveTab] = useState("Tasks");
   const [expandedSubtasks, setExpandedSubtasks] = useState(true);
@@ -110,19 +194,27 @@ export default function AppMockup({ className, activePill = "Projects" }) {
   }, [activePill]);
 
   const currentImageSrc = heroImageMap[activePill] || heroImageMap["Projects"];
+  const isHashAI = activePill === "Hash AI";
 
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-2xl bg-white text-left transition-all duration-300",
+        "relative overflow-hidden rounded-2xl text-left transition-all duration-300",
+        isHashAI ? "bg-[#0b0b0e]" : "bg-white",
         className
       )}
     >
-      {/* Soft Gradient Fade Overlays on Right & Bottom Edges */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white via-white/85 to-transparent z-20" />
+      {!isHashAI && (
+        <>
+          {/* Soft Gradient Fade Overlays on Right & Bottom Edges */}
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white via-white/85 to-transparent z-20" />
+        </>
+      )}
 
-      {!imgError && currentImageSrc ? (
+      {isHashAI ? (
+        <HashAIChatMockup />
+      ) : !imgError && currentImageSrc ? (
         <div className="relative w-full overflow-hidden rounded-2xl bg-white">
           <picture>
             <source srcSet={currentImageSrc} type="image/avif" />

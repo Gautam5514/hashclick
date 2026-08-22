@@ -43,11 +43,11 @@ export default function DemoModal({ open, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[10050] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in"
+      className="fixed inset-0 z-[10050] flex items-center justify-center bg-black/40 backdrop-blur-md p-4 animate-fade-in"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl"
+        className="relative w-full max-w-5xl max-h-[90vh] overflow-hidden rounded-3xl bg-white shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Faded rainbow stripe bleeding in from behind the top edge */}

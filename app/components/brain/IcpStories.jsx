@@ -1,100 +1,86 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Plus, Send, Sparkles } from "lucide-react";
 
 const roles = [
   {
-    title: "Project Manager",
-    desc: "Reviews projects and priorities",
+    title: "Manage projects",
+    desc: "Track progress, priorities, and deadlines",
     project: "Phoenix",
-    accent: "#7b68ee",
-    messages: [
-      ["Lena", "Can we still ship the onboarding flow Friday?", "2:14 pm", "L"],
-      ["Sam", "Design is done, but legal still owes us copy", "2:14 pm", "S"],
-      ["Priya", "I can pick it up after the mobile handoff", "2:15 pm", "P"],
+    conversation: [
+      { role: "user", text: "Summarize the Phoenix project" },
+      { role: "ai", text: "Phoenix is 68% complete. 3 tasks are overdue and 2 are due this week." },
+      { role: "user", text: "Who owns the overdue tasks?" },
+      { role: "ai", text: "Sarah M. owns 2 overdue tasks, and Dean P. owns 1." },
     ],
-    action: "Hash AI summarized the project and highlighted the blocked task",
   },
   {
-    title: "Engineering Lead",
-    desc: "Reviews development workload",
+    title: "Create task",
+    desc: "Add and assign tasks without leaving chat",
     project: "Platform",
-    accent: "#7357ff",
-    messages: [
-      ["Lena", "my PR’s still waiting for review 💀", "2:14 pm", "L"],
-      ["Sam", "we’re going to miss the deadline", "2:14 pm", "S"],
-      ["Priya", "Marcus had to hop on the incident", "2:15 pm", "P"],
+    conversation: [
+      { role: "user", text: "Create a task: fix login bug, due tomorrow" },
+      { role: "ai", text: "Created “Fix login bug” in Platform, due tomorrow, assigned to you." },
+      { role: "user", text: "Add Marcus as a collaborator" },
+      { role: "ai", text: "Added Marcus to “Fix login bug.”" },
     ],
-    action: "Hash AI showed the overdue review and current assignee workload",
   },
   {
-    title: "Agency Owner",
-    desc: "Reviews client delivery work",
-    project: "Client Delivery",
-    accent: "#ff5b8d",
-    messages: [
-      ["Maya", "Northwind needs the new concept today", "9:41 am", "M"],
-      ["Alex", "Vertex hasn’t approved the last round", "9:42 am", "A"],
-      ["Jon", "I’ve got capacity after lunch", "9:43 am", "J"],
+    title: "Chat and ask time",
+    desc: "Check attendance and check-in times",
+    project: "People Ops",
+    conversation: [
+      { role: "user", text: "What time did Priya check in today?" },
+      { role: "ai", text: "Priya checked in at 9:47 am and is currently active." },
+      { role: "user", text: "Who checked in after 10am?" },
+      { role: "ai", text: "2 people checked in after 10am — Dean P. (10:12 am) and Zeb E. (10:24 am)." },
     ],
-    action: "Hash AI summarized the client projects and upcoming deadlines",
   },
   {
-    title: "Head of Ops",
-    desc: "Monitors operational work",
+    title: "Ask about projects",
+    desc: "Get status updates and spot blockers",
     project: "Operations",
-    accent: "#00b884",
-    messages: [
-      ["Noah", "Launch readiness is split across two lists", "11:06 am", "N"],
-      ["Ava", "Product is tracking a different deadline", "11:07 am", "A"],
-      ["Mia", "Can we get one source of truth?", "11:08 am", "M"],
+    conversation: [
+      { role: "user", text: "Which projects are behind schedule?" },
+      { role: "ai", text: "2 projects are behind — Operations Rollout (4 days) and Client Onboarding (2 days)." },
+      { role: "user", text: "What's blocking Operations Rollout?" },
+      { role: "ai", text: "Launch readiness is split across two lists, waiting on final sign-off." },
     ],
-    action: "Hash AI listed active work, owners, and overdue items",
   },
   {
-    title: "Marketing Manager",
-    desc: "Tracks campaign delivery",
-    project: "Q3 Launch",
-    accent: "#ff9f1a",
-    messages: [
-      ["Zoë", "Paid creative is ready for review", "3:21 pm", "Z"],
-      ["Eli", "The landing page copy needs one more pass", "3:22 pm", "E"],
-      ["Nina", "Launch calendar still has two gaps", "3:23 pm", "N"],
+    title: "Know about client",
+    desc: "Look up client details, invoices, and history",
+    project: "Client Delivery",
+    conversation: [
+      { role: "user", text: "What's the status of the Northwind account?" },
+      { role: "ai", text: "Northwind has 2 open invoices totaling $4,200 and 1 active project." },
+      { role: "user", text: "When did we last meet with them?" },
+      { role: "ai", text: "Last meeting was Tuesday. Next one is scheduled for Friday at 3 pm." },
     ],
-    action: "Hash AI summarized campaign tasks and identified missing owners",
   },
   {
-    title: "Founder / CEO",
-    desc: "Reviews business activity",
+    title: "Ask anything",
+    desc: "Get answers about your entire workspace",
     project: "Company HQ",
-    accent: "#ef4c5b",
-    messages: [
-      ["Rina", "Revenue is tracking ahead of the month", "8:31 am", "R"],
-      ["Owen", "Two company OKRs moved to amber", "8:32 am", "O"],
-      ["Kai", "Hiring is behind by three roles", "8:33 am", "K"],
+    conversation: [
+      { role: "user", text: "How is the team doing this month?" },
+      { role: "ai", text: "Revenue is tracking ahead of plan, 2 OKRs are amber, and hiring is behind by 3 roles." },
+      { role: "user", text: "What needs my attention first?" },
+      { role: "ai", text: "Hiring is the biggest gap — 3 open roles with no active candidates." },
     ],
-    action: "Hash AI prepared a role-based workspace summary",
   },
 ];
 
 const DURATION = 6200;
 
-function Sparkle() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2c.7 5.7 4.3 9.3 10 10-5.7.7-9.3 4.3-10 10-.7-5.7-4.3-9.3-10-10 5.7-.7 9.3-4.3 10-10Z" fill="currentColor" />
-    </svg>
-  );
-}
-
 export default function IcpStories() {
   const [active, setActive] = useState(1);
-  const [paused, setPaused] = useState(false);
   const [progress, setProgress] = useState(0);
   const elapsedRef = useRef(0);
 
   useEffect(() => {
-    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
     let startedAt;
     let frame;
     const tick = (now) => {
@@ -113,7 +99,7 @@ export default function IcpStories() {
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [active, paused]);
+  }, [active]);
 
   const selectRole = (index) => {
     elapsedRef.current = 0;
@@ -140,7 +126,7 @@ export default function IcpStories() {
         </header>
 
         <div className="bn-icp-demo">
-          <div className="bn-role-list" role="tablist" aria-label="Choose a role">
+          <div className="bn-role-list" role="tablist" aria-label="Choose what to ask Hash AI">
             {roles.map((item, index) => (
               <button
                 key={item.title}
@@ -158,38 +144,34 @@ export default function IcpStories() {
           </div>
 
           <div className="bn-workspace-wrap">
-            <span className="bn-workspace-aurora" aria-hidden="true" />
             <div className="bn-workspace" key={active}>
               <div className="bn-workspace-topbar">
                 <div className="bn-project-name">
-                  <span style={{ background: role.accent }}>C</span>
+                  <span>{role.project.charAt(0)}</span>
                   <strong>{role.project}</strong>
-                  <i>⌄</i>
                 </div>
-                <div className="bn-project-actions"><span>♧</span><span>♙</span><strong>Share</strong></div>
-              </div>
-              <div className="bn-workspace-tabs">
-                <span className="bn-chat-icon">#</span><strong>Chat</strong><i />
-                <span className="bn-view-plus">＋</span><span>View</span>
               </div>
               <div className="bn-chat-feed">
-                {role.messages.map(([name, text, time, initial], index) => (
-                  <div className="bn-chat-row" style={{ "--delay": `${index * 120}ms` }} key={name}>
-                    <span className={`bn-avatar bn-avatar-${index}`}>{initial}</span>
-                    <div><p><strong>{name}</strong><time>{time}</time></p><span>{text}</span></div>
-                  </div>
-                ))}
-                <div className="bn-brain-action">
-                  <span><Sparkle /></span>
-                  <div><strong>Hash AI response</strong><p>{role.action}</p></div>
-                </div>
+                {role.conversation.map((turn, index) =>
+                  turn.role === "user" ? (
+                    <p className="bn-msg bn-msg-user" style={{ "--delay": `${index * 150}ms` }} key={index}>
+                      {turn.text}
+                    </p>
+                  ) : (
+                    <div className="bn-msg bn-msg-ai" style={{ "--delay": `${index * 150}ms` }} key={index}>
+                      <span className="bn-msg-ai-icon"><Sparkles size={11} /></span>
+                      <p>{turn.text}</p>
+                    </div>
+                  )
+                )}
               </div>
-              <button className="bn-demo-pause" type="button" onClick={() => setPaused((value) => !value)} aria-label={paused ? "Play demo" : "Pause demo"}>
-                <span style={{ "--progress": progress }} />{paused ? "▶" : "Ⅱ"}
-              </button>
               <div className="bn-composer">
-                <p>Write to {role.project} project</p>
-                <div><span>＋</span><span>♧</span><span>@</span><span>◉</span><span>☺</span><span>▣</span><span>♩</span><b>➤</b></div>
+                <p>Ask Hash AI about {role.project}...</p>
+                <div>
+                  <span className="bn-composer-plus"><Plus size={14} /></span>
+                  <img src="/brain-2/logos/chatgpt.svg" width={15} height={15} alt="" className="bn-composer-model" />
+                  <Send size={16} className="bn-composer-send" />
+                </div>
               </div>
             </div>
           </div>

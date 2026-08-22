@@ -1,5 +1,3 @@
-import { FolderKanban, Rocket, Settings2, Newspaper } from "lucide-react";
-
 // Menu structure, copy, links and icon references lifted from ClickUp's nav.
 // `kind` decides how a column renders:
 //   platform — 40px icon + title + description (+ optional badge)
@@ -65,25 +63,10 @@ export const navMenus = [
       },
     ],
   },
-  {
-    id: "solutions",
-    label: "Solutions",
-    columns: [
-      {
-        title: "Solutions by team",
-        kind: "product",
-        items: [
-          { label: "Project management", href: "/teams/project-management", Icon: FolderKanban, color: "#4f46e5" },
-          { label: "Product development", href: "/teams/product-development", Icon: Rocket, color: "#f97316" },
-          { label: "Operations", href: "/teams/operations", Icon: Settings2, color: "#0d9488" },
-          { label: "Blog", href: "/blog", Icon: Newspaper, color: "#ec4899" },
-        ],
-      },
-    ],
-  },
 ];
 
 export const navLinks = [
+  { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/pricing" },
   { label: "Enterprise", href: "/enterprise" },
 ];
