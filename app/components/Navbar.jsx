@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./navbar.css";
 import { navMenus, navLinks } from "./nav-data";
-import { LOGO_LIGHT, CHEVRON, SMB, AGENTS, CARTOON } from "./nav-svgs";
+import { LOGO, LOGO_LIGHT, CHEVRON, SMB, AGENTS, CARTOON } from "./nav-svgs";
 import DemoModal from "./DemoModal";
 
 const ART = { SMB, AGENTS, CARTOON };
@@ -110,6 +110,7 @@ export default function Navbar() {
   const baseId = useId();
   const pathname = usePathname();
   const isAuthPage = pathname === "/login" || pathname === "/signup";
+  const isDarkPage = pathname === "/brain" || pathname === "/ai";
 
   useEffect(() => {
     const onKey = (e) => {
@@ -146,7 +147,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Link href="/brain" className="cu-banner">
+      <Link href="/brain" className={`cu-banner${isDarkPage ? " cu-dark" : ""}`}>
         <span className="cu-banner-text">
           <strong>Hash AI</strong>{" "}
           — Ask questions and take permitted actions across your Hashboard workspace
@@ -169,13 +170,13 @@ export default function Navbar() {
         </svg>
       </Link>
 
-      <nav className="cu-nav" onMouseLeave={hide} data-testid="cu-navigation">
+      <nav className={`cu-nav${isDarkPage ? " cu-dark" : ""}`} onMouseLeave={hide} data-testid="cu-navigation">
       <div className="cu-backdrop" />
 
       <div className="cu-container">
         <div className="cu-container-inner">
           <Link href="/" className="cu-logo" aria-label="Home">
-            <img src={LOGO_LIGHT} alt="Hashboard" />
+            <img src={isDarkPage ? LOGO : LOGO_LIGHT} alt="Hashboard" />
           </Link>
 
          

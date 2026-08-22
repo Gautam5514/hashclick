@@ -47,13 +47,13 @@ export default function Accessibility() {
             <div className="bn-access-glow" />
             <img
               className="bn-device-desktop"
-              src="/brain-2/accessible-anywhere/brain-device-desktop.png"
+              src="/hashAI/ai_webview.png"
               alt=""
               loading="lazy"
             />
             <img
               className="bn-device-phone"
-              src="/brain-2/accessible-anywhere/brain-device-phone.png"
+              src="/hashAI/ai_mobileview.png"
               alt=""
               loading="lazy"
             />
@@ -78,7 +78,7 @@ export default function Accessibility() {
             <div className="bn-access-cap-visual bn-access-mention">
               <div className="bn-access-message">
                 <img src="/brain-2/accessible-anywhere/avatar-oliver.png" alt="" />
-                <p><strong>Oliver</strong><br /><b>@HashAI</b> pull the latest report</p>
+                <p><strong>Gautam</strong><br /><b>@HashAI</b> pull the latest report</p>
               </div>
             </div>
             <div className="bn-access-cap-copy">
