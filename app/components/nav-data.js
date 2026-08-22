@@ -1,9 +1,11 @@
+import { FolderKanban, Rocket, Settings2, Newspaper } from "lucide-react";
+
 // Menu structure, copy, links and icon references lifted from ClickUp's nav.
 // `kind` decides how a column renders:
 //   platform — 40px icon + title + description (+ optional badge)
 //   product  — 24px sprite icon + title
 //   simple   — text-only link list (+ optional "See all →" tail)
-//   featured — platform rows built from inline SVG artwork
+//   featured — platform rows built from inline SVG artwork, or a lucide `Icon` component
 //   story    — the customer-story card
 
 export const navMenus = [
@@ -68,31 +70,13 @@ export const navMenus = [
     label: "Solutions",
     columns: [
       {
-        title: "Solutions",
+        title: "Solutions by team",
         kind: "product",
         items: [
-          { label: "Project management", href: "/teams/project-management", icon: "nav-icon-tasks" },
-          { label: "Product development", href: "/teams/product-development", icon: "nav-icon-views" },
-          { label: "Operations", href: "/teams/operations", icon: "nav-icon-automations" },
-          { label: "Enterprise", href: "/enterprise", icon: "nav-icon-hierarchy" },
-          { label: "All solutions", href: "/solutions", icon: "nav-icon-all-features" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "learn",
-    label: "Learn",
-    columns: [
-      {
-        title: "Learn",
-        kind: "product",
-        items: [
-          { label: "Getting started", href: "/learn", icon: "nav-icon-rapid-views" },
-          { label: "Product walkthrough", href: "/demo", icon: "nav-icon-watch-demo" },
-          { label: "Blog", href: "/blog", icon: "nav-icon-docs" },
-          { label: "Product reference", href: "/research", icon: "nav-icon-wiki" },
-          { label: "Help & contact", href: "/contact", icon: "nav-icon-inbox" },
+          { label: "Project management", href: "/teams/project-management", Icon: FolderKanban, color: "#4f46e5" },
+          { label: "Product development", href: "/teams/product-development", Icon: Rocket, color: "#f97316" },
+          { label: "Operations", href: "/teams/operations", Icon: Settings2, color: "#0d9488" },
+          { label: "Blog", href: "/blog", Icon: Newspaper, color: "#ec4899" },
         ],
       },
     ],
@@ -108,21 +92,21 @@ export const footerColumns = [
   {
     title: "Download",
     links: [
-      { name: "Web workspace", href: "/download" },
-      { name: "Responsive access", href: "/download" },
-      { name: "Hash AI", href: "/brain" },
-      { name: "MCP connectivity", href: "/brain" },
+      { name: "iOS & Android", href: "/download" },
+      { name: "Mac & Windows", href: "/download" },
+      { name: "Hash AI", href: "/ai" },
+      { name: "Chrome extension", href: "/download" },
     ],
   },
   {
     title: "AI",
     links: [
-      { name: "Hash AI", href: "/brain" },
-      { name: "Workspace context", href: "/brain" },
-      { name: "Supported actions", href: "/brain" },
-      { name: "Model choice", href: "/brain" },
-      { name: "Workspace questions", href: "/brain" },
-      { name: "MCP access", href: "/brain" },
+      { name: "Hash AI", href: "/ai" },
+      { name: "Super Agents", href: "/ai#agents" },
+      { name: "Ambient Agents", href: "/ai#ambient" },
+      { name: "AI Notetaker", href: "/ai#notetaker" },
+      { name: "Enterprise Search", href: "/ai#search" },
+      { name: "Talk to Text", href: "/ai#talk" },
     ],
   },
   {
@@ -141,14 +125,17 @@ export const footerColumns = [
     ],
   },
   {
-    title: "Explore",
+    title: "Compare",
     links: [
-      { name: "Hashboard overview", href: "/compare" },
-      { name: "Connected work", href: "/compare" },
-      { name: "People operations", href: "/compare" },
-      { name: "Client operations", href: "/compare" },
-      { name: "Hash AI", href: "/brain" },
-      { name: "MCP connectivity", href: "/brain" },
+      { name: "vs. Atlassian", href: "/compare" },
+      { name: "vs. Microsoft", href: "/compare" },
+      { name: "vs. Asana", href: "/compare" },
+      { name: "vs. Monday", href: "/compare" },
+      { name: "vs. Slack", href: "/compare" },
+      { name: "vs. Notion", href: "/compare" },
+      { name: "vs. Smartsheet", href: "/compare" },
+      { name: "vs. Wrike", href: "/compare" },
+      { name: "vs. Airtable", href: "/compare" },
     ],
   },
   {
@@ -171,10 +158,10 @@ export const footerHelpLinks = [
   { name: "Support", href: "/learn#support" },
   { name: "Contact Sales", href: "/enterprise#contact" },
   { name: "Get a Demo", href: "/demo" },
-  { name: "Getting Started", href: "/learn" },
-  { name: "Workflow Guides", href: "/learn" },
-  { name: "Product Overview", href: "/product" },
-  { name: "Hash AI Guide", href: "/brain" },
+  { name: "Import", href: "/learn" },
+  { name: "Templates", href: "/learn#templates" },
+  { name: "Guides", href: "/learn" },
+  { name: "Product walkthrough", href: "/demo" },
   { name: "Blog", href: "/blog" },
-  { name: "Product Reference", href: "/research" },
+  { name: "Research", href: "/research" },
 ];

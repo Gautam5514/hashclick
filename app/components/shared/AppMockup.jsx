@@ -25,9 +25,18 @@ import {
 import { cn } from "@/lib/utils";
 
 const heroImageMap = {
-  Projects: "/hero_projects_real.png",
-  Chat: "https://clickup.com/assets/home_2026/hero_chat.avif",
-  Calendar: "https://clickup.com/assets/home_2026/hero_calendar.avif",
+  Projects: "/home/project.png",
+  Chat: "/home/chat.png",
+  "Hash AI": "/home/hashai.png",
+  Billing: "/home/billings.png",
+  Attendance: "/home/attendance.png",
+  Calendar: "/home/calendar.png",
+  Tasks: "/home/task.png",
+  Leave: "/home/leave.png",
+  Expenses: "/home/expense.png",
+  Clients: "/home/clients.png",
+  Payroll: "/home/payroll.png",
+  MCP: "/home/mcp.png",
   Scheduling: "https://clickup.com/assets/home_2026/hero_scheduling.avif",
 };
 

@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, Bell, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, CreditCard, FileSpreadsheet, FileText, GanttChart, Globe, Grid2X2, Inbox, LineChart, MessageCircle, PanelsTopLeft, Repeat2, Video, X, Zap,
 } from "lucide-react";
 import InvoicingFaq from "./InvoicingFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -115,7 +114,6 @@ function InvoicingHero() {
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }

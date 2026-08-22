@@ -11,7 +11,6 @@ import {
   TrendingUp, Activity, ShieldCheck, Share2
 } from "lucide-react";
 import DashboardsFaq from "./DashboardsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -33,22 +32,22 @@ const workflow = [
     eyebrow: "Project visibility",
     title: "Review progress from current work records",
     body: "Use projects and tasks to check status, ownership, priorities, due dates, and overdue work across the workspace.",
-    image: "/dashboards/dashboard-feature-1.png",
-    alt: "Hashboard project and task visibility",
+    image: "/features/dashboard/load.png",
+    alt: "Project list with overall progress and overdue counts",
   },
   {
     eyebrow: "Operational views",
     title: "Use focused views for each workflow",
     body: "Review the supported screens for attendance, leave, payroll, invoices, expenses, leads, clients, and meetings.",
-    image: "/dashboards/dashboard-feature-2.png",
-    alt: "Hashboard operational workflow views",
+    image: "/features/dashboard/work_load.png",
+    alt: "Team workload view with per-member overdue and capacity status",
     reverse: true,
   },
   {
     eyebrow: "Workspace assistance",
     title: "Ask about the records you can access",
     body: "Use Hash AI for supported questions about progress, workload, deadlines, and operational records within your role permissions.",
-    image: "/dashboards/dashboard-feature-3.png",
+    image: "/features/dashboard/dashboard_status.png",
     alt: "Hashboard Dashboard interactive drill-down view",
   },
 ];
@@ -105,16 +104,15 @@ function DashboardsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/dashboards/dashboard-hero.png"
+            src="/features/dashboard/dashboard.png"
             width={815}
-            height={543}
+            height={370}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Dashboards analytics view"
+            alt="Hashboard Dashboards home overview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -186,13 +184,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
+          <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
           <h2>Use current workspace records instead of invented analytics.</h2>
           <p>Review the workflow you need or ask Hash AI a supported, permission-aware question.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Dashboards workspace" />
+          <Image className="task-motion-product" src="/features/dashboard/timeline.png" width={595} height={253} sizes="(max-width: 760px) 100vw, 815px" alt="Project timeline across active work" />
         </div>
       </div>
     </section>
@@ -201,8 +199,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "Ask about current project and task status", "Request permitted information about owners, deadlines, priorities, progress, workload, and overdue tasks.", "/tasks/super-agents.png"],
-    ["Supported Workflows", "Review the underlying operational records", "Open the relevant Hashboard workflow for attendance, leave, leads, clients, invoices, expenses, payroll, or meetings.", "/tasks/clickup-brain.png"],
+    ["Hash AI", "Ask about current project and task status", "Request permitted information about owners, deadlines, priorities, progress, workload, and overdue tasks.", "/features/dashboard/work.png"],
+    ["Supported Workflows", "Review the underlying operational records", "Open the relevant Hashboard workflow for attendance, leave, leads, clients, invoices, expenses, payroll, or meetings.", "/features/dashboard/work_status.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function DashboardsFinal() {
             />
 
             <Image
-              src="/dashboards/dashboard-footer.png"
+              src="/features/dashboard/teams.png"
               width={1240}
-              height={460}
-              alt="Hashboard workspace visibility preview"
+              height={531}
+              alt="Team throughput and output across the workspace"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

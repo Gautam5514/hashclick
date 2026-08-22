@@ -12,7 +12,6 @@ import {
   Clock, Palette, Calendar as CalendarIcon
 } from "lucide-react";
 import CalendarFaq from "./CalendarFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -34,23 +33,23 @@ const workflow = [
     eyebrow: "Google Calendar Connection",
     title: "Bring Google events into the Hashboard calendar",
     body: "Connect a Google Calendar account to view primary-calendar events alongside Hashboard bookings and support provider-backed meeting creation.",
-    image: "/calendar/calendar-feature-1.png",
-    alt: "Hashboard 2-Way Calendar Sync",
+    image: "/features/calendar/all_work.png",
+    alt: "Monthly calendar grid with combined events from every project",
   },
   {
     eyebrow: "Busy-time Checks",
     title: "Check availability against current commitments",
     body: "Availability combines active Hashboard bookings with busy intervals from the connected Google Calendar before a supported slot is booked.",
-    image: "/calendar/calendar-feature-2.png",
-    alt: "Availability and busy-time view in Hashboard Calendar",
+    image: "/features/calendar/calendar_edit.png",
+    alt: "Searching the calendar before booking a new slot",
     reverse: true,
   },
   {
     eyebrow: "Synchronized Changes",
     title: "Keep supported meeting changes aligned",
     body: "Update, reschedule, cancel, change attendees, or delegate supported bookings while keeping their Google Calendar event in step.",
-    image: "/calendar/calendar-feature-3.png",
-    alt: "Compare team member schedules in Hashboard Calendar",
+    image: "/features/calendar/assign_work_.png",
+    alt: "Scheduled task card with an editable due date",
   },
 ];
 
@@ -103,16 +102,15 @@ function CalendarHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/calendar/calendar-hero.png"
+            src="/features/calendar/calendar.png"
             width={815}
-            height={543}
+            height={371}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Calendar view"
+            alt="Hashboard Global Calendar month view"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -184,13 +182,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
+          <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
           <h2>Your supported meetings and Google events, connected.</h2>
           <p>Use existing busy time when booking, and keep managed meeting changes aligned with their calendar event.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Calendar workspace" />
+          <Image className="task-motion-product" src="/features/calendar/calen.png" width={595} height={188} sizes="(max-width: 760px) 100vw, 815px" alt="Wide calendar strip across a full month" />
         </div>
       </div>
     </section>
@@ -199,8 +197,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Availability Context", "Use current busy time when choosing a slot", "Hashboard checks supported bookings and the host’s connected Google Calendar before returning or accepting availability.", "/calendar/ai-calendar-1.png"],
-    ["Permission-aware Events", "Show meetings the user can access", "Employees see meetings they host or attend, while broader booking visibility and management remain limited by role.", "/calendar/ai-calendar-2.png"],
+    ["Availability Context", "Use current busy time when choosing a slot", "Hashboard checks supported bookings and the host’s connected Google Calendar before returning or accepting availability.", "/features/calendar/found_spaces.png"],
+    ["Permission-aware Events", "Show meetings the user can access", "Employees see meetings they host or attend, while broader booking visibility and management remain limited by role.", "/features/calendar/all_work.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -348,10 +346,10 @@ function CalendarFinal() {
             />
 
             <Image
-              src="/calendar/calendar-footer.png"
+              src="/features/calendar/calender_screensho.png"
               width={1240}
-              height={460}
-              alt="Hashboard Calendar footer workspace"
+              height={570}
+              alt="Hashboard Calendar month view with connected events"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

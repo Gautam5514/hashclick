@@ -6,7 +6,6 @@ import {
   ArrowRight, Banknote, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, HandCoins, Inbox, Landmark, MessageCircle, PanelsTopLeft, PieChart, Video, Wallet, X, Zap,
 } from "lucide-react";
 import PayrollFaq from "./PayrollFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Monthly Generation",
     title: "Calculate a payroll period from current records",
     body: "Generate monthly entries using eligible employee salary snapshots, attendance, approved leave, holidays, week-offs, and working-day rules.",
-    image: "/dashboards/dashboard-feature-1.png",
-    alt: "Automated payroll run in Hashboard",
+    image: "/features/payroll/payroll_filter.png",
+    alt: "Generate Payroll dialog with month selection",
   },
   {
     eyebrow: "Salary and Deductions",
     title: "Apply the configured compensation inputs",
     body: "Use basic pay, allowances, configured statutory deductions, earned credits, unpaid deficits, and preserved manual adjustments to calculate net pay.",
-    image: "/dashboards/dashboard-feature-2.png",
-    alt: "Payroll salary and deduction calculation in Hashboard",
+    image: "/features/payroll/see_payroll.png",
+    alt: "Employee payroll detail with manual adjustment and salary breakdown",
     reverse: true,
   },
   {
     eyebrow: "Review and Finalization",
     title: "Lock a reviewed run before employees see it",
     body: "Admins can finalize a non-empty draft. Employees see their own finalized payroll history, and admins can reopen a run when a correction is required.",
-    image: "/dashboards/dashboard-feature-3.png",
-    alt: "Payroll reports in Hashboard",
+    image: "/features/payroll/team_salary.png",
+    alt: "Finalized payroll entry with salary breakdown",
   },
 ];
 
@@ -106,16 +105,15 @@ function PayrollHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/dashboards/dashboard-hero.png"
+            src="/features/payroll/payroll.png"
             width={815}
-            height={543}
+            height={369}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Payroll run view"
+            alt="Hashboard Payroll runs overview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/dashboards/dashboard-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Payroll workspace" />
+          <Image className="task-motion-product" src="/features/payroll/payroll_months.png" width={595} height={310} sizes="(max-width: 760px) 100vw, 815px" alt="Monthly payroll run with per-employee breakdown" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Payroll Context", "Review the inputs behind each entry", "Inspect required workdays, attendance credits, leave credits, holiday credits, deficits, salary components, deductions, and net pay.", "/tasks/super-agents.png"],
-    ["Permission-aware Access", "Keep sensitive payroll appropriately scoped", "Employees can access their finalized history, while generation, adjustment, finalization, and reopening remain limited by role.", "/tasks/clickup-brain.png"],
+    ["Payroll Context", "Review the inputs behind each entry", "Inspect required workdays, attendance credits, leave credits, holiday credits, deficits, salary components, deductions, and net pay.", "/features/payroll/team_payroll.png"],
+    ["Permission-aware Access", "Keep sensitive payroll appropriately scoped", "Employees can access their finalized history, while generation, adjustment, finalization, and reopening remain limited by role.", "/features/payroll/team_side_view.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function PayrollFinal() {
             />
 
             <Image
-              src="/dashboards/dashboard-footer.png"
+              src="/features/payroll/payroll.png"
               width={1240}
-              height={460}
-              alt="Hashboard Payroll footer workspace"
+              height={561}
+              alt="Hashboard Payroll runs overview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

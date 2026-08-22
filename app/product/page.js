@@ -19,9 +19,8 @@ import { Container, Section } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/Bits";
 import Button from "../components/ui/Button";
 import AppMockup from "../components/shared/AppMockup";
-import LogoCloud from "../components/shared/LogoCloud";
 import FeatureWall from "../components/home/FeatureWall";
-import Testimonials from "../components/shared/Testimonials";
+// import Testimonials from "../components/shared/Testimonials";
 import Faq from "../components/shared/Faq";
 import CtaBanner from "../components/shared/CtaBanner";
 import { cn } from "@/lib/utils";
@@ -183,7 +182,6 @@ export default function ProductPage() {
         </Container>
       </section>
 
-      <LogoCloud className="mt-20 md:mt-28" />
 
       {/* Alternating module sections */}
       <Section className="pb-0">
@@ -294,7 +292,7 @@ export default function ProductPage() {
       </Section>
 
       <FeatureWall />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq title="Product questions" items={faqs} />
       <CtaBanner />
     </>

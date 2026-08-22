@@ -13,7 +13,6 @@ import {
   Filter, CheckSquare
 } from "lucide-react";
 import KanbanFaq from "./KanbanFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -113,7 +112,6 @@ function KanbanHero() {
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }

@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardCheck, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, MessageCircle, PanelsTopLeft, ShieldCheck, Target, Users2, UsersRound, Video, X, Zap,
 } from "lucide-react";
 import TeamsFaq from "./TeamsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Company Users",
     title: "Keep the internal team in one company directory",
     body: "Keep names, contact details, roles, employee profiles, and team relationships together in the company directory.",
-    image: "/kanban/kanban-feature-1.png",
-    alt: "Team directory in Hashboard",
+    image: "/features/teams/team_list.png",
+    alt: "All People company directory list",
   },
   {
     eyebrow: "Roles & Permissions",
     title: "Use roles and membership together",
     body: "Global Admin, Manager, and Employee roles combine with space roles, project membership, and workflow-specific permissions.",
-    image: "/kanban/kanban-feature-2.png",
-    alt: "Roles and permissions in Hashboard",
+    image: "/features/teams/team_info.png",
+    alt: "Employee profile showing role and portal access",
     reverse: true,
   },
   {
     eyebrow: "Employee Records",
     title: "Keep people information connected",
     body: "Maintain personal and work contact details, onboarding status, emergency information, employee documents, and effective-dated salary records.",
-    image: "/kanban/kanban-feature-3.png",
-    alt: "Employee records and workspace membership in Hashboard",
+    image: "/features/teams/team_salary.png",
+    alt: "Employee salary breakdown with earnings and deductions",
   },
 ];
 
@@ -106,16 +105,15 @@ function TeamsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/kanban/kanban-hero.png"
+            src="/features/teams/teams.png"
             width={815}
-            height={543}
+            height={372}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Teams directory view"
+            alt="Hashboard Teams attendance overview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Teams workspace" />
+          <Image className="task-motion-product" src="/features/teams/payroll_list.png" width={595} height={300} sizes="(max-width: 760px) 100vw, 815px" alt="Payroll runs list" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "Understand team workload", "Managers can ask about employee and open-task information available to their role.", "/tasks/super-agents.png"],
-    ["People Operations", "Connect the employee record to daily workflows", "Use the same company user across employee details, attendance, leave, salary, payroll, spaces, projects, tasks, chat, and meetings.", "/tasks/clickup-brain.png"],
+    ["Hash AI", "Understand team workload", "Managers can ask about employee and open-task information available to their role.", "/features/teams/teams_attendance.png"],
+    ["People Operations", "Connect the employee record to daily workflows", "Use the same company user across employee details, attendance, leave, salary, payroll, spaces, projects, tasks, chat, and meetings.", "/features/teams/team_payroll.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function TeamsFinal() {
             />
 
             <Image
-              src="/kanban/kanban-footer.png"
+              src="/features/teams/teams.png"
               width={1240}
-              height={460}
-              alt="Hashboard Teams footer workspace"
+              height={566}
+              alt="Hashboard Teams attendance overview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

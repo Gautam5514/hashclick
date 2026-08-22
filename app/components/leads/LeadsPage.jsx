@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, MessageCircle, PanelsTopLeft, PieChart, Target, TrendingUp, UserPlus, Video, X, Zap,
 } from "lucide-react";
 import LeadsFaq from "./LeadsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Pipeline Stages",
     title: "Keep every opportunity in a defined stage",
     body: "Move leads through New, Contacted, Qualified, Proposal, Negotiation, Won, or Lost while retaining their current owner and priority.",
-    image: "/tasks/feature-included.png",
-    alt: "Lead pipeline board in Hashboard",
+    image: "/features/leads/mangae_lead.png",
+    alt: "Lead pipeline stage selector from New to Won or Lost",
   },
   {
     eyebrow: "Lead Details",
     title: "Capture the prospect and opportunity context",
     body: "Store contact and company information, source, tags, notes, estimated value, currency, probability, and expected close date.",
-    image: "/tasks/feature-connected.png",
-    alt: "Lead capture in Hashboard",
+    image: "/features/leads/add_leads.png",
+    alt: "Add Lead form with contact and company fields",
     reverse: true,
   },
   {
     eyebrow: "Activities and Conversion",
     title: "Record progress and convert when won",
     body: "Add notes, calls, emails, meetings, follow-ups, status changes, and assignments, then convert an eligible lead into a connected client record.",
-    image: "/tasks/feature-scale.png",
-    alt: "Follow-up automations in Hashboard",
+    image: "/features/leads/lead_timline.png",
+    alt: "Lead activity timeline showing claimed status",
   },
 ];
 
@@ -106,16 +105,15 @@ function LeadsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/tasks/task-hero.png"
+            src="/features/leads/lead.png"
             width={815}
-            height={543}
+            height={370}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Leads pipeline view"
+            alt="Hashboard Leads pipeline list view"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Leads workspace" />
+          <Image className="task-motion-product" src="/features/leads/select_lead.png" width={595} height={307} sizes="(max-width: 760px) 100vw, 815px" alt="Leads table with bulk assignment" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Lead Context", "Use current pipeline information", "Keep stage, priority, owner, estimated value, probability, close date, source, tags, and activity history available as structured context.", "/tasks/super-agents.png"],
-    ["Supported Actions", "Move the opportunity forward deliberately", "Update details, assign ownership, record an activity, complete a follow-up, or convert the lead when the user has permission.", "/tasks/clickup-brain.png"],
+    ["Lead Context", "Use current pipeline information", "Keep stage, priority, owner, estimated value, probability, close date, source, tags, and activity history available as structured context.", "/features/leads/filter_lead.png"],
+    ["Supported Actions", "Move the opportunity forward deliberately", "Update details, assign ownership, record an activity, complete a follow-up, or convert the lead when the user has permission.", "/features/leads/mangae_lead.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function LeadsFinal() {
             />
 
             <Image
-              src="/tasks/task-footer.png"
+              src="/features/leads/lead.png"
               width={1240}
-              height={460}
-              alt="Hashboard Leads footer workspace"
+              height={563}
+              alt="Hashboard Leads pipeline list view"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

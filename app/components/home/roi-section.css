@@ -80,6 +80,7 @@
   align-items: center;
   max-width: fit-content;
   padding: 10px 20px;
+  white-space: nowrap;
   border: unset;
   border-radius: 12px;
   background: #202020;

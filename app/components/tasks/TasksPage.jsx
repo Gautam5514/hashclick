@@ -8,7 +8,6 @@ import {
   CalendarClock, Zap, Clock3, Clapperboard, Grid2X2,
 } from "lucide-react";
 import TasksFaq from "./TasksFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -30,23 +29,23 @@ const workflow = [
     eyebrow: "Everything included",
     title: "More than a to-do list",
     body: "Add descriptions, priorities, deadlines, statuses, assignees, and subtasks so every task has the information needed to complete it.",
-    image: "/tasks/feature-included.png",
-    alt: "A Hashboard task with status, due date, assignees, and priority",
+    image: "/features/tasks/add_task.png",
+    alt: "Creating a Hashboard task with status, due date, assignee, and priority",
   },
   {
     eyebrow: "Connected work",
     title: "Keep work in the right context",
     body: "Every team task belongs to a project and workspace, helping people understand where the work fits and who can access it.",
-    image: "/tasks/feature-connected.png",
-    alt: "A Hashboard task shown in its project workspace",
+    image: "/features/tasks/task_detailed.png",
+    alt: "Hashboard project details panel with task activity history",
     reverse: true,
   },
   {
     eyebrow: "Built for teams",
     title: "Clear ownership at every stage",
     body: "Assign one or more team members, move tasks through defined statuses, and keep responsibility visible throughout delivery.",
-    image: "/tasks/feature-scale.png",
-    alt: "Hashboard board with connected work cards",
+    image: "/features/tasks/add_member.png",
+    alt: "Assigning members to a Hashboard space",
   },
 ];
 
@@ -91,10 +90,9 @@ function TasksHero() {
           </div>
         </div>
         <div className="task-hero-visual">
-          <Image src="/tasks/task-hero.png" width={815} height={543} priority sizes="(max-width: 1000px) 100vw, 815px" alt="Hashboard Tasks list view" />
+          <Image src="/features/tasks/assign_task.png" width={815} height={543} priority sizes="(max-width: 1000px) 100vw, 815px" alt="Hashboard Tasks list view" />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -117,13 +115,13 @@ function WorkflowGrid() {
 }
 
 function MotionBanner() {
-  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already moving. Keep every task visible.</h2><p>Bring responsibilities, deadlines, and project progress together in Hashboard.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/tasks/task-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
+  return <section className="task-section task-motion-section"><div className="task-motion-banner"><div className="task-motion-copy"><Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" /><h2>Your team&apos;s work is already moving. Keep every task visible.</h2><p>Bring responsibilities, deadlines, and project progress together in Hashboard.</p></div><div className="task-motion-visual"><span className="task-motion-noise" aria-hidden="true" /><Image className="task-motion-product" src="/features/tasks/attach_docs.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Tasks workspace" /></div></div></section>;
 }
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI Actions", "Create and update tasks through conversation", "Ask Hash AI to create a task, change its status or priority, update its deadline, or assign it to a team member.", "/tasks/super-agents.png"],
-    ["Workspace Answers", "Understand what needs attention", "Ask about assigned tasks, overdue work, project status, upcoming deadlines, or team workload using permitted workspace data.", "/tasks/hashboard-brain.png"],
+    ["Hash AI Actions", "Create and update tasks through conversation", "Ask Hash AI to create a task, change its status or priority, update its deadline, or assign it to a team member.", "/features/tasks/add_task.png"],
+    ["Workspace Answers", "Understand what needs attention", "Ask about assigned tasks, overdue work, project status, upcoming deadlines, or team workload using permitted workspace data.", "/features/tasks/assign_task.png"],
   ];
   return <section className="task-section task-ai"><div className="task-shell"><header className="task-heading"><p className="task-eyebrow">AI-assisted work</p><h2>Find answers faster,<br />then take action</h2></header><div className="task-ai-grid">{cards.map(([eye, title, body, image]) => <article key={title}><div className="task-ai-copy"><p className="task-eyebrow">{eye}</p><h3>{title}</h3><p>{body}</p><div className="task-inline-actions"><CTAButton secondary>Get started</CTAButton><Link href="/brain" className="task-dark-link">Explore {eye}<ArrowRight /></Link></div></div><div className="task-ai-image"><Image src={image} fill sizes="(max-width: 760px) 100vw, 50vw" alt={title} /></div></article>)}</div></div></section>;
 }
@@ -214,7 +212,7 @@ function TasksFinal() {
             />
 
             <Image
-              src="/tasks/task-footer.png"
+              src="/features/tasks/add_member.png"
               width={1240}
               height={460}
               alt="Hashboard Tasks footer workspace"

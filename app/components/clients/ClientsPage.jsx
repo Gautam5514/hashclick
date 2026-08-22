@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, Briefcase, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, Eye, FileText, GanttChart, Grid2X2, Inbox, MessageCircle, PanelsTopLeft, Share2, Star, UserSquare, Video, X, Zap,
 } from "lucide-react";
 import ClientsFaq from "./ClientsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Client Profiles",
     title: "Keep the essential account details together",
     body: "Store the client name, contact person, email, phone, website, country, address, industry, referral source, notes, and status.",
-    image: "/calendar/calendar-feature-1.png",
-    alt: "Client profile in Hashboard",
+    image: "/features/clients/view_cleint_data.png",
+    alt: "Client profile overview with contact and company details",
   },
   {
     eyebrow: "Client Portal Access",
     title: "Give external users scoped access",
     body: "Create or invite client-owner users and add client members to permitted projects without exposing unrelated company work.",
-    image: "/calendar/calendar-feature-2.png",
-    alt: "Client portal in Hashboard",
+    image: "/features/clients/client_response.png",
+    alt: "Client billing details including GST, PAN, and bank account",
     reverse: true,
   },
   {
     eyebrow: "Project Visibility",
     title: "Connect delivery and billing to the client",
     body: "Link projects, bookings, leads, billing agreements, and invoices to the correct client record for consistent account context.",
-    image: "/calendar/calendar-feature-3.png",
-    alt: "Client project visibility in Hashboard",
+    image: "/features/clients/client_project.png",
+    alt: "Projects tab within a client record",
   },
 ];
 
@@ -106,16 +105,15 @@ function ClientsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/calendar/calendar-hero.png"
+            src="/features/clients/client.png"
             width={815}
-            height={543}
+            height={372}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Clients profile view"
+            alt="Hashboard Clients list view"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Clients workspace" />
+          <Image className="task-motion-product" src="/features/clients/client_filter.png" width={595} height={442} sizes="(max-width: 760px) 100vw, 815px" alt="Filtering clients by status" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Connected Context", "Keep client relationships queryable", "Use current client, project, booking, agreement, and invoice relationships as the basis for permitted workspace questions.", "/tasks/super-agents.png"],
-    ["Role-aware Access", "Respect internal and client boundaries", "Company users and client users receive different access based on their role, client relationship, and project membership.", "/tasks/clickup-brain.png"],
+    ["Connected Context", "Keep client relationships queryable", "Use current client, project, booking, agreement, and invoice relationships as the basis for permitted workspace questions.", "/features/clients/client_response.png"],
+    ["Role-aware Access", "Respect internal and client boundaries", "Company users and client users receive different access based on their role, client relationship, and project membership.", "/features/clients/client_filter.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function ClientsFinal() {
             />
 
             <Image
-              src="/calendar/calendar-footer.png"
+              src="/features/clients/client_add.png"
               width={1240}
-              height={460}
-              alt="Hashboard Clients footer workspace"
+              height={989}
+              alt="Add New Client form with contact and billing fields"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

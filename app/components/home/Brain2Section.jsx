@@ -29,7 +29,7 @@ function HashAiLockup({ className }) {
 }
 
 const models = [
-  { name: "Hash AI", icon: "/brain-2/brain.svg" },
+  { name: "Hash AI", icon: "/hashai.svg" },
   { name: "GPT", icon: "/brain-2/logos/chatgpt.svg" },
   { name: "Claude Opus", icon: "/brain-2/logos/claude.svg" },
   { name: "Gemini", icon: "/brain-2/logos/gemini.svg" },

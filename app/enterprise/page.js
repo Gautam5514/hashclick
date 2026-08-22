@@ -1,123 +1,103 @@
+import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Building2,
-  ShieldCheck,
-  Users,
-  Workflow,
-  Sparkles,
-  ClipboardCheck,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import CtaBanner from "../components/shared/CtaBanner";
+import FeatureSections from "../components/enterprise/FeatureSections";
 import "./enterprise.css";
 
 export const metadata = {
-  title: "Hashboard for larger organizations",
-  description: "Company-scoped workflows, role-aware access, employee records, and Hash AI assistance with clearly stated boundaries.",
+  title: "Enterprise",
+  description: "Powerful, flexible and secure work management for the enterprise.",
 };
 
-const capabilities = [
-  {
-    icon: Building2,
-    title: "Company-scoped workspace",
-    body: "Keep supported projects, people, clients, scheduling, communication, and business records associated with the active company.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Role-aware access",
-    body: "Limit available records and actions according to the signed-in user, company membership, and supported role permissions.",
-  },
-  {
-    icon: Users,
-    title: "Employee operations",
-    body: "Maintain employee profiles, onboarding status, salary history, attendance, leave, and payroll-related records.",
-  },
-  {
-    icon: Workflow,
-    title: "Connected workflows",
-    body: "Coordinate projects, tasks, Chat, clients, leads, meetings, agreements, invoices, payments, and expenses.",
-  },
-  {
-    icon: Sparkles,
-    title: "Hash AI with boundaries",
-    body: "Choose an available model and request supported questions or actions using workspace context permitted to your role.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Enterprise planning",
-    body: "Work with our team on security, privacy, deployment, support, and organizational requirements.",
-  },
+const capabilityCards = [
+  ["99.9% uptime guarantee", "Ensure your operations never skip a beat with our 99.9% uptime guarantee, keeping your workflow smooth and uninterrupted.", "uptime.png"],
+  ["Unmatched speed and scalability", "Leverage our exclusive RapidViews DB™ technology for ultimate scalability and performance unmatched by any other solution.", "speed-scalability.png"],
+  ["Advanced admin tools", "Everything you need to protect your data, manage access, configure permissions and keep a comprehensive activities log is built-in.", "advanced-admin-tools.png"],
+  ["AI-powered workflows", "The world's first neural network connecting tasks, docs, people, and all of your company's knowledge with AI.", "ai-powered-workflows.png"],
+  ["Internationally compliant", "Our unwavering commitment to international standards guarantees your data is managed with exceptional care.", "compliance.png"],
+  ["Loved by all teams", "Unmatched flexibility, standards, and scale to support any team - no matter the size or complexity.", "loved-by-teams.png"],
+  ["Trusted by leadership", "Clear visibility from strategic plans to daily execution, for a single source for updates, risks, and progress.", "trusted-by-leadership.png"],
+  ["Endorsed by IT", "Data is encrypted, safeguarded, and fully compliant with HIPAA, GDPR, Privacy Shield, and more.", "endorsed-by-it.png"],
 ];
 
-const verification = [
-  "Required authentication and identity-provider support",
-  "Audit, logging, retention, and export requirements",
-  "Data location, backup, recovery, and availability commitments",
-  "Regulatory or industry-specific compliance requirements",
-  "Support hours, response targets, onboarding, and migration scope",
-  "Final pricing, limits, model availability, and contract terms",
+
+const support = [
+  ["Self-serve onboarding", "Access complimentary resources, checklists, and templates to customize Hashboard at your pace, creating a workspace uniquely yours.", "self-serve-onboarding.png"],
+  ["Guided onboarding", "Our incredible customer success team provides personalized guidance and best practices for you to fully leverage Hashboard's potential.", "guided-onboarding.png"],
+  ["Dedicated professional services", "Our specialists assess your needs and tailor a workspace to your business objectives for a streamlined setup and onboarding.", "professional-services.png"],
+  ["Dedicated support", "Our award-winning support team, responsive and available 24/7 to support your team no matter the scale or timezone.", "dedicated-support.png"],
+  ["Hashboard University", "Enroll in many of our comprehensive courses to deepen your understanding of Hashboard, ensuring it works exactly how you need it to.", "hashboard-university.png"],
+  ["Vetted consultants", "Work with our carefully vetted Hashboard consultants for support ranging from compliance advice to strategic platform utilization.", "vetted-consultants.png"],
 ];
+
+function Stars() {
+  return <span aria-label="4.6 out of 5 stars" className="ent-stars">★★★★★</span>;
+}
 
 export default function EnterprisePage() {
   return (
-    <main className="bg-white text-[#111827]">
-      <section className="relative overflow-hidden py-20 md:py-28">
+    <>
+      <section className="ent-hero">
         <Container>
-          <div className="mx-auto max-w-4xl text-center">
-            <span className="text-xs font-bold tracking-[0.18em] text-[#7612fa] uppercase">Hashboard for organizations</span>
-            <h1 className="mt-6 text-4xl font-extrabold tracking-[-0.045em] md:text-7xl">
-              Connected operations with clearly defined boundaries
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#6b7280]">
-              Evaluate Hashboard for company-scoped work, employee operations,
-              business records, communication, and permission-aware AI assistance
-              in one connected workspace.
-            </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <Link href="/demo" className="inline-flex items-center gap-2 rounded-xl bg-[#111827] px-6 py-3 font-bold text-white">
-                Discuss requirements <ArrowRight className="size-4" />
-              </Link>
-              <Link href="/product" className="rounded-xl border border-[#d1d5db] px-6 py-3 font-bold">Explore workflows</Link>
+          <div className="ent-hero-copy">
+            <span className="ent-kicker">HASHBOARD ENTERPRISE</span>
+            <h1>The world&apos;s most powerful,<br/>flexible, and intuitive<br/>enterprise software.</h1>
+            <p>Break down silos, align teams, and accelerate AI transformation with Hashboard. Run all your key business<br className="ent-desktop-break"/> processes with ultimate security, scalability, and reliability.</p>
+            <div className="ent-actions">
+              <Link href="/demo" className="ent-primary">Contact sales <ArrowRight size={17} /></Link>
+              <Link href="/signup" className="ent-secondary">Get started free</Link>
             </div>
+            <div className="ent-rating"><Stars /><span>25,000+ reviews from</span><div className="ent-review-sites"><i>G</i><i>◇</i><i>➤</i><i>▰</i><i>P</i></div></div>
+            <div className="ent-hero-logos"><span>TRUSTED BY THE BEST</span><b>amazon</b><b>NVIDIA</b><b>wayfair</b><b>verizon</b><b>● Spotify</b><b>Stanford</b></div>
+            </div>
+        </Container>
+      </section>
+
+      <section className="ent-trust">
+        <Container>
+          <div className="ent-stories">
+            <article><Image src="/enterprise/cartoon-network.svg" alt="Cartoon Network" width={110} height={56}/><span>Increased output by 2x in half the time.</span><a href="#platform">Read story</a></article>
+            <article><Image src="/enterprise/vmware.svg" alt="VMware" width={130} height={48}/><span>8x faster projects and task setup.</span><a href="#platform">Read story</a></article>
+            <article><Image src="/enterprise/mayo-clinic.svg" alt="Mayo Clinic" width={80} height={58}/><span>Saved 6h a week with automated workflows.</span><a href="#platform">Watch story</a></article>
           </div>
         </Container>
       </section>
 
-      <section className="bg-[#f8f8fa] py-20">
+      <section className="ent-capabilities" id="platform">
         <Container>
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map(({ icon: Icon, title, body }) => (
-              <article key={title} className="rounded-3xl border border-[#e5e7eb] bg-white p-7">
-                <span className="flex size-11 items-center justify-center rounded-2xl bg-[#efedfd] text-[#7612fa]"><Icon className="size-5" /></span>
-                <h2 className="mt-5 text-xl font-bold">{title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-[#6b7280]">{body}</p>
+          <div className="ent-heading"><span>BUILT FOR ENTERPRISE</span><h2>Built for unmatched enterprise scalability, security, and reliability.</h2><p>A platform serious teams can grow into—not out of.</p></div>
+          <div className="ent-card-grid">
+            {capabilityCards.map(([title, body, image, tone]) => (
+              <article className={`ent-cap-card ${tone}`} key={title}>
+                <div><h3>{title}</h3><p>{body}</p></div>
+                <Image src={`/enterprise/${image}`} alt="" width={550} height={260} sizes="(max-width: 768px) 100vw, 50vw" />
               </article>
             ))}
           </div>
         </Container>
       </section>
 
-      <section className="py-20 md:py-24">
+      <nav className="ent-anchor"><Container><a href="#complete">Complete solution</a><a href="#controls">Advanced controls</a><a href="#secure">Secure & reliable</a><a href="#ai">AI powered</a><a href="#support">Support</a></Container></nav>
+
+      <FeatureSections />
+
+      <section className="ent-support" id="support">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
-              <span className="text-xs font-bold tracking-[0.16em] text-[#7612fa] uppercase">Plan your rollout</span>
-              <h2 className="mt-4 text-3xl font-extrabold tracking-[-0.03em] md:text-5xl">Shape Hashboard around your organization</h2>
-              <p className="mt-5 leading-relaxed text-[#6b7280]">Bring your requirements to our team and build a clear rollout plan for access, operations, support, and growth.</p>
-            </div>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {verification.map((item) => (
-                <li key={item} className="flex gap-3 rounded-2xl border border-[#e5e7eb] p-5 text-sm leading-relaxed">
-                  <ShieldCheck className="mt-0.5 size-5 shrink-0 text-[#078d3b]" /> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="ent-heading"><h2>Supporting your team around the clock and across all fronts</h2><p>Dedicated onboarding, world-class support, and incredibly responsive success managers make getting started and migrating to Hashboard a breeze.</p></div>
+          <div className="ent-support-grid">{support.map(([title, body, image]) => <article key={title}><Image src={`/enterprise/${image}`} alt="" width={1080} height={484}/><div><h3>{title}</h3><p>{body}</p></div></article>)}</div>
         </Container>
       </section>
 
-      <CtaBanner title="Bring your organization together in Hashboard" subtitle="Discuss supported workflows, permissions, deployment needs, and rollout planning with our team." primaryLabel="Contact sales" primaryHref="/demo" secondaryLabel="Explore product" secondaryHref="/product" />
-    </main>
+      <section className="enterprise-comparison"><Container><div className="ent-heading"><span>WHY HASHBOARD?</span><h2>Unmatched insight and efficiency</h2><p>Hashboard is the only platform that empowers you to visualize and report on all your data from a single, comprehensive view.</p></div><div className="enterprise-table-wrap"><table><thead><tr><th></th><th>Hashboard</th><th>Monday</th><th>Asana</th><th>Jira</th><th>Notion</th></tr></thead><tbody>{[
+        ["Visualize tasks across the entire enterprise in one place, with more than 13 different views for unmatched visibility and seamless workspace management.",[1,1,1,0,0]],
+        ["Natively search across your workspace and third-party apps. Get contextual answers with Connected Search and AI.",[1,1,0,0,0]],
+        ["Drive informed decisions through comprehensive reporting and dashboards across unlimited projects.",[1,0,1,0,0]],
+        ["Boost efficiency by adding tasks to multiple lists simultaneously, cutting duplicate effort.",[1,0,1,0,0]],
+      ].map(([label,values]) => <tr key={label}><td>{label}</td>{values.map((value,index) => <td key={index} className={index===0?"clickup-col":""}><i className={value?"yes":"no"}>{value?"✓":"×"}</i></td>)}</tr>)}</tbody></table></div><Image className="enterprise-awards" src="/enterprise/users-love-us.svg" alt="Enterprise software awards" width={1220} height={195}/></Container></section>
+
+      <CtaBanner title="Ready to bring all your work together?" subtitle="See how Hashboard can fit your teams, controls, and growth plan." primaryLabel="Contact sales" primaryHref="/demo" secondaryLabel="Get started free" secondaryHref="/signup" />
+    </>
   );
 }

@@ -3,7 +3,7 @@ import "../../components/product-development/product-development.css";
 
 export const metadata = {
   title: "Software Team Project Management",
-  description: "Coordinate supported product projects, engineering tasks, owners, deadlines, meetings, and communication.",
+  description: "Plan, build, and ship software faster with Hashboard's all-in-one engineering workspace.",
 };
 
 export default function Page() {

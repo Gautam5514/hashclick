@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LogoCloud from "../shared/LogoCloud";
 import OurMissionSection from "./OurMissionSection";
 import OurMottoSection from "./OurMottoSection";
 import TeamMarqueeSection from "./TeamMarqueeSection";
@@ -54,7 +53,6 @@ export default function AboutPage() {
 
         {/* Shared customer-workflow logo strip. */}
         <div className="mt-1 sm:mt-2">
-          <LogoCloud className="mt-0 py-2 border-none" />
         </div>
       </section>
 

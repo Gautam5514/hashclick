@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardCheck, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, HandCoins, Inbox, MessageCircle, PanelsTopLeft, PieChart, Receipt, Tag, Video, Wallet, X, Zap,
 } from "lucide-react";
 import ExpensesFaq from "./ExpensesFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -115,7 +114,6 @@ function ExpensesHero() {
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }

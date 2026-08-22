@@ -1265,8 +1265,10 @@
   gap: 6px;
   width: 100%;
   opacity: 0;
-  animation: b2-mem-swap 9s var(--b2-ease) infinite;
-  animation-play-state: paused;
+}
+
+.b2-mem-value:first-child {
+  opacity: 1;
 }
 
 .b2-mem-value:nth-child(2) {
@@ -2518,7 +2520,6 @@
   .b2-card:hover .b2-int-selection,
   .b2-card:hover .b2-per-beam,
   .b2-wn-card:hover .b2-mem-line,
-  .b2-wn-card:hover .b2-mem-value,
   .b2-wn-card:hover .b2-em-item,
   .b2-wn-card:hover .b2-em-item::before,
   .b2-wn-card:hover .b2-em-name,
@@ -2532,6 +2533,16 @@
   .b2-wn-card:hover .b2-ds-dot2 {
     animation-play-state: running;
   }
+
+  /* Longhand (no animation-delay) so this doesn't clobber the
+     per-item :nth-child animation-delay declared above. */
+  .b2-wn-card:hover .b2-mem-value {
+    animation-name: b2-mem-swap;
+    animation-duration: 9s;
+    animation-timing-function: var(--b2-ease);
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
 }
 
 @media not all and (hover: hover) and (pointer: fine) {
@@ -2540,7 +2551,6 @@
   .b2-int-selection,
   .b2-per-beam,
   .b2-mem-line,
-  .b2-mem-value,
   .b2-em-item,
   .b2-em-item::before,
   .b2-em-name,
@@ -2552,6 +2562,14 @@
   .b2-ds-brain,
   .b2-ds-dot1,
   .b2-ds-dot2 {
+    animation-play-state: running;
+  }
+
+  .b2-mem-value {
+    animation-name: b2-mem-swap;
+    animation-duration: 9s;
+    animation-timing-function: var(--b2-ease);
+    animation-iteration-count: infinite;
     animation-play-state: running;
   }
 }

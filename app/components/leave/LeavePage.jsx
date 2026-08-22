@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarCheck2, CalendarClock, CalendarDays, CalendarOff, Check, Clapperboard, ClipboardCheck, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, MessageCircle, PanelsTopLeft, Plane, SlidersHorizontal, Video, X, Zap,
 } from "lucide-react";
 import LeaveFaq from "./LeaveFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Leave Requests",
     title: "Submit the dates and leave type clearly",
     body: "Choose an active leave type, start and end dates, full- or half-day units where supported, and include the reason for the request.",
-    image: "/docs/docs-feature-1.png",
-    alt: "Leave request form in Hashboard",
+    image: "/features/leave/team_apply_leave.png",
+    alt: "Apply Leave form with leave type, duration, and dates",
   },
   {
     eyebrow: "Approval Workflows",
     title: "Keep each decision in a defined workflow",
     body: "Authorized admins or managers can review pending requests, approve or reject them, and preserve approver, decision, and status context.",
-    image: "/docs/docs-feature-2.png",
-    alt: "Leave approval workflow in Hashboard",
+    image: "/features/leave/leave_approved.png",
+    alt: "Approved leave requests with approver context",
     reverse: true,
   },
   {
     eyebrow: "Balances and Cancellations",
     title: "Keep approved days and remaining balance aligned",
     body: "Balance-backed leave is deducted when approved. Supported cancellations restore that balance after the required decision flow.",
-    image: "/docs/docs-feature-3.png",
-    alt: "Team leave calendar in Hashboard",
+    image: "/features/leave/leave_complete.png",
+    alt: "Cancelled leave requests list",
   },
 ];
 
@@ -106,16 +105,15 @@ function LeaveHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/docs/docs-hero.png"
+            src="/features/leave/leave.png"
             width={815}
-            height={543}
+            height={371}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Leave request view"
+            alt="Hashboard Leave Management overview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Leave workspace" />
+          <Image className="task-motion-product" src="/features/leave/remianing_leave.png" width={595} height={223} sizes="(max-width: 760px) 100vw, 815px" alt="Configured leave types with yearly limits" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "Ask for your remaining leave balance", "Employees can request their own balance context, while supported team-level leave information remains limited to authorized roles.", "/docs/ai-feature-1.png"],
-    ["Supported Decisions", "Approve leave within permissions", "Authorized admins or managers can use supported tools to approve eligible pending requests while preserving the normal balance rules.", "/docs/ai-feature-2.png"],
+    ["Hash AI", "Ask for your remaining leave balance", "Employees can request their own balance context, while supported team-level leave information remains limited to authorized roles.", "/features/leave/leavs.png"],
+    ["Supported Decisions", "Approve leave within permissions", "Authorized admins or managers can use supported tools to approve eligible pending requests while preserving the normal balance rules.", "/features/leave/team_message.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function LeaveFinal() {
             />
 
             <Image
-              src="/docs/docs-footer.png"
+              src="/features/leave/leave.png"
               width={1240}
-              height={460}
-              alt="Hashboard Leave footer workspace"
+              height={564}
+              alt="Hashboard Leave Management overview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

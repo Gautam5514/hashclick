@@ -1,6 +1,5 @@
 import FeatureTabs from "../components/home/FeatureTabs";
-import LogoCloud from "../components/shared/LogoCloud";
-import Testimonials from "../components/shared/Testimonials";
+// import Testimonials from "../components/shared/Testimonials";
 import CtaBanner from "../components/shared/CtaBanner";
 import Button from "../components/ui/Button";
 
@@ -40,8 +39,7 @@ export default function TeamsPage() {
       {/* Main Interactive Feature Tabs Section */}
       <FeatureTabs />
 
-      <LogoCloud headline="One workspace across teams" />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CtaBanner />
     </main>
   );

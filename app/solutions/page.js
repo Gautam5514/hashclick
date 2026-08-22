@@ -4,8 +4,7 @@ import { Container, Section } from "../components/ui/Container";
 import { SectionHeading } from "../components/ui/Bits";
 import Button from "../components/ui/Button";
 import SolutionCards from "../components/shared/SolutionCards";
-import LogoCloud from "../components/shared/LogoCloud";
-import Testimonials from "../components/shared/Testimonials";
+// import Testimonials from "../components/shared/Testimonials";
 import Faq from "../components/shared/Faq";
 import CtaBanner from "../components/shared/CtaBanner";
 
@@ -166,8 +165,7 @@ export default function SolutionsPage() {
         </Container>
       </Section>
 
-      <LogoCloud headline="Every function, in one workspace" />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq title="Solutions questions" items={faqs} />
       <CtaBanner />
     </>

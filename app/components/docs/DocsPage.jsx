@@ -11,7 +11,6 @@ import {
   Share2, ShieldCheck, History, Eye, Edit3, Layers
 } from "lucide-react";
 import DocsFaq from "./DocsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -33,23 +32,23 @@ const workflow = [
     eyebrow: "Project context",
     title: "Keep essential details close to the work",
     body: "Use project and task descriptions, attachments, and connected conversations to preserve the context required for execution.",
-    image: "/docs/docs-feature-1.png",
-    alt: "Hashboard Docs linked directly to tasks and workflows",
+    image: "/features/docs/docs_added.png",
+    alt: "Adding a document with description and file attachment in Hashboard Docs",
   },
   {
     eyebrow: "Team discussion",
     title: "Discuss decisions where projects happen",
     body: "Use company and project channels, threaded replies, mentions, files, pins, and search to keep important communication accessible.",
-    image: "/docs/docs-feature-2.png",
-    alt: "Hashboard Docs real-time multiplayer editing",
+    image: "/features/docs/add_docs_side.png",
+    alt: "Adding a new document to Hashboard Docs",
     reverse: true,
   },
   {
     eyebrow: "Structured records",
     title: "Store operational details consistently",
     body: "Keep supported records for people, clients, leads, meetings, invoices, expenses, and projects in their purpose-built workflows.",
-    image: "/docs/docs-feature-3.png",
-    alt: "Hashboard Docs organized company wikis",
+    image: "/features/docs/docs_grid.png",
+    alt: "Company Docs card view showing an organized document record",
   },
 ];
 
@@ -102,16 +101,15 @@ function DocsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/docs/docs-hero.png"
+            src="/features/docs/docs_page.png"
             width={815}
-            height={543}
+            height={375}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard workspace context preview"
+            alt="Hashboard Company Docs workspace preview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -183,13 +181,13 @@ function MotionBanner() {
     <section className="task-section task-motion-section">
       <div className="task-motion-banner">
         <div className="task-motion-copy">
-          <Image src="/tasks/clickup-logo-dark.svg" width={161} height={40} alt="Hashboard" />
+          <Image src="/hashboard.svg" width={161} height={40} alt="Hashboard" />
           <h2>Keep the context needed for execution inside the workspace.</h2>
           <p>Start with projects, tasks, Chat, files, and the operational records Hashboard supports today.</p>
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/docs/docs-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard workspace context" />
+          <Image className="task-motion-product" src="/features/docs/docs_view.png" width={815} height={451} sizes="(max-width: 760px) 100vw, 815px" alt="Company Docs list view with organized document records" />
         </div>
       </div>
     </section>
@@ -198,8 +196,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "Ask about permitted workspace records", "Use current tasks, projects, people, clients, meetings, and other supported data as context for workspace questions.", "/docs/ai-feature-1.png"],
-    ["Supported Actions", "Turn a request into structured work", "Ask Hash AI to create or update supported tasks and records when your role has permission to perform the action.", "/docs/ai-feature-2.png"],
+    ["Hash AI", "Ask about permitted workspace records", "Use current tasks, projects, people, clients, meetings, and other supported data as context for workspace questions.", "/features/docs/docs_grid.png"],
+    ["Supported Actions", "Turn a request into structured work", "Ask Hash AI to create or update supported tasks and records when your role has permission to perform the action.", "/features/docs/docs_added.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -347,10 +345,10 @@ function DocsFinal() {
             />
 
             <Image
-              src="/docs/docs-footer.png"
+              src="/features/docs/docs_filter.png"
               width={1240}
-              height={460}
-              alt="Hashboard workspace context preview"
+              height={643}
+              alt="Company Docs category filter and search"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

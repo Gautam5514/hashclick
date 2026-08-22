@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, ListChecks, MessageCircle, MessageSquareText, PanelsTopLeft, Video, X, Zap,
 } from "lucide-react";
 import MeetingsFaq from "./MeetingsFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,23 +27,23 @@ const workflow = [
     eyebrow: "Internal Meetings",
     title: "Create meetings from your workspace",
     body: "Set the title, description, start and end time, timezone, attendees, and optional workspace context for an internal meeting.",
-    image: "/chat/bento-1.png",
-    alt: "Internal meeting details in Hashboard",
+    image: "/features/meetings/create_meetings.png",
+    alt: "Creating a new meeting with title, time, duration, and team members",
   },
   {
     eyebrow: "Meeting Providers",
     title: "Use the meeting provider your team has connected",
     body: "Create supported meetings with Google Meet or Zoom, or schedule the calendar event without a video provider when appropriate.",
-    image: "/chat/bento-2.png",
-    alt: "AI meeting notes in Hashboard",
+    image: "/features/meetings/send_meetings.png",
+    alt: "Sharing a meeting's Google Meet link to a Chat channel",
     reverse: true,
   },
   {
     eyebrow: "Meeting Management",
     title: "Keep changes under control",
     body: "Authorized users can update details, add or remove internal attendees, delegate the host, reschedule the meeting, or cancel it.",
-    image: "/chat/bento-3.png",
-    alt: "Meeting action items in Hashboard",
+    image: "/features/meetings/grid_view.png",
+    alt: "Meeting cards showing status and management actions",
   },
 ];
 
@@ -106,16 +105,15 @@ function MeetingsHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/chat/chat-poster.png"
+            src="/features/meetings/meetings.png"
             width={815}
-            height={543}
+            height={371}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
-            alt="Hashboard Meetings video call view"
+            alt="Hashboard Meetings and Bookings overview"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/chat/chat-poster.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Meetings workspace" />
+          <Image className="task-motion-product" src="/features/meetings/calendar_view.png" width={595} height={304} sizes="(max-width: 760px) 100vw, 815px" alt="Meetings calendar view" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Calendar Context", "Keep the scheduled details accessible", "Review supported booking details such as the host, attendees, timing, status, provider, and connected business context.", "/chat/meeting-summary.png"],
-    ["Permission-aware Management", "Make changes within your role", "Hosts, admins, and managers can perform supported updates while employee visibility remains limited to meetings they host or attend.", "/chat/ai-poster.png"],
+    ["Calendar Context", "Keep the scheduled details accessible", "Review supported booking details such as the host, attendees, timing, status, provider, and connected business context.", "/features/meetings/all_booking_page.png"],
+    ["Permission-aware Management", "Make changes within your role", "Hosts, admins, and managers can perform supported updates while employee visibility remains limited to meetings they host or attend.", "/features/meetings/meetings_open.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function MeetingsFinal() {
             />
 
             <Image
-              src="/chat/chat-footer.png"
+              src="/features/meetings/meetings.png"
               width={1240}
-              height={460}
-              alt="Hashboard Meetings footer workspace"
+              height={564}
+              alt="Hashboard Meetings and Bookings overview"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

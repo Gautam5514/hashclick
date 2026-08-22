@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, Boxes, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardList, Clock3, Columns3, FileText, GanttChart, Grid2X2, Inbox, LayoutGrid, MessageCircle, PanelsTopLeft, Search, ShieldCheck, UserPlus, Video, X, Zap,
 } from "lucide-react";
 import SpacesFaq from "./SpacesFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,14 +27,14 @@ const workflow = [
     eyebrow: "Team Structure",
     title: "Give related projects a shared home",
     body: "Create a space with a name, description, icon, and members, then organize the team’s projects inside it.",
-    image: "/kanban/kanban-feature-1.png",
+    image: "/features/spaces/box_view.png",
     alt: "Nested Space hierarchy in Hashboard",
   },
   {
     eyebrow: "Space Roles",
     title: "Match access to each person’s responsibility",
     body: "Assign Manager, Member, or Viewer roles. Non-admin users see the spaces they belong to, while company admins can manage spaces across the organization.",
-    image: "/kanban/kanban-feature-2.png",
+    image: "/features/spaces/space.png",
     alt: "Space permissions in Hashboard",
     reverse: true,
   },
@@ -43,7 +42,7 @@ const workflow = [
     eyebrow: "Project Templates",
     title: "Reuse project structure within a space",
     body: "Create project templates with predefined tasks, priorities, order, subtasks, and due-date offsets, then use them for repeatable work.",
-    image: "/kanban/kanban-feature-3.png",
+    image: "/features/spaces/task_create.png",
     alt: "Space templates in Hashboard",
   },
 ];
@@ -106,7 +105,7 @@ function SpacesHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/kanban/kanban-hero.png"
+            src="/features/spaces/kanban.png"
             width={815}
             height={543}
             priority
@@ -115,7 +114,6 @@ function SpacesHero() {
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/kanban/kanban-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Spaces workspace" />
+          <Image className="task-motion-product" src="/features/spaces/kanban.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Spaces workspace" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "List the spaces you can access", "Ask for available spaces and use that context to understand where projects and team work are organized.", "/kanban/ai-kanban-1.png"],
-    ["Project Context", "Find projects within their space", "Use permission-aware project and space information when asking about current work, ownership, status, or priorities.", "/kanban/ai-kanban-2.png"],
+    ["Hash AI", "List the spaces you can access", "Ask for available spaces and use that context to understand where projects and team work are organized.", "/features/spaces/space.png"],
+    ["Project Context", "Find projects within their space", "Use permission-aware project and space information when asking about current work, ownership, status, or priorities.", "/features/spaces/tasks.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,7 +348,7 @@ function SpacesFinal() {
             />
 
             <Image
-              src="/kanban/kanban-footer.png"
+              src="/features/spaces/task_status.png"
               width={1240}
               height={460}
               alt="Hashboard Spaces footer workspace"

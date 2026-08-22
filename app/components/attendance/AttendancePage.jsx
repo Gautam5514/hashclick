@@ -6,7 +6,6 @@ import {
   ArrowRight, BarChart3, BookOpen, CalendarClock, CalendarDays, Check, Clapperboard, ClipboardCheck, ClipboardList, Clock, Clock3, Columns3, FileText, Fingerprint, GanttChart, Grid2X2, Inbox, MapPin, MessageCircle, PanelsTopLeft, Video, X, Zap,
 } from "lucide-react";
 import AttendanceFaq from "./AttendanceFaq";
-import LogoCloud from "../shared/LogoCloud";
 
 const comparison = {
   without: [
@@ -28,14 +27,14 @@ const workflow = [
     eyebrow: "Daily Attendance",
     title: "Record the beginning and end of the workday",
     body: "Employees use their enrolled face profile to submit a check-in and check-out. Each record is tied to the employee and the company’s attendance date.",
-    image: "/calendar/calendar-feature-1.png",
-    alt: "Clock in and out view in Hashboard Attendance",
+    image: "/features/attendance/team_attedance.png",
+    alt: "Face recognition check-in screen in Hashboard Attendance",
   },
   {
     eyebrow: "Attendance Status",
     title: "See today’s status without chasing updates",
     body: "Employees can review their own status, while authorized admins can see today’s team summary and inspect individual attendance history.",
-    image: "/calendar/calendar-feature-2.png",
+    image: "/features/attendance/attedance_table.png",
     alt: "Team attendance status in Hashboard",
     reverse: true,
   },
@@ -43,8 +42,8 @@ const workflow = [
     eyebrow: "Monthly Records",
     title: "Review attendance across the month",
     body: "See present, incomplete, and absent days alongside recorded check-in, check-out, and worked time. Working days respect configured holidays and week-offs where applicable.",
-    image: "/calendar/calendar-feature-3.png",
-    alt: "Timesheet report in Hashboard Attendance",
+    image: "/features/attendance/attendance_data.png",
+    alt: "Monthly attendance calendar in Hashboard Attendance",
   },
 ];
 
@@ -106,16 +105,15 @@ function AttendanceHero() {
         </div>
         <div className="task-hero-visual">
           <Image
-            src="/calendar/calendar-hero.png"
+            src="/features/attendance/attendance.png"
             width={815}
-            height={543}
+            height={369}
             priority
             sizes="(max-width: 1000px) 100vw, 815px"
             alt="Hashboard Attendance tracking view"
           />
         </div>
       </div>
-      <LogoCloud className="task-hero-logo-cloud" />
     </section>
   );
 }
@@ -193,7 +191,7 @@ function MotionBanner() {
         </div>
         <div className="task-motion-visual">
           <span className="task-motion-noise" aria-hidden="true" />
-          <Image className="task-motion-product" src="/calendar/calendar-hero.png" width={815} height={543} sizes="(max-width: 760px) 100vw, 815px" alt="Hashboard Attendance workspace" />
+          <Image className="task-motion-product" src="/features/attendance/addendance_image.png" width={595} height={307} sizes="(max-width: 760px) 100vw, 815px" alt="Employee check-in photos with in/out times" />
         </div>
       </div>
     </section>
@@ -202,8 +200,8 @@ function MotionBanner() {
 
 function AiFeatures() {
   const cards = [
-    ["Hash AI", "Ask about permitted attendance records", "Employees can ask for their own attendance. Admins can request a team member’s daily record, including status, check-in, check-out, and worked time.", "/calendar/ai-calendar-1.png"],
-    ["Admin Actions", "Correct attendance with clear context", "Authorized admins can apply supported attendance adjustments and include a note explaining why time was added or deducted.", "/calendar/ai-calendar-2.png"],
+    ["Hash AI", "Ask about permitted attendance records", "Employees can ask for their own attendance. Admins can request a team member’s daily record, including status, check-in, check-out, and worked time.", "/features/attendance/attendance_graph.png"],
+    ["Admin Actions", "Correct attendance with clear context", "Authorized admins can apply supported attendance adjustments and include a note explaining why time was added or deducted.", "/features/attendance/in_out_time.png"],
   ];
   return (
     <section className="task-section task-ai">
@@ -350,10 +348,10 @@ function AttendanceFinal() {
             />
 
             <Image
-              src="/calendar/calendar-footer.png"
+              src="/features/attendance/attendance.png"
               width={1240}
-              height={460}
-              alt="Hashboard Attendance footer workspace"
+              height={562}
+              alt="Hashboard Attendance tracking view"
               className="relative rounded-xl z-10 w-full h-auto object-contain object-bottom block align-bottom"
               style={{ display: "block", marginBottom: 0 }}
               sizes="(max-width: 1140px) 100vw, 1140px"

@@ -335,54 +335,22 @@
   padding-inline: 20px;
 }
 
+/* Solutions panel: lay the few team links out in a row instead of stacking. */
 .cu-panel-solutions .cu-dropdown {
   justify-content: center;
-  padding-top: 12px;
-  padding-bottom: 18px;
 }
 
 .cu-panel-solutions .cu-column {
   align-items: center;
-  width: 100%;
+}
+
+.cu-panel-solutions .cu-column-title {
+  text-align: center;
 }
 
 .cu-panel-solutions .cu-list {
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.cu-panel-solutions .cu-product {
-  justify-content: center;
-  width: auto;
-  height: 38px;
-  padding: 8px 18px;
-}
-
-.cu-panel-learn .cu-dropdown {
-  justify-content: center;
-  padding-top: 12px;
-  padding-bottom: 18px;
-}
-
-.cu-panel-learn .cu-column {
-  align-items: center;
-  width: 100%;
-}
-
-.cu-panel-learn .cu-list {
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.cu-panel-learn .cu-product {
-  justify-content: center;
-  width: auto;
-  height: 38px;
-  padding: 8px 18px;
+  gap: 8px;
 }
 
 .cu-column {
@@ -443,6 +411,20 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.cu-item-icon-lucide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #efedfd;
+  color: #7612fa;
+}
+
+.cu-item-icon-lucide svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Two stacked artworks — the "active" one fades in on hover. */
@@ -526,11 +508,26 @@
   align-items: center;
   width: 24px;
   height: 24px;
+  color: #7612fa;
 }
 
 .cu-product-icon svg {
   width: 24px;
   height: 24px;
+}
+
+.cu-product-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+}
+
+.cu-product-icon-badge svg {
+  width: 14px;
+  height: 14px;
 }
 
 .cu-product-title {
@@ -772,6 +769,15 @@
   object-fit: contain;
 }
 
+.cu-mobile-item-icon.cu-item-icon-lucide {
+  border-radius: 9px;
+}
+
+.cu-mobile-item-icon.cu-item-icon-lucide svg {
+  width: 18px;
+  height: 18px;
+}
+
 .cu-mobile-item-body {
   display: flex;
   flex-direction: column;
@@ -807,6 +813,17 @@
 .cu-mobile-product-icon svg {
   width: 22px;
   height: 22px;
+}
+
+.cu-mobile-product-icon .cu-product-icon-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+}
+
+.cu-mobile-product-icon .cu-product-icon-badge svg {
+  width: 13px;
+  height: 13px;
 }
 
 .cu-mobile-product-title {
